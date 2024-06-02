@@ -58,36 +58,28 @@ struct Cards: View {
 
 struct ContentView: View {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
-    let cuisines = [
+    let cuisines = ["Asian", "Italian", "Tapas", "Steakhouse", "Bar & Grill", "Mexican", "Steakhouse"]
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    VStack(alignment: .leading) {
-                        Text("Asian")
-                            .font(.title.bold())
-                            .padding([.horizontal, .top])
-                        
-                        Cards(cuisine: "Asian", restaurants: restaurants)
-                        
-                        Separator()
+                    ForEach(cuisines, id:\.self) { cuisine in
+                        VStack(alignment: .leading) {
+                            Text(cuisine)
+                                .font(.title.bold())
+                                .padding([.horizontal, .top])
+                            
+                            Cards(cuisine: cuisine, restaurants: restaurants)
+                            
+                            Separator()
+                        }
                     }
-                    
-                    VStack(alignment: .leading) {
-                        Text("")
-                            .font(.title.bold())
-                            .padding([.horizontal, .top])
-                        
-                        Cards(cuisine: "Italian", restaurants: restaurants)
-                        
-                        Separator()
-                    }
-                    
                 }
                 
             }
             .navigationTitle("Restaurants")
+            .background(.mint)
         }
     }
 }
