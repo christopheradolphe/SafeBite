@@ -11,7 +11,7 @@ struct Separator: View {
     var body: some View {
          Rectangle()
             .frame(height: 2)
-            .foregroundStyle(.black)
+            .foregroundStyle(.gray)
             .padding()
     }
 }
@@ -79,7 +79,7 @@ struct ContentView: View {
                 
             }
             .navigationTitle("Restaurants")
-            .background(.mint)
+            .toolbarBackground(.green)
         }
     }
 }
