@@ -17,5 +17,5 @@ struct MenuItem: Codable, Identifiable {
 }
 
 struct Menu: Codable {
-    let MenuItems: [MenuItem]
+    let menuItems: [MenuItem]
 }

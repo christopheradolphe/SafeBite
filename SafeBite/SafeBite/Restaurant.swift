@@ -15,6 +15,7 @@ struct Restaurant: Codable, Identifiable {
     let address: [String]
     let phoneNumber: String
     let website: String
+    let menu: Menu
 }
 
 enum Cuisine: Codable {
