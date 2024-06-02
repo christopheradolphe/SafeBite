@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct IndividualRestaurantView: View {
+    let restaurtant: Restaurant
     let menu: Menu
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                Text("Hi")
+            }
+            .navigationTitle(restaurtant.name)
+        }
     }
     
-    init(restaurant: String) {
-        let filename = restaurant + ".json"
-        self.menu = Menu(menuItems: Bundle.main.decode(filename))
+    init(restaurant: Restaurant) {
+        self.restaurtant = restaurant
+        self.menu = Menu(menuItems: Bundle.main.decode(restaurant.menuJSONname))
     }
 }
 
 #Preview {
-    IndividualRestaurantView(restaurant: "missbao")
+    IndividualRestaurantView(restaurant: "Miss Bao")
 }

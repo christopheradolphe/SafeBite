@@ -20,6 +20,10 @@ struct Restaurant: Codable, Identifiable {
     var image: String {
         name.lowercased().filter{!$0.isWhitespace}
     }
+    
+    var menuJSONname: String {
+        name.lowercased().filter{!$0.isWhitespace} + ".json"
+    }
 }
 
 enum Cuisine: Codable {
