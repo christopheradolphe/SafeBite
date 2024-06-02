@@ -11,7 +11,7 @@ struct Restaurant: Codable, Identifiable {
     let id: String
     let name: String
     let description: String
-    let cuisine: Cuisine //Make this an enum eventually
+    let cuisine: Cuisine
     let address: [String]
     let phoneNumber: String
     let website: String
