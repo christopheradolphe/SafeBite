@@ -11,11 +11,11 @@ struct Restaurant: Codable, Identifiable {
     let id: String
     let name: String
     let description: String
-    let cuisine: Cuisine
+    let cuisine: String  //change back to cuisine
     let address: [String]
     let phoneNumber: String
     let website: String
-    let menu: Menu
+    //let menu: Menu
     
     var image: String {
         name.lowercased().filter{!$0.isWhitespace}

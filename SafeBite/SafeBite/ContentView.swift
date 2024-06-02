@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    let restaurants = Bundle.main.decode("restaurants.json")
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
