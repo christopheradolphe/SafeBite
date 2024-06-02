@@ -12,7 +12,7 @@ struct Separator: View {
          Rectangle()
             .frame(height: 2)
             .foregroundStyle(.black)
-            .padding(.vertical)
+            .padding()
     }
 }
 
@@ -20,8 +20,20 @@ struct ContentView: View {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
     
     var body: some View {
-        ForEach(restaurants) { restaurant in
-            Image(restaurant.image)
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    VStack(alignment: .leading) {
+                        Text("Asian, Italian, Tapas, Steakhouse, BarAndGrill, Mexican")
+                            .font(.title.bold())
+                        
+                        Separator()
+                    }
+                }
+                
+            }
+            .navigationTitle("Restaurants")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
