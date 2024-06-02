@@ -13,10 +13,28 @@ struct IndividualRestaurantView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Hi")
+            ScrollView {
+                VStack(alignment: .leading) {
+                    Text("About \(restaurtant.name)")
+                        .font(.headline)
+                        .padding(.vertical, 10)
+                    Text(restaurtant.description)
+                        .font(.caption)
+                        .foregroundStyle(.gray)
+                }
+                .padding(.horizontal)
+                .navigationTitle(restaurtant.name)
+                .navigationBarTitleDisplayMode(.inline)
+                
+                VStack {
+                    ForEach(menu.menuItems) { menuItem in
+                        NavigationLink(menuItem.name)
+                    }
+                    .navigationDestination(for: MenuItem.self) { selection in
+                        Text("You just selected \(selection.name)")
+                    }
+                }
             }
-            .navigationTitle(restaurtant.name)
         }
     }
     
@@ -27,5 +45,6 @@ struct IndividualRestaurantView: View {
 }
 
 #Preview {
-    IndividualRestaurantView(restaurant: "Miss Bao")
+    let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
+    return IndividualRestaurantView(restaurant: restaurants[6])
 }
