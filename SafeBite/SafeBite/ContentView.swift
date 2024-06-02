@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    let restaurants = Bundle.main.decode("restaurants.json")
+    let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ForEach(restaurants) { restaurant in
+            Image(restaurant.image)
         }
-        .padding()
     }
 }
 

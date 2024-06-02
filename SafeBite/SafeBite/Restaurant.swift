@@ -8,11 +8,11 @@
 import Foundation
 
 struct Restaurant: Codable, Identifiable {
-    let id: String
+    let id: Int
     let name: String
     let description: String
     let cuisine: String  //change back to cuisine
-    let address: [String]
+    let address: String //change to list of strings eventually
     let phoneNumber: String
     let website: String
     //let menu: Menu

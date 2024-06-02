@@ -18,9 +18,6 @@ extension Bundle {
         }
         
         let decoder = JSONDecoder()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "y-MM-dd" //m is minutes, M is month
-        decoder.dateDecodingStrategy = .formatted(formatter)
         
         do {
             return try decoder.decode(T.self, from:data)

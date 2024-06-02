@@ -14,6 +14,7 @@
 		8CEFD92D2C0CEF060048982A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEFD92C2C0CEF050048982A /* Restaurant.swift */; };
 		8CEFD92F2C0CF1320048982A /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEFD92E2C0CF1320048982A /* Menu.swift */; };
 		8CEFD9312C0CFC0A0048982A /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEFD9302C0CFC0A0048982A /* Bundle-Decodable.swift */; };
+		8CEFD9352C0D0AFB0048982A /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CEFD9342C0D0AFB0048982A /* restaurants.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		8CEFD92C2C0CEF050048982A /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		8CEFD92E2C0CF1320048982A /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		8CEFD9302C0CFC0A0048982A /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		8CEFD9342C0D0AFB0048982A /* restaurants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				8CEFD9302C0CFC0A0048982A /* Bundle-Decodable.swift */,
 				8CEFD92C2C0CEF050048982A /* Restaurant.swift */,
 				8CEFD92E2C0CF1320048982A /* Menu.swift */,
+				8CEFD9342C0D0AFB0048982A /* restaurants.json */,
 				8CEFD9222C0CE2BE0048982A /* Assets.xcassets */,
 				8CEFD9242C0CE2BE0048982A /* Preview Content */,
 			);
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CEFD9262C0CE2BE0048982A /* Preview Assets.xcassets in Resources */,
+				8CEFD9352C0D0AFB0048982A /* restaurants.json in Resources */,
 				8CEFD9232C0CE2BE0048982A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
