@@ -16,6 +16,10 @@ struct Restaurant: Codable, Identifiable {
     let phoneNumber: String
     let website: String
     let menu: Menu
+    
+    var image: String {
+        name.lowercased().filter{!$0.isWhitespace}
+    }
 }
 
 enum Cuisine: Codable {
