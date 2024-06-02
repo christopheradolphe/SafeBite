@@ -24,16 +24,33 @@ struct ContentView: View {
             ScrollView {
                 VStack {
                     VStack(alignment: .leading) {
-                        Text("Asian, Italian, Tapas, Steakhouse, BarAndGrill, Mexican")
+                        Text("Asian")
                             .font(.title.bold())
                         
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(restaurants) { restaurant in
+                                    NavigationLink {
+                                        Text("Entering restaurant")
+                                    } label: {
+                                        VStack {
+                                            Image(restaurant.image)
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 100, height: 100)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
                         Separator()
+                        
                     }
                 }
                 
             }
             .navigationTitle("Restaurants")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
