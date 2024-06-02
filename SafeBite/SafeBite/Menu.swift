@@ -15,3 +15,7 @@ struct MenuItem: Codable, Identifiable {
     let image: String //maybe make this computed
     let description: String
 }
+
+struct Menu: Codable {
+    let MenuItems: [MenuItem]
+}
