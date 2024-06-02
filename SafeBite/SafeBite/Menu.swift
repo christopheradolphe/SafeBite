@@ -11,7 +11,6 @@ struct MenuItem: Codable, Identifiable {
     let id: Int
     let name: String
     let itemType: String
-    let image: String //maybe make this computed
     let description: String
     
     //Need to find better solution for allergens
@@ -30,6 +29,10 @@ struct MenuItem: Codable, Identifiable {
     let mustard: Int?
     let vegetarian: Int?
     let vegan: Int?
+    
+    var image: String {
+        name.lowercased().filter{!$0.isWhitespace}
+    }
 }
 
 struct Menu: Codable {
