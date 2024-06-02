@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+struct Separator: View {
+    var body: some View {
+         Rectangle()
+            .frame(height: 2)
+            .foregroundStyle(.black)
+            .padding(.vertical)
+    }
+}
+
 struct ContentView: View {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
     
