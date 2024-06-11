@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C1DAA6D2C18119A00B308BE /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1DAA6C2C18119A00B308BE /* ItemView.swift */; };
 		8CEFD91F2C0CE2BA0048982A /* SafeBiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEFD91E2C0CE2BA0048982A /* SafeBiteApp.swift */; };
 		8CEFD9212C0CE2BA0048982A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEFD9202C0CE2BA0048982A /* ContentView.swift */; };
 		8CEFD9232C0CE2BE0048982A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CEFD9222C0CE2BE0048982A /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C1DAA6C2C18119A00B308BE /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		8CEFD91B2C0CE2BA0048982A /* SafeBite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeBite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CEFD91E2C0CE2BA0048982A /* SafeBiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeBiteApp.swift; sourceTree = "<group>"; };
 		8CEFD9202C0CE2BA0048982A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				8CEFD91E2C0CE2BA0048982A /* SafeBiteApp.swift */,
 				8CEFD9202C0CE2BA0048982A /* ContentView.swift */,
 				8CEFD9362C0D1E720048982A /* IndividualRestaurantView.swift */,
+				8C1DAA6C2C18119A00B308BE /* ItemView.swift */,
 				8CEFD9302C0CFC0A0048982A /* Bundle-Decodable.swift */,
 				8CEFD92C2C0CEF050048982A /* Restaurant.swift */,
 				8CEFD92E2C0CF1320048982A /* Menu.swift */,
@@ -161,6 +164,7 @@
 				8CEFD91F2C0CE2BA0048982A /* SafeBiteApp.swift in Sources */,
 				8CEFD9372C0D1E720048982A /* IndividualRestaurantView.swift in Sources */,
 				8CEFD9312C0CFC0A0048982A /* Bundle-Decodable.swift in Sources */,
+				8C1DAA6D2C18119A00B308BE /* ItemView.swift in Sources */,
 				8CEFD92F2C0CF1320048982A /* Menu.swift in Sources */,
 				8CEFD92D2C0CEF060048982A /* Restaurant.swift in Sources */,
 			);
