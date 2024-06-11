@@ -128,7 +128,7 @@
  {
    "id": 7,
    "name": "Taiwanese Braised Pork Belly Bāo",
-   "itemType": "BĀO",
+   "itemType": "BAO",
    "description": "2 Piece",
    "gluten": 2,
    "sesame": 0,
@@ -149,7 +149,7 @@
  {
    "id": 8,
    "name": "Satay Chicken Bāo",
-   "itemType": "BĀO",
+   "itemType": "BAO",
    "description": "2 Piece",
    "gluten": 2,
    "sesame": 2,
@@ -170,7 +170,7 @@
  {
    "id": 9,
    "name": "Hot Lemon Pepper Tofu Bāo",
-   "itemType": "BĀO",
+   "itemType": "BAO",
    "description": "2 Piece",
    "gluten": 2,
    "sesame": 0,
@@ -191,7 +191,7 @@
  {
    "id": 10,
    "name": "Sweet Chili Shoyu Mushroom Bāo",
-   "itemType": "BĀO",
+   "itemType": "BAO",
    "description": "2 Piece",
    "gluten": 2,
    "sesame": 2,
@@ -212,7 +212,7 @@
  {
    "id": 11,
    "name": "Bāo Sampler",
-   "itemType": "BĀO",
+   "itemType": "BAO",
    "description": "2 Piece",
    "gluten": 2,
    "sesame": 2,

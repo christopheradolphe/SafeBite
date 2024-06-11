@@ -7,6 +7,31 @@
 
 import SwiftUI
 
+struct MenuTypeView: View {
+    let menu: Menu
+    let menuType: String
+    let allergens = ["gluten", "eggs", "vegetarian", "peanuts"]
+    
+    var body: some View {
+        Text(menuType)
+            .font(.subheadline)
+        ForEach(menu.menuItems.filter{$0.itemType==menuType}) { menuItem in
+            NavigationLink(menuItem.name, value: menuItem)
+        }
+        .navigationDestination(for: MenuItem.self) { selection in
+            Text(selection.name)
+                .font(.title)
+                .padding()
+            Text("Allergens included")
+                .font(.headline)
+                .padding()
+            ForEach(allergens, id: \.self) { allergen in
+                Text(allergen)
+            }
+        }
+    }
+}
+
 struct IndividualRestaurantView: View {
     let restaurtant: Restaurant
     let menu: Menu
@@ -14,27 +39,41 @@ struct IndividualRestaurantView: View {
         
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading) {
-                Text("About \(restaurtant.name)")
-                    .font(.headline)
-                    .padding(.vertical, 10)
-                Text(restaurtant.description) //Work to shorten this or make an info button to view
-                    .font(.caption)
-                    .foregroundStyle(.gray)
+            ScrollView {
+                VStack {
+                    Image("missbao")
+                        .resizable()
+                        .scaledToFit()
+                        .containerRelativeFrame(.horizontal) { width, axis in
+                            width * 0.4
+                        }
+                    VStack(alignment: .leading) {
+                        Text("About \(restaurtant.name)")
+                            .font(.headline)
+                            .padding(.vertical, 10)
+                        Text(restaurtant.description) //Work to shorten this or make an info button to view
+                            .font(.caption)
+                            .foregroundStyle(.gray)
+                        
+                        Separator()
+                    }
+                }
+                .padding(.horizontal)
                 
-                Separator()
+                VStack() {
+                    Text("Menu")
+                        .font(.headline)
+                        .padding(.vertical, 10)
+                    ForEach(menuTypes, id: \.self) { type in
+                        MenuTypeView(menu: menu, menuType: type)
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                
+                .navigationTitle(restaurtant.name)
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbarBackground(.green)
             }
-            .padding(.horizontal)
-            
-            List(menu.menuItems) { menuItem in
-                NavigationLink(menuItem.name, value: menuItem)
-            }
-            .navigationDestination(for: MenuItem.self) { selection in
-                Text("You just selected \(selection.name)")
-            }
-        .navigationTitle(restaurtant.name)
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(.green)
         }
     }
     

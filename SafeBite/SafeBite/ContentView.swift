@@ -40,7 +40,7 @@ struct Cards: View {
                                     .frame(maxWidth: 100)
                             }
                             .frame(maxWidth: .infinity)
-                            .background(.green)
+                            .background(.blue)
                         }
                         .clipShape(.rect(cornerRadius: 10))
                         .overlay(
@@ -59,11 +59,18 @@ struct Cards: View {
 struct ContentView: View {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
     let cuisines = ["Asian", "Italian", "Tapas", "Steakhouse", "Bar & Grill", "Mexican", "Steakhouse"]
+    @State private var proximity = [10, 25, 50]
+    @State private var proximityVal = 10
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
+                    Picker("Location", selection: $proximityVal) {
+                        ForEach(proximity, id: \.self) { proximityType in
+                            Text("\(proximityType) km")
+                        }
+                    }
                     ForEach(cuisines, id:\.self) { cuisine in
                         VStack(alignment: .leading) {
                             Text(cuisine)
