@@ -60,7 +60,7 @@ struct IndividualRestaurantView: View {
                 }
                 .padding(.horizontal)
                 
-                VStack() {
+                VStack {
                     Text("Menu")
                         .font(.headline)
                         .padding(.vertical, 10)
