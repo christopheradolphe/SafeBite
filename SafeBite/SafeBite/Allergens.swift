@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Allergens {
+struct Allergens: Codable {
     var Gluten = false
     var Wheat = false
     var Soy = false
@@ -23,7 +23,7 @@ struct Allergens {
     var Sulfites = false
 }
 
-struct DietaryRestrictions {
+struct DietaryRestrictions: Codable {
     var Vegan = false
     var Vegetarian = false
     var Halal = false
