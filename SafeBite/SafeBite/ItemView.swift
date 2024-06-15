@@ -7,6 +7,33 @@
 
 import SwiftUI
 
+struct AllergenCards: View {
+    var safetyIndicator: Int
+    var allergens: Bool //true-> allergens; false -> Dietary Restrictions
+    
+    var color: Color {
+        if safetyIndicator == 0{
+            return .green
+        }else if safetyIndicator == 1 {
+            return .orange
+        } else {
+            return .red
+        }
+    }
+    var body: some View {
+        ScrollView(.horizontal) {
+            VStack {
+                Text("Hello")
+                    .foregroundStyle(.white)
+                    .padding()
+            }
+            .background(color)
+            .clipShape(.capsule)
+            .padding(.horizontal)
+        }
+    }
+}
+
 struct ItemView: View {
     private var menuItem: MenuItem
     
@@ -21,6 +48,7 @@ struct ItemView: View {
                     Text("Safe")
                         .font(.title3)
                         .padding()
+                    AllergenCards(safetyIndicator: 0, allergens: false)
                     Text("Uncertain")
                         .font(.title3)
                         .padding()
