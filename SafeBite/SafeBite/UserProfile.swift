@@ -12,6 +12,12 @@ struct UserInformation: Codable {
     var lastName = ""
     var email = ""
     var phoneNumber = ""
+    var invalidUserInformation: Bool {
+        if (firstName.isEmpty || lastName.isEmpty || email.isEmpty || phoneNumber.isEmpty) {
+            return true
+        }
+        return false
+    }
 }
 
 struct UserProfile: Codable {

@@ -46,18 +46,16 @@ struct SignInView: View {
                     Toggle("Sulfites", isOn: $user.userProfile.allergens.sulfites)
                 }
                 
+                NavigationLink {
+                    ContentView()
+                } label: {
+                    VStack {
+                        Text("Submit Profile")
+                    }
+                }
+                .disabled(user.userProfile.userInformation.invalidUserInformation)
             }
             
-            NavigationLink {
-                ContentView()
-            } label: {
-                VStack {
-                    Text("Submit Profile")
-                        .foregroundStyle(.black)
-                }
-            }
-            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-            .background(.gray)
             .navigationTitle("SafeBite Profile")
         }
     }
