@@ -7,28 +7,42 @@
 
 import Foundation
 
+struct AllergenInfo: Codable, Hashable {
+    let gluten: Int?
+    let wheat: Int?
+    let soy: Int?
+    let shellfish: Int?
+    let fish: Int?
+    let dairy: Int?
+    let egg: Int?
+    let treeNuts: Int?
+    let almonds: Int?
+    let peanuts: Int?
+    let sesame: Int?
+    let mustard: Int?
+    let garlic: Int?
+    let sulfites: Int?
+    let legumes: Int?
+}
+
+struct DietaryRestrictionInfo: Codable, Hashable {
+    let vegan: Int?
+    let vegetarian: Int?
+    let halal: Int?
+    let keto: Int?
+    let lowCarb: Int?
+    let lowFODMAP: Int?
+    let dashDiet: Int?
+}
+
 struct MenuItem: Codable, Identifiable, Hashable {
     let id: Int
     let name: String
     let itemType: String
     let description: String
     
-    //Need to find better solution for allergens
-    let gluten: Int?
-    let sesame: Int?
-    let soy: Int?
-    let fish: Int?
-    let shellfish: Int?
-    let dairy: Int?
-    let egg: Int?
-    let treeNuts: Int?
-    let peanuts: Int?
-    let wheat: Int?
-    let almonds: Int?
-    let legumes: Int?
-    let mustard: Int?
-    let vegetarian: Int?
-    let vegan: Int?
+    let allergenInfo: AllergenInfo
+    let dietaryRestrictionInfo: DietaryRestrictionInfo
     
     var image: String {
         name.lowercased().filter{!$0.isWhitespace}
