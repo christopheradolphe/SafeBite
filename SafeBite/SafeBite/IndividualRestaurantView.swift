@@ -7,28 +7,42 @@
 
 import SwiftUI
 
+struct MenuItemView: View {
+    var menuItem: MenuItem
+    
+    var body: some View {
+        NavigationLink {
+            ItemView(menuItem: menuItem)
+        } label: {
+            VStack {
+                HStack {
+                    Text(menuItem.name)
+                    
+                    Spacer()
+                    
+                    Text(">")
+                }
+                .padding(5)
+            }
+            .clipShape(.capsule)
+        }
+    }
+}
+
 struct MenuTypeView: View {
     let menu: Menu
     let menuType: String
     let allergens = ["gluten", "eggs", "vegetarian", "peanuts"]
     
     var body: some View {
-        Text(menuType)
-            .font(.subheadline)
-        ForEach(menu.menuItems.filter{$0.itemType==menuType}) { menuItem in
-            NavigationLink(menuItem.name, value: menuItem)
-        }
-        .navigationDestination(for: MenuItem.self) { selection in
-            Text(selection.name)
-                .font(.title)
-                .padding()
-            Text("Allergens included")
-                .font(.headline)
-                .padding()
-            ForEach(allergens, id: \.self) { allergen in
-                Text(allergen)
+        VStack {
+            Text(menuType)
+                .font(.subheadline)
+            ForEach(menu.menuItems.filter{$0.itemType==menuType}) { menuItem in
+                MenuItemView(menuItem: menuItem)
             }
         }
+        .padding(.vertical)
     }
 }
 
