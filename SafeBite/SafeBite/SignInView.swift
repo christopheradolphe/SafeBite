@@ -8,34 +8,26 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State private var firstName = ""
-    @State private var lastName = ""
-    @State private var email = ""
-    @State private var phoneNumber = ""
+    @State private var user = User()
     
-    @State private var vegetarian = false
-    @State private var vegan = false
-    
-    @State private var peanuts = false
-    @State private var sesame = false
     var body: some View {
         NavigationStack {
             Form {
                 Section ("Personal Information"){
-                    TextField("First Name", text: $firstName)
-                    TextField("Last Name", text: $lastName)
-                    TextField("Email", text: $email)
-                    TextField("Phone Number", text: $phoneNumber)
+                    TextField("First Name", text: $user.userProfile.userInformation.firstName)
+                    TextField("Last Name", text: $user.userProfile.userInformation.lastName)
+                    TextField("Email", text: $user.userProfile.userInformation.email)
+                    TextField("Phone Number", text: $user.userProfile.userInformation.phoneNumber)
                 }
                 
                 Section ("Dietary Restrictions") {
-                    Toggle("Vegetarian", isOn: $vegetarian)
-                    Toggle("Vegan", isOn: $vegan)
+                    Toggle("Vegetarian", isOn: $user.userProfile.dietaryRestrictions.Vegetarian)
+                    Toggle("Vegan", isOn: $user.userProfile.dietaryRestrictions.Vegan)
                 }
                 
                 Section ("Allergies") {
-                    Toggle("Peanuts", isOn: $peanuts)
-                    Toggle("Sesame", isOn: $sesame)
+                    Toggle("Peanuts", isOn: $user.userProfile.allergens.Peanuts)
+                    Toggle("Sesame", isOn: $user.userProfile.allergens.Sesame)
                 }
                 
             }
