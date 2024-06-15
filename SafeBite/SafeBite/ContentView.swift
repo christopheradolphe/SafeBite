@@ -25,7 +25,7 @@ struct Cards: View {
             HStack {
                 ForEach(restaurants.filter{$0.cuisine==cuisine}) { restaurant in
                     NavigationLink {
-                        Text("Entering restaurant \(restaurant.name)")
+                        IndividualRestaurantView(restaurant: restaurant)
                     } label: {
                         VStack {
                             Image(restaurant.image)

@@ -15,7 +15,7 @@ struct Restaurant: Codable, Identifiable {
     let address: String //change to list of strings eventually
     let phoneNumber: String
     let website: String
-    //let menu: Menu
+    let menuTypes: [String]
     
     var image: String {
         name.lowercased().filter{!$0.isWhitespace}

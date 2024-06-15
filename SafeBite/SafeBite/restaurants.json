@@ -1,119 +1,12 @@
 [
  {
-   "id": 1,
-   "name": "Kinton Ramen",
-   "description": "Established in May 2012, KINTON RAMEN was one of the first Japanese ramen restaurants in Toronto. Led by Executive Chef Aki Urata and our team of professional ramen chefs, we strive to offer our guests an extraordinary dining experience every time. Using the freshest ingredients to make the best quality noodles and broths, we invite guests to taste our exceptional ramen bowls right down to the last drop.",
-   "cuisine": "Asian",
-   "address": "333 University Avenue, Kingston, ON K7L 3R4",
-   "phoneNumber": "343-305-5271",
-   "website": "https://www.kintonramen.com/"
- },
- {
-   "id": 2,
-   "name": "PodoNamu Korean Cuisine",
-   "description": "PodoNamu is a Korean restaurant in the heart of downtown Kingston. Come visit us today for a delicious, hearty, Korean meal!",
-   "cuisine": "Asian",
-   "address": "264 Princess Street, Kingston, ON, K7L 1B5",
-   "phoneNumber": "613-777-9949",
-   "website": "https://www.facebook.com/podokingston/"
- },
- {
-   "id": 3,
-   "name": "Meet Cuisine",
-   "description": "",
-   "cuisine": "Asian",
-   "address": "371 Princess St, Kingston, ON K7L 1B9",
-   "phoneNumber": "613-531-8788",
-   "website": "https://gosnappy.io/owa/snappy/detail/G9617/9617/m/menu_648"
- },
- {
-   "id": 4,
-   "name": "Heist",
-   "description": "Exceptional food using local, seasonal ingredients + curated wine + cocktails in vibrant atmosphere.",
-   "cuisine": "Italian",
-   "address": "168 Wellington St Suite 101, Kingston, ON K7L 3E4",
-   "phoneNumber": "(613) 548-9463",
-   "website": "https://heistrestaurant.ca/?fbclid=IwAR1rEcY4IvuFSzy2ZyK6GPfHzmzLuxTTthU4MV1WlS7-g2utE2tt9lQKlHI"
- },
- {
-   "id": 5,
-   "name": "Atomica Kitchen",
-   "description": "Nestled in the heart of downtown Kingston, on charming Brock St. you’ll find us! Our vibrant and upbeat atmosphere makes us a great spot for drinks with friends, a dinner date out, or a fun corporate lunch.\n\nEnjoy our newly updated fall menu with the cozy flavours of autumn, paired with our well known staple menu items and thoughtfully crafted beverages.\n\nInside you’ll see our pizza masters at work alongside our talented bartenders working together to create a meaningful experience for each and every guest.",
-   "cuisine": "Italian",
-   "address": "71 Brock St, Kingston, ON K7L 2Z9",
-   "phoneNumber": "(613) 530-2118",
-   "website": "https://www.atomica.ca/"
- },
- {
-   "id": 6,
-   "name": "Tango",
-   "description": "Immerse yourself in a globally-inspired tapas experience at Tango Nuevo. Share small plates in our spacious & elegant dining room or reserve our charming wine cellar, La Bodega, for intimate, private gatherings",
-   "cuisine": "Tapas",
-   "address": "331 King St E, Kingston, ON ",
-   "phoneNumber": "(613) 548-3778",
-   "website": "http://www.tangonuevo.ca/"
- },
- {
    "id": 7,
    "name": "Miss Bao",
    "description": "Miss Bao has an Asian fusion inspired menu with share plates in the style of tapas. Our restaurant will feature classical dim sum dishes. We want to innovate traditional Asian dishes by having at least half of the menu composed of vegan, vegetarian and gluten-free items. This choice is vital to our establishment because our plant-based menu options will decrease our ecological footprint.",
    "cuisine": "Asian",
    "address": "286 Princess St, Kingston, ON K7L 1B5",
    "phoneNumber": "(613) 545-0123",
-   "website": "https://www.missbao.ca/"
- },
- {
-   "id": 8,
-   "name": "The Keg",
-   "description": "",
-   "cuisine": "Steakhouse",
-   "address": "300 King St E, Kingston, ON K7L 3B4",
-   "phoneNumber": "(613) 549-1333",
-   "website": "https://thekeg.com/en/locations/kingston"
- },
- {
-   "id": 9,
-   "name": "Jack Astor's",
-   "description": "",
-   "cuisine": "Bar & Grill",
-   "address": "330 King St E, Kingston, ON K7L 3B6",
-   "phoneNumber": "(613) 549-1207",
-   "website": "https://order.jackastors.com/2279/flow/pickup"
- },
- {
-   "id": 10,
-   "name": "The Grizzly Grill",
-   "description": "Discover the ultimate dining and entertainment destination at The Grizzly Grill, located in the heart of downtown Kingston, Ontario, Canada.",
-   "cuisine": "Bar & Grill",
-   "address": "395 Princess St, Kingston, ON K7L 1B9",
-   "phoneNumber": "(613) 544-7566",
-   "website": "https://thegrizzlygrill.ca/"
- },
- {
-   "id": 11,
-   "name": "Anejo",
-   "description": "Unleash your taste buds at Añejo King Street premier Mexican restaurant. Experience the perfect fusion of handcrafted tacos and premium tequila in an upscale ...",
-   "cuisine": "Mexican",
-   "address": "7 Marie Labatte Rd, Toronto, ON M3C 0J1",
-   "phoneNumber": "(647) 735-2946",
-   "website": "https://www.anejo.ca/en/locations/on/toronto/600-king-street-west"
- },
- {
-   "id": 12,
-   "name": "Taylors Landing",
-   "description": "Spacious, industrial-chic venue with outdoor seating offering modern Canadian comfort food & drinks.",
-   "cuisine": "Bar & Grill",
-   "address": "76 O'Neill Rd, Don Mills, ON M3C 0H1",
-   "phoneNumber": "(647) 943-6318",
-   "website": "https://www.thelandinggroup.ca/en/locations/on/don-mills/76-oneill-rd"
- },
- {
-   "id": 13,
-   "name": "Tommy's",
-   "description": "Typical diner fare, including all-day breakfast, served in a 1950-style space with a full bar.",
-   "cuisine": "Bar & Grill",
-   "address": "377 Princess St, Kingston, ON K7L 1B9",
-   "phoneNumber": " (613) 766-6585",
-   "website": "https://www.tommyskingston.ca/lander"
+   "website": "https://www.missbao.ca/",
+   "menuTypes": ["SMALL PLATES", "DESSERT", "BAO", "LARGE PLATES"]
  }
 ]

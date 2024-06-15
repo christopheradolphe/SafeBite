@@ -33,7 +33,6 @@ struct MenuItemView: View {
 struct MenuTypeView: View {
     let menu: Menu
     let menuType: String
-    let allergens = ["gluten", "eggs", "vegetarian", "peanuts"]
     
     var body: some View {
         VStack {
