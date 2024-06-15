@@ -8,27 +8,27 @@
 import Foundation
 
 struct Allergens: Codable {
-    var Gluten = false
-    var Wheat = false
-    var Soy = false
-    var Shellfish = false
-    var Fish = false
-    var Dairy = false
-    var Egg = false
-    var TreeNuts = false
-    var Peanuts = false
-    var Sesame = false
-    var Mustard = false
-    var Garlic = false
-    var Sulfites = false
+    var gluten = false
+    var wheat = false
+    var soy = false
+    var shellfish = false
+    var fish = false
+    var dairy = false
+    var egg = false
+    var treeNuts = false
+    var peanuts = false
+    var sesame = false
+    var mustard = false
+    var garlic = false
+    var sulfites = false
 }
 
 struct DietaryRestrictions: Codable {
-    var Vegan = false
-    var Vegetarian = false
-    var Halal = false
-    var Keto = false
-    var LowCarb = false
-    var LowFODMAP = false
-    var DashDiet = false
+    var vegan = false
+    var vegetarian = false
+    var halal = false
+    var keto = false
+    var lowCarb = false
+    var lowFODMAP = false
+    var dashDiet = false
 }
