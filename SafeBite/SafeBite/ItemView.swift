@@ -104,6 +104,6 @@ struct ItemView: View {
 }
 
 #Preview {
-    var menu: Menu = Menu(menuItems: Bundle.main.decode("missbao.json"))
+    let menu: Menu = Menu(menuItems: Bundle.main.decode("missbao.json"))
     return ItemView(menuItem: menu.menuItems[0])
 }

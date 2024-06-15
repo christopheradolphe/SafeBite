@@ -80,6 +80,7 @@ struct ContentView: View {
             }
             .navigationTitle("Restaurants")
             .toolbarBackground(.green)
+            .navigationBarBackButtonHidden(true)
         }
     }
 }
