@@ -54,11 +54,39 @@ struct ItemView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
+                VStack (alignment: .leading) {
+                    Text("Item Information")
+                        .font(.title2)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical)
+                    
+                    HStack {
+                        Text("Menu Item:")
+                        Spacer()
+                        Text(menuItem.name)
+                    }
+                    .padding(.horizontal)
+                    
+                    HStack {
+                        Text("Menu Type:")
+                        Spacer()
+                        Text(menuItem.itemType)
+                    }
+                    .padding(.horizontal)
+                    
+                    Text("Item Description:")
+                        .padding()
+                    Spacer()
+                    Text(menuItem.description)
+                    .padding(.horizontal)
+                }
+                
+                Separator()
+                
                 VStack(alignment: .leading) {
                     Text("Dietary Restrictions")
                         .font(.title2)
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                        .padding(.vertical)
                     Text("Safe")
                         .font(.title3)
                         .padding()
