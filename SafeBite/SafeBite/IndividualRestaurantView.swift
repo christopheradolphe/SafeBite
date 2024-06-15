@@ -17,14 +17,15 @@ struct MenuItemView: View {
             VStack {
                 HStack {
                     Text(menuItem.name)
+                        .padding(.horizontal)
                     
                     Spacer()
                     
                     Text(">")
+                        .padding(.horizontal)
                 }
                 .padding(5)
             }
-            .clipShape(.capsule)
         }
     }
 }
