@@ -21,13 +21,29 @@ struct SignInView: View {
                 }
                 
                 Section ("Dietary Restrictions") {
-                    Toggle("Vegetarian", isOn: $user.userProfile.dietaryRestrictions.Vegetarian)
-                    Toggle("Vegan", isOn: $user.userProfile.dietaryRestrictions.Vegan)
+                    Toggle("Vegetarian", isOn: $user.userProfile.dietaryRestrictions.vegetarian)
+                    Toggle("Vegan", isOn: $user.userProfile.dietaryRestrictions.vegan)
+                    Toggle("Halal", isOn: $user.userProfile.dietaryRestrictions.halal)
+                    Toggle("Keto", isOn: $user.userProfile.dietaryRestrictions.keto)
+                    Toggle("Low-Carb (50-150g of carbs)", isOn: $user.userProfile.dietaryRestrictions.lowCarb)
+                    Toggle("Low FODMAP", isOn: $user.userProfile.dietaryRestrictions.lowFODMAP)
+                    Toggle("Dash Diet", isOn: $user.userProfile.dietaryRestrictions.dashDiet)
                 }
                 
                 Section ("Allergies") {
-                    Toggle("Peanuts", isOn: $user.userProfile.allergens.Peanuts)
-                    Toggle("Sesame", isOn: $user.userProfile.allergens.Sesame)
+                    Toggle("Wheat", isOn: $user.userProfile.allergens.wheat)
+                    Toggle("Gluten", isOn: $user.userProfile.allergens.gluten)
+                    Toggle("Soy", isOn: $user.userProfile.allergens.soy)
+                    Toggle("Shellfish", isOn: $user.userProfile.allergens.shellfish)
+                    Toggle("Fish", isOn: $user.userProfile.allergens.fish)
+                    Toggle("Dairy", isOn: $user.userProfile.allergens.dairy)
+                    Toggle("Egg", isOn: $user.userProfile.allergens.egg)
+                    Toggle("Tree Nuts", isOn: $user.userProfile.allergens.treeNuts)
+                    Toggle("Peanuts", isOn: $user.userProfile.allergens.peanuts)
+                    Toggle("Sesame", isOn: $user.userProfile.allergens.sesame)
+                    Toggle("Mustard", isOn: $user.userProfile.allergens.mustard)
+                    Toggle("Garlic", isOn: $user.userProfile.allergens.garlic)
+                    Toggle("Sulfites", isOn: $user.userProfile.allergens.sulfites)
                 }
                 
             }
