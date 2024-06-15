@@ -10,6 +10,7 @@ import SwiftUI
 struct AllergenCards: View {
     var safetyIndicator: Int
     var allergens: Bool //true-> allergens; false -> Dietary Restrictions
+    let menuItem: MenuItem
     
     var color: Color {
         if safetyIndicator == 0{
@@ -22,14 +23,27 @@ struct AllergenCards: View {
     }
     var body: some View {
         ScrollView(.horizontal) {
-            VStack {
-                Text("Hello")
-                    .foregroundStyle(.white)
-                    .padding()
+            HStack {
+                if allergens {
+                    ForEach(menuItem.allergenInfo.keys.filter{menuItem.allergenInfo[$0] == safetyIndicator}, id: \.self) { allergen in
+                        Text(allergen)
+                            .foregroundStyle(.white)
+                            .padding(10)
+                            .background(color)
+                            .clipShape(.capsule)
+                            .padding(.leading, 3)
+                    }
+                } else {
+                    ForEach(menuItem.dietaryRestrictionInfo.keys.filter{menuItem.dietaryRestrictionInfo[$0] == safetyIndicator}, id: \.self) { dietaryRestriction in
+                        Text(dietaryRestriction)
+                            .foregroundStyle(.white)
+                            .padding(10)
+                            .background(color)
+                            .clipShape(.capsule)
+                            .padding(.leading, 5)
+                    }
+                }
             }
-            .background(color)
-            .clipShape(.capsule)
-            .padding(.horizontal)
         }
     }
 }
@@ -48,13 +62,15 @@ struct ItemView: View {
                     Text("Safe")
                         .font(.title3)
                         .padding()
-                    AllergenCards(safetyIndicator: 0, allergens: false)
+                    AllergenCards(safetyIndicator: 0, allergens: false, menuItem: menuItem)
                     Text("Uncertain")
                         .font(.title3)
                         .padding()
+                    AllergenCards(safetyIndicator: 1, allergens: false, menuItem: menuItem)
                     Text("Unsafe")
                         .font(.title3)
                         .padding()
+                    AllergenCards(safetyIndicator: 2, allergens: false, menuItem: menuItem)
                     
                     Separator()
                 }
@@ -66,12 +82,15 @@ struct ItemView: View {
                     Text("Safe (Does not Contain)")
                         .font(.title3)
                         .padding()
+                    AllergenCards(safetyIndicator: 0, allergens: true, menuItem: menuItem)
                     Text("May Contain/Cross Contamination Risk")
                         .font(.title3)
                         .padding()
+                    AllergenCards(safetyIndicator: 1, allergens: true, menuItem: menuItem)
                     Text("Unsafe (Contains Allergen)")
                         .font(.title3)
                         .padding()
+                    AllergenCards(safetyIndicator: 2, allergens: true, menuItem: menuItem)
                 }
             }
             .navigationTitle(menuItem.name)

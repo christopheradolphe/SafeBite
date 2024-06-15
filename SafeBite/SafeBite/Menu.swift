@@ -41,8 +41,8 @@ struct MenuItem: Codable, Identifiable, Hashable {
     let itemType: String
     let description: String
     
-    let allergenInfo: AllergenInfo
-    let dietaryRestrictionInfo: DietaryRestrictionInfo
+    let allergenInfo: [String: Int]
+    let dietaryRestrictionInfo: [String: Int]
     
     var image: String {
         name.lowercased().filter{!$0.isWhitespace}
