@@ -37,7 +37,19 @@ struct SignInView: View {
                     Toggle("Peanuts", isOn: $peanuts)
                     Toggle("Sesame", isOn: $sesame)
                 }
+                
             }
+            
+            NavigationLink {
+                ContentView()
+            } label: {
+                VStack {
+                    Text("Submit Profile")
+                        .foregroundStyle(.black)
+                }
+            }
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+            .background(.gray)
             .navigationTitle("SafeBite Profile")
         }
     }
