@@ -26,8 +26,12 @@ struct MenuItemView: View {
                         .padding(.horizontal)
                         .foregroundColor(.black)
                 }
-                .padding(.horizontal)
                 .padding(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(.gray)
+                )
+                .padding(.horizontal)
             }
         }
     }
