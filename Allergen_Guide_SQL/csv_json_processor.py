@@ -1,6 +1,8 @@
 import csv
 
 def read_csv(file_path):
+  #Input: Filepath to csv file
+  #Output: List of dicts mapping column names to data in column 
     data = []
     with open(file_path, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
