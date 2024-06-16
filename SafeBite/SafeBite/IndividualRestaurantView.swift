@@ -18,12 +18,15 @@ struct MenuItemView: View {
                 HStack {
                     Text(menuItem.name)
                         .padding(.horizontal)
+                        .foregroundColor(.black)
                     
                     Spacer()
                     
                     Text(">")
                         .padding(.horizontal)
+                        .foregroundColor(.black)
                 }
+                .padding(.horizontal)
                 .padding(5)
             }
         }
@@ -48,9 +51,7 @@ struct MenuTypeView: View {
 
 struct IndividualRestaurantView: View {
     let restaurtant: Restaurant
-    let menu: Menu
-    let menuTypes = ["SMALL PLATES", "DESSERT", "BAO", "LARGE PLATES"]
-        
+    let menu: Menu        
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -78,7 +79,7 @@ struct IndividualRestaurantView: View {
                     Text("Menu")
                         .font(.headline)
                         .padding(.vertical, 10)
-                    ForEach(menuTypes, id: \.self) { type in
+                    ForEach(restaurtant.menuTypes, id: \.self) { type in
                         MenuTypeView(menu: menu, menuType: type)
                     }
                 }
@@ -99,5 +100,5 @@ struct IndividualRestaurantView: View {
 
 #Preview {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
-    return IndividualRestaurantView(restaurant: restaurants[6])
+    return IndividualRestaurantView(restaurant: restaurants[0])
 }
