@@ -1,0 +1,42 @@
+name,itemType,gluten,sesame,soy,fish,shellfish,dairy,egg,treeNuts,peanuts,onion,mushroom,garlic,corn,mustard,vegetarian,vegan,desciption
+Fried Rice Cake,Appetizers,2,1,2,0,0,0,0,0,0,0,0,2,0,0,0,0,Deep-fried rice cake in special sauce.
+Korean Cheese Stick (3Pcs),Appetizers,2,1,0,0,0,2,2,0,0,0,0,2,0,0,0,2,Fried three rolls of mozzarella cheese and served with special sauce. One order comes with three pieces.
+Fried Dumpling,Appetizers,2,0,1,0,0,0,0,0,0,2,0,2,0,0,1,1,
+Chili Fried Tofu,Appetizers,2,1,0,0,0,0,0,0,0,1,0,2,0,0,0,0,Deep-fried tofu in sweet chili sauce.
+Beef,Kimbab,2,2,0,1,1,0,1,0,0,0,0,1,0,0,2,2,"Korean barbeque, marinated beef, and egg over rice."
+Vegetable,Kimbab,2,2,0,1,1,0,1,0,0,0,0,1,0,0,1,1,
+Kimchi,Kimbab,2,2,0,1,1,0,1,0,0,0,0,1,0,0,1,1,Kimchi stew with pork and tofu.
+Cheese,Kimbab,2,2,0,1,1,2,1,0,0,0,0,1,0,0,1,1,
+Tuna,Kimbab,0,2,0,2,1,2,1,0,0,0,0,1,0,0,2,2,
+Spicy Tuna,Kimbab,0,2,0,2,1,2,1,0,0,0,0,1,0,0,2,2,
+Bibimbap,Meals,2,1,2,0,0,0,1,0,0,0,1,2,0,0,1,1,"Beef, chicken, pork, tuna, or tofu with assorted vegetables, and egg over rice."
+Chicken Mayo,Meals,2,0,2,0,0,1,1,0,0,0,0,2,0,0,2,2,Fried boneless chicken and egg over rice with special soy sauce and mayo.
+Pork Bone Soup,Meals,2,0,0,0,0,0,0,0,0,1,0,2,0,0,2,2,
+Beef Bulgogi,Meals,2,2,2,0,0,0,1,0,0,2,2,0,0,0,2,2,"Korean barbeque, marinated beef, and egg over rice."
+Soon Tofu Soup,Meals,2,0,2,2,0,0,1,0,0,1,1,0,0,0,1,1,Soft tofu with pork or seafood.
+Soon Tofu Soup (Seafood),Meals,2,0,2,2,1,0,1,0,0,1,1,0,0,0,1,1,Soft tofu with pork or seafood.
+Denjang soup ,Meals,2,0,2,0,0,0,0,0,0,1,1,0,0,0,1,1,
+Denjang soup (Seafood),Meals,2,0,2,1,1,0,0,0,0,1,1,0,0,0,1,1,
+Donkatsu,Meals,2,1,2,0,0,2,2,0,0,0,0,1,0,0,2,2,deep fried pork cutlet served with special sauce and rice
+BBQ Pork Belly,Meals,1,1,1,0,0,0,0,0,0,1,0,1,0,0,2,2,Grilled pork belly with vegetables.
+Kimchi Soup,Meals,2,0,2,2,0,0,0,0,0,1,0,0,0,0,1,1,Kimchi stew with pork and tofu.
+Spicy Chicken Dupbab,Meals,2,2,2,0,0,0,1,0,0,1,1,0,0,0,1,1,
+Pork Bulgogi,Meals,2,2,2,0,0,0,1,0,0,2,2,0,0,0,2,2,"Spicy Korean barbeque, marinated pork, and egg over rice."
+Spicy Squid Dupbab,Meals,2,2,2,2,2,0,1,0,0,1,1,0,0,0,2,2,Spicy stir-fried squid with vegetables and egg over rice.
+Jjajang Myun,Meals,2,0,2,0,0,0,1,0,0,2,0,1,0,0,2,2,"Vegetables, pork, and stir-fried black bean sauce on noodles."
+Soon Tofu Jjamppong,Meals,2,0,2,1,1,0,0,0,0,1,1,0,0,0,2,2,
+Half and Half,Chicken,2,1,2,0,0,0,0,0,0,0,0,2,0,0,2,2,Mixed with korean fried chicken wing and korean sauce fried chicken wing
+Korean Fried Chicken Wing,Chicken,2,1,0,0,0,0,0,0,0,0,0,0,0,0,2,2,Korean-style deep-fried chicken. Great to be in the middle of the table for all to share.
+Korean Sauce Fried Chicken Wing,Chicken,2,1,2,0,0,0,0,0,0,0,0,0,0,0,2,2,Korean-style deep-fried chicken. Great to be in the middle of the table for all to share.
+Garlic Chicken,Chicken,2,1,2,0,0,0,0,0,0,0,0,0,0,0,2,2,Deep-fried chicken in special garlic sauce.
+"Sweet, Sour, and Spicy Chicken",Chicken,2,1,0,0,0,0,0,0,0,0,0,0,0,0,2,2,"Deep-fried boneless chicken in sweet, sour, and spicy sauce."
+Original Boneless Chicken,Chicken,2,1,0,0,0,0,0,0,0,0,0,0,0,0,2,2,
+Jalapeno Mayo Chicken,Chicken,2,1,2,0,0,2,0,0,0,0,0,0,0,0,2,2,
+Scallion Chicken,Chicken,2,2,2,0,0,0,0,0,0,1,0,0,0,2,2,2,Deep-fried boneless chicken and scallions with special mustard soy sauce.
+Creamy Onion Chicken,Chicken,2,1,0,0,0,2,0,0,0,1,0,0,0,0,2,2,Deep-fried boneless chicken with onion in a special creamy sauce.
+Kanpoong Chicken,Chicken,2,1,2,0,0,0,0,0,0,1,1,0,0,0,2,2,Deep-fried boneless chicken and vegetables with sweet pepper soy sauce.
+Soy Sauce Chicken,Chicken,2,2,2,0,0,0,0,0,0,0,0,0,0,0,2,2,Deep-fried boneless chicken in special soy sauce.
+Dukbokki,Dish,2,1,2,1,1,0,1,0,0,2,0,2,0,0,1,1,"Rice cakes with vegetables, dumplings ramyun, and sausage in spicy sauce. Great to be in the middle of the table for all to share."
+Budae Soup,Dish,2,2,2,1,1,1,0,0,0,1,0,2,0,0,2,2,Spicy mixed meat and vegetable stew. Great to be in the middle of the table for all to share.
+Rice,Extras,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+Korean Chicken Sauce,Extras,2,0,2,0,0,0,0,0,0,0,0,2,0,0,0,0,

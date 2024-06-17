@@ -1,0 +1,30 @@
+name,itemType,gluten,vegan,vegetarian,sesame,soy,fish,shellfish,dairy,egg,treeNuts,peanuts,mustard,sulfites,keto,lowFODMAP,dashDiet,lowCarb
+Tres Leches,Dessert,2,2,2,0,2,0,0,2,2,0,0,0,0,2,2,2,2
+Churros,Dessert,2,2,2,0,2,0,0,2,2,1,0,0,0,2,2,2,2
+Coconut Shrimp,Snacks,2,2,2,0,0,0,2,0,0,1,1,0,2,2,2,2,2
+Mezcal Adobo Mussels,Snacks,2,2,2,0,2,0,2,2,0,0,0,0,0,0,0,0,0
+Mushroom Flautas,Snacks,2,2,0,0,0,0,0,2,0,0,0,0,0,2,2,2,2
+Guajillo Ribs,Snacks,0,2,2,0,0,0,0,2,0,0,0,0,2,0,2,0,0
+Tableside Guacamole,For The Table,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Salsa de Molcajete,For The Table,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Queso Fundido,For The Table,1,2,0,0,2,0,0,2,0,0,0,0,1,2,2,2,2
+House Salsa Tasting,For The Table,0,0,0,0,0,0,0,2,0,0,0,0,2,2,2,0,2
+Ensalada de Sandia,Salad and Soup,0,2,0,0,0,0,0,2,0,2,1,0,0,2,0,0,0
+Tortilla Soup,Salad and Soup,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,0,2
+Pollo Milanesa,Mexican Dishes,2,2,2,0,0,0,0,2,2,0,0,2,2,2,2,2,2
+Carne Ahumada,Mexican Dishes,0,2,2,0,2,0,0,2,0,0,0,0,0,0,0,0,0
+Chili Relleno,Mexican Dishes,0,2,0,0,0,0,0,2,2,0,0,0,0,2,2,2,2
+Scallop Esquites,Mexican Dishes,0,2,2,0,2,0,2,2,2,0,0,2,0,0,0,0,0
+Camarones Rancheros,Mexican Dishes,0,2,2,0,2,0,2,2,0,0,0,0,2,0,0,0,0
+Molcajete de Carne,Mexican Dishes,1,2,2,0,0,0,0,2,0,0,0,0,1,0,0,0,0
+Beef Barbacoa,Classic Tacos,1,2,2,0,0,0,0,0,0,0,0,0,1,2,2,2,2
+Pork Carnitas,Classic Tacos,1,2,2,0,0,0,0,0,0,0,0,0,1,2,2,2,2
+Crispy Fish,Classic Tacos,2,2,2,0,0,2,0,0,0,0,0,0,1,2,2,2,2
+Chicken Tinga,Classic Tacos,1,2,2,0,0,0,0,0,0,0,0,0,1,2,2,2,2
+Chorizo,Classic Tacos,1,2,2,0,0,0,0,0,0,0,0,0,1,2,2,2,2
+Braised Mushrooms,Classic Tacos,1,0,0,0,2,0,0,0,0,2,1,0,1,2,2,2,2
+Tacos de Camaron,Premium Tacos,2,2,2,0,0,0,2,2,2,0,0,0,2,2,2,2,2
+Quesabirria,Premium Tacos,2,2,2,0,0,0,0,2,0,0,0,0,2,2,2,2,2
+Duck Carnitas,Premium Tacos,2,2,2,0,0,0,0,0,0,0,0,0,2,2,2,2,2
+Tacos Veganos,Premium Tacos,2,0,0,2,0,0,0,0,0,2,1,0,0,2,2,2,2
+Tacos de Pescado,Premium Tacos,0,2,2,0,0,2,0,2,2,0,0,2,2,2,2,2,2

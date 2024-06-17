@@ -1,0 +1,50 @@
+name,itemType,gluten,sesame,soy,fish,shellfish,dairy,egg,treeNuts,peanuts,onion,mushroom,garlic,corn,mustard,vegetarian
+Pork Original ,Ramens ,2,0,2,0,0,0,1,0,0,0,0,2,2,0,2
+Pork Shoyu ,Ramens ,2,2,2,2,2,2,1,2,2,0,0,0,0,0,2
+Pork Miso ,Ramens ,2,2,2,2,2,2,1,2,2,0,0,2,1,0,2
+Pork  Spicy Garlic,Ramens ,2,2,2,0,0,0,1,0,0,0,0,2,2,0,2
+Chicken Original ,Ramens ,2,0,2,0,0,0,1,0,0,1,0,2,2,0,2
+Chicken Shoyu,Ramens ,2,0,2,0,0,0,1,0,0,1,0,0,0,0,2
+Chicken Miso,Ramens ,2,2,2,0,0,0,1,0,0,1,0,2,0,0,2
+Chicken Spicy Jalapeno,Ramens ,2,0,2,0,0,0,1,0,0,1,0,0,0,0,2
+Vegetarian Original ,Ramens ,2,1,2,0,0,0,1,0,0,2,1,2,2,0,0
+Vegetarian Shoyu,Ramens ,2,1,2,2,2,2,1,2,2,2,1,2,1,0,0
+Vegetarian Miso,Ramens ,2,2,2,2,2,2,1,2,2,2,1,2,1,0,0
+Vegetarian Spicy ,Ramens ,2,2,2,0,0,0,1,0,0,2,1,2,2,0,0
+Beef Original ,Ramens ,2,0,2,0,0,0,2,0,0,0,0,2,2,0,2
+Besf Spicy Garlic,Ramens ,2,2,2,0,0,0,1,0,0,0,0,2,2,0,2
+Thick Noodles ,Noodles ,2,0,1,0,0,0,2,0,0,0,0,0,0,0,2
+Thin Noodles ,Noodles ,2,0,1,0,0,0,2,0,0,0,0,0,0,0,2
+Shirataki Noodles,Noodles ,1,0,1,0,0,0,1,0,0,0,0,0,0,0,2
+Pork ,Toppings ,2,0,2,0,0,0,0,0,0,0,0,0,0,0,2
+Chicken Breast ,Toppings ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+Beef Brisket ,Toppings ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+Seasonned Egg ,Toppings ,1,0,1,0,0,0,2,0,0,0,0,0,0,0,2
+Bamboo Shoots ,Toppings ,2,0,2,0,0,0,0,0,0,0,0,0,0,0,2
+Bean Sprouts ,Toppings ,1,0,0,0,0,0,1,0,0,0,0,0,0,0,2
+Fried Bean Curd ,Toppings ,2,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+Garlic Oil ,Toppings ,2,2,2,2,2,2,2,2,2,0,0,0,0,0,2
+Grated Garlic,Toppings ,0,0,0,0,0,0,0,0,0,0,0,2,0,0,2
+Nori ,Toppings ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+Seaweed,Toppings ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+Scallions ,Toppings ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+Sweet Corn ,Toppings ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+White Onions ,Toppings ,0,0,0,0,0,0,0,0,0,2,0,0,0,0,2
+Jalapeno Paste,Toppings ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+Wood Ear Mushroom ,Toppings ,0,2,2,0,0,0,0,0,0,0,2,0,0,0,2
+Chicken Donburi,Tapas,2,0,2,0,0,0,1,0,0,0,0,2,2,0,2
+Pork Donburi ,Tapas,2,0,2,0,0,0,1,0,0,0,0,0,0,0,2
+Beef Donburi ,Tapas,2,0,2,0,0,0,1,0,0,0,0,2,2,0,2
+Gohan ,Tapas,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Edamame ,Tapas,1,0,2,0,0,0,1,0,0,0,0,0,0,0,0
+Kimchi,Tapas,0,1,0,2,2,0,0,0,0,0,0,0,0,0,2
+Green Veg Gyoza ,Tapas Deep Fried,2,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+Pork Gyoza ,Tapas Deep Fried,2,0,2,2,0,2,2,0,0,0,0,0,0,0,2
+Hot Karaage ,Tapas Deep Fried,2,0,2,0,0,0,0,0,0,0,0,0,0,0,2
+Original Karaage,Tapas Deep Fried,2,0,2,0,0,0,1,0,0,0,0,0,0,0,2
+Takoyaki ,Tapas Deep Fried,2,0,2,2,0,0,2,0,0,0,0,0,0,0,2
+Matcha Ice Cream ,Desserts ,2,0,0,0,0,2,2,0,0,0,0,0,0,0,2
+Kurogoma Cheesecake ,Desserts ,2,2,2,0,0,2,2,2,0,0,0,0,0,0,2
+Matcha Cheesecake ,Desserts ,2,0,0,0,0,2,2,0,0,0,0,0,0,0,2
+Mango Cheesecake ,Desserts ,2,0,0,0,0,2,2,0,0,0,0,0,0,0,2
+Yuzu Cheesecake,Desserts ,2,0,2,0,0,2,2,0,0,0,0,0,0,0,2

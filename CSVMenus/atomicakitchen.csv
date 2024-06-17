@@ -1,0 +1,68 @@
+name,itemType,gluten,sesame,soy,fish,shellfish,dairy,treeNuts,peanuts,wheat,almonds,legumes,mustard,description,vegan
+Brooklyn,WEEKDAY LUNCH FEATURES,1,0,0,0,0,1,0,0,1,0,0,0,"Tomato, mozzarella, parmesan, double pepperoni, oregano",2
+Scrumptious,WEEKDAY LUNCH FEATURES,1,0,0,0,0,1,0,0,1,0,0,0,"Mozzarella, tomato, fennel sausage, mixed mushrooms, caramelized onions, roasted garlic, BBQ drizzle",2
+Fowl Play,WEEKDAY LUNCH FEATURES,1,0,0,0,0,1,0,0,1,0,0,0,"Alfredo, mozzarella, goat cheese, roasted chicken, roasted red peppers, sun-dried tomatoes, basil pesto drizzle",2
+Carne Finta,WEEKDAY LUNCH FEATURES,1,0,0,0,0,0,1,0,1,0,0,0,"Bomba tomato, fennel tofu 'sausage', roasted paprika chickpeas, red onion, chopped spinach, walnut 'parmesan', harissa-chive 'sour cream'",0
+Atomica,WEEKDAY LUNCH FEATURES,1,0,0,0,0,1,0,0,1,0,0,0,"Bomba tomato, mozzarella, spicy genoa salami, cremini mushrooms, pepperoncini",2
+Fettuccine,WEEKDAY LUNCH FEATURES,1,0,0,0,0,2,0,0,1,0,0,0,"White wine crema, braised chicken, smoked bacon, cremini mushrooms, arugula, parmesan",2
+Fruit of the Sea,WEEKDAY LUNCH FEATURES,1,0,0,1,1,2,0,0,1,0,0,0,"Bucatini alla carbonara, shrimp, scallops, green peas, bacon, parmesan, gremolata",2
+Butternut Squash Ravioli,WEEKDAY LUNCH FEATURES,2,0,0,0,0,2,0,0,2,1,0,0,"Sage, brown butter, romesco, whipped ricotta, toasted walnuts",2
+Fattoush,SOUP AND SALAD,1,0,0,0,0,0,0,0,1,0,0,0,"Heritage greens, cherry tomatoes, cucumber, red onion, shaved radish, za'atar-fried pita, lemon-garlic vinaigrette",0
+Kale Caesar,SOUP AND SALAD,1,0,0,0,0,2,0,0,1,0,0,0,"Smoked bacon, grilled lemon, herb croutons, roasted garlic dressing",2
+Son of a Beet,SOUP AND SALAD,0,0,0,0,0,1,1,0,0,0,0,0,"Beets, heritage greens, feta, roasted chickpeas, pistachios, green tahini dressing",2
+Cadere Bowl,SOUP AND SALAD,1,0,0,0,0,1,0,0,1,0,0,0,"Quinoa, hummus, heritage greens, roasted chickpeas, butternut squash, fried artichokes, brussels sprouts, pumpkin seeds, dried cranberries, chèvre, fig balsamic drizzle. Plant-based without chèvre.",2
+Chimichurri Chicken,ADD ONS,0,0,0,0,0,0,0,0,0,0,0,0,,2
+Piri Piri Shrimp,ADD ONS,0,0,0,2,2,0,0,0,0,0,0,0,,2
+Fried Tofu,ADD ONS,2,0,0,0,0,0,0,0,2,0,0,0,,2
+BBQ Pork,ADD ONS,0,0,0,0,0,0,0,0,0,0,0,0,,2
+Prosciutto,ADD ONS,0,0,0,0,0,0,0,0,0,0,0,0,,2
+Loaded Hummus,SMALL PLATES,1,2,0,0,0,0,0,0,1,0,0,0,"Lemon & roasted garlic hummus, crushed pistachios, gremolata, smoked paprika oil, cucumber, pita, kettle chips",0
+Harissa Cauliflower Popcorn,SMALL PLATES,0,1,0,0,0,1,0,0,0,0,0,0,"Shaved manchego, tahini-lime aioli, smoked paprika oil, cilantro",2
+Cheese Toast,SMALL PLATES,2,0,0,0,0,2,0,0,2,0,0,0,"Focaccia, whipped ricotta, prosciutto, sundried tomato pesto, pine nuts, micro greens, balsamic drizzle",2
+Piri Piri Shrimp,SMALL PLATES,1,0,0,2,2,0,0,0,1,0,0,0,"Garlic, jalapeños, scallions, piri piri sauce, toasted focaccia",2
+Arancini,SMALL PLATES,2,0,0,0,0,2,0,0,2,0,0,0,"Crispy risotto balls filled with mozzarella & parmesan, pomodoro, basil",2
+Piri Piri Bao,BAO DOWN,2,1,0,2,2,0,0,0,2,0,0,0,"Piri piri shrimp, pickled jalapeños, old bay remoulade, creamy slaw, sesame seeds",2
+Dirty Fried Chicken Bao,BAO DOWN,2,1,0,0,0,0,0,0,2,0,0,0,"Honey-harissa fried chicken thighs, smoked blue cheese ranch, pickled onions, romaine chiffonade, sesame seeds",2
+Tofu Bao,BAO DOWN,2,1,0,0,0,0,0,0,2,0,0,0,"Fried tofu, 'buttermilk' ranch, romaine chiffonade, zuni pickles, sesame seeds",0
+Zhu Bao,BAO DOWN,2,1,0,0,0,0,0,0,2,0,0,0,"Herb marinated pork, pomegranate BBQ sauce, creamy slaw, zuni pickles, sesame seeds",2
+Fettuccine,PASTA,1,0,0,0,0,2,0,0,1,0,0,0,"White wine crema, braised chicken, smoked bacon, cremini mushrooms, arugula, parmesan",2
+Fruit of the Sea,PASTA,1,0,0,1,1,2,0,0,1,0,0,0,"Bucatini alla carbonara, shrimp, scallops, green peas, bacon, parmesan, gremolata",2
+Chicken Parmesan,PASTA,2,0,0,0,0,2,0,0,2,0,0,0,"Rosemary & parmesan breaded chicken breast, pomodoro, fior di latte, basil, fettuccine, white wine crema",2
+Butternut Squash Ravioli,PASTA,2,0,0,0,0,21,1,0,2,1,0,0,"Sage, brown butter, romesco, whipped ricotta, toasted walnuts",2
+Margherita,PIZZA,1,0,0,0,0,1,0,0,1,0,0,0,"Tomato, fior di latte, basil, olive oil",2
+Brooklyn,PIZZA,1,0,0,0,0,1,0,0,1,0,0,0,"Tomato, mozzarella, parmesan, double pepperoni, oregano",2
+Canuck AF,PIZZA,1,0,0,0,0,1,0,0,1,0,0,0,"Tomato, cheese curd, pepperoni, smoked bacon, cremini mushrooms, Crown Royal-maple drizzle",2
+Fowl Play,PIZZA,1,0,0,0,0,1,0,0,1,0,0,0,"Alfredo, mozzarella, goat cheese, roasted chicken, roasted red peppers, sun-dried tomatoes, basil pesto drizzle",2
+Getting Figgi with it,PIZZA,1,0,0,0,0,2,1,0,0,1,0,0,"Fig jam mascarpone, brie, apple, prosciutto, shaved almonds, arugula, balsamic reduction",2
+Big Kahuna,PIZZA,1,0,0,0,0,1,0,0,1,0,0,0,"Tomato, mozzarella, swiss, country roasted ham, roasted pineapple, pickled jalapeños",2
+Funghi,PIZZA,1,1,0,0,0,1,1,0,1,0,0,0,"Basil pesto, mixed mushrooms, roasted garlic, arugula, whipped ricotta, white balsamic, truffle oil",2
+The Cure,PIZZA,1,0,1,0,0,1,0,0,1,0,0,0,"Tomato, mozzarella, sopressa salami, country roasted ham, Italian sausage, smoked bacon, parmesan",2
+Scrumptious,PIZZA,1,0,1,0,0,1,0,0,1,0,0,0,"Mozzarella, tomato, fennel sausage, mixed mushrooms, caramelized onions, roasted garlic, BBQ drizzle",2
+Motor City Style Pan Pizza,PIZZA,2,0,1,0,0,2,0,0,2,0,0,0,"Brick cheese, mozzarella, pizza sauce, pepperoni, sausage, parmesan",2
+Gluten-Free Crust,SUBSTITUTIONS,0,0,0,0,0,0,0,0,0,0,0,0,,2
+House Plant-Based Cashew 'Mozzarella',SUBSTITUTIONS,0,0,0,0,0,0,1,0,0,0,0,0,,0
+Smoked Blue Cheese Ranch,PIZZA DIPS,0,0,0,0,0,2,0,0,0,0,0,0,,2
+Pomodoro,PIZZA DIPS,0,0,0,0,0,0,0,0,0,0,0,0,,2
+Plant-Based Ranch,PIZZA DIPS,0,0,0,0,0,0,0,0,0,0,0,0,,0
+Piri Piri,PIZZA DIPS,0,0,0,0,0,0,0,0,0,0,0,0,,2
+Remoulade,PIZZA DIPS,0,0,0,0,0,0,0,0,0,0,0,0,,2
+Vegan Funghi,PLANT-BASED,1,0,1,0,0,0,1,0,1,0,0,0,,0
+You've Got to Be Squidding Me,PLANT-BASED,0,0,0,0,0,0,0,0,0,0,0,0,,0
+Atomica Club Panini,LUNCH ,2,0,0,0,0,1,0,0,2,0,0,0,"Chimichurri chicken breast, double smoked bacon, provolone, beefsteak tomato, arugula, chipotle aioli, on white or multigrain",2
+BBLT Panini,LUNCH ,2,0,0,0,0,1,0,0,2,0,0,0,"Brie, loads of double smoked bacon, beefsteak tomato, arugula, pickled onion, lemon-pepper aioli, on white or multigrain",2
+Chicken Parm,LUNCH ,2,0,0,0,0,2,0,0,2,0,0,0,"Breaded chicken cutlet, tomato sauce, fresh basil, fior di latte, basil pesto aioli, on focaccia",2
+Kitchen Sink,LUNCH ,2,1,0,0,0,1,0,0,2,0,0,0,"Chopped country roasted ham, genoa salami, pepperoni, cheddar cheese, romaine chiffonade, tomato, red onion, kalamata olives, pepperoncini, sub sauce, tahini aioli, on focaccia",2
+Mushroom 'Cheese Steak' Panini,LUNCH ,2,0,1,0,0,1,0,0,2,0,0,0,"Braised portobello mushrooms, provolone, green peppers, spinach, red onion, BBQ aioli, on white or multigrain. Plant-based option available.",0
+Atomica Club Panini,HALF SANDWICHES,2,0,0,0,0,1,0,0,2,0,0,0,"Chimichurri chicken breast, double smoked bacon, provolone, beefsteak tomato, arugula, chipotle aioli, on white or multigrain",2
+BBLT Panini,HALF SANDWICHES,2,0,0,0,0,1,0,0,2,0,0,0,"Brie, loads of double smoked bacon, beefsteak tomato, arugula, pickled onion, lemon-pepper aioli, on white or multigrain",2
+Mushroom 'Cheese Steak' Panini,HALF SANDWICHES,2,0,0,0,0,1,0,0,2,0,0,0,"Braised portobello mushrooms, provolone, green peppers, spinach, red onion, BBQ aioli, on white or multigrain. Plant-based option available.",0
+Nutella Tiramisu,DESSERT,2,0,0,0,0,2,0,0,2,0,0,0,,2
+Fruit Crumble,DESSERT,0,0,0,0,0,0,0,0,2,2,0,0,,2
+Rocky Road Cookie Dough Bar,DESSERT,0,0,0,0,0,0,0,0,2,2,0,0,,2
+Cheese Pizza,KIDS MENU,2,0,0,0,0,1,0,0,2,0,0,0,,2
+Pepperoni Pizza,KIDS MENU,2,0,0,0,0,1,0,0,2,0,0,0,,2
+Garlic Fingers,KIDS MENU,2,0,0,0,0,1,0,0,2,0,0,0,,2
+Marinara,KIDS MENU,1,0,0,0,0,0,0,0,2,0,0,0,,2
+Butter,KIDS MENU,1,0,0,0,0,2,0,0,2,0,0,0,,2
+Pesto,KIDS MENU,1,0,0,0,0,0,0,0,2,0,0,0,,2
+Alfredo,KIDS MENU,2,0,0,0,0,2,0,0,2,0,0,0,,2

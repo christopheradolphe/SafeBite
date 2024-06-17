@@ -1,0 +1,56 @@
+name,itemType,vegetarian,vegan,shellfish,dairy,eggs,fish,garlic,gluten,peanut,sesame,soy,treeNuts,onion
+House Salad,SALADS,2,0,0,0,0,0,2,0,0,0,0,0,0
+Caesar Salad,SALADS,2,2,0,2,2,0,2,1,0,1,1,2,0
+Steak and Avocado Salad,SALADS,2,2,0,1,0,0,2,0,0,0,0,0,2
+Beet Salad,SALADS,0,2,0,2,0,0,2,0,2,0,0,2,0
+Grizzly Salad,SALADS,0,2,0,2,0,0,0,0,0,0,0,2,2
+Blackened Potato Salad,SALADS,1,2,0,0,2,0,2,0,0,0,0,0,0
+BBQ Pork Rib Poutine,APPETIZERS,2,2,0,2,0,0,2,2,0,0,2,0,0
+Spinach Dip,APPETIZERS,0,2,0,2,0,0,2,1,0,0,0,0,2
+Garlic Shrimp,APPETIZERS,2,2,2,2,0,2,2,1,0,0,0,0,0
+Pecan Shrimp,APPETIZERS,2,2,2,0,2,2,0,2,2,0,0,2,0
+Pull Apart Garlic Bread,APPETIZERS,0,2,0,2,0,0,2,2,0,0,0,0,0
+Pull Apart Garlic Cauliflower,APPETIZERS,0,2,0,2,0,0,2,0,0,0,0,0,0
+Chicken Wings with Honey Sriracha Buffalo,APPETIZERS,2,2,0,2,0,0,2,0,0,0,0,0,0
+Chicken Wings,APPETIZERS,2,2,0,0,0,0,2,2,0,0,0,0,0
+P.E.I. Mussels,APPETIZERS,2,2,2,0,0,2,2,1,0,0,0,0,0
+Basket of Fries,APPETIZERS,2,2,0,0,2,0,2,0,0,0,0,0,0
+Sweet Potato Fries,APPETIZERS,0,2,0,0,2,0,2,2,0,0,2,0,0
+Shaved Prime Rib Poutine,APPETIZERS,2,2,0,0,0,0,2,2,0,0,2,0,2
+Dry Rib Sampler,APPETIZERS,2,2,0,2,0,0,2,2,0,0,0,0,0
+Feta Dip,APPETIZERS,0,2,0,2,2,0,2,1,0,0,0,0,0
+Crispy Calamari,APPETIZERS,2,2,2,0,2,2,2,2,0,0,0,0,0
+Muskoka,WOOD FIRED PIZZA,2,2,0,2,0,0,2,1,0,2,2,2,2
+Margherita,WOOD FIRED PIZZA,0,2,0,0,0,0,2,1,0,0,0,0,0
+Olive and Artichoke Heart,WOOD FIRED PIZZA,2,2,0,2,0,0,2,1,0,0,0,0,1
+Say Cheese,WOOD FIRED PIZZA,0,2,0,2,0,0,2,1,0,0,0,0,1
+Roasted Vegetable,WOOD FIRED PIZZA,0,2,0,2,0,0,2,1,0,0,0,0,1
+Philly Cheese Steak,WOOD FIRED PIZZA,2,2,0,2,0,0,2,1,0,0,0,0,1
+Prosciutto and Pear,WOOD FIRED PIZZA,2,2,0,2,0,0,2,1,0,0,0,0,1
+Chicken Pesto,WOOD FIRED PIZZA,2,2,0,2,0,0,2,1,2,0,0,2,1
+Mushroom and Brie,WOOD FIRED PIZZA,2,2,0,2,0,0,2,1,0,0,0,0,1
+Barbecue Chicken and Pineapple,WOOD FIRED PIZZA,2,2,0,2,0,0,2,2,0,0,0,0,1
+Meat Chili Heat,WOOD FIRED PIZZA,2,2,0,2,0,0,2,1,0,0,0,0,1
+Caprese,SANDWICHES,0,2,0,2,2,0,2,2,0,0,0,0,0
+Shaved Prime Rib,SANDWICHES,2,2,0,0,0,0,2,2,0,0,0,0,0
+Chicken Bacon Club,SANDWICHES,2,2,0,0,2,0,2,2,0,0,0,0,1
+Grizzly Burger,SANDWICHES,2,2,0,2,2,0,2,2,0,0,0,0,1
+BBQ Ranch Burger,SANDWICHES,2,2,0,2,0,0,2,2,0,0,0,0,1
+Steak and Goat Cheese,SANDWICHES,2,2,0,2,0,0,2,2,0,0,0,0,0
+Chicken Parmesan,PASTAS,2,2,0,2,0,0,2,1,0,0,0,0,1
+Vegetable Gnocchi,PASTAS,0,2,0,2,0,0,2,1,0,0,0,0,1
+Beef Stroganoff,PASTAS,2,2,2,2,0,0,2,1,0,0,0,0,1
+Rigatoni Bolognese,PASTAS,2,2,0,2,0,0,0,1,0,0,0,0,1
+Canadian,PASTAS,2,2,0,2,0,0,2,1,0,0,0,0,1
+Brandy & Blue Cheese Gnocchi,PASTAS,2,2,0,2,0,0,2,1,0,0,0,0,1
+Shrimp and Chorizo,PASTAS,2,2,0,2,0,0,2,1,0,0,0,0,1
+Butternut Squash Ravioli,PASTAS,0,2,0,2,2,0,2,1,0,0,0,0,1
+AAA Slow Roasted Prime Rib (La Carte),CLASSICS,2,2,0,0,0,0,2,0,0,0,0,0,0
+Striploin,CLASSICS,2,2,0,2,0,0,0,2,0,0,0,0,1
+Atlantic Salmon,CLASSICS,2,2,0,2,0,2,0,1,2,0,0,2,0
+Surf and Turf,CLASSICS,2,2,2,0,2,2,0,1,2,0,0,2,1
+Sticky Chicken,CLASSICS,2,2,0,0,1,0,2,1,0,0,0,0,0
+Steak Frites,CLASSICS,2,2,0,0,0,0,2,0,0,0,0,0,0
+Stuffed Chicken,CLASSICS,2,2,0,2,0,0,2,0,2,0,0,2,0
+Ribs and Wings,CLASSICS,2,2,0,2,1,0,2,1,0,0,0,0,0
+Charcuterie,LARGE SHARING BOARDS,2,2,0,2,0,0,0,1,0,0,0,0,2

@@ -1,0 +1,106 @@
+name,itemType,gluten,vegan,vegetarian,sesame,soy,fish,shellfish,dairy,egg,treeNuts,peanuts,wheat,garlic,mustard,halal,description,keto,lowFODMAP,dashDiet,lowCarb
+The Classic,Breakfast Combos,2,0,0,1,0,0,0,2,2,0,0,0,0,2,2,"2 eggs any style, bacon or sausage and your choice of 2; homefries, baked beans, toast or baby cakes",2,2,2,2
+Huevos Rancheros,Breakfast Combos,2,0,0,1,0,0,0,2,2,0,0,0,0,2,0,"2 Sunny Side eggs, avocado, tomatoes, cucumbers, jalapeños and feta served on crispy corn tortillas with salsa and sour cream",2,2,2,2
+Meatlovers,Breakfast Combos,2,2,2,1,2,0,0,1,1,0,0,1,1,0,2,"2 eggs any style, bacon, sauce and ham and your choice of 2; homefries, baked beans, toast or baby cakes.",2,2,2,2
+The Deluxe,Breakfast Combos,2,1,1,1,2,0,0,1,2,0,0,1,1,0,2,"2 eggs any style, choice of bacon or sausage. Served with homefries, baked beans, baby cakes and toast",2,2,2,2
+Steak and Eggs,Breakfast Combos,2,2,2,1,2,0,0,1,1,0,0,1,1,0,2,"6oz Sirloin steak cooked the way you like it, 2 eggs any style and your choice of 2; homefries, baked beans, toast or baby cakes",2,2,2,2
+Breakfast Quesadilla,Breakfast Combos,2,1,1,1,2,0,0,1,2,0,0,2,1,0,2,"Scrambled eggs, bacon, sausage, cheese, onions, peppers and choice of baked beans, homefries or baby cakes",2,2,2,2
+Funky G’s Tacos,Breakfast Combos,2,1,1,1,2,0,0,1,1,0,0,2,1,0,2,"Softshell tacos loaded with scrambled egg, sausage, tomato, green onion, blended cheese and chipotle mayo",2,2,2,2
+Flapjack Wraps,Breakfast Combos,2,2,2,1,2,0,0,2,2,0,0,2,1,0,2,An order of our tasty breakfast sausages wrapped in thin pancakes. Served with a side of pancake syrup for dippin’ and two eggs any style,2,2,2,2
+Keto Combo,Breakfast Combos,2,1,1,1,2,0,0,1,2,0,0,1,1,0,2,"2 eggs any style, bacon, fresh sliced avocado and mixed green salad.",0,0,2,0
+Billion's Benny,The Benny's,2,2,2,2,2,0,0,2,2,0,0,2,0,0,2,"6oz AAA Flat Iron steak laid across a toasted english muffin topped with 2 poached eggs, sautéed mushrooms, smothered with hollandaise sauce and topped with onion frizzle",2,2,2,2
+Smoked Salmon,The Benny's,2,2,2,2,2,2,0,2,2,0,0,2,0,0,2,"Built on a toasted english muffin with 2 poached eggs, rich hollandaise sauce and cold smoked Canadian salmon.",2,0,2,0
+Lovesick Benny,The Benny's,2,2,2,2,2,0,0,2,2,0,0,2,0,0,2,"Classic eggs Benny with ham, poached eggs and hollandaise, built with fresh baby spinach and topped with feta",2,2,2,2
+Mikey B's Eggs Benny,The Benny's,2,2,1,2,2,0,0,2,2,0,0,2,0,0,2,"English muffin toasted and topped with black forest ham, poached eggs and hol- landaise. Served with your choice of homefries, baked beans or baby cakes",2,2,2,2
+Smokkin Lizzy,The Benny's,2,2,2,2,2,0,0,2,2,0,0,2,0,0,2,,2,2,2,2
+Jack Rabbit Slims,The Benny's,2,2,0,2,2,0,0,2,2,0,0,2,0,0,0,"Fresh baby spinach, feta, tomato and avocado",2,2,2,2
+Pancakes,Smothered in Syrup,2,2,1,0,0,0,0,2,2,0,0,2,0,0,1,It’s all in the name!,2,2,2,2
+Canadian Cakes,Smothered in Syrup,2,2,1,0,0,0,0,2,2,0,0,2,0,0,1,Half stack of our famous buttermilk pancakes with 3 strips of bacon and a 45g box of smarties cooked right in them. Served with your choice of sausage or bacon.,2,2,2,2
+Cream Cheese Pancake Club,Smothered in Syrup,2,2,1,0,0,0,0,2,2,0,0,2,0,0,1,3 buttermilk pancakes stacked and layered with our banana cream cheese and fresh sliced berries. Topped with whipped cream and fresh strawberry and blueberry coulis,2,2,2,2
+SiniBaileys French Toast,Smothered in Syrup,2,2,1,0,0,0,0,2,2,0,0,2,0,0,1,,2,2,2,2
+King Louis,Smothered in Syrup,2,2,1,0,0,0,0,2,2,0,0,2,0,0,1,,2,2,2,2
+Ultimate French Toast,Smothered in Syrup,2,2,1,0,0,0,0,2,2,0,0,2,0,0,1,It’s all in the name!,2,2,2,2
+Belgian Waffles,Smothered in Syrup,2,2,1,0,2,0,0,2,2,0,0,2,0,0,1,It’s all in the name!,2,2,2,2
+The Captains Panwich,Breakfast Sandwiches,2,2,1,0,0,0,0,2,2,0,0,0,0,0,2,"Sausage, bacon, ham, fried egg and aged Canadian cheddar stacked between 2 bread sized pancakes.",2,2,2,2
+Grilled Cheese w/ Bacon,Breakfast Sandwiches,2,2,1,1,0,0,0,2,0,0,0,0,0,0,2,"4 types of cheese, with 3 strips of bacon grilled golden and delicious!",2,2,2,2
+The Beattie Burrito,Breakfast Sandwiches,2,2,1,0,0,0,0,2,2,0,0,0,0,0,2,"Scrambled eggs, bacon, sausage, green peppers, onion, blended cheese and baked beans in a flour tortilla.",2,2,2,2
+Avacodo Toast,Breakfast Sandwiches,2,2,0,1,0,0,0,2,0,0,0,0,0,0,0,It’s all in the name!,2,2,2,2
+Fried Egg Peameal BLT,Breakfast Sandwiches,2,2,1,0,0,0,0,2,2,0,0,0,0,0,2,"Peameal bacon, aged Canadian cheddar, fried egg, lettuce, tomato and mayo on a soft brioche bun.",2,2,2,2
+Lox’n' Bagel,Breakfast Sandwiches,2,2,2,2,0,2,0,2,0,0,0,0,0,0,0,"Toasted everything bagel, cream cheese, Canadian cold smoked salmon and capers.",2,2,2,2
+Brunch Burger,Breakfast Sandwiches,2,2,2,0,0,0,0,2,2,0,0,1,0,2,2,1/2 pound homemade burger topped with a poached egg and hollandaise,2,2,2,2
+Western,Omlettes,1,2,1,1,0,0,0,2,2,0,0,1,0,0,2,"Ham, onions, & green peppers.",2,2,2,2
+Meatlovers,Omlettes,1,2,2,1,0,0,0,2,2,0,0,1,0,0,2,"2 eggs any style, bacon, sauce and ham and your choice of 2; homefries, baked beans, toast or baby cakes.",2,2,2,2
+Spinach and Feta,Omlettes,1,2,0,1,0,0,0,2,2,0,0,1,0,0,0,It’s all in the name!,2,2,2,2
+"Green, Eggs ‘n’ Ham",Omlettes,1,2,1,1,0,0,0,2,2,0,0,1,0,0,2,,2,2,2,2
+Mushroom Swiss,Omlettes,1,2,0,1,0,0,0,2,2,0,0,1,0,0,0,It’s all in the name!,2,2,2,2
+Chicken Pesto,Omlettes,1,2,1,1,0,0,0,2,2,2,2,2,0,0,2,With feta.,2,2,2,2
+Jack Rabbit Slims,Omlettes,1,2,0,1,0,0,0,2,2,0,0,1,0,0,0,"Fresh baby spinach, feta, tomato and avocado",2,2,2,2
+Guinness Pulled Pork,Omlettes,1,2,2,1,0,0,0,2,2,0,0,1,0,0,2,"Fresh baby spinach, feta, tomato and avocado",2,2,2,2
+Beer Battered Fries,Munchies & Apps,2,2,0,0,2,0,0,0,0,0,0,2,0,0,0,,2,2,2,2
+Sweet Potato Fries,Munchies & Apps,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,,2,2,2,2
+Mozza Sticks,Munchies & Apps,2,2,0,0,2,0,0,2,0,0,0,2,0,0,0,,2,2,2,2
+Fuzzy Pickles,Munchies & Apps,2,2,0,0,0,0,0,0,0,0,0,2,0,0,0,,2,2,2,2
+Basket of Onion Rings,Munchies & Apps,2,2,0,0,0,0,0,2,0,0,0,2,0,0,0,,2,2,2,2
+Perogies,Munchies & Apps,2,2,1,0,2,0,0,2,0,0,0,2,0,0,1,,2,2,2,2
+Cheesy G-Bread,Munchies & Apps,2,2,2,2,2,0,0,2,0,0,0,2,0,0,0,"Garlic butter brushed grilled ciabatta topped with blended cheeses, bacon, tomatoes and green onion",2,2,2,2
+Gangsta Fries,Munchies & Apps,2,2,1,0,2,0,0,2,0,0,0,2,0,0,1,"Beer battered fries, Guinness braised pulled pork, bacon, shredded cheese, smokey BBQ sauce and gangsta sauce (garlic aioli)",2,2,2,2
+Stoner Fries,Munchies & Apps,2,2,1,0,2,0,0,2,0,0,0,2,0,0,1,"Beer battered fries topped with blended cheeses, bacon, jalapeños, green onion and 1000 islands dressing",2,2,2,2
+Jonny and Jack’s Chili Cheese Fries,Munchies & Apps,2,2,2,0,2,0,0,1,0,0,0,2,2,0,2,,2,2,2,2
+Nachos,Munchies & Apps,0,2,1,0,0,0,0,2,0,0,0,0,0,0,1,"Heaping stack of tortilla chips baked with blended cheeses, tomatoes, green onions, olives and jalapeños. Served with sour cream and salsa.",2,2,2,2
+Fried Flower Power,Munchies & Apps,2,2,0,0,0,0,0,0,0,0,0,2,0,0,0,Cauliflower florets battered and fried golden brown served with your choice of chipotle mayo or garlic aiol,2,2,2,2
+Wings,Munchies & Apps,2,2,2,1,2,0,0,2,2,0,0,2,2,0,2,"Kingston’s best dusted wings, tossed in your choice of sauce: mild, medium, dry lemon pepper, honey garlic, honey-hot, BBQ, dry Cajun, Dirty Bama, and Frank’s Red Hot, or Extra Hot.",2,2,2,2
+Spinach and Artichoke Dip,Munchies & Apps,2,2,0,1,1,0,0,2,1,0,0,1,2,0,0,"Our own recipe made with fresh spinach and artichoke hearts, served with house made tortilla chips and fried naan bread",2,2,2,2
+Lapp-Dawgs,Munchies & Apps,2,2,2,0,2,0,2,0,2,0,2,2,0,2,2,,2,2,2,2
+Jumbo Pretzels,Munchies & Apps,2,0,0,0,0,0,0,0,0,0,0,2,0,0,0,"2 soft jumbo pretzels, baked golden brown. Your choice of garlic parmesan, with garlic aioli to dip or classic sea salt & grainy mustard",2,2,2,2
+Garden Salad,Fresh Salads,0,1,0,0,1,0,0,1,1,0,0,0,0,1,0,,2,2,0,0
+Caesar Salad,Fresh Salads,0,1,1,0,1,2,2,2,2,0,0,0,2,2,2,,2,2,0,0
+Cobb Salad,Fresh Salads,0,1,1,0,1,0,0,1,1,0,0,0,0,1,2,"Crisp romaine, hard boiled egg, avocado, bacon, tomatoes, blended cheeses and crispy chicken with ranch dressing",2,2,0,0
+Classic Poutine,Tommy's Poutines,2,2,0,2,2,0,0,2,0,0,0,2,2,0,0,"Beer battered fries, Canadian curds and gravy .",2,2,2,2
+Zoot’s Pulled Pork,Tommy's Poutines,2,2,2,2,2,0,0,2,0,0,0,2,2,0,2,"Beer battered fries, and slow cooked pork roast braised in Guinness, topped with sautéed onions, curds and gravy",2,2,2,2
+Onion Ring Poutine,Tommy's Poutines,2,2,0,2,2,0,0,2,0,0,0,2,2,0,0,,2,2,2,2
+Railway Sweet Potato,Tommy's Poutines,2,2,0,2,2,0,0,2,0,0,0,2,2,0,0,,2,2,2,2
+True Hart Perogie,Tommy's Poutines,2,2,1,2,2,0,0,2,0,0,0,2,2,0,2,"Potato and cheddar perogies pan tossed with garlic, bacon and onions, topped with cheese curds and gravy",2,2,2,2
+The Smoked Hight,Tommy's Poutines,2,2,1,2,2,0,0,2,0,0,0,2,2,0,2,,2,2,2,2
+Doc Johnson’s Buffalo Chicken,Tommy's Poutines,2,2,1,2,2,0,0,2,0,0,0,2,2,0,2,"Beer battered fries, Quebec cheese curds, crispy chicken tossed in Frank's Red Hot, and gravy drizzled with ranch dressing",2,2,2,2
+The Terminator,Tommy's Poutines,2,2,1,2,2,0,0,2,0,0,0,2,2,0,2,"Beer battered fries, Quebec cheese curds, mozza sticks, bacon, chicken fingers and gravy",2,2,2,2
+The Ninja,Tommy's Poutines,2,2,1,2,2,0,0,2,0,0,0,2,2,0,0,"The ultimate poutine experience! Full basket of Sweet Potato fries, half basket of onion rings, five mozza sticks stretched across the top. Layered with feta cheese, 3 cheese blend and curds, smothered in mayo and gravy",2,2,2,2
+Fish and Chips,Entrees,2,2,2,0,2,2,0,2,2,0,0,2,2,0,0,Definitely unlike any fish and chips you’ve ever had. Say hello to your new favourite! Beer battered Haddock rolled in smashed black pepper and lime chips.,2,2,2,2
+Chicken Fingers,Entrees,2,2,2,0,2,0,0,2,2,0,0,2,0,0,2,,2,2,2,2
+Chicken and Waffles,Entrees,2,2,2,0,0,0,0,2,2,0,0,2,0,0,2,,2,2,2,2
+Jonny and Jack’s Tennessee style chili,Entrees,1,2,2,0,0,0,0,2,2,0,0,0,2,2,2,,2,2,2,2
+Cranky Chicken Quesadilla,Entrees,2,2,1,0,0,0,0,2,0,0,0,2,0,0,2,,2,2,2,2
+Vegetarian Quesadilla,Entrees,2,2,0,0,0,0,0,2,0,0,0,2,0,0,0,"Monterey Jack, cheddar, mozzarella, red onions, tomatoes, green peppers, black olives, jalapeños, broccoli and spinach. Served with salsa and sour cream,",2,2,2,2
+Gangsta Quesadilla,Entrees,2,2,1,0,2,0,0,2,0,0,0,2,2,0,2,"Guinness Braised Pulled Pork, Crispy Dusted Jalapenos, Blended Cheeses, Diced Hot House Tomatoes and Gangsta sauce! Served with your choice of side",2,2,2,2
+Pretty Fellows Pulled Pork Tacos,Entrees,2,2,2,0,0,0,0,2,2,0,0,2,2,2,2,"3 soft shell tacos loaded with Guinness braised pulled pork, crispy deep-fried pickles, onion frizzle and garlic aioli. Served with beer battered fries or chef salad",2,2,2,2
+Caulifornia Tacos,Entrees,2,1,0,0,0,0,0,2,2,0,0,2,2,2,0,"Crispy fried cauliflower, avocado, romaine and diced tomato drizzled with Dirty Bama. Served with your choice of Chefs Salad or Beer battered fries",2,2,2,2
+Chicken Caesar Wrap,Sandwiches & Wraps,2,2,2,0,0,0,0,2,2,0,0,2,2,2,2,It’s a chicken caesar salad all rolled up. Made with choice of grilled chicken or crispy strips,2,2,2,2
+Melted Mozza BLT Wrap,Sandwiches & Wraps,2,2,1,0,0,0,0,2,2,0,0,2,2,2,2,"Bacon, lettuce,and tomato with mango chipotle mayo, gooey mozza sticks and just a drizzle of our house made marinara. All wrapped in a flour tortilla",2,2,2,2
+Jonesy’s Pulled Pork Sandwich,Sandwiches & Wraps,2,2,2,0,0,0,0,0,0,0,0,2,2,2,2,Slow cooked pork roast braised in Guinness and topped with sautéed onions,2,2,2,2
+The Smoke’N’Barrel Brisket Dip,Sandwiches & Wraps,2,2,2,2,2,0,0,2,0,0,0,2,2,2,2,"1/4 lb of certified AAA angus slow smoked in a Texas rub over Red Oak, creamy jalapeno havarti and dusted onions on a grilled, garlic butter brushed ciabatta bun served with fries and smoked au jus",2,2,2,2
+New York Steak Sandwich,Sandwiches & Wraps,2,2,2,2,2,0,0,0,0,0,0,2,2,2,2,6oz New York Steak cooked to your liking. Served open face on garlic brushed ciabatta and topped with sautéed onions,2,2,2,2
+Buffalo Chicken Wrap,Sandwiches & Wraps,2,2,2,0,0,0,0,2,2,0,0,2,2,2,2,,2,2,2,2
+The Glorious Grilled Chicken Club,Sandwiches & Wraps,2,2,2,2,2,0,0,2,2,0,0,2,2,2,2,"Seasoned grilled chicken breast, bacon, herbed havarti cheese, lettuce, tomato and chipotle mayo on a soft, grilled ciabatta bun",2,2,2,2
+The Drunken Trigger,Sandwiches & Wraps,2,2,2,0,0,0,0,2,2,0,0,2,2,2,2,"It’s the ultimate BLT! 6 strips of bacon, grilled chicken breast, fried egg, cheddar cheese, lettuce and tomato",2,2,2,2
+The Million Dollar Sandwich,Sandwiches & Wraps,2,2,2,0,0,0,0,2,2,0,0,2,2,2,2,,2,2,2,2
+The Colvini Stack,Sandwiches & Wraps,2,2,2,0,0,0,0,2,2,0,0,2,2,2,2,"Crispy chicken fingers tossed in Frank’s, smokey BBQ pulled pork, sliced pickles, all built on a garlic butter brushed burger bun with cream cheese. Sounds ridiculous but is amazing!",2,2,2,2
+The Aydonator,Sandwiches & Wraps,2,2,2,0,0,2,2,0,2,0,0,2,2,2,0,"Our famous beer battered, kettle chip tossed haddock with fresh lettuce, tomato and chipotle mayo on a garlic butter brushed grilled brioche style bun",2,2,2,2
+The Alabama Kid,Sandwiches & Wraps,2,2,2,0,0,0,0,2,2,0,0,2,2,2,2,"Crispy fried chicken tossed in dity bama, lettuce, tomato, herbed havarti and gangstasauce on a garlic butter brushed brioche style bun",2,2,2,2
+Deep Fried Cheesecake,Desserts,2,2,0,0,0,0,0,2,2,0,0,2,0,0,0,"Tortilla wrapped New York style Cheese Cake, fried golden brown, topped with fresh strawberry coolis and caramel",2,2,2,2
+Pudgy Sundaes,Desserts,2,2,0,0,0,0,0,2,2,0,0,2,0,0,0,,2,2,2,2
+Pudgy Boy Mini Donuts (12),Desserts,2,2,0,0,0,0,0,2,2,0,0,2,0,0,0,,2,2,2,2
+Belgian Waffles,Desserts,2,2,0,0,2,0,0,2,2,0,0,2,0,0,0,,2,2,2,2
+Classic Burger,Tommy's Burgers,2,2,1,0,2,0,0,0,2,0,0,2,2,2,2,"Lettuce, tomato, onions and pickles",2,2,2,2
+The Stinky Burger,Tommy's Burgers,2,2,1,0,2,0,0,2,2,0,0,2,2,2,2,"Garlic, sautéed onions and blue cheese",2,2,2,2
+Swiss Mushroom Melt,Tommy's Burgers,2,2,1,0,2,0,0,2,2,0,0,2,2,2,2,It’s all in the name!,2,2,2,2
+The Ranch,Tommy's Burgers,2,2,1,0,2,0,0,2,2,0,0,2,2,2,2,"BBQ pulled pork,old cheddar and crispy beefeater onion rings",2,2,2,2
+The Big Tom,Tommy's Burgers,2,2,1,0,2,0,0,2,2,0,0,2,2,2,2,"Shredded lettuce, Canadian cheddar, pickles, onion and secret sauce (1000 Island Dressing)",2,2,2,2
+Smokey Bacon,Tommy's Burgers,2,2,1,0,2,0,0,0,2,0,0,2,2,2,2,Smothered in Smokey BBQ sauce and five strips of bacon,2,2,2,2
+NYPD Blue,Tommy's Burgers,2,2,1,0,2,0,0,2,2,0,0,2,2,2,2,"Blue cheese, pulled pork, bacon and black forest ham",2,2,2,2
+The Fiesta,Tommy's Burgers,2,2,1,0,2,0,0,2,2,0,0,2,2,2,2,"Grated cheese, onions, tomatoes, olives, jalapeños, salsa, sour cream and tortilla chips .",2,2,2,2
+The Caesar,Tommy's Burgers,2,2,1,0,2,0,0,2,2,0,0,2,2,2,2,,2,2,2,2
+The Angry Pickle,Tommy's Burgers,2,2,1,0,2,0,0,2,2,0,0,2,2,2,2,"Crispy fuzzy pickles, seared jalapenos and chipotle mayo",2,2,2,2
+Carlos in the Kitchen,Tommy's Burgers,2,2,1,0,2,0,0,2,2,0,0,2,2,2,2,"It’s a burger in a Quesadilla! Blended cheeses, tortilla chips, jalapenos, lettuce, tomato, onion, pickles and sour cream wrapped and grilled in flour tortilla",2,2,2,2
+Hot Hamburger Melt,Tommy's Burgers,2,2,1,0,2,0,0,2,2,0,0,2,2,2,2,"Sauteed mushrooms, onions and swiss cheese smothered in gravy. Served open face on texas toast",2,2,2,2
+Gangsta Grilled Cheese Burger,Tommy's Burgers,2,2,1,0,2,0,0,2,2,0,0,2,2,2,2,,2,2,2,2
+Tommy's Uppercut,Tommy's Burgers,2,2,1,0,2,0,0,2,2,0,0,2,2,2,2,,2,2,2,2
+Tommy’s massive 3lb Burger,TOMMY'S ULTIMATE BURGER CHALLENGE,2,2,2,0,2,0,0,2,2,0,0,2,2,2,2,,2,2,2,2

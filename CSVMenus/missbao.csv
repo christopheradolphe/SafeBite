@@ -1,0 +1,17 @@
+id,name,itemType,description,gluten,sesame,soy,fish,shellfish,dairy,egg,treeNuts,peanuts,wheat,almonds,legumes,mustard,vegetarian,vegan
+1,Crispy Shiitake Wontons,SMALL PLATES,"Deep fried plant-based wontons filled with tofu, shiitake mushroom and seasonal vegetables. Served with sweet and sour sauce.",2,2,2,0,2,0,2,0,0,2,0,2,0,2,0
+2,Nộm (Vietnamese Root Salad),SMALL PLATES,"Vietnamese inspired fine-julienne seasonal root mix topped with pickled vegetable, fresh mint dressing and seasoned rice paper crisp.",0,0,0,0,0,0,0,1,0,0,1,0,0,2,0
+3,Karaage (Japanese Fried Chicken),SMALL PLATES,"Shoyu marinated, topped with teriyaki sauce, lemon aioli, nori and bonito flakes.",2,2,2,1,2,0,2,0,0,2,0,2,0,2,2
+4,Mushroom Lentil Pâté,SMALL PLATES,"Packed in umami flavour, this herb infused plant-based pâté is served with house-made maple whole grain mustard, pickled onion and garlic crostini. GF-option served with fried rice paper.",1,0,0,0,0,0,0,0,0,1,0,0,1,2,0
+5,Deep Fried Wontons,SMALL PLATES,House-made pork and shrimp wontons. Served with sweet and sour sauce.,2,0,2,2,2,0,2,0,0,2,0,2,0,2,2
+6,Thai Milk Tea Tiramisu,DESSERT,"Creamy, rich, and bursting with a milk tea flavor. This modern Thai twist on the classic Italian dessert layered with sponge cake, light and airy mascarpone cream and a silky Thai tea crème anglaise.",2,0,0,0,0,2,2,0,0,2,0,0,0,0,2
+7,Taiwanese Braised Pork Belly Bāo,BĀO,2 Piece,2,0,2,0,0,0,0,1,0,2,1,2,0,2,2
+8,Satay Chicken Bāo,BĀO,2 Piece,2,2,2,2,2,0,0,1,0,2,1,2,0,2,2
+9,Hot Lemon Pepper Tofu Bāo,BĀO,2 Piece,2,0,2,0,2,0,2,1,0,2,1,2,0,2,0
+10,Sweet Chili Shoyu Mushroom Bāo,BĀO,2 Piece,2,2,2,0,0,0,0,1,0,2,1,2,0,2,0
+11,Bāo Sampler,BĀO,2 Piece,2,2,2,2,2,0,2,1,0,2,1,2,0,2,2
+12,Spicy Korean BBQ Pork,LARGE PLATES,"Thin sliced spicy pork belly served with Korean BBQ sauce, house-made kimchi, sesame oil, lettuce, seasonal vegetables and rice.",2,2,2,0,0,0,0,0,0,2,0,2,0,2,2
+13,Tan Tan Noodle,LARGE PLATES,"Originated from the Sichuan region of China which combines spicy minced pork, slow-cooked chicken broth, pickled mustard greens and chili oil. Topped with crispy egg noodles.",2,2,2,0,2,0,2,0,0,2,0,2,0,2,2
+14,Ochazuke,LARGE PLATES,"A seasonal twist on an iconic Japanese comfort food. Made with spiced winter squash purée, confit butternut squash and rice. Poured with a savoury green tea dashi broth.",0,1,0,0,0,0,0,0,0,0,0,0,0,2,0
+15,Thai Red Curry,LARGE PLATES,"House-made spicy Thai red curry paste, coconut milk, seasonal vegetables, lemongrass and fresh herbs, served with rice.",0,1,0,0,0,0,0,0,0,0,0,1,0,2,0
+16,Add Satay Chicken,LARGE PLATES,,0,2,2,2,2,0,0,0,0,0,0,2,0,2,2

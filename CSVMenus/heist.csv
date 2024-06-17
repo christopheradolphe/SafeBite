@@ -1,0 +1,54 @@
+name,itemType,gluten,vegan,vegetarian,dairy,egg,shellfish,fish,sesame,nuts,seeds,mustard,oliveOil,garlic,onion,description
+Steamed Mussels,THE MEET-UP,1,2,2,1,0,2,2,0,0,0,1,1,1,1,"white wine cream broth, leeks, garlic, fine herbs, grilled focaccia"
+Oysters,THE MEET-UP,0,2,2,0,0,2,2,0,0,0,0,0,0,1,"a selection of east coast oysters served on crushed ice with red wine mignonette, lemon, lime + shaved horseradish GF"
+Arancini,THE MEET-UP,2,2,0,2,2,0,0,0,0,0,0,1,1,2,"crispy fried saffron rice, buffalo mozzarella, tomato sugo, basil V"
+Heist Fries,THE MEET-UP,2,1,0,1,0,0,0,0,0,0,0,0,0,0,"seasoning blend, grana padano V"
+Calamari Fritti,THE MEET-UP,2,2,2,1,1,0,2,0,0,0,1,0,1,0,"breaded calamari, zucchini, fermented chili aioli
+"
+Burrata,THE MEET-UP,1,2,0,2,0,0,0,0,0,1,1,1,0,0,"fresh burrata, fruit mostarda, toasted sourdough, olive oil V"
+Shrimp Cocktail,THE MEET-UP,0,2,2,0,0,2,2,0,0,0,0,1,1,1,"poached jumbo shrimp, lemon, classic seafood sauce, gildas GF"
+Polenta Fries,THE MEET-UP,2,2,0,2,0,0,0,0,0,0,1,0,1,0,
+Caesar Salad,THE PLAN,2,2,2,2,2,0,2,0,0,0,2,0,2,2,"romaine, grilled corn, applewood smoked bacon,
+grana padano, caesar dressing"
+Warm Roasted Vegetable Salad,THE PLAN,0,0,0,0,0,0,0,0,1,0,1,1,1,1,"mixed greens, roasted beets, rainbow carrots, candied pecans, broccoli, shallot vinaigrette, pomegranate GF V"
+Artisanal Green Salad,THE PLAN,1,1,0,1,0,0,0,0,0,0,1,1,1,1,"mixed greens, cider vinaigrette, crispy shallots, gremolata, shaved pecorino V"
+Lamb Loin Chops ,THE PLAN,1,2,2,1,0,0,0,0,0,0,0,1,1,1,"grilled chops, mushroom and toasted farro ragu, red wine jus"
+Beef Tartare,THE PLAN,2,2,2,0,1,1,1,0,0,0,1,1,0,1,"classic dressing, scallop chips, lobster oil"
+Deep Sea Scallops,THE PLAN,0,2,2,1,0,2,2,0,1,0,1,0,1,1,"leek and mustard crema, toasted pistachio crust GF"
+Orecchiette,THE ITALIAN JOB,1,1,1,1,0,0,0,0,0,0,0,1,1,1,"fennel sausage, rapini, chilis, cherry tomatoes, pangrattato, garlic"
+Tagliatelle Bolognese,THE ITALIAN JOB,1,2,2,2,0,0,0,0,0,0,0,0,2,2,"slow braised ragu of pork and beef, shaved grana padano"
+Pan Roasted Potato Gnocchi,THE ITALIAN JOB,2,2,0,2,2,0,0,0,0,0,0,1,2,1,"grilled corn, roasted peppers, peas, mushrooms, scallion, garlic crema, grana padano V"
+Rigatoni Alla Vodka,THE ITALIAN JOB,1,2,1,2,0,0,0,0,0,0,0,0,1,1,"guanciale, scallion, vodka tomato cream sauce"
+Margherita,THE ITALIAN JOB,2,2,0,1,0,0,0,0,0,0,0,1,1,0,"tomato sauce, basil, buffalo mozzarella V"
+Chicken Alla Vodka,THE ITALIAN JOB,2,2,2,1,0,0,0,0,0,0,0,0,1,1,"roasted chicken, wilted spinach, sweet red onion, vodka sauce"
+Meatlovers,THE ITALIAN JOB,2,2,2,1,0,0,0,0,0,0,0,0,2,2,"house ragu, crispy bacon, sausage"
+Hot Honey,THE ITALIAN JOB,2,2,2,1,0,0,0,0,0,0,0,1,2,2,"hot honey, soppressata, dried chilies, mozzarella"
+Brie + Bacon,THE ITALIAN JOB,2,2,2,2,0,0,0,0,0,0,0,0,2,2,"applewood smoked bacon jam, adoray cheese"
+Mortadella,THE ITALIAN JOB,2,2,2,1,0,0,0,0,2,0,0,0,2,2,"bianco pizza, mortadella, toasted pistachio, stracciatella"
+Linguine Vongole,THE ITALIAN JOB,2,2,2,0,0,2,2,0,0,0,0,0,1,1,"pasta clams, white wine sauce, roasted garlic, chili, olive oil"
+Roast Beet Risotto,THE ITALIAN JOB,1,1,0,1,0,0,0,0,1,0,0,0,2,2,"red patchwork beets, baby arugula, goat feta, pine nuts V"
+The Fun-Ghi ,THE ITALIAN JOB,2,1,0,1,0,0,0,0,0,0,0,1,1,1,"bianco pizza, roasted mushrooms, sweet onion, mozzarella, truffle oil V"
+Roasted Vegetables,THE ITALIAN JOB,2,1,0,1,0,0,0,0,0,0,0,1,1,1,"crispy brussel sprouts, roasted root vegetables, caramelized onions, fonduta, balsamic glaze V"
+Branzino,OCEANS 168,0,2,2,1,0,0,2,0,0,0,0,1,1,1,"warm fingerling potato salad, braised leeks, soubise GF"
+Rainbow Trout,OCEANS 169,0,2,2,1,0,0,2,0,0,0,0,1,1,1,"light cured, pan seared rainbow trout, seasonal vegetables, roasted potato, salsa verde GF"
+Eggplant Parmigiana,THE USUAL SUSPECTS,0,0,0,1,0,0,0,0,0,0,0,0,2,0,"sliced eggplant, zucchini, tomato sugo, fresh basil, seasonal vegetables Vg"
+Chicken Parmigiana,THE USUAL SUSPECTS,2,2,2,2,2,0,0,0,0,0,0,0,2,1,"breaded chicken cutlet, tomato sugo, buffalo mozzarella, rigatoni alla vodka"
+Oven Roasted Half Chicken ,THE USUAL SUSPECTS,0,2,2,1,0,0,0,0,0,0,0,0,1,1,"seasonal vegetables, roasted potatoes, red wine jus GF"
+Braised Short Ribs,THE USUAL SUSPECTS,1,2,2,1,0,0,0,0,0,0,0,0,2,2,"creamy polenta, grilled radicchio, red wine jus"
+Tenderloin ,THE STEAK OUT,0,2,2,1,0,0,0,0,0,0,0,1,1,1,"served with roasted potatoes, seasonal vegetables, red wine jus GF"
+Striploin ,THE STEAK OUT,0,2,2,1,0,0,0,0,0,0,0,1,1,1,"served with roasted potatoes, seasonal vegetables, red wine jus GF"
+12 Hour Brined Pork Chop,THE STEAK OUT,0,2,2,1,0,0,0,0,0,0,0,1,2,1,"bone-in grilled pork chop, mushroom-farro ragu, seasonal vegetables"
+Crushed Potatoes,ACCOMPLICES,2,0,0,1,0,0,0,0,0,0,0,0,1,0,
+Sauteed Mushrooms,ACCOMPLICES,0,1,0,1,0,0,0,0,0,0,0,1,1,1,
+"Seared Scallop, 2pcs",ACCOMPLICES,0,2,2,1,0,2,2,0,1,0,1,0,1,1,
+Seasonal Vegetables,ACCOMPLICES,0,1,0,1,0,0,0,0,0,0,0,0,0,0,
+"Chicken Breast, 5oz",ACCOMPLICES,0,2,2,1,0,0,0,0,0,0,0,0,1,1,
+"Grilled Shrimp, 3pcs",ACCOMPLICES,0,2,2,1,0,2,2,0,0,0,0,0,1,1,
+Grilled Lobster Tail,ACCOMPLICES,0,2,2,1,0,2,2,0,0,0,0,0,1,1,
+Grilled Rapini,ACCOMPLICES,0,1,0,0,0,0,0,0,0,0,0,1,1,0,
+Sticky Toffee Pudding,THE GETAWAY,2,2,0,2,2,0,0,0,2,0,0,0,0,0,"banana toffee cake, caramel toffee glaze, caramelized banana, candied walnut, chantilly"
+Tiramisu,THE GETAWAY,2,2,0,2,2,0,0,2,2,0,0,0,0,0,"espresso, lady finger, whipped mascarpone, cocoa powder"
+Crème Brulee,THE GETAWAY,0,2,0,2,2,0,0,0,0,0,0,0,0,0,"earl grey infused custard, fresh fruit"
+Vegan Cheescake ,THE GETAWAY,0,0,0,0,0,0,0,2,2,2,0,0,0,0,"maple cashew mousse, date-hazelnut crust"
+Chocolate Mousse,THE GETAWAY,0,2,0,2,2,0,0,0,1,0,0,1,0,0,
+Gelato & Sorbet ,THE GETAWAY,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"chef’s selection, served with fresh berries"

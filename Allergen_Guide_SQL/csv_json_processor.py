@@ -1,5 +1,6 @@
 import csv
 import json
+import argparse
 
 def read_csv(file_path):
   #Input: Filepath to csv file
@@ -96,7 +97,7 @@ class MenuItem:
 def process_csv_data(csv_data):
     objects = []
     for row in csv_data:
-        obj = MenuItem(row['name'], row['itemType'], row['descritpion'] if 'description' in row.keys() else "", 
+        obj = MenuItem(row['name'], row['itemType'], row['description'] if 'description' in row.keys() else "", 
               AllergenInfo(int(row['gluten']) if 'gluten' in row.keys() else -1,
                            int(row['wheat']) if 'wheat' in row.keys() else -1, 
                            int(row['soy']) if 'soy' in row.keys() else -1, 
@@ -137,4 +138,11 @@ def main(csv_file, json_file):
   export_to_json(objects, json_file)
 
 if __name__ == "__main__":
-  main('Allergen_Guide_SQL/grizzlygrillguide.csv', 'output.json')
+  parser = argparse.ArgumentParser()
+  parser.add_argument(
+      "allergenGuideCSVPath",
+      help="The name of the file containing the allergen guide to be converted to json."
+  )
+  args = parser.parse_args()
+  outputJSONFilePath = args.allergenGuideCSVPath.replace(".csv", ".json").replace("CSVMenus", "JSONOutputMenus")
+  main(args.allergenGuideCSVPath, outputJSONFilePath)

@@ -1,0 +1,70 @@
+name,itemType,gluten,sesame,soy,fish,egg,treeNuts,peanuts,mushroom,corn,vegetarian,vegan
+Deep Fried Chicken Cartilage,Chef's Special,0,0,0,0,0,0,0,0,0,2,2
+Crispy Chicken Nugget,Chef's Special,0,0,0,0,0,0,0,0,0,2,2
+Crispy Chicken Skin,Chef's Special,0,0,0,0,0,0,0,0,0,2,2
+Oil-Poached Fish,Chef's Special,0,0,0,0,0,0,0,0,0,2,2
+Beef with Pickled Pepper (Spicy),Chef's Special,0,0,0,0,0,0,0,0,0,2,2
+Chicken Gizzards With Pickled Pepper (Spicy),Chef's Special,0,0,0,0,0,0,0,0,0,2,2
+Scallion Mushroom Chicken,Chef's Special,0,0,2,0,0,0,0,1,0,2,2
+Scallion Mushroom Beef,Chef's Special,0,0,2,0,0,0,0,1,0,2,2
+Pickled Cabbage Pork Intestine,Chef's Special,0,0,0,0,0,0,0,0,0,2,2
+Golden Shrimp,Chef's Special,0,0,0,0,0,0,0,0,0,2,2
+Braised Eggplant with Pork,Chef's Special,0,0,0,0,0,0,0,0,0,2,2
+Sautéed Pork Intestine,Chef's Special,0,0,0,0,0,0,0,0,0,2,2
+Wok Fried Potato Julienne,Chef's Special,0,0,0,0,0,0,0,0,0,2,2
+Wonton Soup (6pc),Soup,2,0,0,2,0,0,0,0,0,2,2
+Seaweed & Egg Soup,Soup,0,0,0,0,0,0,0,0,0,2,2
+Hot And Sour Soup,Soup,2,0,2,0,1,0,0,0,0,2,2
+Deep Fried Calamari,Seafood and Fish,2,0,0,2,0,0,0,0,0,2,2
+Spicy Calamari,Seafood and Fish,2,0,0,2,0,0,0,0,0,2,2
+Thousand Island Sauce Shrimp,Seafood and Fish,0,0,0,0,0,0,0,0,0,2,2
+Pickled Cabbage Fish,Seafood and Fish,0,0,0,0,0,0,0,0,0,2,2
+Hot Chilli Oil Fish,Seafood and Fish,0,0,0,0,0,0,0,0,0,2,2
+Mala Xiang Guo,Seafood and Fish,0,0,0,0,0,0,0,0,0,2,2
+Vegetable Spring Rolls,Dim Sum,2,2,0,0,0,0,2,0,0,2,2
+Egg Rolls,Dim Sum,2,2,0,0,2,0,2,0,0,2,2
+Siu Mai,Dim Sum,2,0,2,2,0,0,0,0,0,2,2
+Har Gow,Dim Sum,2,0,2,2,0,0,0,0,0,2,2
+Lotus Leaf Sticky Rice,Dim Sum,0,0,0,0,0,0,0,0,0,2,2
+Soup Dumplings,Dim Sum,2,0,2,0,0,0,0,0,0,2,2
+BBQ Pork Buns,Dim Sum,2,0,2,0,0,0,0,0,0,2,2
+Deep Fried Shrimp Wonton,Dim Sum,0,0,0,0,0,0,0,0,0,2,2
+Steamed Pork And Vegetable Dumpling,Dim Sum,2,0,2,0,0,0,0,0,0,2,2
+Salted Egg Yolk Custard Buns,Dim Sum,0,0,0,0,0,0,0,0,0,2,2
+Black Pepper Beef Tenderloin,Beef,2,0,1,0,0,0,0,0,0,2,2
+Maggi Sauce Beef Tenderloin,Beef,2,0,1,0,0,0,0,1,0,2,2
+Beef & Broccoli,Beef,2,0,1,0,0,0,0,0,0,2,2
+Hot Chilli Oil Beef,Beef,0,0,0,0,0,0,0,0,0,2,2
+Twice Cooked Sweet & Sour Pork,Pork ,0,0,0,0,0,0,0,0,0,2,2
+Country Style Pork Belly,Pork ,2,0,1,0,0,0,0,0,0,2,2
+Pork Hock,Pork ,2,0,2,0,0,0,0,0,0,2,2
+Pork Hock Rice,Pork ,2,0,2,0,0,0,0,0,0,2,2
+Mapo Tofu,Pork ,0,0,0,0,0,0,0,0,0,2,2
+Wok Fried Green Beans,Pork ,0,0,0,0,0,0,0,0,0,2,2
+Sweet & Sour Chicken,Chicken,2,0,2,0,0,0,0,0,0,2,2
+Kung Pao Chicken,Chicken,2,0,2,0,0,0,0,0,0,2,2
+General Tao's Chicken,Chicken,2,0,2,0,0,0,0,0,0,2,2
+Stew Chicken & Shiitake (Bone-In),Chicken,0,0,0,0,0,0,0,0,0,2,2
+Chong Qing La Zi Ji (Bone-In),Chicken,0,0,0,0,0,0,0,0,0,2,2
+Unagi Fried Rice,Fired Rice ,0,0,0,0,0,0,0,0,0,2,2
+Spicy Soft-Shell Crab Fried Rice,Fired Rice ,0,0,0,0,0,0,0,0,0,2,2
+Shrimp Fried Rice With Garlic,Fired Rice ,0,0,1,0,1,0,0,0,1,2,2
+B.B.Q Pork Fried Rice,Fired Rice ,0,0,1,0,1,0,0,0,1,2,2
+Chicken Fried Rice,Fired Rice ,0,0,1,0,1,0,0,0,1,2,2
+Veg Fried Rice,Fired Rice ,0,0,1,0,1,0,0,0,1,2,2
+Steamed Rice,Fired Rice ,0,0,0,0,0,0,0,0,0,2,2
+Singapore Style Vermicelli,Fried Noodles,2,0,1,0,2,0,0,0,0,2,2
+Seafood Pad Thai,Fried Noodles,2,0,2,1,1,0,1,0,0,2,2
+Soy Sauce Chow Mein,Fried Noodles,2,0,1,0,0,0,0,0,0,2,2
+Beef Thick Rice Noodle (Ho Fun),Fried Noodles,2,0,2,0,0,0,0,0,0,2,2
+Cantonese Chow Mein (Crispy Noodle Base),Fried Noodles,2,0,1,1,0,0,0,1,0,2,2
+Braised Tofu,Vegtables,0,0,0,0,0,0,0,0,0,2,2
+Mushroom Egg Tofu,Vegtables,0,0,0,0,0,0,0,0,0,2,2
+Scramble Egg & Tomato,Vegtables,0,0,0,0,0,0,0,0,0,2,2
+Yu Xiang Eggplant,Vegtables,2,0,2,0,0,0,0,0,0,2,2
+Garlic Broccoli,Vegtables,0,0,0,0,0,0,0,0,0,2,2
+Shredded Cabbage,Vegtables,0,0,1,0,0,0,0,0,0,2,2
+Chopped Pepper Fish Claypot Rice,Claypot Rice,0,0,0,0,0,0,0,0,0,2,2
+Chicken Gizzard Claypot Rice (Spicy),Claypot Rice,0,0,0,0,0,0,0,0,0,2,2
+Beef Claypot Rice,Claypot Rice,0,0,0,0,0,0,0,0,0,2,2
+Shortrib Claypot Rice,Claypot Rice,0,0,0,0,0,0,0,0,0,2,2

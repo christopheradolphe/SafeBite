@@ -1,0 +1,68 @@
+name,itemType,shellfish,egg,fish,dairy,mustard,peanuts,sesame,soy,sulphites,treeNuts,wheat,gluten,vegetarian,garlic,onion
+Jack's Garlic pan Bread,Starters,0,2,0,2,0,0,0,2,0,0,2,2,0,2,0
+Jack's Cheese Garlic Pan Bread,Starters,0,2,0,2,0,0,0,2,0,0,2,2,0,2,0
+Fresh Guacamole,Starters,0,0,0,0,0,0,0,0,2,0,0,0,0,2,2
+Thick-Cut Bruschetta,Starters,0,2,0,2,0,0,0,2,2,0,2,2,0,2,2
+Asian Wonton Nachos,Starters,0,2,0,2,2,0,2,2,2,0,2,2,2,2,2
+Lobster & Crab Dip,Starters,2,0,2,2,2,0,0,2,2,0,2,2,2,2,2
+Tiny Tuna Tacos,Starters,0,2,2,0,2,0,2,2,2,0,2,2,2,2,2
+Classic Poutine,Jack's One Pound Poutines,0,0,0,2,0,0,0,2,0,0,0,2,2,2,2
+South West Poutine,Jack's One Pound Poutines,0,2,0,2,2,0,0,2,0,0,0,0,2,2,2
+Fully Loaded Poutine,Jack's One Pound Poutines,0,0,0,2,0,0,0,2,0,0,0,0,2,2,2
+Veggie Nachos,Loaded Nachos,0,0,0,2,2,0,0,0,0,2,0,0,0,2,2
+Beef Nachos,Loaded Nachos,0,0,0,2,2,0,0,0,0,2,0,0,2,2,2
+Roasted Chicken Nachos,Loaded Nachos,0,0,0,2,2,0,0,2,0,2,2,0,2,2,2
+Street Chicken Taco,Tacos,0,2,0,2,2,0,0,2,0,2,2,2,2,2,2
+Fish Taco,Tacos,0,2,2,2,2,0,0,2,2,0,2,2,2,2,2
+Cheeseburger,handhelds & tacos,0,2,0,2,1,0,0,2,0,0,2,2,2,2,2
+Bacon Cheeseburger,handhelds & tacos,0,2,0,2,1,0,0,2,0,0,2,2,2,2,2
+Holy Smoke BBQ Burger,handhelds & tacos,0,2,0,2,1,0,0,2,2,0,2,2,2,2,2
+Hold The Beef,handhelds & tacos,0,2,0,2,1,0,0,2,2,0,2,2,2,2,2
+Mushroom Truffle Cheeseburger,handhelds & tacos,0,2,0,2,1,0,0,2,0,0,2,2,2,2,2
+Chicken & Goat Cheese Wrap,handhelds & tacos,0,2,0,2,0,0,0,2,0,0,2,2,2,2,2
+Chicken Club,handhelds & tacos,0,2,0,2,2,0,0,2,0,0,2,2,2,2,2
+Crispy Chicken Sandwich,handhelds & tacos,0,2,0,2,2,0,0,2,0,0,2,2,2,2,2
+Buffalo Blue Crispy Chicken Sandwich,handhelds & tacos,0,2,0,2,2,0,0,2,0,0,2,2,2,2,2
+Naked & Afraid,jack's chicken,0,0,0,2,0,0,0,0,0,0,2,2,2,2,2
+Sauced & Tossed,jack's chicken,0,2,0,2,0,0,0,2,0,0,2,2,2,2,2
+1lb or 2Ibs of Wings,jack's chicken,0,2,0,2,2,0,0,0,0,0,2,2,2,2,2
+Asiago Chicken Bow-Ties,mains & steaks,0,0,0,2,0,0,0,0,0,0,2,2,2,2,2
+Chicken Parmigiana,mains & steaks,0,0,0,2,0,0,0,0,0,0,2,2,2,2,2
+Truffle Chicken Linguini,mains & steaks,0,2,0,2,0,0,0,2,0,0,2,2,2,2,2
+Hunter's Chicken,mains & steaks,0,0,0,2,0,0,0,2,2,0,2,0,2,2,2
+Grilled Cajun Salmon,mains & steaks,0,0,2,2,2,2,2,2,2,0,0,0,2,2,2
+Steak Frites,mains & steaks,0,0,0,2,0,0,0,2,2,0,0,0,2,0,2
+Classic New York,mains & steaks,0,0,0,2,0,0,0,2,2,0,0,0,2,0,2
+The Memphis,mains & steaks,0,0,0,2,0,0,0,2,2,0,2,2,2,2,2
+New York Truffle Striploin,mains & steaks,0,2,0,2,2,0,0,2,2,0,0,2,2,2,2
+Russet Fries,sides,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+Seasonal Vegetables,sides,0,0,0,2,0,0,0,2,0,0,2,0,0,0,0
+House Salad,sides,0,2,0,2,0,0,0,2,0,0,0,2,0,2,0
+Baked Potato with Butter,sides,0,0,0,2,0,0,0,2,0,0,2,0,0,0,0
+Caesar Salad,sides,0,2,2,2,2,0,0,2,2,0,0,2,2,2,2
+Sweet Potato Fries,premium sides,0,2,0,0,2,0,0,0,0,0,0,2,2,2,2
+Classic Poutine,premium sides,0,0,0,2,0,0,0,2,0,0,0,2,2,2,2
+Truffle Fries,premium sides,0,2,0,2,0,0,0,2,0,0,0,2,2,2,0
+Buddha Salad,premium sides,0,0,0,2,2,2,2,2,2,2,0,0,0,2,2
+Fiesta Salad,premium sides,0,0,0,2,0,0,0,2,2,0,0,0,0,2,2
+Tuna Poke Salad,salads & bowls,0,0,2,0,0,2,2,2,2,2,2,2,2,2,2
+Chicken Cobb Salad,salads & bowls,0,2,0,2,2,0,0,0,2,0,0,2,2,2,2
+Epic Asiago Chicken Caesar Salad,salads & bowls,0,2,2,2,2,0,0,2,2,0,2,2,2,2,2
+Mexican Chicken Bowl,salads & bowls,0,2,0,2,2,0,0,2,2,0,0,0,2,2,2
+Chicken Pad Thai Bowl,salads & bowls,2,2,2,0,0,2,0,2,0,2,0,0,2,2,2
+Miso Glazed Salmon Bowl,salads & bowls,0,0,2,0,2,2,2,2,2,0,0,0,2,2,2
+Thai Coconut Curry Chicken Bowl,salads & bowls,0,0,2,0,0,2,2,2,0,2,0,0,2,2,2
+Birthday Cake,desserts,0,2,0,2,0,0,0,2,2,0,2,2,2,0,0
+Chocolate Malted Brownie,desserts,0,2,0,2,0,0,0,2,2,0,2,2,2,0,0
+Lemon Blueberry Tart,desserts,0,2,0,2,0,0,0,2,2,0,2,2,2,0,0
+Chocolate Peanut Butter Cheesecake,desserts,0,2,0,2,0,2,0,2,2,2,0,0,2,0,0
+My Cookie Ate Your Brownie,desserts,0,2,0,2,0,0,0,2,2,0,2,2,2,0,0
+Kids Take Home Cookie,Kids Dessert,0,2,0,2,0,0,0,2,2,0,2,2,2,0,0
+Brownie,Kids Dessert,0,2,0,2,0,0,0,2,2,0,2,2,2,0,0
+Apples with Caramel Dip,Kids Dessert,0,0,0,2,0,0,0,2,2,0,0,0,2,0,0
+Orange Sorbet,Kids Dessert,0,0,0,2,0,0,0,2,2,0,0,0,2,0,0
+Chicken Fingers,kids meals,0,0,0,2,0,0,0,0,0,0,2,2,2,2,0
+Chicken Wings,kids meals,0,2,0,2,0,0,0,2,0,0,2,2,2,2,2
+Burger,kids meals,0,2,0,2,0,0,0,2,0,0,2,2,2,0,0
+Cheese Pita Pit-Za,kids meals,0,0,0,2,0,0,0,0,0,0,2,2,0,2,2
+Jack's Pasta,kids meals,0,0,0,2,0,0,0,2,0,0,2,2,0,2,2
