@@ -1,4 +1,5 @@
 import csv
+import json
 
 def read_csv(file_path):
   #Input: Filepath to csv file
@@ -31,6 +32,28 @@ class AllergenInfo:
     self.corn = corn
     self.oliveOil = oliveOil
     self.legumes = legumes
+  
+  def to_dict(self):
+    return {
+      'gluten': self.gluten,
+      'wheat': self.wheat,
+      'soy': self.soy,
+      'shellfish': self.shellfish,
+      'fish': self.fish,
+      'dairy': self.dairy,
+      'egg': self.egg,
+      'treeNuts': self.treeNuts,
+      'peanuts': self.peanuts,
+      'sesame': self.sesame,
+      'mustard': self.mustard,
+      'garlic': self.garlic,
+      'sulfites': self.sulfites,
+      'onion': self.onion,
+      'mushroom': self.mushroom,
+      'corn': self.corn,
+      'oliveOil': self.oliveOil,
+      'legumes': self.legumes
+    }
 
 class DietaryRestrictionInfo:
   def __init__(self, vegan, vegetarian, halal, keto, lowCarb, lowFODMAP, dashDiet):
@@ -41,6 +64,17 @@ class DietaryRestrictionInfo:
     self.lowCarb = lowCarb
     self.lowFODMAP = lowFODMAP
     self.dashDiet = dashDiet
+  
+  def to_dict(self):
+    return {
+      'vegan': self.vegan,
+      'vegetarian': self.vegetarian,
+      'halal': self.halal,
+      'keto': self.keto,
+      'lowCarb': self.lowCarb,
+      'lowFODMAP': self.lowFODMAP,
+      'dashDiet': self.dashDiet
+    }
 
 class MenuItem:
   def __init__(self, name, itemType, description, allergenInfo, dietaryRestrictionInfo):
@@ -55,8 +89,8 @@ class MenuItem:
       'name': self.name,
       'itemType': self.itemType,
       'description': self.description,
-      'allergenInfo': self.allergenInfo,
-      'dietaryRestrictionInfo': self.dietaryRestrictionInfo
+      'allergenInfo': self.allergenInfo.to_dict(),
+      'dietaryRestrictionInfo': self.dietaryRestrictionInfo.to_dict()
     }
 
 def process_csv_data(csv_data):
@@ -70,6 +104,11 @@ def process_csv_data(csv_data):
               )
         objects.append(obj)
     return objects
+
+def export_to_json(objects, json_file):
+    json_data = [obj.to_dict() for obj in objects]
+    with open(json_file, 'w') as f:
+        json.dump(json_data, f, indent=4)
 
 if __name__ == "__main__":
   print(read_csv("/Users/christopheradolphe/Desktop/SafeBite/Allergen_Guide_SQL/grizzlygrillguide.csv"))
