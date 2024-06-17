@@ -60,7 +60,7 @@ struct IndividualRestaurantView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    Image("missbao")
+                    Image(restaurtant.image)
                         .resizable()
                         .scaledToFit()
                         .containerRelativeFrame(.horizontal) { width, axis in
