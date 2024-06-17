@@ -104,5 +104,5 @@ struct IndividualRestaurantView: View {
 
 #Preview {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
-    return IndividualRestaurantView(restaurant: restaurants[0])
+    return IndividualRestaurantView(restaurant: restaurants[4])
 }

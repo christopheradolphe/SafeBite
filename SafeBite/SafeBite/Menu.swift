@@ -39,7 +39,7 @@ struct MenuItem: Codable, Identifiable, Hashable {
     let id = UUID()
     let name: String
     let itemType: String
-    let description: String?
+    let description: String
     
     let allergenInfo: [String: Int]
     let dietaryRestrictionInfo: [String: Int]

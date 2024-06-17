@@ -11,18 +11,18 @@
 		8C1DAA6F2C1952E400B308BE /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1DAA6E2C1952E300B308BE /* SignInView.swift */; };
 		8C1DAA712C1D5B5B00B308BE /* Allergens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1DAA702C1D5B5B00B308BE /* Allergens.swift */; };
 		8C1DAA732C1D5E9000B308BE /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1DAA722C1D5E9000B308BE /* UserProfile.swift */; };
-		8C1DAA7C2C1FF43400B308BE /* grizzlygrill.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA742C1FF43200B308BE /* grizzlygrill.json */; };
+		8C1DAA7C2C1FF43400B308BE /* thegrizzlygrill.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA742C1FF43200B308BE /* thegrizzlygrill.json */; };
 		8C1DAA7D2C1FF43400B308BE /* anejo.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA752C1FF43300B308BE /* anejo.json */; };
-		8C1DAA7E2C1FF43400B308BE /* keg.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA762C1FF43300B308BE /* keg.json */; };
+		8C1DAA7E2C1FF43400B308BE /* thekeg.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA762C1FF43300B308BE /* thekeg.json */; };
 		8C1DAA7F2C1FF43400B308BE /* kintonramen.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA772C1FF43300B308BE /* kintonramen.json */; };
 		8C1DAA802C1FF43400B308BE /* atomicakitchen.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA782C1FF43300B308BE /* atomicakitchen.json */; };
 		8C1DAA812C1FF43400B308BE /* meetcuisine.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA792C1FF43300B308BE /* meetcuisine.json */; };
 		8C1DAA822C1FF43400B308BE /* heist.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA7A2C1FF43300B308BE /* heist.json */; };
-		8C1DAA832C1FF43400B308BE /* jackastors.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA7B2C1FF43400B308BE /* jackastors.json */; };
+		8C1DAA832C1FF43400B308BE /* jackastor's.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA7B2C1FF43400B308BE /* jackastor's.json */; };
 		8C1DAA882C1FF43C00B308BE /* tango.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA842C1FF43C00B308BE /* tango.json */; };
-		8C1DAA892C1FF43C00B308BE /* podanamu.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA852C1FF43C00B308BE /* podanamu.json */; };
+		8C1DAA892C1FF43C00B308BE /* podonamukoreancuisine.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA852C1FF43C00B308BE /* podonamukoreancuisine.json */; };
 		8C1DAA8A2C1FF43C00B308BE /* taylorslanding.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA862C1FF43C00B308BE /* taylorslanding.json */; };
-		8C1DAA8B2C1FF43C00B308BE /* tommys.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA872C1FF43C00B308BE /* tommys.json */; };
+		8C1DAA8B2C1FF43C00B308BE /* tommy's.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA872C1FF43C00B308BE /* tommy's.json */; };
 		8C1DAA8D2C1FF47300B308BE /* missbao.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA8C2C1FF47200B308BE /* missbao.json */; };
 		8CEFD91F2C0CE2BA0048982A /* SafeBiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEFD91E2C0CE2BA0048982A /* SafeBiteApp.swift */; };
 		8CEFD9212C0CE2BA0048982A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEFD9202C0CE2BA0048982A /* ContentView.swift */; };
@@ -40,18 +40,18 @@
 		8C1DAA6E2C1952E300B308BE /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		8C1DAA702C1D5B5B00B308BE /* Allergens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergens.swift; sourceTree = "<group>"; };
 		8C1DAA722C1D5E9000B308BE /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		8C1DAA742C1FF43200B308BE /* grizzlygrill.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = grizzlygrill.json; path = ../../JSONOutputMenus/grizzlygrill.json; sourceTree = "<group>"; };
+		8C1DAA742C1FF43200B308BE /* thegrizzlygrill.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = thegrizzlygrill.json; path = ../../JSONOutputMenus/thegrizzlygrill.json; sourceTree = "<group>"; };
 		8C1DAA752C1FF43300B308BE /* anejo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = anejo.json; path = ../../JSONOutputMenus/anejo.json; sourceTree = "<group>"; };
-		8C1DAA762C1FF43300B308BE /* keg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = keg.json; path = ../../JSONOutputMenus/keg.json; sourceTree = "<group>"; };
+		8C1DAA762C1FF43300B308BE /* thekeg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = thekeg.json; path = ../../JSONOutputMenus/thekeg.json; sourceTree = "<group>"; };
 		8C1DAA772C1FF43300B308BE /* kintonramen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = kintonramen.json; path = ../../JSONOutputMenus/kintonramen.json; sourceTree = "<group>"; };
 		8C1DAA782C1FF43300B308BE /* atomicakitchen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = atomicakitchen.json; path = ../../JSONOutputMenus/atomicakitchen.json; sourceTree = "<group>"; };
 		8C1DAA792C1FF43300B308BE /* meetcuisine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = meetcuisine.json; path = ../../JSONOutputMenus/meetcuisine.json; sourceTree = "<group>"; };
 		8C1DAA7A2C1FF43300B308BE /* heist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = heist.json; path = ../../JSONOutputMenus/heist.json; sourceTree = "<group>"; };
-		8C1DAA7B2C1FF43400B308BE /* jackastors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = jackastors.json; path = ../../JSONOutputMenus/jackastors.json; sourceTree = "<group>"; };
+		8C1DAA7B2C1FF43400B308BE /* jackastor's.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "jackastor's.json"; path = "../../JSONOutputMenus/jackastor's.json"; sourceTree = "<group>"; };
 		8C1DAA842C1FF43C00B308BE /* tango.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tango.json; path = ../../JSONOutputMenus/tango.json; sourceTree = "<group>"; };
-		8C1DAA852C1FF43C00B308BE /* podanamu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = podanamu.json; path = ../../JSONOutputMenus/podanamu.json; sourceTree = "<group>"; };
+		8C1DAA852C1FF43C00B308BE /* podonamukoreancuisine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = podonamukoreancuisine.json; path = ../../JSONOutputMenus/podonamukoreancuisine.json; sourceTree = "<group>"; };
 		8C1DAA862C1FF43C00B308BE /* taylorslanding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = taylorslanding.json; path = ../../JSONOutputMenus/taylorslanding.json; sourceTree = "<group>"; };
-		8C1DAA872C1FF43C00B308BE /* tommys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tommys.json; path = ../../JSONOutputMenus/tommys.json; sourceTree = "<group>"; };
+		8C1DAA872C1FF43C00B308BE /* tommy's.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "tommy's.json"; path = "../../JSONOutputMenus/tommy's.json"; sourceTree = "<group>"; };
 		8C1DAA8C2C1FF47200B308BE /* missbao.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = missbao.json; path = ../../JSONOutputMenus/missbao.json; sourceTree = "<group>"; };
 		8CEFD91B2C0CE2BA0048982A /* SafeBite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeBite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CEFD91E2C0CE2BA0048982A /* SafeBiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeBiteApp.swift; sourceTree = "<group>"; };
@@ -108,15 +108,15 @@
 				8CEFD9342C0D0AFB0048982A /* restaurants.json */,
 				8C1DAA752C1FF43300B308BE /* anejo.json */,
 				8C1DAA782C1FF43300B308BE /* atomicakitchen.json */,
-				8C1DAA742C1FF43200B308BE /* grizzlygrill.json */,
+				8C1DAA742C1FF43200B308BE /* thegrizzlygrill.json */,
 				8C1DAA8C2C1FF47200B308BE /* missbao.json */,
 				8C1DAA7A2C1FF43300B308BE /* heist.json */,
-				8C1DAA7B2C1FF43400B308BE /* jackastors.json */,
-				8C1DAA852C1FF43C00B308BE /* podanamu.json */,
+				8C1DAA7B2C1FF43400B308BE /* jackastor's.json */,
+				8C1DAA852C1FF43C00B308BE /* podonamukoreancuisine.json */,
 				8C1DAA842C1FF43C00B308BE /* tango.json */,
 				8C1DAA862C1FF43C00B308BE /* taylorslanding.json */,
-				8C1DAA872C1FF43C00B308BE /* tommys.json */,
-				8C1DAA762C1FF43300B308BE /* keg.json */,
+				8C1DAA872C1FF43C00B308BE /* tommy's.json */,
+				8C1DAA762C1FF43300B308BE /* thekeg.json */,
 				8C1DAA772C1FF43300B308BE /* kintonramen.json */,
 				8C1DAA792C1FF43300B308BE /* meetcuisine.json */,
 				8CEFD9222C0CE2BE0048982A /* Assets.xcassets */,
@@ -191,19 +191,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C1DAA832C1FF43400B308BE /* jackastors.json in Resources */,
+				8C1DAA832C1FF43400B308BE /* jackastor's.json in Resources */,
 				8C1DAA882C1FF43C00B308BE /* tango.json in Resources */,
 				8CEFD9262C0CE2BE0048982A /* Preview Assets.xcassets in Resources */,
-				8C1DAA7C2C1FF43400B308BE /* grizzlygrill.json in Resources */,
+				8C1DAA7C2C1FF43400B308BE /* thegrizzlygrill.json in Resources */,
 				8CEFD9352C0D0AFB0048982A /* restaurants.json in Resources */,
 				8C1DAA812C1FF43400B308BE /* meetcuisine.json in Resources */,
-				8C1DAA7E2C1FF43400B308BE /* keg.json in Resources */,
+				8C1DAA7E2C1FF43400B308BE /* thekeg.json in Resources */,
 				8C1DAA7D2C1FF43400B308BE /* anejo.json in Resources */,
-				8C1DAA892C1FF43C00B308BE /* podanamu.json in Resources */,
+				8C1DAA892C1FF43C00B308BE /* podonamukoreancuisine.json in Resources */,
 				8CEFD9232C0CE2BE0048982A /* Assets.xcassets in Resources */,
 				8C1DAA7F2C1FF43400B308BE /* kintonramen.json in Resources */,
 				8C1DAA8D2C1FF47300B308BE /* missbao.json in Resources */,
-				8C1DAA8B2C1FF43C00B308BE /* tommys.json in Resources */,
+				8C1DAA8B2C1FF43C00B308BE /* tommy's.json in Resources */,
 				8C1DAA8A2C1FF43C00B308BE /* taylorslanding.json in Resources */,
 				8C1DAA802C1FF43400B308BE /* atomicakitchen.json in Resources */,
 				8C1DAA822C1FF43400B308BE /* heist.json in Resources */,

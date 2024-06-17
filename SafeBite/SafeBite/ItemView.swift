@@ -74,12 +74,12 @@ struct ItemView: View {
                     }
                     .padding(.horizontal)
                     
-                    if menuItem.description != nil {
+                    if menuItem.description != "" {
                         Text("Item Description:")
                             .padding()
                         Spacer()
                         
-                        Text(menuItem.description ?? "N/A")
+                        Text(menuItem.description)
                         .padding(.horizontal)
                     }
                 }
