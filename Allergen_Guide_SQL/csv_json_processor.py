@@ -96,11 +96,32 @@ class MenuItem:
 def process_csv_data(csv_data):
     objects = []
     for row in csv_data:
-        obj = MenuItem(row['name'], row['itemType'], row['descritpion'], 
-              AllergenInfo(row['gluten'], row['wheat'], row['soy'], row['shellfish'], row['fish'], row['dairy'], row['eggs'],
-              row['treeNuts'], row['peanuts'], row['sesame'], row['mustard'], row['garlic'], row['sulfites'], row['mushroom'],
-              row['corn'], row['oliveOil'], row['legumes']),
-              DietaryRestrictionInfo(row['vegan'], row['vegetarian'], row['halal'], row['keto'], row['lowCarb'], row['lowFODMAP'], row['dashDiet'])
+        obj = MenuItem(row['name'], row['itemType'], row['descritpion'] if 'description' in row.keys() else "", 
+              AllergenInfo(int(row['gluten']) if 'gluten' in row.keys() else -1,
+                           int(row['wheat']) if 'wheat' in row.keys() else -1, 
+                           int(row['soy']) if 'soy' in row.keys() else -1, 
+                           int(row['shellfish']) if 'shellfish' in row.keys() else -1, 
+                           int(row['fish']) if 'fish' in row.keys() else -1, 
+                           int(row['dairy']) if 'dairy' in row.keys() else -1, 
+                           int(row['eggs']) if 'eggs' in row.keys() else -1,
+                           int(row['treeNuts']) if 'treeNuts' in row.keys() else -1, 
+                           int(row['peanuts']) if 'peanuts' in row.keys() else -1, 
+                           int(row['sesame']) if 'sesame' in row.keys() else -1, 
+                           int(row['mustard']) if 'mustard' in row.keys() else -1, 
+                           int(row['garlic']) if 'garlic' in row.keys() else -1, 
+                           int(row['sulfites']) if 'sulfites' in row.keys() else -1,
+                           int(row['onion']) if 'onion' in row.keys() else -1, 
+                           int(row['mushroom']) if 'mushroom' in row.keys() else -1,
+                           int(row['corn']) if 'corn' in row.keys() else -1, 
+                           int(row['oliveOil']) if 'oliveOil' in row.keys() else -1, 
+                           int(row['legumes']) if 'legumes' in row.keys() else -1),
+              DietaryRestrictionInfo(int(row['vegan']) if 'vegan' in row.keys() else -1, 
+                                     int(row['vegetarian']) if 'vegetarian' in row.keys() else -1, 
+                                     int(row['halal']) if 'halal' in row.keys() else -1, 
+                                     int(row['keto']) if 'keto' in row.keys() else -1, 
+                                     int(row['lowCarb']) if 'lowCarb' in row.keys() else -1, 
+                                     int(row['lowFODMAP']) if 'lowFODMAP' in row.keys() else -1, 
+                                     int(row['dashDiet']) if 'dashDiet' in row.keys() else -1)
               )
         objects.append(obj)
     return objects
@@ -110,5 +131,10 @@ def export_to_json(objects, json_file):
     with open(json_file, 'w') as f:
         json.dump(json_data, f, indent=4)
 
+def main(csv_file, json_file):
+  csv_data = read_csv(csv_file)
+  objects = process_csv_data(csv_data)
+  export_to_json(objects, json_file)
+
 if __name__ == "__main__":
-  print(read_csv("/Users/christopheradolphe/Desktop/SafeBite/Allergen_Guide_SQL/grizzlygrillguide.csv"))
+  main('Allergen_Guide_SQL/grizzlygrillguide.csv', 'output.json')

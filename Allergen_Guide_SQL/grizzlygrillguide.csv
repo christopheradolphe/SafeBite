@@ -1,4 +1,4 @@
-Item Name,Item Type,Vegetarian,Vegan,Shellfish,Dairy,Eggs,Fish,Garlic,Gluten,Peanut,Sesame,Soy,Tree Nuts,Onion
+name,itemType,vegetarian,vegan,shellfish,dairy,eggs,fish,garlic,gluten,peanut,sesame,soy,treeNuts,onion
 House Salad,SALADS,2,0,0,0,0,0,2,0,0,0,0,0,0
 Caesar Salad,SALADS,2,2,0,2,2,0,2,1,0,1,1,2,0
 Steak and Avocado Salad,SALADS,2,2,0,1,0,0,2,0,0,0,0,0,2
