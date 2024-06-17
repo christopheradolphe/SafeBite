@@ -59,6 +59,17 @@ class MenuItem:
       'dietaryRestrictionInfo': self.dietaryRestrictionInfo
     }
 
+def process_csv_data(csv_data):
+    objects = []
+    for row in csv_data:
+        obj = MenuItem(row['name'], row['itemType'], row['descritpion'], 
+              AllergenInfo(row['gluten'], row['wheat'], row['soy'], row['shellfish'], row['fish'], row['dairy'], row['eggs'],
+              row['treeNuts'], row['peanuts'], row['sesame'], row['mustard'], row['garlic'], row['sulfites'], row['mushroom'],
+              row['corn'], row['oliveOil'], row['legumes']),
+              DietaryRestrictionInfo(row['vegan'], row['vegetarian'], row['halal'], row['keto'], row['lowCarb'], row['lowFODMAP'], row['dashDiet'])
+              )
+        objects.append(obj)
+    return objects
 
 if __name__ == "__main__":
   print(read_csv("/Users/christopheradolphe/Desktop/SafeBite/Allergen_Guide_SQL/grizzlygrillguide.csv"))
