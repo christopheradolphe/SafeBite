@@ -66,6 +66,7 @@ struct IndividualRestaurantView: View {
                         .containerRelativeFrame(.horizontal) { width, axis in
                             width * 0.4
                         }
+                        .clipShape(.circle)
                     VStack(alignment: .leading) {
                         Text("About \(restaurtant.name)")
                             .font(.headline)
@@ -104,5 +105,5 @@ struct IndividualRestaurantView: View {
 
 #Preview {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
-    return IndividualRestaurantView(restaurant: restaurants[4])
+    return IndividualRestaurantView(restaurant: restaurants[7])
 }
