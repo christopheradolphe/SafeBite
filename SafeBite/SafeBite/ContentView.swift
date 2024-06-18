@@ -31,17 +31,16 @@ struct Cards: View {
                             Image(restaurant.image)
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 100, height: 100)
-                                .padding()
+                                .frame(width: 100, height:100)
                             VStack {
                                 Text(restaurant.name)
                                     .font(.subheadline)
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(.black)
                                     .frame(maxWidth: 100)
                             }
                             .frame(maxWidth: .infinity)
-                            .background(.blue)
                         }
+                        .background(.green)
                         .clipShape(.rect(cornerRadius: 10))
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
