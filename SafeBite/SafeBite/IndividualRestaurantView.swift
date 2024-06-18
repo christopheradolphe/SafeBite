@@ -84,7 +84,7 @@ struct IndividualRestaurantView: View {
                 
                 VStack {
                     Text("Menu")
-                        .font(.headline)
+                        .font(.title2)
                         .padding(.vertical, 10)
                     ForEach(restaurtant.menuTypes, id: \.self) { type in
                         MenuTypeView(menu: menu, menuType: type)
