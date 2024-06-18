@@ -67,15 +67,17 @@ struct IndividualRestaurantView: View {
                             width * 0.4
                         }
                         .clipShape(.circle)
-                    VStack(alignment: .leading) {
-                        Text("About \(restaurtant.name)")
-                            .font(.headline)
-                            .padding(.vertical, 10)
-                        Text(restaurtant.description) //Work to shorten this or make an info button to view
-                            .font(.caption)
-                            .foregroundStyle(.gray)
-                        
-                        Separator()
+                    if restaurtant.description != "" {
+                        VStack(alignment: .leading) {
+                            Text("About \(restaurtant.name)")
+                                .font(.headline)
+                                .padding(.vertical, 10)
+                            Text(restaurtant.description) //Work to shorten this or make an info button to view
+                                .font(.caption)
+                                .foregroundStyle(.gray)
+                            
+                            Separator()
+                        }
                     }
                 }
                 .padding(.horizontal)
