@@ -212,5 +212,5 @@ struct DietaryRestrictions: Codable {
         }
     }
     
-    dietaryRestrictionList = Set<String>()
+    var dietaryRestrictionList = Set<String>()
 }

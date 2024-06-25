@@ -49,7 +49,7 @@ struct MenuItem: Codable, Identifiable, Hashable {
     }
     
     var safeBiteValue: Int {
-        
+        return 0
     }
 }
 
