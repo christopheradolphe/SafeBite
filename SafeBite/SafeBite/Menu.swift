@@ -36,7 +36,7 @@ struct DietaryRestrictionInfo: Codable, Hashable {
 }
 
 struct MenuItem: Codable, Identifiable, Hashable {
-    let id = UUID()
+    var id = UUID()
     let name: String
     let itemType: String
     let description: String

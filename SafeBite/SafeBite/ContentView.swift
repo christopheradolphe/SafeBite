@@ -30,7 +30,7 @@ struct Cards: View {
                         VStack {
                             Image(restaurant.image)
                                 .resizable()
-                                .scaledToFit()
+                                .scaledToFill()
                                 .frame(width: 100, height:100)
                             VStack {
                                 Text(restaurant.name)
