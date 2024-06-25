@@ -49,7 +49,25 @@ struct MenuItem: Codable, Identifiable, Hashable {
     }
     
     var safeBiteValue: Int {
-        return 0
+        var user = User()
+        var safe = true
+        for allergy in user.userProfile.allergens.allergenList {
+            if allergenInfo[allergy] == 2 {
+                return 2
+            } else if allergenInfo[allergy] == 1 {
+                safe = false
+            }
+        }
+        
+        for diet in user.userProfile.dietaryRestrictions.dietaryRestrictionList {
+            if dietaryRestrictionInfo[diet] == 2 {
+                return 2
+            } else if dietaryRestrictionInfo[diet] == 1 {
+                safe = false
+            }
+        }
+        
+        return safe ? 0 : 1
     }
 }
 
