@@ -47,6 +47,10 @@ struct MenuItem: Codable, Identifiable, Hashable {
     var image: String {
         name.lowercased().filter{!$0.isWhitespace}
     }
+    
+    var safeBiteValue: Int {
+        
+    }
 }
 
 struct Menu: Codable {
