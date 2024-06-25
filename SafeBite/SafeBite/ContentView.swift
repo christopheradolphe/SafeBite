@@ -28,15 +28,28 @@ struct Cards: View {
                         IndividualRestaurantView(restaurant: restaurant)
                     } label: {
                         VStack {
-                            Image(restaurant.image)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 100, height:100)
+                            ZStack {
+                                Image(restaurant.restaurantThumbnail)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width:150, height:100)
+                                VStack {
+                                    Spacer()
+                                    HStack {
+                                        Spacer()
+                                        Image(restaurant.image)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width:50, height:50)
+                                            .background(.white)
+                                    }
+                                }
+                            }
                             VStack {
                                 Text(restaurant.name)
                                     .font(.subheadline)
                                     .foregroundStyle(.black)
-                                    .frame(maxWidth: 100)
+                                    .frame(maxWidth: 150)
                             }
                             .frame(maxWidth: .infinity)
                         }
