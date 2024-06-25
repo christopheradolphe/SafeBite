@@ -40,12 +40,13 @@ struct MenuItemView: View {
 struct MenuTypeView: View {
     let menu: Menu
     let menuType: String
+    let safetyRating: Int
     
     var body: some View {
         VStack {
             Text(menuType)
                 .font(.subheadline)
-            ForEach(menu.menuItems.filter{$0.itemType==menuType}) { menuItem in
+            ForEach(menu.menuItems.filter{$0.itemType==menuType}.filter{$0.safeBiteValue==safetyRating}) { menuItem in
                 MenuItemView(menuItem: menuItem)
             }
         }
@@ -86,15 +87,48 @@ struct IndividualRestaurantView: View {
                     Text("Menu")
                         .font(.title2)
                         .padding(.vertical, 10)
-                    ForEach(restaurtant.menuTypes, id: \.self) { type in
-                        MenuTypeView(menu: menu, menuType: type)
+                    
+                    VStack(alignment: .leading) {
+                        Text("Allergy Safe")
+                            .font(.title3)
+                            .padding(.horizontal)
+                        
+                        ForEach(restaurtant.menuTypes, id: \.self) { type in
+                            MenuTypeView(menu: menu, menuType: type, safetyRating: 0)
+                        }
                     }
+                    .background(.green)
+                    
+                    VStack(alignment: .leading) {
+                        Text("Item Removal Possible")
+                            .font(.title3)
+                            .padding(.horizontal)
+                        
+                        ForEach(restaurtant.menuTypes, id: \.self) { type in
+                            MenuTypeView(menu: menu, menuType: type, safetyRating: 1)
+                        }
+                    }
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    .background(.orange)
+                    
+                    VStack(alignment: .leading) {
+                        Text("Allergen in Meal")
+                            .font(.title3)
+                            .padding(.horizontal)
+                        
+                        ForEach(restaurtant.menuTypes, id: \.self) { type in
+                            MenuTypeView(menu: menu, menuType: type, safetyRating: 2)
+                        }
+                    }
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    .padding(.vertical)
+                    .background(.red)
                 }
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
                 .navigationTitle(restaurtant.name)
                 .navigationBarTitleDisplayMode(.inline)
-                .toolbarBackground(.green)
+                .toolbarBackground(.gray)
             }
         }
     }
