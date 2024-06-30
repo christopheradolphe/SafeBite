@@ -55,19 +55,27 @@ struct MenuTypeView: View {
 }
 
 struct IndividualRestaurantView: View {
-    let restaurtant: Restaurant
-    let menu: Menu        
+    @State private var restaurtant: Restaurant
+    let menu: Menu
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    Image(restaurtant.image)
-                        .resizable()
-                        .scaledToFit()
-                        .containerRelativeFrame(.horizontal) { width, axis in
-                            width * 0.4
-                        }
-                        .clipShape(.circle)
+                    ZStack {
+//                        Image(restaurtant.restaurantThumbnail)
+//                            .resizable()
+//                            .scaledToFill()
+//                            .containerRelativeFrame(.horizontal) { width, axis in
+//                                width * 0.9
+//                            }
+                        Image(restaurtant.image)
+                            .resizable()
+                            .scaledToFit()
+                            .containerRelativeFrame(.horizontal) { width, axis in
+                                width * 0.4
+                            }
+                            .clipShape(.circle)
+                    }
                     if restaurtant.description != "" {
                         VStack(alignment: .leading) {
                             Text("About \(restaurtant.name)")
@@ -129,6 +137,13 @@ struct IndividualRestaurantView: View {
                 .navigationTitle(restaurtant.name)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbarBackground(.gray)
+                .toolbar {
+                    Button {
+                        restaurtant.favourite.toggle()
+                    } label: {
+                        Image(systemName: restaurtant.favourite ? "star.fill" : "star")
+                    }
+                }
             }
         }
     }

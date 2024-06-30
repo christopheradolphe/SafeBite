@@ -18,7 +18,7 @@ struct Separator: View {
 
 struct Cards: View {
     let cuisine: String
-    let restaurants: [Restaurant]
+    var restaurants: [Restaurant]
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {

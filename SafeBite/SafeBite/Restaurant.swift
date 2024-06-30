@@ -16,6 +16,7 @@ struct Restaurant: Codable, Identifiable {
     let phoneNumber: String
     let website: String
     let menuTypes: [String]
+    var favourite = false
     
     var image: String {
         name.lowercased().filter{!$0.isWhitespace}
@@ -27,6 +28,18 @@ struct Restaurant: Codable, Identifiable {
     
     var restaurantThumbnail: String {
         name.lowercased().filter{!$0.isWhitespace} + "thumbnail"
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case description
+        case cuisine
+        case address
+        case phoneNumber
+        case website
+        case menuTypes
+            // Do not include `newField` here
     }
 }
 
