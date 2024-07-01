@@ -41,8 +41,14 @@ struct MenuTypeView: View {
     
     var body: some View {
         VStack {
+            let menuTypeItems = menu.menuItems.filter{$0.itemType==menuType}.filter{$0.safeBiteValue==safetyRating}
             Text(menuType)
                 .font(.subheadline)
+                .padding(.bottom, 5)
+                .frame(maxWidth:.infinity)
+            if menuTypeItems.isEmpty {
+                Text("No items fit this catergory")
+            }
             ForEach(menu.menuItems.filter{$0.itemType==menuType}.filter{$0.safeBiteValue==safetyRating}) { menuItem in
                 MenuItemView(menuItem: menuItem)
             }
