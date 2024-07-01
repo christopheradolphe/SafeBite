@@ -66,19 +66,23 @@ struct IndividualRestaurantView: View {
             ScrollView {
                 VStack {
                     ZStack {
-//                        Image(restaurtant.restaurantThumbnail)
-//                            .resizable()
-//                            .scaledToFill()
-//                            .containerRelativeFrame(.horizontal) { width, axis in
-//                                width * 0.9
-//                            }
-                        Image(restaurtant.image)
+                        Image(restaurtant.restaurantThumbnail)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: UIScreen.main.bounds.width * 0.4)
-                            .clipShape(.circle)
-                            .shadow(radius:5)
+                            .frame(width: UIScreen.main.bounds.width)
+                        VStack {
+                            Spacer()
+                            
+                            Image(restaurtant.image)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: UIScreen.main.bounds.width * 0.3)
+                                .clipShape(.circle)
+                                .shadow(radius:5)
+                        }
                     }
+                    .padding(.bottom, 20)
+                    
                     if restaurtant.description != "" {
                         VStack(alignment: .leading) {
                             Text("About \(restaurtant.name)")
