@@ -57,8 +57,29 @@ struct MenuTypeView: View {
     }
 }
 
+struct ItemCatergoryView: View {
+    let restaurant: Restaurant
+    let menu: Menu
+    let safeBiteCatergory: Int
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(safeBiteCatergory == 0 ? "Allergy Safe" : safeBiteCatergory == 1 ? "Item Removal Possible" : "Contains Allergen")
+                .font(.title3)
+                .padding(.horizontal)
+            
+            ForEach(restaurant.menuTypes, id: \.self) { type in
+                MenuTypeView(menu: menu, menuType: type, safetyRating: safeBiteCatergory)
+            }
+        }
+        .background(safeBiteCatergory == 0 ? Color.green.opacity(0.6) : safeBiteCatergory == 1 ? Color.orange.opacity(0.6) : Color.red.opacity(0.6))
+        .cornerRadius(10)
+        .padding(.bottom, 10)
+    }
+}
+
 struct IndividualRestaurantView: View {
-    @State private var restaurtant: Restaurant
+    @State private var restaurant: Restaurant
     let menu: Menu
     
     var body: some View {
@@ -66,14 +87,14 @@ struct IndividualRestaurantView: View {
             ScrollView {
                 VStack {
                     ZStack {
-                        Image(restaurtant.restaurantThumbnail)
+                        Image(restaurant.restaurantThumbnail)
                             .resizable()
                             .scaledToFit()
                             .frame(width: UIScreen.main.bounds.width)
                         VStack {
                             Spacer()
                             
-                            Image(restaurtant.image)
+                            Image(restaurant.image)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: UIScreen.main.bounds.width * 0.3)
@@ -83,16 +104,16 @@ struct IndividualRestaurantView: View {
                     }
                     .padding(.bottom, 20)
                     
-                    if restaurtant.description != "" {
+                    if restaurant.description != "" {
                         VStack(alignment: .leading) {
-                            Text("About \(restaurtant.name)")
+                            Text("About \(restaurant.name)")
                                 .font(.headline)
                                 .padding(.vertical, 10)
-                            Text(restaurtant.description) //Work to shorten this or make an info button to view
+                            Text(restaurant.description) //Work to shorten this or make an info button to view
                                 .font(.caption)
                                 .foregroundStyle(.gray)
                             
-                            Separator()
+                            Divider()
                         }
                     }
                 }
@@ -103,52 +124,22 @@ struct IndividualRestaurantView: View {
                         .font(.title2)
                         .padding(.vertical, 10)
                     
-                    VStack(alignment: .leading) {
-                        Text("Allergy Safe")
-                            .font(.title3)
-                            .padding(.horizontal)
-                        
-                        ForEach(restaurtant.menuTypes, id: \.self) { type in
-                            MenuTypeView(menu: menu, menuType: type, safetyRating: 0)
-                        }
-                    }
-                    .background(.green)
+                    ItemCatergoryView(restaurant: restaurant, menu: menu, safeBiteCatergory: 0)
                     
-                    VStack(alignment: .leading) {
-                        Text("Item Removal Possible")
-                            .font(.title3)
-                            .padding(.horizontal)
-                        
-                        ForEach(restaurtant.menuTypes, id: \.self) { type in
-                            MenuTypeView(menu: menu, menuType: type, safetyRating: 1)
-                        }
-                    }
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                    .background(.orange)
+                    ItemCatergoryView(restaurant: restaurant, menu: menu, safeBiteCatergory: 1)
                     
-                    VStack(alignment: .leading) {
-                        Text("Allergen in Meal")
-                            .font(.title3)
-                            .padding(.horizontal)
-                        
-                        ForEach(restaurtant.menuTypes, id: \.self) { type in
-                            MenuTypeView(menu: menu, menuType: type, safetyRating: 2)
-                        }
-                    }
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                    .padding(.vertical)
-                    .background(.red)
+                    ItemCatergoryView(restaurant: restaurant, menu: menu, safeBiteCatergory: 2)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(.horizontal)
                 
-                .navigationTitle(restaurtant.name)
+                .navigationTitle(restaurant.name)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbarBackground(.gray)
                 .toolbar {
                     Button {
-                        restaurtant.favourite.toggle()
+                        restaurant.favourite.toggle()
                     } label: {
-                        Image(systemName: restaurtant.favourite ? "star.fill" : "star")
+                        Image(systemName: restaurant.favourite ? "star.fill" : "star")
                     }
                 }
             }
@@ -156,7 +147,7 @@ struct IndividualRestaurantView: View {
     }
     
     init(restaurant: Restaurant) {
-        self.restaurtant = restaurant
+        self.restaurant = restaurant
         self.menu = Menu(menuItems: Bundle.main.decode(restaurant.menuJSONname))
     }
 }
