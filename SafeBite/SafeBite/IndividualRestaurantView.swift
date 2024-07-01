@@ -24,13 +24,10 @@ struct MenuItemView: View {
                     
                     Image(systemName: "chevron.right")
                         .padding(.horizontal)
-                        .foregroundColor(.black)
+                        .foregroundColor(.gray)
                 }
                 .padding(5)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(.gray)
-                )
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color.white).shadow(radius: 10))
                 .padding(.horizontal)
             }
         }
