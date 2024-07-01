@@ -22,7 +22,7 @@ struct MenuItemView: View {
                     
                     Spacer()
                     
-                    Text(">")
+                    Image(systemName: "chevron.right")
                         .padding(.horizontal)
                         .foregroundColor(.black)
                 }
