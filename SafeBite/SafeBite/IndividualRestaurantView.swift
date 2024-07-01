@@ -60,6 +60,7 @@ struct MenuTypeView: View {
 struct IndividualRestaurantView: View {
     @State private var restaurtant: Restaurant
     let menu: Menu
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -74,10 +75,9 @@ struct IndividualRestaurantView: View {
                         Image(restaurtant.image)
                             .resizable()
                             .scaledToFit()
-                            .containerRelativeFrame(.horizontal) { width, axis in
-                                width * 0.4
-                            }
+                            .frame(width: UIScreen.main.bounds.width * 0.4)
                             .clipShape(.circle)
+                            .shadow(radius:5)
                     }
                     if restaurtant.description != "" {
                         VStack(alignment: .leading) {
