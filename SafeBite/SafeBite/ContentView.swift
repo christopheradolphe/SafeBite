@@ -45,11 +45,32 @@ struct Cards: View {
                                     }
                                 }
                             }
-                            VStack {
+                            HStack {
                                 Text(restaurant.name)
                                     .font(.subheadline)
                                     .foregroundStyle(.black)
                                     .frame(maxWidth: 150)
+                                ZStack {
+                                    let percentage = Double(restaurant.menu.safeItems) / Double(restaurant.menu.totalItems)
+                                    let color = Color(red: (1 - percentage), green: percentage, blue: 0)
+                                    Circle()
+                                        .stroke(lineWidth: 5)
+                                        .opacity(0.3)
+                                        .foregroundColor(.gray)
+                                        .frame(width: 50, height: 50)
+
+                                    Circle()
+                                        .trim(from: 0.0, to: percentage)
+                                        .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+                                        .foregroundColor(color)
+                                        .rotationEffect(Angle(degrees: -90))
+                                        .animation(.linear, value: percentage)
+                                        .frame(width: 50, height: 50)
+                                    
+                                    Text(percentage, format: .percent.precision(.fractionLength(0)))
+                                        .foregroundStyle(.white)
+                                }
+                                .padding(5)
                             }
                             .frame(maxWidth: .infinity)
                         }
@@ -84,7 +105,7 @@ struct ContentView: View {
                             
                             Cards(cuisine: cuisine, restaurants: restaurants)
                             
-                            Separator()
+                            Divider()
                         }
                     }
                 }

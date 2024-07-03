@@ -74,19 +74,19 @@ struct MenuItem: Codable, Identifiable, Hashable {
 struct Menu: Codable {
     let menuItems: [MenuItem]
     
-    var totalItems: Int {
-        menuItems.count
+    var totalItems: Double {
+        Double(menuItems.count)
     }
     
-    var safeItems: Int {
-        menuItems.filter{$0.safeBiteValue==0}.count
+    var safeItems: Double {
+        Double(menuItems.filter{$0.safeBiteValue==0}.count)
     }
     
-    var modifiableItems: Int {
-        menuItems.filter{$0.safeBiteValue==1}.count
+    var modifiableItems: Double {
+        Double(menuItems.filter{$0.safeBiteValue==1}.count)
     }
     
-    var unsafeItems: Int {
-        menuItems.filter{$0.safeBiteValue==2}.count
+    var unsafeItems: Double {
+        Double(menuItems.filter{$0.safeBiteValue==2}.count)
     }
 }
