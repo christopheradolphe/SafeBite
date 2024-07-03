@@ -31,8 +31,16 @@ struct Cards: View {
                             ZStack {
                                 Image(restaurant.restaurantThumbnail)
                                     .resizable()
-                                    .scaledToFit()
-                                    .frame(width:150, height:100)
+                                    .scaledToFill()
+                                    .frame(width: 150, height: 100)
+                                    .clipped() // Clip content within frame
+                                    .cornerRadius(10)
+                                    .shadow(radius: 3)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.green, lineWidth: 1)
+                                    )
+                                
                                 VStack {
                                     Spacer()
                                     HStack {
@@ -40,11 +48,14 @@ struct Cards: View {
                                         Image(restaurant.image)
                                             .resizable()
                                             .scaledToFit()
-                                            .frame(width:50, height:50)
-                                            .background(.white)
+                                            .frame(width: 50, height: 50)
+                                            .background(Color.white)
+                                            .clipShape(Circle())
+                                            .padding(5)
                                     }
                                 }
                             }
+                            
                             HStack {
                                 Text(restaurant.name)
                                     .font(.subheadline)
