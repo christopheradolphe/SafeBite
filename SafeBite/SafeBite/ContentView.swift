@@ -23,7 +23,8 @@ struct Cards: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(restaurants.filter{$0.cuisine==cuisine}) { restaurant in
+                let restaurantList = cuisine == "Favourites" ? restaurants.filter{$0.favourite==true} : restaurants.filter{$0.cuisine==cuisine}
+                ForEach(restaurantList) { restaurant in
                     NavigationLink {
                         IndividualRestaurantView(restaurant: restaurant)
                     } label: {
@@ -113,7 +114,16 @@ struct ContentView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    ForEach(cuisines, id:\.self) { cuisine in
+                    VStack(alignment: .leading) {
+                        Text("Favourites")
+                            .font(.title.bold())
+                            .padding([.horizontal, .top])
+                        
+                        Cards(cuisine: "Favourites", restaurants: restaurants)
+                        
+                        Divider()
+                    }
+                        ForEach(cuisines, id:\.self) { cuisine in
                         VStack(alignment: .leading) {
                             Text(cuisine)
                                 .font(.title.bold())
