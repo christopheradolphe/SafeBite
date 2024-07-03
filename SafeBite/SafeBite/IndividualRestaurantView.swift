@@ -62,21 +62,27 @@ struct ItemCatergoryView: View {
     let menu: Menu
     let safeBiteCatergory: Int
     
-    @State private var isExpanded = false
+    @State var isExpanded: Bool
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(safeBiteCatergory == 0 ? "Allergy Safe" : safeBiteCatergory == 1 ? "Item Removal Possible" : "Contains Allergen")
-                .font(.title3)
-                .padding(.horizontal)
-            
-            ForEach(restaurant.menuTypes, id: \.self) { type in
-                MenuTypeView(menu: menu, menuType: type, safetyRating: safeBiteCatergory)
+            DisclosureGroup(isExpanded: $isExpanded) {
+                ForEach(restaurant.menuTypes, id: \.self) { type in
+                    MenuTypeView(menu: menu, menuType: type, safetyRating: safeBiteCatergory)
+                }
+            } label: {
+                HStack {
+                    Text(safeBiteCatergory == 0 ? "Allergy Safe" : safeBiteCatergory == 1 ? "Item Removal Possible" : "Contains Allergen")
+                        .font(.title3)
+                        .foregroundStyle(.black)
+                        .padding()
+                }
             }
         }
         .background(safeBiteCatergory == 0 ? Color.green.opacity(0.6) : safeBiteCatergory == 1 ? Color.orange.opacity(0.6) : Color.red.opacity(0.6))
         .cornerRadius(10)
         .padding(.bottom, 10)
+        .padding(.horizontal, 5)
     }
 }
 
@@ -114,11 +120,11 @@ struct IndividualRestaurantView: View {
                         .font(.title2)
                         .padding(.vertical, 10)
                     
-                    ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 0)
+                    ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 0, isExpanded: true)
                     
-                    ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 1)
+                    ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 1, isExpanded: false)
                     
-                    ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 2)
+                    ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 2, isExpanded: false)
                 }
                 .padding(.horizontal)
                 
