@@ -32,7 +32,7 @@ struct Cards: View {
                                 Image(restaurant.restaurantThumbnail)
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 150, height: 100)
+                                    .frame(width: 200, height: 100)
                                     .clipped() // Clip content within frame
                                     .cornerRadius(10)
                                     .shadow(radius: 3)
@@ -58,9 +58,14 @@ struct Cards: View {
                             
                             HStack {
                                 Text(restaurant.name)
-                                    .font(.subheadline)
+                                    .font(.callout)
                                     .foregroundStyle(.black)
-                                    .frame(maxWidth: 150)
+                                    .lineLimit(2)
+                                    .truncationMode(.tail)
+                                    .padding(.horizontal, 5)
+                                
+                                Spacer()
+                                
                                 ZStack {
                                     let percentage = Double(restaurant.menu.safeItems) / Double(restaurant.menu.totalItems)
                                     let color = Color(red: (1 - percentage), green: percentage, blue: 0)
@@ -83,7 +88,7 @@ struct Cards: View {
                                 }
                                 .padding(5)
                             }
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth: 200)
                         }
                         .background(.green)
                         .clipShape(.rect(cornerRadius: 10))
