@@ -62,6 +62,8 @@ struct ItemCatergoryView: View {
     let menu: Menu
     let safeBiteCatergory: Int
     
+    @State private var isExpanded = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text(safeBiteCatergory == 0 ? "Allergy Safe" : safeBiteCatergory == 1 ? "Item Removal Possible" : "Contains Allergen")
@@ -80,6 +82,7 @@ struct ItemCatergoryView: View {
 
 struct IndividualRestaurantView: View {
     @State var restaurant: Restaurant
+    @State private var showDescription = false
     
     var body: some View {
         NavigationStack {
@@ -103,18 +106,6 @@ struct IndividualRestaurantView: View {
                     }
                     .padding(.bottom, 20)
                     
-                    if restaurant.description != "" {
-                        VStack(alignment: .leading) {
-                            Text("About \(restaurant.name)")
-                                .font(.headline)
-                                .padding(.vertical, 10)
-                            Text(restaurant.description) //Work to shorten this or make an info button to view
-                                .font(.caption)
-                                .foregroundStyle(.gray)
-                            
-                            Divider()
-                        }
-                    }
                 }
                 .padding(.horizontal)
                 
@@ -135,11 +126,57 @@ struct IndividualRestaurantView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbarBackground(.gray)
                 .toolbar {
+                    if !restaurant.description.isEmpty{
+                        Button(action: {
+                            withAnimation {
+                                showDescription.toggle()
+                            }
+                        }) {
+                            Image(systemName: "info.circle")
+                        }
+                    }
+                    
                     Button {
                         restaurant.favourite.toggle()
                     } label: {
                         Image(systemName: restaurant.favourite ? "star.fill" : "star")
                     }
+                }
+                .sheet(isPresented: $showDescription) {
+                    // Sheet content
+                    VStack {
+                        ScrollView {
+                            VStack(alignment: .leading, spacing: 10) {
+                                HStack {
+                                    Text("About \(restaurant.name)")
+                                        .font(.headline)
+                                        .foregroundStyle(.black)
+                                        .padding(.vertical, 10)
+                                    
+                                    Spacer()
+                                    
+                                    Button(action: {
+                                        withAnimation {
+                                            showDescription.toggle()
+                                        }
+                                    }) {
+                                        Image(systemName: "xmark.circle")
+                                            .foregroundColor(.gray)
+                                    }
+                                    .padding()
+                                }
+                                
+                                Text(restaurant.description)
+                                    .font(.body)
+                                    .foregroundStyle(.gray)
+                                    .padding(.horizontal)
+                                
+                                Spacer()
+                            }
+                            .padding()
+                        }
+                    }
+                    .navigationTitle("Restaurant Info")
                 }
             }
         }
@@ -148,5 +185,5 @@ struct IndividualRestaurantView: View {
 
 #Preview {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
-    return IndividualRestaurantView(restaurant: restaurants[7])
+    return IndividualRestaurantView(restaurant: restaurants[1])
 }
