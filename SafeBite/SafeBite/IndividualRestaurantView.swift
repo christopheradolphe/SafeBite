@@ -79,8 +79,7 @@ struct ItemCatergoryView: View {
 }
 
 struct IndividualRestaurantView: View {
-    @State private var restaurant: Restaurant
-    let menu: Menu
+    @State var restaurant: Restaurant
     
     var body: some View {
         NavigationStack {
@@ -124,11 +123,11 @@ struct IndividualRestaurantView: View {
                         .font(.title2)
                         .padding(.vertical, 10)
                     
-                    ItemCatergoryView(restaurant: restaurant, menu: menu, safeBiteCatergory: 0)
+                    ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 0)
                     
-                    ItemCatergoryView(restaurant: restaurant, menu: menu, safeBiteCatergory: 1)
+                    ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 1)
                     
-                    ItemCatergoryView(restaurant: restaurant, menu: menu, safeBiteCatergory: 2)
+                    ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 2)
                 }
                 .padding(.horizontal)
                 
@@ -144,11 +143,6 @@ struct IndividualRestaurantView: View {
                 }
             }
         }
-    }
-    
-    init(restaurant: Restaurant) {
-        self.restaurant = restaurant
-        self.menu = Menu(menuItems: Bundle.main.decode(restaurant.menuJSONname))
     }
 }
 

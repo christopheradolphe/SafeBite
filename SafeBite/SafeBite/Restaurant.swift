@@ -41,6 +41,10 @@ struct Restaurant: Codable, Identifiable {
         case menuTypes
             // Do not include `newField` here
     }
+    
+    var menu: Menu {
+        Menu(menuItems: Bundle.main.decode(menuJSONname))
+    }
 }
 
 enum Cuisine: Codable {
