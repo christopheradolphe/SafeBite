@@ -39,6 +39,7 @@ struct Restaurant: Codable, Identifiable {
         case phoneNumber
         case website
         case menuTypes
+        case favourite
             // Do not include `newField` here
     }
     
