@@ -13,14 +13,16 @@ struct AllergenCards: View {
     let menuItem: MenuItem
     
     var color: Color {
-        if safetyIndicator == 0{
+        switch safetyIndicator {
+        case 0:
             return .green
-        }else if safetyIndicator == 1 {
+        case 1:
             return .orange
-        } else {
+        default:
             return .red
         }
     }
+    
     var body: some View {
         ScrollView(.horizontal) {
             HStack {
