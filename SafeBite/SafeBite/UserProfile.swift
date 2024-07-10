@@ -46,7 +46,7 @@ class User {
         }
     }
     
-    init () {
+    private init () {
         if let savedUserProfile = UserDefaults.standard.data(forKey: "User Profile") {
             if let decodedUserProfile = try? JSONDecoder().decode(UserProfile.self, from: savedUserProfile) {
                 userProfile = decodedUserProfile
@@ -54,4 +54,6 @@ class User {
             }
         }
     }
+    
+    static let shared = User()
 }
