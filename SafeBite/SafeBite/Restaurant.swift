@@ -16,7 +16,6 @@ struct Restaurant: Codable, Identifiable {
     let phoneNumber: String
     let website: String
     let menuTypes: [String]
-    var favourite = false
     
     var image: String {
         name.lowercased().filter{!$0.isWhitespace}
@@ -39,7 +38,6 @@ struct Restaurant: Codable, Identifiable {
         case phoneNumber
         case website
         case menuTypes
-        case favourite
             // Do not include `newField` here
     }
     

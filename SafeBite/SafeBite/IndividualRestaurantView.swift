@@ -143,7 +143,7 @@ struct IndividualRestaurantView: View {
                     }
                     
                     Button {
-                        restaurant.favourite.toggle()
+                        User().userProfile.favouriteRestaurants.append(restaurant)
                     } label: {
                         Image(systemName: restaurant.favourite ? "star.fill" : "star")
                     }

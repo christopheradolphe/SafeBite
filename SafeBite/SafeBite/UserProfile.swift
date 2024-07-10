@@ -24,6 +24,16 @@ struct UserProfile: Codable {
     var userInformation = UserInformation()
     var allergens = Allergens()
     var dietaryRestrictions = DietaryRestrictions()
+    var favouriteRestaurants: [String : Bool]
+    
+    init() {
+        let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
+        var favourites = [String: Bool]()
+        for restaurant in restaurants {
+            favourites[restaurant.name] = false
+        }
+        favouriteRestaurants = favourites
+    }
 }
 
 @Observable
