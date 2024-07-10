@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State private var user = User()
+    @State private var user = User.shared
     
     var body: some View {
         NavigationStack {

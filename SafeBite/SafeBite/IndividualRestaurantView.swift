@@ -143,9 +143,9 @@ struct IndividualRestaurantView: View {
                     }
                     
                     Button {
-                        User().userProfile.favouriteRestaurants.append(restaurant)
+                        User.shared.userProfile.favouriteRestaurants[restaurant.name]?.toggle()
                     } label: {
-                        Image(systemName: restaurant.favourite ? "star.fill" : "star")
+                        Image(systemName: User.shared.userProfile.favouriteRestaurants[restaurant.name] ? "star.fill" : "star")
                     }
                 }
                 .sheet(isPresented: $showDescription) {
