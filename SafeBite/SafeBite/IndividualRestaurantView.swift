@@ -190,6 +190,7 @@ struct IndividualRestaurantView: View {
                         }
                     }
                     .navigationTitle("Restaurant Info")
+                    .presentationDetents([.medium])
                 }
             }
         }
