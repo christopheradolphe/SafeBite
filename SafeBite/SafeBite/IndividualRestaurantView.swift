@@ -76,6 +76,13 @@ struct ItemCatergoryView: View {
                         .font(.title3)
                         .foregroundStyle(.black)
                         .padding()
+                    
+                    Spacer()
+                    
+                    Text("\(Int( safeBiteCatergory == 0 ? restaurant.menu.safeItems : safeBiteCatergory == 1 ? restaurant.menu.modifiableItems : restaurant.menu.unsafeItems))")
+                        .font(.title3)
+                        .foregroundStyle(.gray)
+                        .padding()
                 }
             }
         }
