@@ -115,7 +115,7 @@ struct ContentView: View {
             ScrollView {
                 VStack {
                     VStack(alignment: .leading) {
-                        Text("Favourites")
+                        Text("Your Favourites")
                             .font(.title.bold())
                             .padding([.horizontal, .top])
                         
