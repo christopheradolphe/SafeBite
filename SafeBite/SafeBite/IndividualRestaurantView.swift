@@ -163,7 +163,7 @@ struct IndividualRestaurantView: View {
                                 HStack {
                                     Text("About \(restaurant.name)")
                                         .font(.headline)
-                                        .foregroundStyle(.black)
+                                        .foregroundColor(.primary)
                                         .padding(.vertical, 10)
                                     
                                     Spacer()
@@ -173,22 +173,26 @@ struct IndividualRestaurantView: View {
                                             showDescription.toggle()
                                         }
                                     }) {
-                                        Image(systemName: "xmark.circle")
+                                        Image(systemName: "xmark.circle.fill")
                                             .foregroundColor(.gray)
+                                            .imageScale(.large)
                                     }
                                     .padding()
                                 }
                                 
                                 Text(restaurant.description)
                                     .font(.body)
-                                    .foregroundStyle(.gray)
+                                    .foregroundColor(.secondary)
                                     .padding(.horizontal)
                                 
                                 Spacer()
                             }
                             .padding()
+                            .background(RoundedRectangle(cornerRadius: 20).fill(Color.white).shadow(radius: 10))
+                            .padding()
                         }
                     }
+                    .background(Color(UIColor.systemGroupedBackground).edgesIgnoringSafeArea(.all))
                     .navigationTitle("Restaurant Info")
                     .presentationDetents([.medium])
                 }
