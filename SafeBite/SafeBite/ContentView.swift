@@ -123,9 +123,9 @@ struct ContentView: View {
                                 Text("You Currently Have No Favourite Restaurants")
                                     .font(.callout)
                                     .foregroundColor(.gray)
-                                    .multilineTextAlignment(.center) // Center-align the text if it's multiline
-                                    .frame(maxWidth: .infinity, maxHeight: .infinity) // Expand to fill the parent view
-                                    .background(Color.clear) // Ensure background is clear to center properly
+                                    .multilineTextAlignment(.center)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    .background(Color.clear)
                                     .padding(.vertical)
 
                         }
