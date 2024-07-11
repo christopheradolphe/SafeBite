@@ -119,6 +119,17 @@ struct ContentView: View {
                             .font(.title.bold())
                             .padding([.horizontal, .top])
                         
+                        if (!User.shared.userProfile.favouriteRestaurants.values.contains(true)) {
+                                Text("You Currently Have No Favourite Restaurants")
+                                    .font(.callout)
+                                    .foregroundColor(.gray)
+                                    .multilineTextAlignment(.center) // Center-align the text if it's multiline
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity) // Expand to fill the parent view
+                                    .background(Color.clear) // Ensure background is clear to center properly
+                                    .padding(.vertical)
+
+                        }
+                        
                         Cards(cuisine: "Favourites", restaurants: restaurants)
                         
                         Divider()
@@ -128,7 +139,7 @@ struct ContentView: View {
                             Text(cuisine)
                                 .font(.title.bold())
                                 .padding([.horizontal, .top])
-                            
+
                             Cards(cuisine: cuisine, restaurants: restaurants)
                             
                             Divider()
