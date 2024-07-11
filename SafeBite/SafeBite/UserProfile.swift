@@ -32,7 +32,7 @@ struct UserProfile: Codable {
         for restaurant in restaurants {
             favourites[restaurant.name] = false
         }
-        favouriteRestaurants = favourites
+        self.favouriteRestaurants = favourites
     }
 }
 

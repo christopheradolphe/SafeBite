@@ -49,7 +49,7 @@ struct MenuItem: Codable, Identifiable, Hashable {
     }
     
     var safeBiteValue: Int {
-        let user = User()
+        let user = User.shared
         var safe = true
         for allergy in user.userProfile.allergens.allergenList {
             if allergenInfo[allergy] == 2 {

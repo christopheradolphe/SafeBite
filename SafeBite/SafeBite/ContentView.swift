@@ -23,7 +23,7 @@ struct Cards: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                let restaurantList = cuisine == "Favourites" ? restaurants.filter{User.shared.userProfile.favouriteRestaurants[$0.name]} : restaurants.filter{$0.cuisine==cuisine}
+                let restaurantList = cuisine == "Favourites" ? restaurants.filter{User.shared.userProfile.favouriteRestaurants[$0.name] ?? false} : restaurants.filter{$0.cuisine==cuisine}
                 ForEach(restaurantList) { restaurant in
                     NavigationLink {
                         IndividualRestaurantView(restaurant: restaurant)
@@ -75,7 +75,7 @@ struct Cards: View {
                                         .opacity(0.3)
                                         .foregroundColor(.gray)
                                         .frame(width: 50, height: 50)
-
+                                    
                                     Circle()
                                         .trim(from: 0.0, to: percentage)
                                         .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
