@@ -105,12 +105,41 @@ struct Cards: View {
     }
 }
 
+struct LocationPickerView: View {
+    @Binding var selectedLocation: String
+    let locations = ["All", "Toronto", "Kingston"]
+
+    var body: some View {
+        NavigationStack {
+            List {
+                ForEach(locations, id: \.self) { location in
+                    Button(action: {
+                        selectedLocation = location
+                    }) {
+                        HStack {
+                            Text(location)
+                            if selectedLocation == location {
+                                Spacer()
+                                Image(systemName: "checkmark")
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Select Location")
+        }
+    }
+}
+
 
 struct ContentView: View {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
     let cuisines = ["Asian", "Italian", "Tapas", "Steakhouse", "Bar & Grill", "Mexican", "Steakhouse"]
     
     @State private var showingLocationSheet = false
+    @State private var locationFilter = "All"
+    
+    
     @State private var cuisine = "All"
     
     var body: some View {
@@ -138,6 +167,23 @@ struct ContentView: View {
                         Divider()
                     }
                     
+                    HStack (alignment: .top) {
+                        Button {
+                            showingLocationSheet.toggle()
+                        } label: {
+                            Text("Location: \(locationFilter)")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.gray)
+                                .cornerRadius(10)
+                                .shadow(color: .gray, radius: 2, x: 0, y: 2)
+                        }
+                        .padding()
+                        
+                        Spacer()
+                    }
+                    
                     ForEach(cuisines, id:\.self) { cuisine in
                         VStack(alignment: .leading) {
                             Text(cuisine)
@@ -153,6 +199,10 @@ struct ContentView: View {
                 
             }
             .navigationTitle("Restaurants")
+            
+            .sheet(isPresented: $showingLocationSheet) {
+                LocationPickerView(selectedLocation: $locationFilter)
+            }
             .toolbarBackground(.green)
             .navigationBarBackButtonHidden(true)
         }
