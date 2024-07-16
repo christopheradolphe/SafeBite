@@ -146,7 +146,7 @@ struct FilterPickerView: View {
 
 struct ContentView: View {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
-    let cuisines = ["Asian", "Italian", "Tapas", "Steakhouse", "Bar & Grill", "Mexican", "Steakhouse"]
+    let cuisines = ["Asian", "Italian", "Tapas", "Steakhouse", "Bar & Grill", "Mexican"]
     
     @State private var showingLocationFilter = false
     @State private var locationFilter = "All"
@@ -179,6 +179,34 @@ struct ContentView: View {
                         
                         Divider()
                     }
+                    
+                    HStack(alignment: .center){
+                        Text("Filters")
+                            .font(.headline)
+                            .padding(10)
+                        
+                        Spacer ()
+                        
+                        Button(action: {
+                            withAnimation{
+                                locationFilter = "All"
+                                cuisineFilter = "All"
+                            }
+                        }) {
+                            Text("Reset")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                                .padding(10)
+                                .background(Color.clear)
+                                .cornerRadius(30)
+                                .overlay(
+                                    Capsule()
+                                        .stroke(Color.gray, lineWidth: 2)
+                                )
+                        }
+                        .padding(.horizontal)
+                    }
+                    .padding(.top)
                     
                     HStack (alignment: .top) {
                         Button {
