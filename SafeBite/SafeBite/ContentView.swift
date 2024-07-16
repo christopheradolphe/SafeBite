@@ -21,9 +21,16 @@ struct Cards: View {
     var restaurants: [Restaurant]
     
     var body: some View {
+        let restaurantList = cuisine == "Favourites" ? restaurants.filter{User.shared.userProfile.favouriteRestaurants[$0.name] ?? false} : restaurants.filter{$0.cuisine==cuisine}
+        if !restaurantList.isEmpty {
+            Divider()
+            
+            Text(cuisine)
+                .font(.title.bold())
+                .padding([.horizontal, .top])
+        }
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                let restaurantList = cuisine == "Favourites" ? restaurants.filter{User.shared.userProfile.favouriteRestaurants[$0.name] ?? false} : restaurants.filter{$0.cuisine==cuisine}
                 ForEach(restaurantList) { restaurant in
                     NavigationLink {
                         IndividualRestaurantView(restaurant: restaurant)
@@ -240,13 +247,7 @@ struct ContentView: View {
                     
                     ForEach(cuisines, id:\.self) { cuisine in
                         VStack(alignment: .leading) {
-                            Text(cuisine)
-                                .font(.title.bold())
-                                .padding([.horizontal, .top])
-
                             Cards(cuisine: cuisine, restaurants: restaurants)
-                            
-                            Divider()
                         }
                     }
                 }
