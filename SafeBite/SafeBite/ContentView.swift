@@ -20,9 +20,10 @@ struct Cards: View {
     let cuisine: String
     var restaurants: [Restaurant]
     let location: String
+    var restaurantList: [Restaurant]
     
     var body: some View {
-        let restaurantList = cuisine == "Favourites" ? restaurants.filter{User.shared.userProfile.favouriteRestaurants[$0.name] ?? false} : restaurants.filter{$0.cuisine==cuisine}
+        
         if !restaurantList.isEmpty {
             Divider()
             
@@ -111,6 +112,16 @@ struct Cards: View {
             }
         }
     }
+    init(cuisine: String, restaurants: [Restaurant], location: String) {
+        self.cuisine = cuisine
+        self.restaurants = restaurants
+        self.location = location
+        
+        self.restaurantList = cuisine == "Favourites" ? restaurants.filter{User.shared.userProfile.favouriteRestaurants[$0.name] ?? false} : restaurants.filter{$0.cuisine==cuisine}
+        if !(location == "All"){
+            restaurantList = restaurantList.filter{$0.location==location}
+        }
+    }
 }
 
 struct FilterPickerView: View {
@@ -191,8 +202,8 @@ struct ContentView: View {
                     HStack(alignment: .center){
                         VStack {
                             Text("Filters")
-                                .font(.title3)
-                                .padding(10)
+                                .font(.headline)
+                                .padding(.horizontal)
                             
                             Spacer()
                         }
