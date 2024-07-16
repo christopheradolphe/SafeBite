@@ -19,6 +19,7 @@ struct Separator: View {
 struct Cards: View {
     let cuisine: String
     var restaurants: [Restaurant]
+    let location: String
     
     var body: some View {
         let restaurantList = cuisine == "Favourites" ? restaurants.filter{User.shared.userProfile.favouriteRestaurants[$0.name] ?? false} : restaurants.filter{$0.cuisine==cuisine}
@@ -182,15 +183,19 @@ struct ContentView: View {
 
                         }
                         
-                        Cards(cuisine: "Favourites", restaurants: restaurants)
+                        Cards(cuisine: "Favourites", restaurants: restaurants, location: "All")
                         
                         Divider()
                     }
                     
                     HStack(alignment: .center){
-                        Text("Filters")
-                            .font(.headline)
-                            .padding(10)
+                        VStack {
+                            Text("Filters")
+                                .font(.title3)
+                                .padding(10)
+                            
+                            Spacer()
+                        }
                         
                         Spacer ()
                         
@@ -247,10 +252,10 @@ struct ContentView: View {
                     VStack(alignment: .leading) {
                         if cuisineFilter == "All" {
                             ForEach(cuisines, id:\.self) { cuisine in
-                                Cards(cuisine: cuisine, restaurants: restaurants)
+                                Cards(cuisine: cuisine, restaurants: restaurants, location: locationFilter)
                             }
                         } else {
-                            Cards(cuisine: cuisineFilter, restaurants: restaurants)
+                            Cards(cuisine: cuisineFilter, restaurants: restaurants, location: locationFilter)
                         }
                     }
                 }
