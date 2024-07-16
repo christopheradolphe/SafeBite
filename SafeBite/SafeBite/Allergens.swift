@@ -155,9 +155,9 @@ struct DietaryRestrictions: Codable {
     var vegetarian = false {
         didSet {
             if vegetarian {
-                dietaryRestrictionList.insert("soy")
+                dietaryRestrictionList.insert("vegetarian")
             } else {
-                dietaryRestrictionList.remove("soy")
+                dietaryRestrictionList.remove("vegetarian")
             }
         }
     }
