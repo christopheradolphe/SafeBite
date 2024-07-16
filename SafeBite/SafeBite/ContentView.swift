@@ -110,6 +110,9 @@ struct ContentView: View {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
     let cuisines = ["Asian", "Italian", "Tapas", "Steakhouse", "Bar & Grill", "Mexican", "Steakhouse"]
     
+    @State private var showingLocationSheet = false
+    @State private var cuisine = "All"
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -134,7 +137,8 @@ struct ContentView: View {
                         
                         Divider()
                     }
-                        ForEach(cuisines, id:\.self) { cuisine in
+                    
+                    ForEach(cuisines, id:\.self) { cuisine in
                         VStack(alignment: .leading) {
                             Text(cuisine)
                                 .font(.title.bold())
