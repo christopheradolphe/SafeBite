@@ -16,6 +16,7 @@ struct Restaurant: Codable, Identifiable {
     let phoneNumber: String
     let website: String
     let menuTypes: [String]
+    let location: String //Change to list of strings eventually
     
     var image: String {
         name.lowercased().filter{!$0.isWhitespace}
@@ -38,6 +39,7 @@ struct Restaurant: Codable, Identifiable {
         case phoneNumber
         case website
         case menuTypes
+        case location
             // Do not include `newField` here
     }
     

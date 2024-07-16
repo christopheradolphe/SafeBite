@@ -7,7 +7,8 @@
    "address": "333 University Avenue, Kingston, ON K7L 3R4",
    "phoneNumber": "343-305-5271",
    "website": "https://www.kintonramen.com/",
-   "menuTypes": ["Ramens ", "Noodles ", "Toppings ", "Tapas", "Tapas Deep Fried", "Desserts "]
+   "menuTypes": ["Ramens ", "Noodles ", "Toppings ", "Tapas", "Tapas Deep Fried", "Desserts "],
+   "location": "Kingston"
  },
  {
    "id": 2,
@@ -17,7 +18,8 @@
    "address": "264 Princess Street, Kingston, ON, K7L 1B5",
    "phoneNumber": "613-777-9949",
    "website": "https://www.facebook.com/podokingston/",
-   "menuTypes": ["Appetizers", "Kimbab", "Meals", "Chicken", "Dish", "Extras"]
+   "menuTypes": ["Appetizers", "Kimbab", "Meals", "Chicken", "Dish", "Extras"],
+   "location": "Kingston"
  },
  {
    "id": 3,
@@ -27,7 +29,8 @@
    "address": "371 Princess St, Kingston, ON K7L 1B9",
    "phoneNumber": "613-531-8788",
    "website": "https://gosnappy.io/owa/snappy/detail/G9617/9617/m/menu_648",
-   "menuTypes": ["Chef's Special", "Soup", "Seafood and Fish", "Dim Sum", "Beef", "Pork ", "Chicken", "Fired Rice", "Fried Noodles", "Vegtables", "Claypot Rice"]
+   "menuTypes": ["Chef's Special", "Soup", "Seafood and Fish", "Dim Sum", "Beef", "Pork ", "Chicken", "Fired Rice", "Fried Noodles", "Vegtables", "Claypot Rice"],
+   "location": "Kingston"
  },
  {
    "id": 4,
@@ -37,7 +40,8 @@
    "address": "168 Wellington St Suite 101, Kingston, ON K7L 3E4",
    "phoneNumber": "(613) 548-9463",
    "website": "https://heistrestaurant.ca/?fbclid=IwAR1rEcY4IvuFSzy2ZyK6GPfHzmzLuxTTthU4MV1WlS7-g2utE2tt9lQKlHI",
-   "menuTypes": ["THE MEET-UP", "THE PLAN", "THE ITALIAN JOB", "OCEANS 169", "THE USUAL SUSPECTS", "THE STEAK OUT", "ACCOMPLICES", "THE GETAWAY"]
+   "menuTypes": ["THE MEET-UP", "THE PLAN", "THE ITALIAN JOB", "OCEANS 169", "THE USUAL SUSPECTS", "THE STEAK OUT", "ACCOMPLICES", "THE GETAWAY"],
+   "location": "Kingston"
  },
  {
    "id": 5,
@@ -47,7 +51,8 @@
    "address": "71 Brock St, Kingston, ON K7L 2Z9",
    "phoneNumber": "(613) 530-2118",
    "website": "https://www.atomica.ca/",
-   "menuTypes": ["WEEKDAY LUNCH FEATURES", "SOUP AND SALAD", "ADD ONS", "SMALL PLATES", "BAO DOWN", "PASTA", "PIZZA", "SUBSTITUTIONS", "PIZZA DIPS", "PLANT-BASED", "LUNCH ", "HALF SANDWICHES", "DESSERT", "KIDS MENU"]
+   "menuTypes": ["WEEKDAY LUNCH FEATURES", "SOUP AND SALAD", "ADD ONS", "SMALL PLATES", "BAO DOWN", "PASTA", "PIZZA", "SUBSTITUTIONS", "PIZZA DIPS", "PLANT-BASED", "LUNCH ", "HALF SANDWICHES", "DESSERT", "KIDS MENU"],
+   "location": "Kingston"
  },
  {
    "id": 6,
@@ -57,7 +62,8 @@
    "address": "331 King St E, Kingston, ON ",
    "phoneNumber": "(613) 548-3778",
    "website": "http://www.tangonuevo.ca/",
-   "menuTypes": ["Tapas Frias", "Tapas Verduras", "Tapas Mariscos", "Tapas Carnes", "Postres"]
+   "menuTypes": ["Tapas Frias", "Tapas Verduras", "Tapas Mariscos", "Tapas Carnes", "Postres"],
+   "location": "Kingston"
  },
  {
    "id": 7,
@@ -67,7 +73,8 @@
    "address": "286 Princess St, Kingston, ON K7L 1B5",
    "phoneNumber": "(613) 545-0123",
    "website": "https://www.missbao.ca/",
-   "menuTypes": ["SMALL PLATES", "DESSERT", "BAO", "LARGE PLATES"]
+   "menuTypes": ["SMALL PLATES", "DESSERT", "BAO", "LARGE PLATES"],
+   "location": "Kingston"
  },
  {
    "id": 8,
@@ -77,7 +84,8 @@
    "address": "300 King St E, Kingston, ON K7L 3B4",
    "phoneNumber": "(613) 549-1333",
    "website": "https://thekeg.com/en/locations/kingston",
-   "menuTypes": ["STARTERS", "SALADS + SOUP", "KEG STEAKS + PRIME RIB", "STEAK + SEAFOOD", "ACCOMPANIMENTS", "SHAREABLE SIDES", "KEG Classics", "ADD TO YOUR MEAL", " MAINS", "CASUAL PLATES + BAR SNACKS", "CASUAL PLATES + BAR SNACKS", "KIDS"]
+   "menuTypes": ["STARTERS", "SALADS + SOUP", "KEG STEAKS + PRIME RIB", "STEAK + SEAFOOD", "ACCOMPANIMENTS", "SHAREABLE SIDES", "KEG Classics", "ADD TO YOUR MEAL", " MAINS", "CASUAL PLATES + BAR SNACKS", "CASUAL PLATES + BAR SNACKS", "KIDS"],
+   "location": "Kingston"
  },
  {
    "id": 9,
@@ -87,7 +95,8 @@
    "address": "330 King St E, Kingston, ON K7L 3B6",
    "phoneNumber": "(613) 549-1207",
    "website": "https://order.jackastors.com/2279/flow/pickup",
-   "menuTypes": ["Starters", "Jack's One Pound Poutines", "Loaded Nachos", "Tacos", "handhelds & tacos", "jack's chicken", "mains & steaks", "sides", "premium sides", "salads & bowls", "desserts", "Kids Dessert", "kids meals"]
+   "menuTypes": ["Starters", "Jack's One Pound Poutines", "Loaded Nachos", "Tacos", "handhelds & tacos", "jack's chicken", "mains & steaks", "sides", "premium sides", "salads & bowls", "desserts", "Kids Dessert", "kids meals"],
+   "location": "Kingston"
  },
  {
    "id": 10,
@@ -97,7 +106,8 @@
    "address": "395 Princess St, Kingston, ON K7L 1B9",
    "phoneNumber": "(613) 544-7566",
    "website": "https://thegrizzlygrill.ca/",
-   "menuTypes": ["SALADS", "APPETIZERS", "WOOD FIRED PIZZA", "SANDWICHES", "PASTAS", "CLASSICS", "LARGE SHARING BOARDS"]
+   "menuTypes": ["SALADS", "APPETIZERS", "WOOD FIRED PIZZA", "SANDWICHES", "PASTAS", "CLASSICS", "LARGE SHARING BOARDS"],
+   "location": "Kingston"
  },
  {
    "id": 11,
@@ -107,7 +117,8 @@
    "address": "7 Marie Labatte Rd, Toronto, ON M3C 0J1",
    "phoneNumber": "(647) 735-2946",
    "website": "https://www.anejo.ca/en/locations/on/toronto/600-king-street-west",
-   "menuTypes": ["Dessert", "Snacks", "For The Table", "Salad and Soup", "Mexican Dishes", "Classic Tacos", "Premium Tacos"]
+   "menuTypes": ["Dessert", "Snacks", "For The Table", "Salad and Soup", "Mexican Dishes", "Classic Tacos", "Premium Tacos"],
+   "location": "Toronto"
  },
  {
    "id": 12,
@@ -117,7 +128,8 @@
    "address": "76 O'Neill Rd, Don Mills, ON M3C 0H1",
    "phoneNumber": "(647) 943-6318",
    "website": "https://www.thelandinggroup.ca/en/locations/on/don-mills/76-oneill-rd",
-   "menuTypes": ["Shares & Starters", "Pizzas", "Salads & Bowls", "Burgers & Sandwiches", "Mains", "Sides", "Kids", "Desserts", "Brunch"]
+   "menuTypes": ["Shares & Starters", "Pizzas", "Salads & Bowls", "Burgers & Sandwiches", "Mains", "Sides", "Kids", "Desserts", "Brunch"],
+   "location": "Toronto"
  },
  {
    "id": 13,
@@ -127,6 +139,7 @@
    "address": "377 Princess St, Kingston, ON K7L 1B9",
    "phoneNumber": " (613) 766-6585",
    "website": "https://www.tommyskingston.ca/lander",
-   "menuTypes": ["Breakfast Combos", "The Benny's", "Smothered in Syrup", "Breakfast Sandwiches", "Omlettes", "Munchies & Apps", "Tommy's Poutines", "Entrees", "Sandwiches & Wraps", "Desserts", "Tommy's Burgers", "TOMMY'S ULTIMATE BURGER CHALLENGE"]
+   "menuTypes": ["Breakfast Combos", "The Benny's", "Smothered in Syrup", "Breakfast Sandwiches", "Omlettes", "Munchies & Apps", "Tommy's Poutines", "Entrees", "Sandwiches & Wraps", "Desserts", "Tommy's Burgers", "TOMMY'S ULTIMATE BURGER CHALLENGE"],
+   "location": "Toronto"
  }
 ]
