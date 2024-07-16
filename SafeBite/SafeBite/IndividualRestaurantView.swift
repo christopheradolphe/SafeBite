@@ -122,6 +122,26 @@ struct IndividualRestaurantView: View {
                 }
                 .padding(.horizontal)
                 
+                VStack (alignment: .leading){
+                    HStack {
+                        Text("About \(restaurant.name)")
+                            .font(.title3)
+                            .padding(.leading)
+                        
+                        if !restaurant.description.isEmpty{
+                            Button(action: {
+                                withAnimation {
+                                    showDescription.toggle()
+                                }
+                            }) {
+                                Image(systemName: "info.circle")
+                            }
+                        }
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                }
+                
                 VStack {
                     Text("Menu")
                         .font(.title2)
@@ -139,15 +159,6 @@ struct IndividualRestaurantView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbarBackground(.gray)
                 .toolbar {
-                    if !restaurant.description.isEmpty{
-                        Button(action: {
-                            withAnimation {
-                                showDescription.toggle()
-                            }
-                        }) {
-                            Image(systemName: "info.circle")
-                        }
-                    }
                     
                     Button {
                         User.shared.userProfile.favouriteRestaurants[restaurant.name]?.toggle()
