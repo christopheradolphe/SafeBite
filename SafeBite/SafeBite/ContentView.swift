@@ -105,20 +105,29 @@ struct Cards: View {
     }
 }
 
-struct LocationPickerView: View {
+struct FilterPickerView: View {
     @Binding var selectedLocation: String
-    let locations = ["All", "Toronto", "Kingston"]
+    @Environment(\.dismiss) var dismiss
+    let options: [String]
+    let topic: String
 
     var body: some View {
-        NavigationStack {
+        VStack {
+            HStack {
+                Spacer()
+                Button("Done") {
+                    dismiss()
+                }
+                .padding()
+            }
             List {
-                ForEach(locations, id: \.self) { location in
+                ForEach(options, id: \.self) { option in
                     Button(action: {
-                        selectedLocation = location
+                        selectedLocation = option
                     }) {
                         HStack {
-                            Text(location)
-                            if selectedLocation == location {
+                            Text(option)
+                            if selectedLocation == option {
                                 Spacer()
                                 Image(systemName: "checkmark")
                             }
@@ -126,8 +135,11 @@ struct LocationPickerView: View {
                     }
                 }
             }
-            .navigationTitle("Select Location")
+            .navigationTitle("Select \(topic)")
         }
+        .background(Color.white)
+        .cornerRadius(20)
+        .shadow(radius: 10)
     }
 }
 
@@ -136,11 +148,12 @@ struct ContentView: View {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
     let cuisines = ["Asian", "Italian", "Tapas", "Steakhouse", "Bar & Grill", "Mexican", "Steakhouse"]
     
-    @State private var showingLocationSheet = false
+    @State private var showingLocationFilter = false
     @State private var locationFilter = "All"
+    private let locationOptions = ["All", "Kingston", "Toronto"]
     
-    
-    @State private var cuisine = "All"
+    @State private var showingCuisineFilter = false
+    @State private var cuisineFilter = "All"
     
     var body: some View {
         NavigationStack {
@@ -169,17 +182,30 @@ struct ContentView: View {
                     
                     HStack (alignment: .top) {
                         Button {
-                            showingLocationSheet.toggle()
+                            showingLocationFilter.toggle()
                         } label: {
                             Text("Location: \(locationFilter)")
                                 .font(.headline)
                                 .foregroundColor(.white)
                                 .padding()
-                                .background(Color.gray)
-                                .cornerRadius(10)
+                                .background(Color.green)
+                                .cornerRadius(30)
                                 .shadow(color: .gray, radius: 2, x: 0, y: 2)
                         }
-                        .padding()
+                        .padding(10)
+                        
+                        Button {
+                            showingCuisineFilter.toggle()
+                        } label: {
+                            Text("Cuisine: \(cuisineFilter)")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.green)
+                                .cornerRadius(30)
+                                .shadow(color: .gray, radius: 2, x: 0, y: 2)
+                        }
+                        .padding(10)
                         
                         Spacer()
                     }
@@ -200,8 +226,11 @@ struct ContentView: View {
             }
             .navigationTitle("Restaurants")
             
-            .sheet(isPresented: $showingLocationSheet) {
-                LocationPickerView(selectedLocation: $locationFilter)
+            .sheet(isPresented: $showingLocationFilter) {
+                FilterPickerView(selectedLocation: $locationFilter, options: locationOptions, topic: "Location")
+            }
+            .sheet(isPresented: $showingCuisineFilter) {
+                FilterPickerView(selectedLocation: $cuisineFilter, options: cuisines, topic: "Cuisine")
             }
             .toolbarBackground(.green)
             .navigationBarBackButtonHidden(true)
