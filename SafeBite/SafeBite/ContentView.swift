@@ -244,10 +244,13 @@ struct ContentView: View {
                         
                         Spacer()
                     }
-                    
-                    ForEach(cuisines, id:\.self) { cuisine in
-                        VStack(alignment: .leading) {
-                            Cards(cuisine: cuisine, restaurants: restaurants)
+                    VStack(alignment: .leading) {
+                        if cuisineFilter == "All" {
+                            ForEach(cuisines, id:\.self) { cuisine in
+                                Cards(cuisine: cuisine, restaurants: restaurants)
+                            }
+                        } else {
+                            Cards(cuisine: cuisineFilter, restaurants: restaurants)
                         }
                     }
                 }
