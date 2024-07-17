@@ -90,34 +90,40 @@ struct UserProfileView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading, spacing: 10) {
-                Text("Personal Information")
-                    .font(.headline)
-                    .padding(.bottom, 5)
+            VStack(alignment: .leading, spacing: 20) {
+                // App Icon
+                HStack {
+                    Spacer()
+                    Image(systemName: "person.crop.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(.blue)
+                    Spacer()
+                }
+                .padding(.top)
 
-                Text("First Name: \(user.userProfile.userInformation.firstName)")
-                Text("Last Name: \(user.userProfile.userInformation.lastName)")
-                Text("Email: \(user.userProfile.userInformation.email)")
-                Text("Phone Number: \(user.userProfile.userInformation.phoneNumber)")
+                // Personal Information
+                SectionView(title: "Personal Information") {
+                    InfoText(label: "First Name", value: user.userProfile.userInformation.firstName)
+                    InfoText(label: "Last Name", value: user.userProfile.userInformation.lastName)
+                    InfoText(label: "Email", value: user.userProfile.userInformation.email)
+                    InfoText(label: "Phone Number", value: user.userProfile.userInformation.phoneNumber)
+                }
 
-                Divider()
+                // Dietary Restrictions
+                SectionView(title: "Dietary Restrictions") {
+                    dietaryRestrictionsView
+                }
 
-                Text("Dietary Restrictions")
-                    .font(.headline)
-                    .padding(.bottom, 5)
-
-                dietaryRestrictionsView
-
-                Divider()
-
-                Text("Allergies")
-                    .font(.headline)
-                    .padding(.bottom, 5)
-
-                allergiesView
+                // Allergies
+                SectionView(title: "Allergies") {
+                    allergiesView
+                }
 
                 Spacer()
                 
+                // Edit Profile Button
                 Button(action: {
                     user.userProfile.userProfileMade = true
                     showEditProfilePage = true
@@ -136,37 +142,73 @@ struct UserProfileView: View {
             }
             .padding()
             .navigationTitle("Profile Summary")
+            .background(Color(UIColor.systemGray6)) // Light gray background
         }
     }
 
     private var dietaryRestrictionsView: some View {
         VStack(alignment: .leading, spacing: 5) {
-            if user.userProfile.dietaryRestrictions.vegetarian { Text("Vegetarian") }
-            if user.userProfile.dietaryRestrictions.vegan { Text("Vegan") }
-            if user.userProfile.dietaryRestrictions.halal { Text("Halal") }
-            if user.userProfile.dietaryRestrictions.keto { Text("Keto") }
-            if user.userProfile.dietaryRestrictions.lowCarb { Text("Low-Carb (50-150g of carbs)") }
-            if user.userProfile.dietaryRestrictions.lowFODMAP { Text("Low FODMAP") }
-            if user.userProfile.dietaryRestrictions.dashDiet { Text("Dash Diet") }
+            if user.userProfile.dietaryRestrictions.vegetarian { Label("Vegetarian", systemImage: "leaf.fill") }
+            if user.userProfile.dietaryRestrictions.vegan { Label("Vegan", systemImage: "leaf.fill") }
+            if user.userProfile.dietaryRestrictions.halal { Label("Halal", systemImage: "hand.raised.fill") }
+            if user.userProfile.dietaryRestrictions.keto { Label("Keto", systemImage: "bolt.fill") }
+            if user.userProfile.dietaryRestrictions.lowCarb { Label("Low-Carb", systemImage: "flame.fill") }
+            if user.userProfile.dietaryRestrictions.lowFODMAP { Label("Low FODMAP", systemImage: "leaf.fill") }
+            if user.userProfile.dietaryRestrictions.dashDiet { Label("Dash Diet", systemImage: "heart.fill") }
         }
+        .foregroundColor(.green)
     }
 
     private var allergiesView: some View {
         VStack(alignment: .leading, spacing: 5) {
-            if user.userProfile.allergens.wheat { Text("Wheat") }
-            if user.userProfile.allergens.gluten { Text("Gluten") }
-            if user.userProfile.allergens.soy { Text("Soy") }
-            if user.userProfile.allergens.shellfish { Text("Shellfish") }
-            if user.userProfile.allergens.fish { Text("Fish") }
-            if user.userProfile.allergens.dairy { Text("Dairy") }
-            if user.userProfile.allergens.egg { Text("Egg") }
-            if user.userProfile.allergens.treeNuts { Text("Tree Nuts") }
-            if user.userProfile.allergens.peanuts { Text("Peanuts") }
-            if user.userProfile.allergens.sesame { Text("Sesame") }
-            if user.userProfile.allergens.mustard { Text("Mustard") }
-            if user.userProfile.allergens.garlic { Text("Garlic") }
-            if user.userProfile.allergens.sulfites { Text("Sulfites") }
+            if user.userProfile.allergens.wheat { Label("Wheat", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.gluten { Label("Gluten", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.soy { Label("Soy", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.shellfish { Label("Shellfish", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.fish { Label("Fish", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.dairy { Label("Dairy", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.egg { Label("Egg", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.treeNuts { Label("Tree Nuts", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.peanuts { Label("Peanuts", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.sesame { Label("Sesame", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.mustard { Label("Mustard", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.garlic { Label("Garlic", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.sulfites { Label("Sulfites", systemImage: "exclamationmark.triangle.fill") }
         }
+        .foregroundColor(.red)
+    }
+
+    private func InfoText(label: String, value: String) -> some View {
+        HStack {
+            Text("\(label):")
+                .fontWeight(.bold)
+            Text(value)
+        }
+        .padding(.bottom, 2)
+    }
+}
+
+struct SectionView<Content: View>: View {
+    let title: String
+    let content: () -> Content
+
+    init(title: String, @ViewBuilder content: @escaping () -> Content) {
+        self.title = title
+        self.content = content
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text(title)
+                .font(.headline)
+                .padding(.bottom, 5)
+            content()
+        }
+        .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.white)
+        .cornerRadius(8)
+        .shadow(color: Color.gray.opacity(0.2), radius: 5, x: 0, y: 5)
     }
 }
 
