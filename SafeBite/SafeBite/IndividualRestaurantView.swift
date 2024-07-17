@@ -173,10 +173,19 @@ struct IndividualRestaurantView: View {
                     }
                     .padding(.horizontal)
                 }
+                
                 VStack {
                     MapView(address: restaurant.address)
                         .frame(height: 200)
+                        .padding(.bottom, 10) // Optional padding below the map
+                    
+                    Text(restaurant.address)
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 20)
                 }
+                .padding(30)
                 
                 VStack {
                     Text("Menu")
