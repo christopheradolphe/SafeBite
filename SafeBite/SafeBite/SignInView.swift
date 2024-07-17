@@ -93,6 +93,16 @@ struct UserProfileView: View {
                 allergiesView
 
                 Spacer()
+                
+                NavigationLink(destination: SignInView()) {
+                    Text("Edit Profile")
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                .padding(.top, 20)
             }
             .padding()
             .navigationTitle("Profile Summary")
