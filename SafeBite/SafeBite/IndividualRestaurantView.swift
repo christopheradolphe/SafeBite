@@ -128,7 +128,7 @@ struct ItemCatergoryView: View {
 struct IndividualRestaurantView: View {
     @State var restaurant: Restaurant
     @State private var showDescription = false
-    @State private var selection: Int?
+    @State private var selection = 0
     
     var body: some View {
         NavigationStack {
@@ -187,34 +187,39 @@ struct IndividualRestaurantView: View {
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
                 
-                VStack (alignment: .leading){
-                    Text("Website")
-                    Link("\(restaurant.website)", destination: URL(string: "\(restaurant.website)")!)
-                        .font(.headline)
-                        .foregroundColor(.blue)
-                        .padding(5)
+                if selection == 0 {
+                    VStack(alignment: .leading) {
+                        Text("Website")
+                        Link(restaurant.website, destination: URL(string: restaurant.website)!)
+                            .font(.headline)
+                            .foregroundColor(.blue)
+                            .padding(5)
+                    }
+                    .transition(.opacity)
+                } else if selection == 1 {
+                    VStack(alignment: .leading) {
+                        Text("Phone Number")
+                        Link(restaurant.phoneNumber, destination: URL(string: "tel:+\(restaurant.phoneNumber)")!)
+                            .font(.headline)
+                            .foregroundColor(.blue)
+                            .padding()
+                    }
+                    .transition(.opacity)
+                } else if selection == 2 {
+                    VStack {
+                        Text("Map")
+                        MapView(address: restaurant.address)
+                            .frame(height: 200)
+                            .padding(.bottom, 10)
+                        
+                        Text(restaurant.address)
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20)
+                    }
+                    .transition(.opacity)
                 }
-                
-                VStack (alignment: .leading) {
-                    Text("Phone Number")
-                    Link("\(restaurant.phoneNumber)", destination: URL(string: "tel:+\(restaurant.phoneNumber)")!)
-                        .font(.headline)
-                        .foregroundColor(.blue)
-                        .padding()
-                }
-                
-                VStack {
-                    MapView(address: restaurant.address)
-                        .frame(height: 200)
-                        .padding(.bottom, 10) // Optional padding below the map
-                    
-                    Text(restaurant.address)
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 20)
-                }
-                .padding(30)
                 
                 VStack {
                     Text("Menu")
