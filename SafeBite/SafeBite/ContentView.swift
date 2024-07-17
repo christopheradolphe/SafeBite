@@ -163,7 +163,7 @@ struct FilterPickerView: View {
 }
 
 
-struct ContentView: View {
+struct MainPageView: View {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
     let cuisines = ["Asian", "Italian", "Tapas", "Steakhouse", "Bar & Grill", "Mexican"]
     
@@ -282,6 +282,26 @@ struct ContentView: View {
             }
             .toolbarBackground(.green)
             .navigationBarBackButtonHidden(true)
+        }
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        TabView {
+            MainPageView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Restaurants")
+                }
+        }
+        
+        TabView {
+            UserProfileView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Profile")
+                }
         }
     }
 }

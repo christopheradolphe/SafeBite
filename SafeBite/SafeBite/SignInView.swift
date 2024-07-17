@@ -61,6 +61,12 @@ struct SignInView: View {
     }
 }
 
+struct UserProfileView: View {
+    var body: some View {
+        Text("Hi")
+    }
+}
+
 #Preview {
     SignInView()
 }
