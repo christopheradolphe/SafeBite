@@ -62,8 +62,71 @@ struct SignInView: View {
 }
 
 struct UserProfileView: View {
+    @State private var user = User.shared
+
     var body: some View {
-        Text("Hi")
+        NavigationStack {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Personal Information")
+                    .font(.headline)
+                    .padding(.bottom, 5)
+
+                Text("First Name: \(user.userProfile.userInformation.firstName)")
+                Text("Last Name: \(user.userProfile.userInformation.lastName)")
+                Text("Email: \(user.userProfile.userInformation.email)")
+                Text("Phone Number: \(user.userProfile.userInformation.phoneNumber)")
+
+                Divider()
+
+                Text("Dietary Restrictions")
+                    .font(.headline)
+                    .padding(.bottom, 5)
+
+                dietaryRestrictionsView
+
+                Divider()
+
+                Text("Allergies")
+                    .font(.headline)
+                    .padding(.bottom, 5)
+
+                allergiesView
+
+                Spacer()
+            }
+            .padding()
+            .navigationTitle("Profile Summary")
+        }
+    }
+
+    private var dietaryRestrictionsView: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            if user.userProfile.dietaryRestrictions.vegetarian { Text("Vegetarian") }
+            if user.userProfile.dietaryRestrictions.vegan { Text("Vegan") }
+            if user.userProfile.dietaryRestrictions.halal { Text("Halal") }
+            if user.userProfile.dietaryRestrictions.keto { Text("Keto") }
+            if user.userProfile.dietaryRestrictions.lowCarb { Text("Low-Carb (50-150g of carbs)") }
+            if user.userProfile.dietaryRestrictions.lowFODMAP { Text("Low FODMAP") }
+            if user.userProfile.dietaryRestrictions.dashDiet { Text("Dash Diet") }
+        }
+    }
+
+    private var allergiesView: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            if user.userProfile.allergens.wheat { Text("Wheat") }
+            if user.userProfile.allergens.gluten { Text("Gluten") }
+            if user.userProfile.allergens.soy { Text("Soy") }
+            if user.userProfile.allergens.shellfish { Text("Shellfish") }
+            if user.userProfile.allergens.fish { Text("Fish") }
+            if user.userProfile.allergens.dairy { Text("Dairy") }
+            if user.userProfile.allergens.egg { Text("Egg") }
+            if user.userProfile.allergens.treeNuts { Text("Tree Nuts") }
+            if user.userProfile.allergens.peanuts { Text("Peanuts") }
+            if user.userProfile.allergens.sesame { Text("Sesame") }
+            if user.userProfile.allergens.mustard { Text("Mustard") }
+            if user.userProfile.allergens.garlic { Text("Garlic") }
+            if user.userProfile.allergens.sulfites { Text("Sulfites") }
+        }
     }
 }
 

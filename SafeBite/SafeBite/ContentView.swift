@@ -294,9 +294,7 @@ struct ContentView: View {
                     Image(systemName: "house.fill")
                     Text("Restaurants")
                 }
-        }
-        
-        TabView {
+            
             UserProfileView()
                 .tabItem {
                     Image(systemName: "person.fill")
