@@ -3,13 +3,15 @@ import os
 def rename_images(root_dir):
     # Walk through each subdirectory in the root directory
     for subdir, _, files in os.walk(root_dir):
-        restaurant_name = os.path.basename(subdir)
+        restaurant_name = os.path.basename(subdir).lower().replace(" ", "")
         
         for file in files:
             # Get the item name from the original filename
             item_name, _ = os.path.splitext(file)
+            if restaurant_name in item_name:
+              continue
             # Remove whitespace from item name
-            item_name = item_name.replace(" ", "")
+            item_name = item_name.lower().replace(" ", "")
             # Construct the new filename
             new_filename = f"{restaurant_name}_{item_name}.jpg"
             # Get full file paths
