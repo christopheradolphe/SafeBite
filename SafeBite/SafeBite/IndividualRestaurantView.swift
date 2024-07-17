@@ -176,10 +176,13 @@ struct IndividualRestaurantView: View {
                 }
                 .padding(.bottom)
                 
-                Picker("Select Option", selection: $selection) {
-                    Text("Website").tag(0)
-                    Text("Phone Number").tag(1)
-                    Text("Map").tag(2)
+                Picker(selection: $selection, label: Text("")) {
+                    Image(systemName: "globe")
+                        .tag(0)
+                    Image(systemName: "phone")
+                        .tag(1)
+                    Image(systemName: "map")
+                        .tag(2)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
