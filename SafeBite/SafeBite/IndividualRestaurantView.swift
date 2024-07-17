@@ -128,6 +128,7 @@ struct ItemCatergoryView: View {
 struct IndividualRestaurantView: View {
     @State var restaurant: Restaurant
     @State private var showDescription = false
+    @State private var selection: Int?
     
     var body: some View {
         NavigationStack {
@@ -175,12 +176,28 @@ struct IndividualRestaurantView: View {
                 }
                 .padding(.bottom)
                 
+                Picker("Select Option", selection: $selection) {
+                    Text("Website").tag(0)
+                    Text("Phone Number").tag(1)
+                    Text("Map").tag(2)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding()
+                
                 VStack (alignment: .leading){
                     Text("Website")
                     Link("\(restaurant.website)", destination: URL(string: "\(restaurant.website)")!)
                         .font(.headline)
                         .foregroundColor(.blue)
                         .padding(5)
+                }
+                
+                VStack (alignment: .leading) {
+                    Text("Phone Number")
+                    Link("\(restaurant.phoneNumber)", destination: URL(string: "tel:+\(restaurant.phoneNumber)")!)
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .padding()
                 }
                 
                 VStack {
