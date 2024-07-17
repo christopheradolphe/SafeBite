@@ -176,49 +176,60 @@ struct IndividualRestaurantView: View {
                 }
                 .padding(.bottom)
                 
-                Picker(selection: $selection, label: Text("")) {
-                    Image(systemName: "globe")
-                        .tag(0)
-                    Image(systemName: "phone")
-                        .tag(1)
-                    Image(systemName: "map")
-                        .tag(2)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
-                
-                if selection == 0 {
-                    VStack(alignment: .leading) {
-                        Text("Website")
-                        Link(restaurant.website, destination: URL(string: restaurant.website)!)
-                            .font(.headline)
-                            .foregroundColor(.blue)
-                            .padding(5)
-                    }
-                    .transition(.opacity)
-                } else if selection == 1 {
-                    VStack(alignment: .leading) {
-                        Text("Phone Number")
-                        Link(restaurant.phoneNumber, destination: URL(string: "tel:+\(restaurant.phoneNumber)")!)
-                            .font(.headline)
-                            .foregroundColor(.blue)
-                            .padding()
-                    }
-                    .transition(.opacity)
-                } else if selection == 2 {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.gray.opacity(0.2))
+                        .padding(20)
+                    
                     VStack {
-                        Text("Map")
-                        MapView(address: restaurant.address)
-                            .frame(height: 200)
-                            .padding(.bottom, 10)
+                        Picker(selection: $selection, label: Text("")) {
+                            Image(systemName: "globe")
+                                .tag(0)
+                            Image(systemName: "phone")
+                                .tag(1)
+                            Image(systemName: "map")
+                                .tag(2)
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+                        .padding()
                         
-                        Text(restaurant.address)
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal, 20)
+                        if selection == 0 {
+                            VStack(alignment: .leading) {
+                                Text("Website")
+                                Link(restaurant.website, destination: URL(string: restaurant.website)!)
+                                    .font(.headline)
+                                    .foregroundColor(.blue)
+                                    .padding(5)
+                            }
+                            .transition(.opacity)
+                        } else if selection == 1 {
+                            VStack(alignment: .leading) {
+                                Text("Phone Number")
+                                Link(restaurant.phoneNumber, destination: URL(string: "tel:+\(restaurant.phoneNumber)")!)
+                                    .font(.headline)
+                                    .foregroundColor(.blue)
+                                    .padding()
+                            }
+                            .transition(.opacity)
+                        } else if selection == 2 {
+                            VStack {
+                                Text("Map")
+                                MapView(address: restaurant.address)
+                                    .frame(height: 200)
+                                    .padding(.bottom, 10)
+                                
+                                Text(restaurant.address)
+                                    .font(.caption)
+                                    .foregroundColor(.gray)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal, 20)
+                            }
+                            .transition(.opacity)
+                        }
+                        
+                        Spacer()
                     }
-                    .transition(.opacity)
+                    .padding(30)
                 }
                 
                 VStack {
