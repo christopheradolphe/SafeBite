@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SignInView: View {
     @State private var user = User.shared
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
@@ -46,14 +47,32 @@ struct SignInView: View {
                     Toggle("Sulfites", isOn: $user.userProfile.allergens.sulfites)
                 }
                 
-                NavigationLink {
-                    ContentView()
-                } label: {
-                    VStack {
-                        Text("Submit Profile")
+                if !user.userProfile.userProfileMade {
+                    NavigationLink {
+                        ContentView()
+                    } label: {
+                        VStack {
+                            Text("Submit Profile")
+                        }
                     }
+                    .disabled(user.userProfile.userInformation.invalidUserInformation)
+                } else {
+                    Button(action: {
+                        dismiss()
+                    }) {
+                        VStack {
+                            Text("Update Profile")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                    }
+                    .padding()
+                    .disabled(user.userProfile.userInformation.invalidUserInformation)
                 }
-                .disabled(user.userProfile.userInformation.invalidUserInformation)
             }
             
             .navigationTitle("SafeBite Profile")
@@ -63,6 +82,7 @@ struct SignInView: View {
 
 struct UserProfileView: View {
     @State private var user = User.shared
+    @State private var showEditProfilePage = false
 
     var body: some View {
         NavigationStack {
@@ -94,7 +114,10 @@ struct UserProfileView: View {
 
                 Spacer()
                 
-                NavigationLink(destination: SignInView()) {
+                Button(action: {
+                    user.userProfile.userProfileMade = true
+                    showEditProfilePage = true
+                }) {
                     Text("Edit Profile")
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -102,7 +125,10 @@ struct UserProfileView: View {
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
-                .padding(.top, 20)
+                .sheet(isPresented: $showEditProfilePage) {
+                    SignInView()
+                }
+                .padding()
             }
             .padding()
             .navigationTitle("Profile Summary")

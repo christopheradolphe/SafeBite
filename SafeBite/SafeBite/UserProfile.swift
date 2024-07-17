@@ -21,6 +21,7 @@ struct UserInformation: Codable {
 }
 
 struct UserProfile: Codable {
+    var userProfileMade = false
     var userInformation = UserInformation()
     var allergens = Allergens()
     var dietaryRestrictions = DietaryRestrictions()
