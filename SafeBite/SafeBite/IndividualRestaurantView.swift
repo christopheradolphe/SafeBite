@@ -48,9 +48,17 @@ struct MenuItemView: View {
         } label: {
             VStack {
                 HStack {
-                    Text(menuItem.name)
-                        .padding(.horizontal)
-                        .foregroundColor(.black)
+                    VStack (alignment: .leading) {
+                        Text(menuItem.name)
+                            .padding(.horizontal)
+                            .foregroundColor(.black)
+                        Text(menuItem.description)
+                            .padding(.horizontal)
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+                    }
                     
                     Spacer()
                     
@@ -308,5 +316,5 @@ struct IndividualRestaurantView: View {
 
 #Preview {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
-    return IndividualRestaurantView(restaurant: restaurants[1])
+    return IndividualRestaurantView(restaurant: restaurants[4])
 }
