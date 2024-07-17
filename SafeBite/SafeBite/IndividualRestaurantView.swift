@@ -155,6 +155,8 @@ struct IndividualRestaurantView: View {
                 }
                 .padding(.horizontal)
                 
+                Divider()
+                
                 VStack (alignment: .leading){
                     HStack {
                         Text("About \(restaurant.name)")
@@ -231,6 +233,8 @@ struct IndividualRestaurantView: View {
                     }
                     .padding(30)
                 }
+                
+                Divider()
                 
                 VStack {
                     Text("Menu")
