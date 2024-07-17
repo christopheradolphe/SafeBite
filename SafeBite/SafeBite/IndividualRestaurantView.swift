@@ -39,15 +39,29 @@ struct MapView: UIViewRepresentable {
     }
 }
 
+
+func imageExists(named name: String) -> Bool {
+    return UIImage(named: name) != nil
+}
+
 struct MenuItemView: View {
     var menuItem: MenuItem
+    let restaurantName: String
     
     var body: some View {
+        let primaryImageName = restaurantName.lowercased().filter{!$0.isWhitespace} + "_" + menuItem.image
+        let fallbackImageName = restaurantName.lowercased().filter{!$0.isWhitespace}
+        let imageName = imageExists(named: primaryImageName) ? primaryImageName : fallbackImageName
+
         NavigationLink {
             ItemView(menuItem: menuItem)
         } label: {
             VStack {
                 HStack {
+                    Image(imageName)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width:50, height: 50)
                     VStack (alignment: .leading) {
                         Text(menuItem.name)
                             .padding(.horizontal)
@@ -78,6 +92,7 @@ struct MenuTypeView: View {
     let menu: Menu
     let menuType: String
     let safetyRating: Int
+    let restaurantName: String
     
     var body: some View {
         VStack {
@@ -90,7 +105,7 @@ struct MenuTypeView: View {
                 Text("No items fit this catergory")
             }
             ForEach(menu.menuItems.filter{$0.itemType==menuType}.filter{$0.safeBiteValue==safetyRating}) { menuItem in
-                MenuItemView(menuItem: menuItem)
+                MenuItemView(menuItem: menuItem, restaurantName: restaurantName)
             }
         }
         .padding(.vertical)
@@ -108,7 +123,7 @@ struct ItemCatergoryView: View {
         VStack(alignment: .leading) {
             DisclosureGroup(isExpanded: $isExpanded) {
                 ForEach(restaurant.menuTypes, id: \.self) { type in
-                    MenuTypeView(menu: menu, menuType: type, safetyRating: safeBiteCatergory)
+                    MenuTypeView(menu: menu, menuType: type, safetyRating: safeBiteCatergory, restaurantName: restaurant.name)
                 }
             } label: {
                 HStack {
@@ -316,5 +331,5 @@ struct IndividualRestaurantView: View {
 
 #Preview {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
-    return IndividualRestaurantView(restaurant: restaurants[4])
+    return IndividualRestaurantView(restaurant: restaurants[0])
 }
