@@ -128,7 +128,7 @@ struct ItemCatergoryView: View {
 struct IndividualRestaurantView: View {
     @State var restaurant: Restaurant
     @State private var showDescription = false
-    @State private var selection = 0
+    @State private var selection = 3 //Nothing displayed at start
     
     var body: some View {
         NavigationStack {
