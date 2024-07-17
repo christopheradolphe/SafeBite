@@ -219,21 +219,20 @@ struct IndividualRestaurantView: View {
                         .padding()
                         
                         if selection == 0 {
-                            VStack(alignment: .leading) {
+                            VStack(alignment: .center) {
                                 Text("Website")
                                 Link(restaurant.website, destination: URL(string: restaurant.website)!)
-                                    .font(.headline)
+                                    .font(.headline.bold())
                                     .foregroundColor(.blue)
                                     .padding(5)
                             }
                             .transition(.opacity)
                         } else if selection == 1 {
-                            VStack(alignment: .leading) {
+                            VStack(alignment: .center) {
                                 Text("Phone Number")
                                 Link(restaurant.phoneNumber, destination: URL(string: "tel:+\(restaurant.phoneNumber)")!)
-                                    .font(.headline)
+                                    .font(.headline.bold())
                                     .foregroundColor(.blue)
-                                    .padding()
                             }
                             .transition(.opacity)
                         } else if selection == 2 {
