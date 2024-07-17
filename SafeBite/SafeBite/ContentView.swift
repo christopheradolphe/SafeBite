@@ -301,6 +301,7 @@ struct ContentView: View {
                     Text("Profile")
                 }
         }
+        //.navigationBarBackButtonHidden(true)
     }
 }
 
