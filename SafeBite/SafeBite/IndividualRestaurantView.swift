@@ -173,6 +173,15 @@ struct IndividualRestaurantView: View {
                     }
                     .padding(.horizontal)
                 }
+                .padding(.bottom)
+                
+                VStack (alignment: .leading){
+                    Text("Website")
+                    Link("\(restaurant.website)", destination: URL(string: "\(restaurant.website)")!)
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .padding(5)
+                }
                 
                 VStack {
                     MapView(address: restaurant.address)
