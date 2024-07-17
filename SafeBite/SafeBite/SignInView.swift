@@ -93,16 +93,17 @@ struct UserProfileView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     // App Icon
-                    HStack {
-                        Spacer()
-                        Image(systemName: "person.crop.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                            .foregroundColor(.blue)
-                        Spacer()
+                    ZStack {
+                        HStack {
+                            Spacer()
+                            Image(systemName: "person.crop.circle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
+                                .foregroundColor(.blue)
+                            Spacer()
+                        }
                     }
-                    .padding(.top)
                     
                     // Personal Information
                     SectionView(title: "Personal Information") {
@@ -143,7 +144,9 @@ struct UserProfileView: View {
                 }
                 .padding()
                 .navigationTitle("Profile Summary")
+                .navigationBarTitleDisplayMode(.inline)
                 .background(Color(UIColor.systemGray6)) // Light gray background
+                .ignoresSafeArea(edges: .all)
             }
         }
     }
@@ -215,5 +218,5 @@ struct SectionView<Content: View>: View {
 }
 
 #Preview {
-    SignInView()
+    UserProfileView()
 }
