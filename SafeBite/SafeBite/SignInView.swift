@@ -90,59 +90,61 @@ struct UserProfileView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading, spacing: 20) {
-                // App Icon
-                HStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    // App Icon
+                    HStack {
+                        Spacer()
+                        Image(systemName: "person.crop.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
+                            .foregroundColor(.blue)
+                        Spacer()
+                    }
+                    .padding(.top)
+                    
+                    // Personal Information
+                    SectionView(title: "Personal Information") {
+                        InfoText(label: "First Name", value: user.userProfile.userInformation.firstName)
+                        InfoText(label: "Last Name", value: user.userProfile.userInformation.lastName)
+                        InfoText(label: "Email", value: user.userProfile.userInformation.email)
+                        InfoText(label: "Phone Number", value: user.userProfile.userInformation.phoneNumber)
+                    }
+                    
+                    // Dietary Restrictions
+                    SectionView(title: "Dietary Restrictions") {
+                        dietaryRestrictionsView
+                    }
+                    
+                    // Allergies
+                    SectionView(title: "Allergies") {
+                        allergiesView
+                    }
+                    
                     Spacer()
-                    Image(systemName: "person.crop.circle.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.blue)
-                    Spacer()
-                }
-                .padding(.top)
-
-                // Personal Information
-                SectionView(title: "Personal Information") {
-                    InfoText(label: "First Name", value: user.userProfile.userInformation.firstName)
-                    InfoText(label: "Last Name", value: user.userProfile.userInformation.lastName)
-                    InfoText(label: "Email", value: user.userProfile.userInformation.email)
-                    InfoText(label: "Phone Number", value: user.userProfile.userInformation.phoneNumber)
-                }
-
-                // Dietary Restrictions
-                SectionView(title: "Dietary Restrictions") {
-                    dietaryRestrictionsView
-                }
-
-                // Allergies
-                SectionView(title: "Allergies") {
-                    allergiesView
-                }
-
-                Spacer()
-                
-                // Edit Profile Button
-                Button(action: {
-                    user.userProfile.userProfileMade = true
-                    showEditProfilePage = true
-                }) {
-                    Text("Edit Profile")
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                }
-                .sheet(isPresented: $showEditProfilePage) {
-                    SignInView()
+                    
+                    // Edit Profile Button
+                    Button(action: {
+                        user.userProfile.userProfileMade = true
+                        showEditProfilePage = true
+                    }) {
+                        Text("Edit Profile")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }
+                    .sheet(isPresented: $showEditProfilePage) {
+                        SignInView()
+                    }
+                    .padding()
                 }
                 .padding()
+                .navigationTitle("Profile Summary")
+                .background(Color(UIColor.systemGray6)) // Light gray background
             }
-            .padding()
-            .navigationTitle("Profile Summary")
-            .background(Color(UIColor.systemGray6)) // Light gray background
         }
     }
 
