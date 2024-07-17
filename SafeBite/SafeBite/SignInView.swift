@@ -47,32 +47,36 @@ struct SignInView: View {
                     Toggle("Sulfites", isOn: $user.userProfile.allergens.sulfites)
                 }
                 
-                if !user.userProfile.userProfileMade {
+//                if !user.userProfile.userProfileMade {
                     NavigationLink {
                         ContentView()
                     } label: {
                         VStack {
-                            Text("Submit Profile")
+                            if !user.userProfile.userProfileMade {
+                                Text("Submit Profile")
+                            } else {
+                                Text("Update Profile")
+                            }
                         }
                     }
                     .disabled(user.userProfile.userInformation.invalidUserInformation)
-                } else {
-                    Button(action: {
-                        dismiss()
-                    }) {
-                        VStack {
-                            Text("Update Profile")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                        }
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(8)
-                    }
-                    .padding()
-                    .disabled(user.userProfile.userInformation.invalidUserInformation)
-                }
+//                } else {
+//                    Button(action: {
+//                        dismiss()
+//                    }) {
+//                        VStack {
+//                            Text("Update Profile")
+//                                .font(.headline)
+//                                .foregroundColor(.white)
+//                        }
+//                        .frame(maxWidth: .infinity)
+//                        .padding()
+//                        .background(Color.blue)
+//                        .cornerRadius(8)
+//                    }
+//                    .padding()
+//                    .disabled(user.userProfile.userInformation.invalidUserInformation)
+//                }
             }
             
             .navigationTitle("SafeBite Profile")
