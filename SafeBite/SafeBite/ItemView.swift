@@ -138,6 +138,7 @@ struct ItemViewOld: View {
 
 struct ItemView: View {
     private var menuItem: MenuItem
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
@@ -161,7 +162,7 @@ struct ItemView: View {
                     AllergenCards(safetyIndicator: 2, allergens: true, menuItem: menuItem)
                     
                     Button(action: {
-                        // Dismiss action here
+                        dismiss()
                     }) {
                         Text("OKAY")
                             .font(.headline)

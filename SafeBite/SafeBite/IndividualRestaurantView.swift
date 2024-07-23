@@ -47,43 +47,46 @@ func imageExists(named name: String) -> Bool {
 struct MenuItemView: View {
     var menuItem: MenuItem
     let restaurantName: String
+    @State private var showItemDetail = false
     
     var body: some View {
         let primaryImageName = restaurantName.lowercased().filter{!$0.isWhitespace} + "_" + menuItem.image
         let fallbackImageName = restaurantName.lowercased().filter{!$0.isWhitespace}
         let imageName = imageExists(named: primaryImageName) ? primaryImageName : fallbackImageName
 
-        NavigationLink {
-            ItemView(menuItem: menuItem)
-        } label: {
-            VStack {
-                HStack {
-                    Image(imageName)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width:80, height: 80)
-                    VStack (alignment: .leading) {
-                        Text(menuItem.name)
-                            .padding(.horizontal)
-                            .foregroundColor(.black)
-                        Text(menuItem.description)
-                            .padding(.horizontal)
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
-                    }
-                    
-                    Spacer()
-                    
-                    Image(systemName: "chevron.right")
+        VStack {
+            HStack {
+                Image(imageName)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width:80, height: 80)
+                VStack (alignment: .leading) {
+                    Text(menuItem.name)
                         .padding(.horizontal)
+                        .foregroundColor(.black)
+                    Text(menuItem.description)
+                        .padding(.horizontal)
+                        .font(.caption)
                         .foregroundColor(.gray)
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                 }
-                .padding(5)
-                .background(RoundedRectangle(cornerRadius: 10).fill(Color.white).shadow(radius: 10))
-                .padding(.horizontal)
+                
+                Spacer()
+                
+                Image(systemName: "chevron.right")
+                    .padding(.horizontal)
+                    .foregroundColor(.gray)
             }
+            .padding(5)
+            .background(RoundedRectangle(cornerRadius: 10).fill(Color.white).shadow(radius: 10))
+            .padding(.horizontal)
+            .onTapGesture {
+                showItemDetail.toggle()
+            }
+        }
+        .sheet(isPresented: $showItemDetail) {
+            ItemView(menuItem: menuItem)
         }
     }
 }
