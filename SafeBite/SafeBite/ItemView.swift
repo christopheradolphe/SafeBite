@@ -27,26 +27,48 @@ struct AllergenCards: View {
         ScrollView(.horizontal) {
             HStack {
                 if allergens {
-                    ForEach(menuItem.allergenInfo.keys.filter{menuItem.allergenInfo[$0] == safetyIndicator}, id: \.self) { allergen in
-                        Text(allergen)
+                    let allergenList = menuItem.allergenInfo.keys.filter{menuItem.allergenInfo[$0] == safetyIndicator}
+                    if allergenList.isEmpty {
+                        Text("N/A")
                             .foregroundStyle(.white)
                             .padding(10)
-                            .background(color)
-                            .clipShape(.capsule)
+                            .background(Color.gray)
+                            .clipShape(Capsule())
                             .padding(.leading, 3)
+                    } else {
+                        ForEach(allergenList, id: \.self) { allergen in
+                            Text(allergen)
+                                .foregroundStyle(.white)
+                                .padding(10)
+                                .background(color)
+                                .clipShape(.capsule)
+                                .padding(.leading, 3)
+                        }
                     }
                 } else {
-                    ForEach(menuItem.dietaryRestrictionInfo.keys.filter{menuItem.dietaryRestrictionInfo[$0] == safetyIndicator}, id: \.self) { dietaryRestriction in
-                        Text(dietaryRestriction)
+                    let dietaryRestrictionList = menuItem.dietaryRestrictionInfo.keys.filter { menuItem.dietaryRestrictionInfo[$0] == safetyIndicator }
+                    if dietaryRestrictionList.isEmpty {
+                        Text("N/A")
                             .foregroundStyle(.white)
                             .padding(10)
-                            .background(color)
-                            .clipShape(.capsule)
-                            .padding(.leading, 5)
+                            .background(Color.gray)
+                            .clipShape(Capsule())
+                            .padding(.leading, 3)
+                    } else {
+                        ForEach(dietaryRestrictionList, id: \.self) { dietaryRestriction in
+                            Text(dietaryRestriction)
+                                .foregroundStyle(.white)
+                                .padding(10)
+                                .background(color)
+                                .clipShape(Capsule())
+                                .padding(.leading, 3)
+                        }
                     }
                 }
             }
+            .padding(.horizontal, 10)
         }
+        .padding(.vertical, 10)
     }
 }
 
