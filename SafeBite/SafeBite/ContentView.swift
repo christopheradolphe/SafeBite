@@ -68,11 +68,12 @@ struct Cards: View {
                             
                             HStack {
                                 Text(restaurant.name)
-                                    .font(.callout)
+                                    .font(.system(size: 18))
                                     .foregroundStyle(.black)
                                     .lineLimit(2)
                                     .truncationMode(.tail)
-                                    .padding(.horizontal, 5)
+                                    .padding(.horizontal, 10)
+                                    .multilineTextAlignment(.leading)
                                 
                                 Spacer()
                                 
@@ -83,7 +84,7 @@ struct Cards: View {
                                         .stroke(lineWidth: 5)
                                         .opacity(0.3)
                                         .foregroundColor(.gray)
-                                        .frame(width: 50, height: 50)
+                                        .frame(width: 40, height: 40)
                                     
                                     Circle()
                                         .trim(from: 0.0, to: percentage)
@@ -91,7 +92,7 @@ struct Cards: View {
                                         .foregroundColor(color)
                                         .rotationEffect(Angle(degrees: -90))
                                         .animation(.linear, value: percentage)
-                                        .frame(width: 50, height: 50)
+                                        .frame(width: 40, height: 40)
                                     
                                     Text(percentage, format: .percent.precision(.fractionLength(0)))
                                         .foregroundStyle(.white)
