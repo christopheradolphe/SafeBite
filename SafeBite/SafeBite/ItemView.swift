@@ -50,7 +50,7 @@ struct AllergenCards: View {
     }
 }
 
-struct ItemView: View {
+struct ItemViewOld: View {
     private var menuItem: MenuItem
     
     var body: some View {
@@ -126,6 +126,54 @@ struct ItemView: View {
                     AllergenCards(safetyIndicator: 2, allergens: true, menuItem: menuItem)
                 }
             }
+            .navigationTitle(menuItem.name)
+            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+    
+    init(menuItem: MenuItem) {
+        self.menuItem = menuItem
+    }
+}
+
+struct ItemView: View {
+    private var menuItem: MenuItem
+    
+    var body: some View {
+        NavigationStack {
+                
+                VStack(alignment: .leading) {
+                    
+                    Text("Diets Not Suitable")
+                        .font(.title3)
+                        .padding(.horizontal)
+                    
+                    // List all diets not suitable for the dish
+                    AllergenCards(safetyIndicator: 2, allergens: false, menuItem: menuItem)
+                    
+                    Separator()
+                    
+                    Text("Allergens Contained")
+                        .font(.title3)
+                        .padding(.horizontal)
+                    
+                    // List all allergens contained in the dish
+                    AllergenCards(safetyIndicator: 2, allergens: true, menuItem: menuItem)
+                    
+                    Button(action: {
+                        // Dismiss action here
+                    }) {
+                        Text("OKAY")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    .padding(.top)
+                }
+            
             .navigationTitle(menuItem.name)
             .navigationBarTitleDisplayMode(.inline)
         }
