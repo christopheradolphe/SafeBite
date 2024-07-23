@@ -137,8 +137,8 @@ struct ItemViewOld: View {
 }
 
 struct ItemView: View {
-    private var menuItem: MenuItem
-    @Environment(\.dismiss) var dismiss
+    var menuItem: MenuItem
+    @Binding var isPresented: Bool
     
     var body: some View {
         NavigationStack {
@@ -162,7 +162,7 @@ struct ItemView: View {
                     AllergenCards(safetyIndicator: 2, allergens: true, menuItem: menuItem)
                     
                     Button(action: {
-                        dismiss()
+                        isPresented = false
                     }) {
                         Text("OKAY")
                             .font(.headline)
@@ -179,13 +179,10 @@ struct ItemView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
     }
-    
-    init(menuItem: MenuItem) {
-        self.menuItem = menuItem
-    }
 }
 
 #Preview {
     let menu: Menu = Menu(menuItems: Bundle.main.decode("missbao.json"))
-    return ItemView(menuItem: menu.menuItems[0])
+    @State var test = false
+    return ItemView(menuItem: menu.menuItems[0],isPresented: $test)
 }

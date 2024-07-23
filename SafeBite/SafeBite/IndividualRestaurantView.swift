@@ -86,7 +86,9 @@ struct MenuItemView: View {
             }
         }
         .sheet(isPresented: $showItemDetail) {
-            ItemView(menuItem: menuItem)
+            ItemView(menuItem: menuItem, isPresented: $showItemDetail)
+                .background(Color(UIColor.systemGroupedBackground).edgesIgnoringSafeArea(.all))
+                .presentationDetents([.medium])
         }
     }
 }
