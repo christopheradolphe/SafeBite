@@ -25,9 +25,9 @@ struct SafeBiteApp: App {
                     }
             } else {
                 if isLoggedIn {
-                    SignInView()
-                } else {
                     ContentView()
+                } else {
+                    SignInView()
                 }
             }
         }
