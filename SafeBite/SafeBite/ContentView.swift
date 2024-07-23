@@ -291,6 +291,9 @@ struct ContentView: View {
         }
         .navigationBarBackButtonHidden(true)
     }
+    init() {
+        User.shared.userProfile.userProfileMade = true
+    }
 }
 
 #Preview {
