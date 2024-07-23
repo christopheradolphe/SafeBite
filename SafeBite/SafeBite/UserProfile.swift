@@ -38,7 +38,7 @@ struct UserProfile: Codable {
 }
 
 @Observable
-class User {
+class User: ObservableObject {
     var userProfile = UserProfile() {
         didSet {
             if let encoded = try? JSONEncoder().encode(userProfile) {

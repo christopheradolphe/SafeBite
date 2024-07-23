@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct SafeBiteApp: App {
+    @State private var isLoggedIn: Bool = User.shared.userProfile.userProfileMade
     var body: some Scene {
         WindowGroup {
-            SignInView()
+            if isLoggedIn {
+                SignInView()
+            } else {
+                ContentView()
+            }
         }
     }
 }
