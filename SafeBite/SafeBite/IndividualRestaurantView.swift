@@ -61,7 +61,7 @@ struct MenuItemView: View {
                     Image(imageName)
                         .resizable()
                         .scaledToFill()
-                        .frame(width:50, height: 50)
+                        .frame(width:80, height: 80)
                     VStack (alignment: .leading) {
                         Text(menuItem.name)
                             .padding(.horizontal)
