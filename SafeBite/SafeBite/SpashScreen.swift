@@ -8,20 +8,28 @@
 import SwiftUI
 
 struct SplashScreenView: View {
+    @State private var isAnimating = false
+    
     var body: some View {
         VStack {
-            Image("AppIcon")
+            Image("safebite")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 150, height: 150)
+                .clipShape(RoundedRectangle(cornerRadius: 25))                .scaleEffect(isAnimating ? 1.1 : 1.0) // Pulsing effect
+                .animation(
+                    Animation.easeInOut(duration: 0.75)
+                        .repeatForever(autoreverses: true)
+                )
+                .onAppear {
+                    isAnimating = true
+                }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.white)
     }
 }
 
-struct SplashScreenView_Previews: PreviewProvider {
-    static var previews: some View {
-        SplashScreenView()
-    }
+#Preview {
+    return SplashScreenView()
 }
