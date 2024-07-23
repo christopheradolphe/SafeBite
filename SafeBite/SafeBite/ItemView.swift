@@ -151,8 +151,7 @@ struct ItemView: View {
                     
                     // List all diets not suitable for the dish
                     AllergenCards(safetyIndicator: 2, allergens: false, menuItem: menuItem)
-                    
-                    Separator()
+                        .padding(.bottom, 20)
                     
                     Text("Allergens Contained")
                         .font(.title3)
@@ -161,16 +160,21 @@ struct ItemView: View {
                     // List all allergens contained in the dish
                     AllergenCards(safetyIndicator: 2, allergens: true, menuItem: menuItem)
                     
-                    Button(action: {
-                        isPresented = false
-                    }) {
-                        Text("OKAY")
-                            .font(.headline)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.green)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            isPresented = false
+                        }) {
+                            Text("OKAY")
+                                .font(.headline)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.green)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
+                        .frame(width: UIScreen.main.bounds.width / 2)
+                        Spacer()
                     }
                     .padding(.top)
                 }
