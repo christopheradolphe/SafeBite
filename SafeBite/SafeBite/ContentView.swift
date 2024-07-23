@@ -178,25 +178,13 @@ struct MainPageView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    VStack(alignment: .leading) {
-                        Text("Your Favourites")
-                            .font(.title.bold())
-                            .padding([.horizontal, .top])
-                        
-                        if (!User.shared.userProfile.favouriteRestaurants.values.contains(true)) {
-                                Text("You Currently Have No Favourite Restaurants")
-                                    .font(.callout)
-                                    .foregroundColor(.gray)
-                                    .multilineTextAlignment(.center)
-                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                    .background(Color.clear)
-                                    .padding(.vertical)
-
+                    if (User.shared.userProfile.favouriteRestaurants.values.contains(true)) {
+                            VStack(alignment: .leading) {
+                            
+                                Cards(cuisine: "Favourites", restaurants: restaurants, location: "All")
+                                
+                                Divider()
                         }
-                        
-                        Cards(cuisine: "Favourites", restaurants: restaurants, location: "All")
-                        
-                        Divider()
                     }
                     
                     HStack(alignment: .center){
