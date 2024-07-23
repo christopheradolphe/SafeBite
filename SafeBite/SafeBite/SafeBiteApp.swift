@@ -10,12 +10,25 @@ import SwiftUI
 @main
 struct SafeBiteApp: App {
     @State private var isLoggedIn: Bool = User.shared.userProfile.userProfileMade
+    @State private var showSplashScreen = true
+
     var body: some Scene {
         WindowGroup {
-            if isLoggedIn {
-                SignInView()
+            if showSplashScreen {
+                SplashScreenView()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            withAnimation {
+                                showSplashScreen = false
+                            }
+                        }
+                    }
             } else {
-                ContentView()
+                if isLoggedIn {
+                    SignInView()
+                } else {
+                    ContentView()
+                }
             }
         }
     }
