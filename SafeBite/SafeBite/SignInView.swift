@@ -127,7 +127,6 @@ struct UserProfileView: View {
                     
                     // Edit Profile Button
                     Button(action: {
-                        user.userProfile.userProfileMade = true
                         showEditProfilePage = true
                     }) {
                         Text("Edit Profile")

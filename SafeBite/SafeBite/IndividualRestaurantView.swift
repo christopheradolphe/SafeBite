@@ -58,7 +58,7 @@ struct MenuItemView: View {
             HStack {
                 Image(imageName)
                     .resizable()
-                    .scaledToFill()
+                    .scaledToFit()
                     .frame(width:80, height: 80)
                 VStack (alignment: .leading) {
                     Text(menuItem.name)
@@ -335,5 +335,5 @@ struct IndividualRestaurantView: View {
 
 #Preview {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
-    return IndividualRestaurantView(restaurant: restaurants[0])
+    return IndividualRestaurantView(restaurant: restaurants[12])
 }

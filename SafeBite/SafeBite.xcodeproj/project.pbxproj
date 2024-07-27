@@ -25,6 +25,7 @@
 		8C1DAA8B2C1FF43C00B308BE /* tommy's.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA872C1FF43C00B308BE /* tommy's.json */; };
 		8C1DAA8D2C1FF47300B308BE /* missbao.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DAA8C2C1FF47200B308BE /* missbao.json */; };
 		8C1F005A2C4F6AA700D0767B /* SpashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F00592C4F6AA700D0767B /* SpashScreen.swift */; };
+		8C1F005C2C4F70A200D0767B /* MapPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F005B2C4F70A200D0767B /* MapPageView.swift */; };
 		8CEFD91F2C0CE2BA0048982A /* SafeBiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEFD91E2C0CE2BA0048982A /* SafeBiteApp.swift */; };
 		8CEFD9212C0CE2BA0048982A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEFD9202C0CE2BA0048982A /* ContentView.swift */; };
 		8CEFD9232C0CE2BE0048982A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CEFD9222C0CE2BE0048982A /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		8C1DAA872C1FF43C00B308BE /* tommy's.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "tommy's.json"; path = "../../JSONOutputMenus/tommy's.json"; sourceTree = "<group>"; };
 		8C1DAA8C2C1FF47200B308BE /* missbao.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = missbao.json; path = ../../JSONOutputMenus/missbao.json; sourceTree = "<group>"; };
 		8C1F00592C4F6AA700D0767B /* SpashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpashScreen.swift; sourceTree = "<group>"; };
+		8C1F005B2C4F70A200D0767B /* MapPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPageView.swift; sourceTree = "<group>"; };
 		8CEFD91B2C0CE2BA0048982A /* SafeBite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeBite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CEFD91E2C0CE2BA0048982A /* SafeBiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeBiteApp.swift; sourceTree = "<group>"; };
 		8CEFD9202C0CE2BA0048982A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				8CEFD91E2C0CE2BA0048982A /* SafeBiteApp.swift */,
+				8C1F005B2C4F70A200D0767B /* MapPageView.swift */,
 				8CEFD9202C0CE2BA0048982A /* ContentView.swift */,
 				8C1DAA6E2C1952E300B308BE /* SignInView.swift */,
 				8C1DAA722C1D5E9000B308BE /* UserProfile.swift */,
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CEFD9212C0CE2BA0048982A /* ContentView.swift in Sources */,
+				8C1F005C2C4F70A200D0767B /* MapPageView.swift in Sources */,
 				8CEFD91F2C0CE2BA0048982A /* SafeBiteApp.swift in Sources */,
 				8C1DAA732C1D5E9000B308BE /* UserProfile.swift in Sources */,
 				8CEFD9372C0D1E720048982A /* IndividualRestaurantView.swift in Sources */,
@@ -376,7 +380,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.safebite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -405,7 +409,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.safebite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
