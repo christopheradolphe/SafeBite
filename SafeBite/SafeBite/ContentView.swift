@@ -188,14 +188,6 @@ struct MainPageView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                HStack {
-                    TextField("Search for restaurants", text: $searchQuery)
-                        .padding(.leading, 24)
-                }
-                .padding()
-                .background(Color(.systemGray6))
-                .cornerRadius(8)
-                .padding(.horizontal)
                 ScrollView {
                     VStack {
                         if (User.shared.userProfile.favouriteRestaurants.values.contains(true)) {
@@ -206,6 +198,15 @@ struct MainPageView: View {
                                 Divider()
                             }
                         }
+                        
+                        HStack {
+                            TextField("Search for restaurants", text: $searchQuery)
+                                .padding(.leading, 24)
+                        }
+                        .padding()
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                        .padding(.horizontal)
                         
                         HStack(alignment: .center){
                             VStack {
