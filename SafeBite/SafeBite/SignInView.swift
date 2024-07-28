@@ -53,7 +53,11 @@ struct SignInView: View {
                         dismiss()
                     } label: {
                         VStack {
-                            Text("Update Profile")
+                            HStack {
+                                Spacer()
+                                Text("Update Profile")
+                                Spacer()
+                            }
                         }
                     }
                     .disabled(user.userProfile.userInformation.invalidUserInformation)
@@ -62,7 +66,11 @@ struct SignInView: View {
                         ContentView()
                     } label: {
                         VStack {
-                            Text("Submit Profile")
+                            HStack {
+                                Spacer()
+                                Text("Submit Profile")
+                                Spacer()
+                            }
                         }
                     }
                     .disabled(user.userProfile.userInformation.invalidUserInformation)
