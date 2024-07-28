@@ -175,102 +175,122 @@ struct MainPageView: View {
     @State private var showingCuisineFilter = false
     @State private var cuisineFilter = "All"
     
+    @State private var searchQuery = ""
+
+    var filteredRestaurants: [Restaurant] {
+        if searchQuery.isEmpty {
+            return restaurants
+        } else {
+            return restaurants.filter { $0.name.localizedCaseInsensitiveContains(searchQuery) }
+        }
+    }
+    
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack {
-                    if (User.shared.userProfile.favouriteRestaurants.values.contains(true)) {
+            VStack {
+                HStack {
+                    TextField("Search for restaurants", text: $searchQuery)
+                        .padding(.leading, 24)
+                }
+                .padding()
+                .background(Color(.systemGray6))
+                .cornerRadius(8)
+                .padding(.horizontal)
+                ScrollView {
+                    VStack {
+                        if (User.shared.userProfile.favouriteRestaurants.values.contains(true)) {
                             VStack(alignment: .leading) {
-                            
+                                
                                 Cards(cuisine: "Favourites", restaurants: restaurants, location: "All")
                                 
                                 Divider()
+                            }
                         }
-                    }
-                    
-                    HStack(alignment: .center){
-                        VStack {
-                            Text("Filters")
-                                .font(.headline)
-                                .padding(.horizontal)
+                        
+                        HStack(alignment: .center){
+                            VStack {
+                                Text("Filters")
+                                    .font(.headline)
+                                    .padding(.horizontal)
+                                
+                                Spacer()
+                            }
+                            
+                            Spacer ()
+                            
+                            Button(action: {
+                                withAnimation{
+                                    locationFilter = "All"
+                                    cuisineFilter = "All"
+                                }
+                            }) {
+                                Text("Reset")
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                                    .padding(10)
+                                    .background(Color.clear)
+                                    .cornerRadius(30)
+                                    .overlay(
+                                        Capsule()
+                                            .stroke(Color.gray, lineWidth: 2)
+                                    )
+                            }
+                            .padding(.horizontal)
+                        }
+                        .padding(.top)
+                        
+                        HStack (alignment: .top) {
+                            Button {
+                                showingLocationFilter.toggle()
+                            } label: {
+                                Text("Location: \(locationFilter)")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(Color.green)
+                                    .cornerRadius(30)
+                                    .shadow(color: .gray, radius: 2, x: 0, y: 2)
+                            }
+                            .padding(10)
+                            
+                            Button {
+                                showingCuisineFilter.toggle()
+                            } label: {
+                                Text("Cuisine: \(cuisineFilter)")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(Color.green)
+                                    .cornerRadius(30)
+                                    .shadow(color: .gray, radius: 2, x: 0, y: 2)
+                            }
+                            .padding(10)
                             
                             Spacer()
                         }
-                        
-                        Spacer ()
-                        
-                        Button(action: {
-                            withAnimation{
-                                locationFilter = "All"
-                                cuisineFilter = "All"
+                        VStack(alignment: .leading) {
+                            if cuisineFilter == "All" {
+                                ForEach(cuisines, id:\.self) { cuisine in
+                                    Cards(cuisine: cuisine, restaurants: filteredRestaurants, location: locationFilter)
+                                }
+                            } else {
+                                Cards(cuisine: cuisineFilter, restaurants: filteredRestaurants, location: locationFilter)
                             }
-                        }) {
-                            Text("Reset")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                                .padding(10)
-                                .background(Color.clear)
-                                .cornerRadius(30)
-                                .overlay(
-                                    Capsule()
-                                        .stroke(Color.gray, lineWidth: 2)
-                                )
                         }
-                        .padding(.horizontal)
                     }
-                    .padding(.top)
                     
-                    HStack (alignment: .top) {
-                        Button {
-                            showingLocationFilter.toggle()
-                        } label: {
-                            Text("Location: \(locationFilter)")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(Color.green)
-                                .cornerRadius(30)
-                                .shadow(color: .gray, radius: 2, x: 0, y: 2)
-                        }
-                        .padding(10)
-                        
-                        Button {
-                            showingCuisineFilter.toggle()
-                        } label: {
-                            Text("Cuisine: \(cuisineFilter)")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(Color.green)
-                                .cornerRadius(30)
-                                .shadow(color: .gray, radius: 2, x: 0, y: 2)
-                        }
-                        .padding(10)
-                        
-                        Spacer()
-                    }
-                    VStack(alignment: .leading) {
-                        if cuisineFilter == "All" {
-                            ForEach(cuisines, id:\.self) { cuisine in
-                                Cards(cuisine: cuisine, restaurants: restaurants, location: locationFilter)
-                            }
-                        } else {
-                            Cards(cuisine: cuisineFilter, restaurants: restaurants, location: locationFilter)
-                        }
-                    }
                 }
+                .navigationTitle("Restaurants")
                 
+                .sheet(isPresented: $showingLocationFilter) {
+                    FilterPickerView(selectedLocation: $locationFilter, options: locationOptions, topic: "Location")
+                }
+                .sheet(isPresented: $showingCuisineFilter) {
+                    FilterPickerView(selectedLocation: $cuisineFilter, options: cuisines, topic: "Cuisine")
+                }
+                .toolbarBackground(.green)
+                .navigationBarBackButtonHidden(true)
             }
-            .navigationTitle("Restaurants")
-            
-            .sheet(isPresented: $showingLocationFilter) {
-                FilterPickerView(selectedLocation: $locationFilter, options: locationOptions, topic: "Location")
-            }
-            .sheet(isPresented: $showingCuisineFilter) {
-                FilterPickerView(selectedLocation: $cuisineFilter, options: cuisines, topic: "Cuisine")
-            }
-            .toolbarBackground(.green)
-            .navigationBarBackButtonHidden(true)
         }
     }
 }
