@@ -48,18 +48,25 @@ struct SignInView: View {
                 }
                 
 //                if !user.userProfile.userProfileMade {
+                if user.userProfile.userProfileMade {
+                    Button {
+                        dismiss()
+                    } label: {
+                        VStack {
+                            Text("Update Profile")
+                        }
+                    }
+                    .disabled(user.userProfile.userInformation.invalidUserInformation)
+                } else {
                     NavigationLink {
                         ContentView()
                     } label: {
                         VStack {
-                            if !user.userProfile.userProfileMade {
-                                Text("Submit Profile")
-                            } else {
-                                Text("Update Profile")
-                            }
+                            Text("Submit Profile")
                         }
                     }
                     .disabled(user.userProfile.userInformation.invalidUserInformation)
+                }
 //                } else {
 //                    Button(action: {
 //                        dismiss()
