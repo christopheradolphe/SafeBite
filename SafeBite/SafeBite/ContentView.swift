@@ -275,6 +275,21 @@ struct MainPageView: View {
     }
 }
 
+struct MapPageView: View {
+    @State private var addresses: [String] = [
+        "1600 Amphitheatre Parkway, Mountain View, CA",
+        "1 Infinite Loop, Cupertino, CA",
+        "Apple Park Visitor Center, Cupertino, CA"
+    ]
+
+    var body: some View {
+        VStack {
+            MapViewMultiple(addresses: $addresses)
+                .edgesIgnoringSafeArea(.all)
+        }
+    }
+}
+
 struct ContentView: View {
     var body: some View {
         TabView {
@@ -282,6 +297,12 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Restaurants")
+                }
+            
+            MapPageView()
+                .tabItem{
+                    Image(systemName: "map.fill")
+                    Text("Map")
                 }
             
             UserProfileView()
