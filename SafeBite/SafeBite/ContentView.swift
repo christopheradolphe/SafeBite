@@ -276,11 +276,12 @@ struct MainPageView: View {
 }
 
 struct MapPageView: View {
-    @State private var addresses: [String] = [
-        "1600 Amphitheatre Parkway, Mountain View, CA",
-        "1 Infinite Loop, Cupertino, CA",
-        "Apple Park Visitor Center, Cupertino, CA"
-    ]
+    @State private var addresses: [String] = []
+
+    init() {
+        let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
+        _addresses = State(initialValue: restaurants.map { $0.address })
+    }
 
     var body: some View {
         VStack {
