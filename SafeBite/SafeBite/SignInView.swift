@@ -67,23 +67,6 @@ struct SignInView: View {
                     }
                     .disabled(user.userProfile.userInformation.invalidUserInformation)
                 }
-//                } else {
-//                    Button(action: {
-//                        dismiss()
-//                    }) {
-//                        VStack {
-//                            Text("Update Profile")
-//                                .font(.headline)
-//                                .foregroundColor(.white)
-//                        }
-//                        .frame(maxWidth: .infinity)
-//                        .padding()
-//                        .background(Color.blue)
-//                        .cornerRadius(8)
-//                    }
-//                    .padding()
-//                    .disabled(user.userProfile.userInformation.invalidUserInformation)
-//                }
             }
             
             .navigationTitle("SafeBite Profile")
