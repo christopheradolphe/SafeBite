@@ -82,14 +82,27 @@ struct MapViewMultiple: UIViewRepresentable {
         Coordinator(parent: self)
     }
 
-    func makeUIView(context: Context) -> MKMapView {
+    func makeUIView(context: Context) -> UIView {
+        let containerView = UIView()
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
         mapView.showsUserLocation = true
-        return mapView
+        
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(mapView)
+
+        NSLayoutConstraint.activate([
+            mapView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            mapView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            mapView.topAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.topAnchor),
+            mapView.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor)
+        ])
+
+        return containerView
     }
 
-    func updateUIView(_ mapView: MKMapView, context: Context) {
+    func updateUIView(_ uiView: UIView, context: Context) {
+        guard let mapView = uiView.subviews.first as? MKMapView else { return }
         guard let userLocation = locationManager.userLocation else { return }
         
         if !initialRegionSet {
