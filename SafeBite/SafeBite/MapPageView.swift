@@ -69,12 +69,21 @@ struct MapViewMultiple: UIViewRepresentable {
     @Binding var addresses: [String]
     @ObservedObject var locationManager = LocationManager()
     @State private var initialRegionSet = false
+    @State private var showRecenterButton = false
 
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapViewMultiple
 
         init(parent: MapViewMultiple) {
             self.parent = parent
+        }
+        
+        func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+            if !parent.initialRegionSet {
+                parent.initialRegionSet = true
+            } else {
+                parent.showRecenterButton = true
+            }
         }
     }
 
@@ -114,12 +123,6 @@ struct MapViewMultiple: UIViewRepresentable {
             initialRegionSet = true
         }
 
-        updateAnnotations(mapView)
-    }
-
-    private func updateAnnotations(_ mapView: MKMapView) {
-        mapView.removeAnnotations(mapView.annotations)
-
         for address in addresses {
             geocodeAddress(address) { coordinate in
                 let annotation = MKPointAnnotation()
@@ -139,6 +142,16 @@ struct MapViewMultiple: UIViewRepresentable {
             }
             completion(location.coordinate)
         }
+    }
+    
+    func recenterMap(_ mapView: MKMapView) {
+        guard let userLocation = locationManager.userLocation else { return }
+        let region = MKCoordinateRegion(
+            center: userLocation.coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        )
+        mapView.setRegion(region, animated: true)
+        showRecenterButton = false
     }
 }
 
