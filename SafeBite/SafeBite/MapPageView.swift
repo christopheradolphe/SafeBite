@@ -68,6 +68,7 @@ struct MapView: UIViewRepresentable {
 struct MapViewMultiple: UIViewRepresentable {
     @Binding var addresses: [String]
     @ObservedObject var locationManager = LocationManager()
+    @State private var initialRegionSet = false
 
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapViewMultiple
@@ -91,11 +92,14 @@ struct MapViewMultiple: UIViewRepresentable {
     func updateUIView(_ mapView: MKMapView, context: Context) {
         guard let userLocation = locationManager.userLocation else { return }
         
-        let region = MKCoordinateRegion(
-            center: userLocation.coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        )
-        mapView.setRegion(region, animated: true)
+        if !initialRegionSet {
+            let region = MKCoordinateRegion(
+                center: userLocation.coordinate,
+                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            )
+            mapView.setRegion(region, animated: true)
+            initialRegionSet = true
+        }
 
         for address in addresses {
             geocodeAddress(address) { coordinate in
