@@ -114,6 +114,12 @@ struct MapViewMultiple: UIViewRepresentable {
             initialRegionSet = true
         }
 
+        updateAnnotations(mapView)
+    }
+
+    private func updateAnnotations(_ mapView: MKMapView) {
+        mapView.removeAnnotations(mapView.annotations)
+
         for address in addresses {
             geocodeAddress(address) { coordinate in
                 let annotation = MKPointAnnotation()
