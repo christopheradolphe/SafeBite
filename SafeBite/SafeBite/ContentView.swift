@@ -176,6 +176,7 @@ struct MainPageView: View {
     @State private var cuisineFilter = "All"
     
     @State private var searchQuery = ""
+    @State private var searchIsFocused = false
 
     var filteredRestaurants: [Restaurant] {
         if searchQuery.isEmpty {
@@ -202,6 +203,7 @@ struct MainPageView: View {
                         HStack {
                             TextField("Search for restaurants", text: $searchQuery)
                                 .padding(.leading, 24)
+                                .focused($searchIsFocused)
                         }
                         .padding()
                         .background(Color(.systemGray6))
@@ -288,6 +290,13 @@ struct MainPageView: View {
                 }
                 .sheet(isPresented: $showingCuisineFilter) {
                     FilterPickerView(selectedLocation: $cuisineFilter, options: cuisines, topic: "Cuisine")
+                }
+                .toolbar {
+                    if searchIsFocused {
+                        Button("Done") {
+                            searchIsFocused = false
+                        }
+                    }
                 }
                 .toolbarBackground(.green)
                 .navigationBarBackButtonHidden(true)
