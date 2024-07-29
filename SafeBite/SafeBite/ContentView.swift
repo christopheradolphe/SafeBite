@@ -176,7 +176,7 @@ struct MainPageView: View {
     @State private var cuisineFilter = "All"
     
     @State private var searchQuery = ""
-    @State private var searchIsFocused = false
+    @FocusState private var searchIsFocused: Bool
 
     var filteredRestaurants: [Restaurant] {
         if searchQuery.isEmpty {
