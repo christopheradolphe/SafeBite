@@ -79,9 +79,7 @@ struct MapViewMultiple: UIViewRepresentable {
         }
         
         func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-            if !parent.initialRegionSet {
-                parent.initialRegionSet = true
-            } else {
+            if parent.initialRegionSet {
                 parent.showRecenterButton = true
             }
         }
@@ -117,7 +115,7 @@ struct MapViewMultiple: UIViewRepresentable {
         if !initialRegionSet {
             let region = MKCoordinateRegion(
                 center: userLocation.coordinate,
-                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01) // Adjusted for initial zoom
             )
             mapView.setRegion(region, animated: true)
             initialRegionSet = true
@@ -148,7 +146,7 @@ struct MapViewMultiple: UIViewRepresentable {
         guard let userLocation = locationManager.userLocation else { return }
         let region = MKCoordinateRegion(
             center: userLocation.coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01) // Adjusted for initial zoom
         )
         mapView.setRegion(region, animated: true)
         showRecenterButton = false
