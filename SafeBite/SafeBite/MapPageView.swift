@@ -66,7 +66,7 @@ struct MapView: UIViewRepresentable {
 }
 
 struct MapViewMultiple: UIViewRepresentable {
-    @Binding var addresses: [String]
+    @Binding var restaurants: [Restaurant]
     @ObservedObject var locationManager = LocationManager()
     @State private var initialRegionSet = false
     @State private var showRecenterButton = false
@@ -121,11 +121,11 @@ struct MapViewMultiple: UIViewRepresentable {
             initialRegionSet = true
         }
 
-        for address in addresses {
-            geocodeAddress(address) { coordinate in
+        for restaurant in restaurants {
+            geocodeAddress(restaurant.address) { coordinate in
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = coordinate
-                annotation.title = address
+                annotation.title = restaurant.name
                 mapView.addAnnotation(annotation)
             }
         }

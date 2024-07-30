@@ -306,16 +306,16 @@ struct MainPageView: View {
 }
 
 struct MapPageView: View {
-    @State private var addresses: [String] = []
+    @State private var restaurants: [Restaurant] = []
 
     init() {
         let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
-        _addresses = State(initialValue: restaurants.map { $0.address })
+        _restaurants = State(initialValue: restaurants)
     }
 
     var body: some View {
         VStack {
-            MapViewMultiple(addresses: $addresses)
+            MapViewMultiple(restaurants: $restaurants)
                 .edgesIgnoringSafeArea(.all)
         }
     }
