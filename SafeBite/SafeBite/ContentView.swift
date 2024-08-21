@@ -312,11 +312,61 @@ struct MapPageView: View {
         let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
         _restaurants = State(initialValue: restaurants)
     }
+    
+    @StateObject private var locationManager = LocationManager()
+    @State private var selectedRestaurant: Restaurant?
 
     var body: some View {
-        VStack {
-            MapViewMultiple(restaurants: $restaurants)
+        ZStack {
+            MapViewMultiple(restaurants: $restaurants, locationManager: locationManager, selectedRestaurant: $selectedRestaurant)
                 .edgesIgnoringSafeArea(.all)
+
+            VStack {
+                Spacer()
+                HStack {
+                    Button(action: {
+                        // Add zoom out functionality here
+                    }) {
+                        Image(systemName: "minus.magnifyingglass")
+                            .padding()
+                            .background(Color.white)
+                            .clipShape(Circle())
+                            .shadow(radius: 10)
+                    }
+                    .padding()
+
+                    Button(action: {
+                        // Add zoom in functionality here
+                    }) {
+                        Image(systemName: "plus.magnifyingglass")
+                            .padding()
+                            .background(Color.white)
+                            .clipShape(Circle())
+                            .shadow(radius: 10)
+                    }
+                    .padding()
+                }
+            }
+        }
+        .sheet(item: $selectedRestaurant) { restaurant in
+            VStack {
+                Text(restaurant.name)
+                    .font(.largeTitle)
+                    .padding()
+                Text(restaurant.description)
+                    .padding()
+                Button(action: {
+                    // Navigate to restaurant page view
+                }) {
+                    Text("Go to Restaurant Page")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+            }
+            .padding()
+            .presentationDetents([.medium]) // Set the sheet to medium size
         }
     }
 }

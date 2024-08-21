@@ -67,7 +67,8 @@ struct MapView: UIViewRepresentable {
 
 struct MapViewMultiple: UIViewRepresentable {
     @Binding var restaurants: [Restaurant]
-    @ObservedObject var locationManager = LocationManager()
+    @ObservedObject var locationManager: LocationManager
+    @Binding var selectedRestaurant: Restaurant?
     @State private var initialRegionSet = false
     @State private var showRecenterButton = false
 
@@ -81,6 +82,13 @@ struct MapViewMultiple: UIViewRepresentable {
         func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
             if parent.initialRegionSet {
                 parent.showRecenterButton = true
+            }
+        }
+        
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            guard let annotation = view.annotation, let title = annotation.title ?? nil else { return }
+            if let restaurant = parent.restaurants.first(where: { $0.name == title }) {
+                parent.selectedRestaurant = restaurant
             }
         }
     }
@@ -119,6 +127,9 @@ struct MapViewMultiple: UIViewRepresentable {
             )
             mapView.setRegion(region, animated: true)
             initialRegionSet = true
+        } else {
+            // Keep the current region, don't reset it
+            mapView.setCenter(mapView.region.center, animated: false)
         }
 
         for restaurant in restaurants {
