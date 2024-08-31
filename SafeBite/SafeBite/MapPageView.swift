@@ -33,7 +33,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 }
 
-
 struct MapView: UIViewRepresentable {
     let address: String
 
@@ -64,6 +63,7 @@ struct MapView: UIViewRepresentable {
         }
     }
 }
+
 
 struct MapViewMultiple: UIViewRepresentable {
     @Binding var restaurants: [Restaurant]
@@ -127,11 +127,9 @@ struct MapViewMultiple: UIViewRepresentable {
             )
             mapView.setRegion(region, animated: true)
             initialRegionSet = true
-        } else {
-            // Keep the current region, don't reset it
-            mapView.setCenter(mapView.region.center, animated: false)
         }
 
+        // Add annotations for each restaurant
         for restaurant in restaurants {
             geocodeAddress(restaurant.address) { coordinate in
                 let annotation = MKPointAnnotation()
@@ -164,7 +162,65 @@ struct MapViewMultiple: UIViewRepresentable {
     }
 }
 
+struct RestaurantDetailSheet: View {
+    let restaurant: Restaurant
+    var onGoToRestaurant: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text(restaurant.name)
+                .font(.title)
+                .fontWeight(.bold)
+
+            Text(restaurant.address)
+                .font(.subheadline)
+
+            Text(restaurant.description)
+                .font(.body)
+                .padding(.top, 8)
+
+            Button(action: onGoToRestaurant) {
+                Text("Go to Restaurant")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+            }
+        }
+        .padding()
+        .presentationDetents([.medium]) // Set sheet size
+    }
+}
+
+struct MapPage: View {
+    @State var restaurants: [Restaurant] = []
+    @StateObject private var locationManager = LocationManager()
+    @State private var selectedRestaurant: Restaurant? = nil
+
+    var body: some View {
+        ZStack {
+            MapViewMultiple(restaurants: $restaurants, locationManager: locationManager, selectedRestaurant: $selectedRestaurant)
+                .edgesIgnoringSafeArea(.all)
+        }
+        .sheet(item: $selectedRestaurant) { restaurant in
+            RestaurantDetailSheet(restaurant: restaurant) {
+                // Navigate to the Individual Restaurant View
+                print("Navigating to \(restaurant.name)")
+                // Replace with actual navigation to IndividualRestaurantView(restaurant)
+                // For example:
+                // NavigationLink(destination: IndividualRestaurantView(restaurant: restaurant)) { EmptyView() }
+            }
+        }
+    }
+    
+    init() {
+        let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
+        _restaurants = State(initialValue: restaurants)
+    }
+}
+
 
 #Preview {
-    ContentView()
+    MapPage()
 }

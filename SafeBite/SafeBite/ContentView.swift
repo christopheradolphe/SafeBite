@@ -197,15 +197,16 @@ struct MainPageView: View {
             VStack {
                 ScrollView {
                     VStack {
+                        // Display Favourites Section if Available
                         if (User.shared.userProfile.favouriteRestaurants.values.contains(true)) {
                             VStack(alignment: .leading) {
-                                
                                 Cards(cuisine: "Favourites", restaurants: restaurants, location: "All")
-                                
                                 Divider()
                             }
+                            .padding(.bottom, 10)
                         }
                         
+                        // Search Bar
                         HStack {
                             TextField("Search for restaurants", text: $searchQuery)
                                 .padding(.leading, 24)
@@ -216,19 +217,19 @@ struct MainPageView: View {
                         .cornerRadius(8)
                         .padding(.horizontal)
                         
-                        HStack(alignment: .center){
+                        // Filters Section
+                        HStack(alignment: .center) {
                             VStack {
                                 Text("Filters")
                                     .font(.headline)
                                     .padding(.horizontal)
-                                
                                 Spacer()
                             }
                             
-                            Spacer ()
+                            Spacer()
                             
                             Button(action: {
-                                withAnimation{
+                                withAnimation {
                                     locationFilter = "All"
                                     cuisineFilter = "All"
                                 }
@@ -248,7 +249,8 @@ struct MainPageView: View {
                         }
                         .padding(.top)
                         
-                        HStack (alignment: .top) {
+                        // Location and Cuisine Filter Buttons
+                        HStack(alignment: .top) {
                             Button {
                                 showingLocationFilter.toggle()
                             } label: {
@@ -260,7 +262,7 @@ struct MainPageView: View {
                                     .cornerRadius(30)
                                     .shadow(color: .gray, radius: 2, x: 0, y: 2)
                             }
-                            .padding(10)
+                            .padding(.horizontal, 10)
                             
                             Button {
                                 showingCuisineFilter.toggle()
@@ -273,13 +275,16 @@ struct MainPageView: View {
                                     .cornerRadius(30)
                                     .shadow(color: .gray, radius: 2, x: 0, y: 2)
                             }
-                            .padding(10)
+                            .padding(.horizontal, 10)
                             
                             Spacer()
                         }
+                        .padding(.bottom, 10)
+                        
+                        // Display Cuisine Cards
                         VStack(alignment: .leading) {
                             if cuisineFilter == "All" {
-                                ForEach(cuisines, id:\.self) { cuisine in
+                                ForEach(cuisines, id: \.self) { cuisine in
                                     Cards(cuisine: cuisine, restaurants: filteredRestaurants, location: locationFilter)
                                 }
                             } else {
@@ -287,10 +292,8 @@ struct MainPageView: View {
                             }
                         }
                     }
-                    
                 }
                 .navigationTitle("Restaurants")
-                
                 .sheet(isPresented: $showingLocationFilter) {
                     FilterPickerView(selectedLocation: $locationFilter, options: locationOptions, topic: "Location")
                 }
@@ -298,18 +301,32 @@ struct MainPageView: View {
                     FilterPickerView(selectedLocation: $cuisineFilter, options: cuisines, topic: "Cuisine")
                 }
                 .toolbar {
+                    // Centered App Icon in Navigation Bar
+                    ToolbarItem(placement: .principal) {
+                        Image("safebite")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 50)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                            .padding(.top, 5)
+                    }
+                    
+                    // Done Button for Keyboard Focus
                     if searchIsFocused {
-                        Button("Done") {
-                            searchIsFocused = false
+                        ToolbarItem(placement: .keyboard) {
+                            Button("Done") {
+                                searchIsFocused = false
+                            }
                         }
                     }
                 }
-                .toolbarBackground(.green)
+                .toolbarBackground(Color.green, for: .navigationBar) // Set consistent toolbar background color
                 .navigationBarBackButtonHidden(true)
             }
         }
     }
 }
+
 
 struct MapPageView: View {
     @State private var restaurants: [Restaurant] = []
