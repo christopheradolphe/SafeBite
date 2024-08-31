@@ -305,9 +305,10 @@ struct MainPageView: View {
                     ToolbarItem(placement: .principal) {
                         Image("safebite")
                             .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 50)
+                            .scaledToFill()
+                            .frame(width: 100, height: 35)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
+                            .clipped()
                             .padding(.top, 5)
                     }
                     
