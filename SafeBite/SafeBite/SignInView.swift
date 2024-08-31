@@ -146,6 +146,18 @@ struct UserProfileView: View {
                 .ignoresSafeArea(edges: .all)
             }
         }
+        .toolbar {
+            // Centered App Icon in Navigation Bar
+            ToolbarItem(placement: .principal) {
+                Image("safebite")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 100, height: 35)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .clipped()
+                    .padding(.top, 5)
+            }
+        }
     }
 
     private var dietaryRestrictionsView: some View {

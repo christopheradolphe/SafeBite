@@ -124,7 +124,19 @@ struct Cards: View {
         self.restaurants = restaurants
         self.location = location
         
-        self.restaurantList = cuisine == "Favourites" ? restaurants.filter{User.shared.userProfile.favouriteRestaurants[$0.name] ?? false} : restaurants.filter{$0.cuisine==cuisine}
+        if cuisine == "Favourites" {
+            self.restaurantList = restaurants.filter{User.shared.userProfile.favouriteRestaurants[$0.name] ?? false}
+        } else if cuisine == "Safest" {
+            self.restaurantList = restaurants.sorted {
+                let firstPercentage = Double($0.menu.safeItems) / Double($0.menu.totalItems)
+                let secondPercentage = Double($1.menu.safeItems) / Double($1.menu.totalItems)
+                return firstPercentage > secondPercentage
+            }
+            .prefix(5)
+            .map { $0 }
+        } else {
+            self.restaurantList = restaurants.filter{$0.cuisine==cuisine}
+        }
         if !(location == "All"){
             restaurantList = restaurantList.filter{$0.location==location}
         }
@@ -205,6 +217,13 @@ struct MainPageView: View {
                             }
                             .padding(.bottom, 10)
                         }
+                        
+                        // Display Top 5 Safest Restaurants Section
+                        VStack(alignment: .leading) {
+                            Cards(cuisine: "Safest", restaurants: restaurants, location: "All")
+                            Divider()
+                        }
+                        .padding(.bottom, 10)
                         
                         // Search Bar
                         HStack {
