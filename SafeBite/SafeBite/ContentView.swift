@@ -42,7 +42,7 @@ struct Cards: View {
                                 Image(restaurant.restaurantThumbnail)
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 200, height: 100)
+                                    .frame(width: 250, height: 100)
                                     .clipped() // Clip content within frame
                                     .cornerRadius(10)
                                     .shadow(radius: 3)
@@ -67,13 +67,18 @@ struct Cards: View {
                             }
                             
                             HStack {
-                                Text(restaurant.name)
-                                    .font(.system(size: 18))
-                                    .foregroundStyle(.black)
-                                    .lineLimit(2)
-                                    .truncationMode(.tail)
-                                    .padding(.horizontal, 10)
-                                    .multilineTextAlignment(.leading)
+                                VStack (alignment: .leading){
+                                    Text(restaurant.name)
+                                        .font(.system(size: 18))
+                                        .foregroundStyle(.black)
+                                        .lineLimit(1)
+                                        .multilineTextAlignment(.leading)
+                                    Text(restaurant.address)
+                                        .font(.system(size: 10))
+                                        .foregroundStyle(.black)
+                                        .lineLimit(1)
+                                        .multilineTextAlignment(.leading)
+                                }
                                 
                                 Spacer()
                                 
@@ -99,10 +104,11 @@ struct Cards: View {
                                 }
                                 .padding(5)
                             }
-                            .frame(maxWidth: 200)
+                            .frame(maxWidth: 230)
                         }
                         .background(.green)
                         .clipShape(.rect(cornerRadius: 10))
+                        .shadow(radius: 5)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(.green)
@@ -380,7 +386,7 @@ struct ContentView: View {
                     Text("Restaurants")
                 }
             
-            MapPageView()
+            MapPage()
                 .tabItem{
                     Image(systemName: "map.fill")
                     Text("Map")
