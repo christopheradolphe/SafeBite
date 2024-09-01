@@ -28,7 +28,7 @@
 		8C1F005A2C4F6AA700D0767B /* SpashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F00592C4F6AA700D0767B /* SpashScreen.swift */; };
 		8C1F005C2C4F70A200D0767B /* MapPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F005B2C4F70A200D0767B /* MapPageView.swift */; };
 		8CB709F72C84382D000A7D5D /* caferenee.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB709F62C84382D000A7D5D /* caferenee.json */; };
-		8CB709F92C843A9B000A7D5D /* ballroom.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB709F82C843A9B000A7D5D /* ballroom.json */; };
+		8CB709F92C843A9B000A7D5D /* theballroom.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB709F82C843A9B000A7D5D /* theballroom.json */; };
 		8CB709FB2C843AB0000A7D5D /* empire.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB709FA2C843AB0000A7D5D /* empire.json */; };
 		8CB709FD2C843AC0000A7D5D /* libertysoho.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB709FC2C843ABF000A7D5D /* libertysoho.json */; };
 		8CB709FF2C843AC5000A7D5D /* maxime's.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB709FE2C843AC5000A7D5D /* maxime's.json */; };
@@ -67,7 +67,7 @@
 		8C1F00592C4F6AA700D0767B /* SpashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpashScreen.swift; sourceTree = "<group>"; };
 		8C1F005B2C4F70A200D0767B /* MapPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPageView.swift; sourceTree = "<group>"; };
 		8CB709F62C84382D000A7D5D /* caferenee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = caferenee.json; path = ../../JSONOutputMenus/caferenee.json; sourceTree = "<group>"; };
-		8CB709F82C843A9B000A7D5D /* ballroom.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ballroom.json; path = ../../JSONOutputMenus/ballroom.json; sourceTree = "<group>"; };
+		8CB709F82C843A9B000A7D5D /* theballroom.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = theballroom.json; path = ../../JSONOutputMenus/theballroom.json; sourceTree = "<group>"; };
 		8CB709FA2C843AB0000A7D5D /* empire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = empire.json; path = ../../JSONOutputMenus/empire.json; sourceTree = "<group>"; };
 		8CB709FC2C843ABF000A7D5D /* libertysoho.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = libertysoho.json; path = ../../JSONOutputMenus/libertysoho.json; sourceTree = "<group>"; };
 		8CB709FE2C843AC5000A7D5D /* maxime's.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "maxime's.json"; path = "../../JSONOutputMenus/maxime's.json"; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				8C0BDFB62C835DAD0084A7EA /* atomicakitchen.json */,
 				8C0BDFBE2C835DAE0084A7EA /* heist.json */,
 				8CB709F62C84382D000A7D5D /* caferenee.json */,
-				8CB709F82C843A9B000A7D5D /* ballroom.json */,
+				8CB709F82C843A9B000A7D5D /* theballroom.json */,
 				8CB709FE2C843AC5000A7D5D /* maxime's.json */,
 				8CB70A012C843ACD000A7D5D /* myth.json */,
 				8CB70A002C843ACD000A7D5D /* nbacourtside.json */,
@@ -242,7 +242,7 @@
 				8C0BDFC42C835DAE0084A7EA /* tommy's.json in Resources */,
 				8CB70A032C843ACD000A7D5D /* myth.json in Resources */,
 				8C0BDFCE2C835DAE0084A7EA /* anejo.json in Resources */,
-				8CB709F92C843A9B000A7D5D /* ballroom.json in Resources */,
+				8CB709F92C843A9B000A7D5D /* theballroom.json in Resources */,
 				8C0BDFCA2C835DAE0084A7EA /* thegrizzlygrill.json in Resources */,
 				8C0BDFC92C835DAE0084A7EA /* thekeg.json in Resources */,
 			);

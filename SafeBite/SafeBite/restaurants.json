@@ -145,12 +145,92 @@
  {
    "id": 14,
    "name": "Cafe Renee",
-   "description": "Typical diner fare, including all-day breakfast, served in a 1950-style space with a full bar.",
-   "cuisine": "BAR & Grill",
-   "address": "379 Princess St, Kingston, ON K7L 1B9",
-   "phoneNumber": " (613) 766-6585",
-   "website": "https://www.tommyskingston.ca/lander",
+   "description": "Cafe Renée is a lively and social brasserie, with outdoor seating in our back Garden. Renée boasts a well rounded selection of old and new world wines, champagnes, and a large cocktail menu. The menu is French/Italian, with a focus on French inspired pastas. We offer Weekend Brunch, a Martini Happy Hour, and a Late Night Menu.",
+   "cuisine": "Steak / Seafood",
+   "address": "100 Portland St, Toronto, ON M5V 2N2, Canada",
+   "phoneNumber": "+1 416-361-3318",
+   "website": "https://www.cafereneebar.com/",
    "menuTypes": ["STARTERS", "PASTA", "MAINS", "BRUNCH", "COLD BAR", "SIDES"],
-   "location": "Kingston"
+   "location": "Toronto"
+ },
+ {
+   "id" : 15,
+   "name": "Ruby Soho",
+   "description": "Casual bar offering hearty pub fare & shared plates, plus brunch & craft cocktails.",
+   "cuisine": "Bar & Grill",
+   "address": "587 King St W, Toronto, ON M5V 1M5",
+   "phoneNumber": "(416) 901-7829",
+   "website": "https://www.rubysohobar.com/",
+   "location": "Toronto"
+ },
+ {
+   "id" : 16,
+   "name": "NBA Courtside Restaurant",
+   "description": "NBA Courtside Restaurant is a premium, sports-inspired dining experience that celebrates the NBA. Serves happy hour food · Has fireplace · Has private dining room",
+   "cuisine": "Bar & Grill",
+   "address": "15 Queens Quay E #101, Toronto, ON M5E 0C5",
+   "phone Number": "(416) 967-5550",
+   "website": "https://nbarestaurant.com/",
+   "location": "Toronto"
+ },
+ {
+   "id" : 17,
+   "name": "Empire",
+   "description": "An immersive and seductive supper club in Toronto",
+   "cuisine": "Italian",
+   "address": "220 King St W, Toronto, ON M5V 3M2",
+   "phoneNumber": "(647) 454-6061",
+   "website": "https://www.empiretoronto.ca/",
+   "location": "Toronto"
+ },
+ {
+   "id" : 18,
+   "name": "Liberty Soho",
+   "cuisine": "Bar & Grill",
+   "address": "139 E Liberty St, Toronto, ON M6K 3K4, Canada",
+   "phoneNumber": "416-477-7972",
+   "website": "https://www.liberty-soho.com/main",
+   "description": "Casual bar offering hearty pub fare & shared plates, plus brunch & craft cocktails.",
+   "location": "Toronto"
+ },
+ {
+   "id" : 19,
+   "Name": "Cafe Renee",
+   "Description": "Cafe Renée is a lively and social brasserie, with outdoor seating in our back Garden. Renée boasts a well rounded selection of old and new world wines, champagnes, and a large cocktail menu. The menu is French/Italian, with a focus on French inspired pastas. We offer Weekend Brunch, a Martini Happy Hour, and a Late Night Menu.",
+   "Cuisine": "Steak / Seafood",
+   "Address": "100 Portland St, Toronto, ON M5V 2N2, Canada",
+   "Phone Number": "+1 416-361-3318",
+   "Website": "https://www.cafereneebar.com/",
+   "location": "Toronto"
+ },
+ {
+   "id" : 20,
+   "name": "Myth",
+   "description": "Traditional Greek dishes in an upscale venue with an elegant atmosphere, patio seating & a full bar.",
+   "cuisine": "Greek",
+   "address": "522 King St W, Toronto, ON M5V 1L7",
+   "phoneNumber": "(416) 703-2800",
+   "website": "https://mythrestaurant.com/",
+   "location": "Toronto"
+ },
+ {
+   "id" : 21,
+   "name": "The Ballroom",
+   "description": "Large entertainment venue with 10-pin bowling, dozens of TVs, a rooftop patio & elevated pub fare.",
+   "cuisine": "Bar & Grill",
+   "address": "145 John St, Toronto, ON M5V 2E4",
+   "phoneNumber": "(647) 366-7890",
+   "website": "https://www.theballroombowl.ca/",
+   "location": "Toronto"
+ },
+ {
+   "id" : 21,
+   "name": "Maxime's",
+   "description": "Toronto's newest steak, seafood, and cocktail destination.",
+   "cuisine": "Steak / Seafood",
+   "address": "77 Portland St, Toronto, ON M5V 2M9",
+   "phoneNumber": "(647) 484-7476",
+   "website": "https://maximestoronto.com/",
+   "location": "Toronto"
  }
 ]
