@@ -170,7 +170,7 @@
    "description": "NBA Courtside Restaurant is a premium, sports-inspired dining experience that celebrates the NBA. Serves happy hour food · Has fireplace · Has private dining room",
    "cuisine": "Bar & Grill",
    "address": "15 Queens Quay E #101, Toronto, ON M5E 0C5",
-   "phone Number": "(416) 967-5550",
+   "phoneNumber": "(416) 967-5550",
    "website": "https://nbarestaurant.com/",
    "menuTypes": ["Warm-Up", "Salads & Bowls", "Courtside Wings", "Hand Helds", "Stone Baked Pizza", "Mains", "Steak", "Pasta"],
    "location": "Toronto"
