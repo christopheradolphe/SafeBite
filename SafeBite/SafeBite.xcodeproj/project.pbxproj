@@ -32,7 +32,7 @@
 		8CB709FB2C843AB0000A7D5D /* empire.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB709FA2C843AB0000A7D5D /* empire.json */; };
 		8CB709FD2C843AC0000A7D5D /* libertysoho.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB709FC2C843ABF000A7D5D /* libertysoho.json */; };
 		8CB709FF2C843AC5000A7D5D /* maxime's.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB709FE2C843AC5000A7D5D /* maxime's.json */; };
-		8CB70A022C843ACD000A7D5D /* nbacourtside.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB70A002C843ACD000A7D5D /* nbacourtside.json */; };
+		8CB70A022C843ACD000A7D5D /* nbacourtsiderestaurant.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB70A002C843ACD000A7D5D /* nbacourtsiderestaurant.json */; };
 		8CB70A032C843ACD000A7D5D /* myth.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB70A012C843ACD000A7D5D /* myth.json */; };
 		8CB70A052C843AD5000A7D5D /* rubysoho.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB70A042C843AD5000A7D5D /* rubysoho.json */; };
 		8CEFD91F2C0CE2BA0048982A /* SafeBiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEFD91E2C0CE2BA0048982A /* SafeBiteApp.swift */; };
@@ -71,7 +71,7 @@
 		8CB709FA2C843AB0000A7D5D /* empire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = empire.json; path = ../../JSONOutputMenus/empire.json; sourceTree = "<group>"; };
 		8CB709FC2C843ABF000A7D5D /* libertysoho.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = libertysoho.json; path = ../../JSONOutputMenus/libertysoho.json; sourceTree = "<group>"; };
 		8CB709FE2C843AC5000A7D5D /* maxime's.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "maxime's.json"; path = "../../JSONOutputMenus/maxime's.json"; sourceTree = "<group>"; };
-		8CB70A002C843ACD000A7D5D /* nbacourtside.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = nbacourtside.json; path = ../../JSONOutputMenus/nbacourtside.json; sourceTree = "<group>"; };
+		8CB70A002C843ACD000A7D5D /* nbacourtsiderestaurant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = nbacourtsiderestaurant.json; path = ../../JSONOutputMenus/nbacourtsiderestaurant.json; sourceTree = "<group>"; };
 		8CB70A012C843ACD000A7D5D /* myth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = myth.json; path = ../../JSONOutputMenus/myth.json; sourceTree = "<group>"; };
 		8CB70A042C843AD5000A7D5D /* rubysoho.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = rubysoho.json; path = ../../JSONOutputMenus/rubysoho.json; sourceTree = "<group>"; };
 		8CEFD91B2C0CE2BA0048982A /* SafeBite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeBite.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +134,7 @@
 				8CB709F82C843A9B000A7D5D /* theballroom.json */,
 				8CB709FE2C843AC5000A7D5D /* maxime's.json */,
 				8CB70A012C843ACD000A7D5D /* myth.json */,
-				8CB70A002C843ACD000A7D5D /* nbacourtside.json */,
+				8CB70A002C843ACD000A7D5D /* nbacourtsiderestaurant.json */,
 				8CB709FA2C843AB0000A7D5D /* empire.json */,
 				8CB70A042C843AD5000A7D5D /* rubysoho.json */,
 				8C0BDFB92C835DAD0084A7EA /* jackastor's.json */,
@@ -238,7 +238,7 @@
 				8C0BDFCB2C835DAE0084A7EA /* heist.json in Resources */,
 				8C0BDFC72C835DAE0084A7EA /* kintonramen.json in Resources */,
 				8CB70A052C843AD5000A7D5D /* rubysoho.json in Resources */,
-				8CB70A022C843ACD000A7D5D /* nbacourtside.json in Resources */,
+				8CB70A022C843ACD000A7D5D /* nbacourtsiderestaurant.json in Resources */,
 				8C0BDFC42C835DAE0084A7EA /* tommy's.json in Resources */,
 				8CB70A032C843ACD000A7D5D /* myth.json in Resources */,
 				8C0BDFCE2C835DAE0084A7EA /* anejo.json in Resources */,
