@@ -297,25 +297,28 @@ struct MainPageView: View {
                         }
                         .padding(.bottom, 10)
                         
-                        // Display Favourites Section if Available
-                        if (User.shared.userProfile.favouriteRestaurants.values.contains(true)) {
+                        
+                        if searchQuery.isEmpty {
+                            // Display Favourites Section if Available
+                            if (User.shared.userProfile.favouriteRestaurants.values.contains(true)) {
+                                VStack(alignment: .leading) {
+                                    Cards(cuisine: "Favourites", restaurants: restaurants, location: "All")
+                                    Divider()
+                                }
+                                .padding(.bottom, 10)
+                            }
+                            
+                            // Display Top 5 Safest Restaurants Section
                             VStack(alignment: .leading) {
-                                Cards(cuisine: "Favourites", restaurants: restaurants, location: "All")
-                                Divider()
+                                Cards(cuisine: "Safest", restaurants: restaurants, location: "All")
+                            }
+                            .padding(.bottom, 10)
+                            
+                            VStack(alignment: .leading) {
+                                Cards(cuisine: "Closest", restaurants: restaurants, location: "All")
                             }
                             .padding(.bottom, 10)
                         }
-                        
-                        // Display Top 5 Safest Restaurants Section
-                        VStack(alignment: .leading) {
-                            Cards(cuisine: "Safest", restaurants: restaurants, location: "All")
-                        }
-                        .padding(.bottom, 10)
-                        
-                        VStack(alignment: .leading) {
-                            Cards(cuisine: "Closest", restaurants: restaurants, location: "All")
-                        }
-                        .padding(.bottom, 10)
                         
                         // Display Cuisine Cards
                         VStack(alignment: .leading) {
