@@ -161,6 +161,7 @@
    "address": "587 King St W, Toronto, ON M5V 1M5",
    "phoneNumber": "(416) 901-7829",
    "website": "https://www.rubysohobar.com/",
+   "menuTypes": ["Shareables + Starters", "Wings", "House Favourites", "Salads + Bowls", "Tortillas + Friends", "Between Two Breads", "Sides", "Desserts", "Breakfast", "Benny", "Pancakes"],
    "location": "Toronto"
  },
  {
@@ -171,6 +172,7 @@
    "address": "15 Queens Quay E #101, Toronto, ON M5E 0C5",
    "phone Number": "(416) 967-5550",
    "website": "https://nbarestaurant.com/",
+   "menuTypes": ["Warm-Up", "Salads & Bowls", "Courtside Wings", "Hand Helds", "Stone Baked Pizza", "Mains", "Steak", "Pasta"],
    "location": "Toronto"
  },
  {
@@ -181,6 +183,7 @@
    "address": "220 King St W, Toronto, ON M5V 3M2",
    "phoneNumber": "(647) 454-6061",
    "website": "https://www.empiretoronto.ca/",
+   "menuTypes": ["Appetizer", "Fresh Baked Panini", "Pasta", "Main", "Dessert"],
    "location": "Toronto"
  },
  {
@@ -191,36 +194,29 @@
    "phoneNumber": "416-477-7972",
    "website": "https://www.liberty-soho.com/main",
    "description": "Casual bar offering hearty pub fare & shared plates, plus brunch & craft cocktails.",
+   "menuTypes": ["Shareables + Starters", "Wings", "House Favourites", "Salads + Bowls", "Tortillas + Friends", "Between Two Breads", "Sides", "Desserts", "Breakfast", "Benny", "Pancakes"],
    "location": "Toronto"
  },
  {
    "id" : 19,
-   "Name": "Cafe Renee",
-   "Description": "Cafe Renée is a lively and social brasserie, with outdoor seating in our back Garden. Renée boasts a well rounded selection of old and new world wines, champagnes, and a large cocktail menu. The menu is French/Italian, with a focus on French inspired pastas. We offer Weekend Brunch, a Martini Happy Hour, and a Late Night Menu.",
-   "Cuisine": "Steak / Seafood",
-   "Address": "100 Portland St, Toronto, ON M5V 2N2, Canada",
-   "Phone Number": "+1 416-361-3318",
-   "Website": "https://www.cafereneebar.com/",
-   "location": "Toronto"
- },
- {
-   "id" : 20,
    "name": "Myth",
    "description": "Traditional Greek dishes in an upscale venue with an elegant atmosphere, patio seating & a full bar.",
    "cuisine": "Greek",
    "address": "522 King St W, Toronto, ON M5V 1L7",
    "phoneNumber": "(416) 703-2800",
    "website": "https://mythrestaurant.com/",
+   "menuTypes": ["RAW", "Mezedes", "SALATA", "FOR THE TABLE", "FROM THE LAND", "SIDES", "DESSERTS"],
    "location": "Toronto"
  },
  {
-   "id" : 21,
+   "id" : 20,
    "name": "The Ballroom",
    "description": "Large entertainment venue with 10-pin bowling, dozens of TVs, a rooftop patio & elevated pub fare.",
    "cuisine": "Bar & Grill",
    "address": "145 John St, Toronto, ON M5V 2E4",
    "phoneNumber": "(647) 366-7890",
    "website": "https://www.theballroombowl.ca/",
+   "menuTypes": ["Shareables", "Handhelds", "Mains", "Salads", "Small Plates", "Bowling Platters", "Desserts", "Kids Menu"],
    "location": "Toronto"
  },
  {
@@ -231,6 +227,7 @@
    "address": "77 Portland St, Toronto, ON M5V 2M9",
    "phoneNumber": "(647) 484-7476",
    "website": "https://maximestoronto.com/",
+   "menuTypes": ["Starters & Salads", "To share", "Grill", "Sides", "Dessert"],
    "location": "Toronto"
  }
 ]
