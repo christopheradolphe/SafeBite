@@ -221,7 +221,7 @@ struct FilterPickerView: View {
 
 struct MainPageView: View {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
-    let cuisines = ["Asian", "Italian", "Tapas", "Steakhouse", "Bar & Grill", "Mexican"]
+    let cuisines = ["Asian", "Italian", "Tapas", "Steak / Seafood", "Bar & Grill", "Mexican", "Greek"]
     
     @State private var showingLocationFilter = false
     @State private var locationFilter = "All"

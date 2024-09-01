@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "rubysoho.jpeg",
+      "filename" : "rubysoho.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,12 +12,6 @@
     {
       "idiom" : "universal",
       "scale" : "3x"
-    },
-    {
-      "filename" : "rubysoho.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "unassigned" : true
     }
   ],
   "info" : {
