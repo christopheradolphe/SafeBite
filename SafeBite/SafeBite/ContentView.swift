@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import CoreLocation
+import MapKit
 
 struct Separator: View {
     var body: some View {
@@ -21,7 +23,6 @@ struct Cards: View {
     var restaurants: [Restaurant]
     let location: String
     var restaurantList: [Restaurant]
-    
     var body: some View {
         
         if !restaurantList.isEmpty {
@@ -124,18 +125,27 @@ struct Cards: View {
         self.restaurants = restaurants
         self.location = location
         
-        if cuisine == "Favourites" {
-            self.restaurantList = restaurants.filter{User.shared.userProfile.favouriteRestaurants[$0.name] ?? false}
-        } else if cuisine == "Safest" {
-            self.restaurantList = restaurants.sorted {
-                let firstPercentage = Double($0.menu.safeItems) / Double($0.menu.totalItems)
-                let secondPercentage = Double($1.menu.safeItems) / Double($1.menu.totalItems)
-                return firstPercentage > secondPercentage
+        switch cuisine {
+        case "Favourites":
+            self.restaurantList = restaurants.filter {
+                User.shared.userProfile.favouriteRestaurants[$0.name] ?? false
             }
-            .prefix(5)
-            .map { $0 }
-        } else {
-            self.restaurantList = restaurants.filter{$0.cuisine==cuisine}
+            
+        case "Safest":
+            self.restaurantList = restaurants
+                .sorted {
+                    let firstPercentage = Double($0.menu.safeItems) / Double($0.menu.totalItems)
+                    let secondPercentage = Double($1.menu.safeItems) / Double($1.menu.totalItems)
+                    return firstPercentage > secondPercentage
+                }
+                .prefix(5)
+                .map { $0 }
+            
+        case "Closest":
+            // Safely unwrap the user's location before calculating distances
+            self.restaurantList = []
+        default:
+            self.restaurantList = restaurants.filter { $0.cuisine == cuisine }
         }
         if !(location == "All"){
             restaurantList = restaurantList.filter{$0.location==location}
@@ -221,7 +231,11 @@ struct MainPageView: View {
                         // Display Top 5 Safest Restaurants Section
                         VStack(alignment: .leading) {
                             Cards(cuisine: "Safest", restaurants: restaurants, location: "All")
-                            Divider()
+                        }
+                        .padding(.bottom, 10)
+                        
+                        VStack(alignment: .leading) {
+                            Cards(cuisine: "Closest", restaurants: restaurants, location: "All")
                         }
                         .padding(.bottom, 10)
                         
@@ -347,69 +361,34 @@ struct MainPageView: View {
     }
 }
 
-
 struct MapPageView: View {
     @State private var restaurants: [Restaurant] = []
+    @StateObject private var locationManager = LocationManager()
 
     init() {
         let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
         _restaurants = State(initialValue: restaurants)
     }
-    
-    @StateObject private var locationManager = LocationManager()
-    @State private var selectedRestaurant: Restaurant?
 
     var body: some View {
-        ZStack {
-            MapViewMultiple(restaurants: $restaurants, locationManager: locationManager, selectedRestaurant: $selectedRestaurant)
+        VStack {
+            MapViewMultiple(restaurants: $restaurants)
                 .edgesIgnoringSafeArea(.all)
-
-            VStack {
-                Spacer()
-                HStack {
-                    Button(action: {
-                        // Add zoom out functionality here
-                    }) {
-                        Image(systemName: "minus.magnifyingglass")
-                            .padding()
-                            .background(Color.white)
-                            .clipShape(Circle())
-                            .shadow(radius: 10)
+                .onAppear {
+                    if let mapView = UIApplication.shared.windows.first?.rootViewController?.view.subviews.first(where: { $0 is MKMapView }) as? MKMapView {
+                        setInitialRegion(for: mapView)
                     }
-                    .padding()
-
-                    Button(action: {
-                        // Add zoom in functionality here
-                    }) {
-                        Image(systemName: "plus.magnifyingglass")
-                            .padding()
-                            .background(Color.white)
-                            .clipShape(Circle())
-                            .shadow(radius: 10)
-                    }
-                    .padding()
                 }
-            }
         }
-        .sheet(item: $selectedRestaurant) { restaurant in
-            VStack {
-                Text(restaurant.name)
-                    .font(.largeTitle)
-                    .padding()
-                Text(restaurant.description)
-                    .padding()
-                Button(action: {
-                    // Navigate to restaurant page view
-                }) {
-                    Text("Go to Restaurant Page")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-            }
-            .padding()
-            .presentationDetents([.medium]) // Set the sheet to medium size
+    }
+    private func setInitialRegion(for mapView: MKMapView) {
+        // Check if the initial region has already been set
+        if let userLocation = locationManager.userLocation{
+            let region = MKCoordinateRegion(
+                center: userLocation.coordinate,
+                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01) // Adjust zoom level as needed
+            )
+            mapView.setRegion(region, animated: true)
         }
     }
 }
@@ -423,7 +402,7 @@ struct ContentView: View {
                     Text("Restaurants")
                 }
             
-            MapPage()
+            MapPageView()
                 .tabItem{
                     Image(systemName: "map.fill")
                     Text("Map")

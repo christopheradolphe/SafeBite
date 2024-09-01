@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct Restaurant: Codable, Identifiable {
     let id: Int
@@ -28,6 +29,33 @@ struct Restaurant: Codable, Identifiable {
     
     var restaurantThumbnail: String {
         name.lowercased().filter{!$0.isWhitespace} + "thumbnail"
+    }
+    
+    var coordinate: CLLocationCoordinate2D? {
+        get {
+            // Attempt to get the coordinates synchronously
+            if let location = getCoordinate(from: address) {
+                return location
+            }
+            return nil
+        }
+    }
+    
+    private func getCoordinate(from address: String) -> CLLocationCoordinate2D? {
+        var coordinate: CLLocationCoordinate2D?
+        let geocoder = CLGeocoder()
+        let semaphore = DispatchSemaphore(value: 0) // For synchronous call
+        
+        geocoder.geocodeAddressString(address) { placemarks, error in
+            if let placemark = placemarks?.first, let location = placemark.location {
+                coordinate = location.coordinate
+            }
+            semaphore.signal() // Signal to continue after geocoding
+        }
+        
+        // Wait until geocoding is complete
+        semaphore.wait()
+        return coordinate
     }
     
     enum CodingKeys: String, CodingKey {
