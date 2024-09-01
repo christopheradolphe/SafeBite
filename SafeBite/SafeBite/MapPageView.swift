@@ -55,6 +55,7 @@ struct MapView: UIViewRepresentable {
         }
     }
 }
+
 struct MapViewMultiple: UIViewRepresentable {
     @Binding var restaurants: [Restaurant]
     @ObservedObject var locationManager = LocationManager()

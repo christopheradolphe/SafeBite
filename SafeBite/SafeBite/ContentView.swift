@@ -219,32 +219,13 @@ struct MainPageView: View {
             VStack {
                 ScrollView {
                     VStack {
-                        // Display Favourites Section if Available
-                        if (User.shared.userProfile.favouriteRestaurants.values.contains(true)) {
-                            VStack(alignment: .leading) {
-                                Cards(cuisine: "Favourites", restaurants: restaurants, location: "All")
-                                Divider()
-                            }
-                            .padding(.bottom, 10)
-                        }
-                        
-                        // Display Top 5 Safest Restaurants Section
-                        VStack(alignment: .leading) {
-                            Cards(cuisine: "Safest", restaurants: restaurants, location: "All")
-                        }
-                        .padding(.bottom, 10)
-                        
-                        VStack(alignment: .leading) {
-                            Cards(cuisine: "Closest", restaurants: restaurants, location: "All")
-                        }
-                        .padding(.bottom, 10)
-                        
                         // Search Bar
                         HStack {
                             TextField("Search for restaurants", text: $searchQuery)
                                 .padding(.leading, 24)
                                 .focused($searchIsFocused)
                         }
+                        .frame(height: 10)
                         .padding()
                         .background(Color(.systemGray6))
                         .cornerRadius(8)
@@ -288,7 +269,8 @@ struct MainPageView: View {
                                 showingLocationFilter.toggle()
                             } label: {
                                 Text("Location: \(locationFilter)")
-                                    .font(.headline)
+                                    .font(.system(size: 14))
+                                    .bold()
                                     .foregroundColor(.white)
                                     .padding()
                                     .background(Color.green)
@@ -301,7 +283,8 @@ struct MainPageView: View {
                                 showingCuisineFilter.toggle()
                             } label: {
                                 Text("Cuisine: \(cuisineFilter)")
-                                    .font(.headline)
+                                    .font(.system(size: 14))
+                                    .bold()
                                     .foregroundColor(.white)
                                     .padding()
                                     .background(Color.green)
@@ -311,6 +294,26 @@ struct MainPageView: View {
                             .padding(.horizontal, 10)
                             
                             Spacer()
+                        }
+                        .padding(.bottom, 10)
+                        
+                        // Display Favourites Section if Available
+                        if (User.shared.userProfile.favouriteRestaurants.values.contains(true)) {
+                            VStack(alignment: .leading) {
+                                Cards(cuisine: "Favourites", restaurants: restaurants, location: "All")
+                                Divider()
+                            }
+                            .padding(.bottom, 10)
+                        }
+                        
+                        // Display Top 5 Safest Restaurants Section
+                        VStack(alignment: .leading) {
+                            Cards(cuisine: "Safest", restaurants: restaurants, location: "All")
+                        }
+                        .padding(.bottom, 10)
+                        
+                        VStack(alignment: .leading) {
+                            Cards(cuisine: "Closest", restaurants: restaurants, location: "All")
                         }
                         .padding(.bottom, 10)
                         
