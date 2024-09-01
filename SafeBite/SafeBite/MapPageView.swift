@@ -11,7 +11,11 @@ import CoreLocation
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private var locationManager = CLLocationManager()
+    private let geocoder = CLGeocoder()
+
     @Published var userLocation: CLLocation? = nil
+    @Published var restaurantCoordinates: [String: CLLocationCoordinate2D] = [:]
+
     override init() {
         super.init()
         self.locationManager.delegate = self
@@ -25,6 +29,23 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
+    }
+    func fetchLocation(for address: String, completion: @escaping (CLLocationCoordinate2D?) -> Void) {
+        if let cachedCoordinate = restaurantCoordinates[address] {
+            completion(cachedCoordinate)
+            return
+        }
+        
+        geocoder.geocodeAddressString(address) { placemarks, error in
+            if let placemark = placemarks?.first, let location = placemark.location {
+                let coordinate = location.coordinate
+                self.restaurantCoordinates[address] = coordinate
+                completion(coordinate)
+            } else {
+                print("Failed to geocode address: \(address), error: \(error?.localizedDescription ?? "unknown error")")
+                completion(nil)
+            }
+        }
     }
 }
 struct MapView: UIViewRepresentable {

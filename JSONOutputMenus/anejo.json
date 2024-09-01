@@ -2,7 +2,7 @@
     {
         "name": "Tres Leches",
         "itemType": "Dessert",
-        "description": "",
+        "description": "Moist sponge cake soaked in sweetened milk mixture.",
         "allergenInfo": {
             "gluten": 2,
             "wheat": -1,
@@ -36,7 +36,7 @@
     {
         "name": "Churros",
         "itemType": "Dessert",
-        "description": "",
+        "description": "Fried dough pastry dusted with cinnamon and sugar.",
         "allergenInfo": {
             "gluten": 2,
             "wheat": -1,
@@ -70,7 +70,7 @@
     {
         "name": "Coconut Shrimp",
         "itemType": "Snacks",
-        "description": "",
+        "description": "Crispy shrimp coated in coconut with tangy dipping sauce.",
         "allergenInfo": {
             "gluten": 2,
             "wheat": -1,
@@ -104,7 +104,7 @@
     {
         "name": "Mezcal Adobo Mussels",
         "itemType": "Snacks",
-        "description": "",
+        "description": "Mussels simmered in smoky mezcal and adobo sauce.",
         "allergenInfo": {
             "gluten": 2,
             "wheat": -1,
@@ -138,7 +138,7 @@
     {
         "name": "Mushroom Flautas",
         "itemType": "Snacks",
-        "description": "",
+        "description": "Crispy rolled tortillas filled with sautéed mushrooms.",
         "allergenInfo": {
             "gluten": 2,
             "wheat": -1,
@@ -172,7 +172,7 @@
     {
         "name": "Guajillo Ribs",
         "itemType": "Snacks",
-        "description": "",
+        "description": "Tender ribs marinated in spicy guajillo pepper sauce.",
         "allergenInfo": {
             "gluten": 0,
             "wheat": -1,
@@ -206,7 +206,7 @@
     {
         "name": "Tableside Guacamole",
         "itemType": "For The Table",
-        "description": "",
+        "description": "Freshly made guacamole prepared tableside with ripe avocados.",
         "allergenInfo": {
             "gluten": 0,
             "wheat": -1,
@@ -240,7 +240,7 @@
     {
         "name": "Salsa de Molcajete",
         "itemType": "For The Table",
-        "description": "",
+        "description": "Smoky salsa made with fire-roasted tomatoes and spices.",
         "allergenInfo": {
             "gluten": 0,
             "wheat": -1,
@@ -274,7 +274,7 @@
     {
         "name": "Queso Fundido",
         "itemType": "For The Table",
-        "description": "",
+        "description": "Melted cheese dip with chorizo and spices.",
         "allergenInfo": {
             "gluten": 1,
             "wheat": -1,
@@ -308,7 +308,7 @@
     {
         "name": "House Salsa Tasting",
         "itemType": "For The Table",
-        "description": "",
+        "description": "Assortment of salsas showcasing different heat and flavor levels.",
         "allergenInfo": {
             "gluten": 0,
             "wheat": -1,
@@ -342,7 +342,7 @@
     {
         "name": "Ensalada de Sandia",
         "itemType": "Salad and Soup",
-        "description": "",
+        "description": "Refreshing watermelon salad with mint and feta cheese.",
         "allergenInfo": {
             "gluten": 0,
             "wheat": -1,
@@ -376,7 +376,7 @@
     {
         "name": "Tortilla Soup",
         "itemType": "Salad and Soup",
-        "description": "",
+        "description": "Spicy tomato broth with crispy tortilla strips.",
         "allergenInfo": {
             "gluten": 0,
             "wheat": -1,
@@ -410,7 +410,7 @@
     {
         "name": "Pollo Milanesa",
         "itemType": "Mexican Dishes",
-        "description": "",
+        "description": "Breaded chicken cutlet served with tangy sauce.",
         "allergenInfo": {
             "gluten": 2,
             "wheat": -1,
@@ -444,7 +444,7 @@
     {
         "name": "Carne Ahumada",
         "itemType": "Mexican Dishes",
-        "description": "",
+        "description": "Smoked beef marinated in savory spices and grilled.",
         "allergenInfo": {
             "gluten": 0,
             "wheat": -1,
@@ -478,7 +478,7 @@
     {
         "name": "Chili Relleno",
         "itemType": "Mexican Dishes",
-        "description": "",
+        "description": "Stuffed pepper filled with cheese, battered, and fried.",
         "allergenInfo": {
             "gluten": 0,
             "wheat": -1,
@@ -512,7 +512,7 @@
     {
         "name": "Scallop Esquites",
         "itemType": "Mexican Dishes",
-        "description": "",
+        "description": "Grilled scallops on a bed of esquites corn salad.",
         "allergenInfo": {
             "gluten": 0,
             "wheat": -1,
@@ -546,7 +546,7 @@
     {
         "name": "Camarones Rancheros",
         "itemType": "Mexican Dishes",
-        "description": "",
+        "description": "Shrimp cooked in a tangy tomato-based ranchero sauce.",
         "allergenInfo": {
             "gluten": 0,
             "wheat": -1,
@@ -580,7 +580,7 @@
     {
         "name": "Molcajete de Carne",
         "itemType": "Mexican Dishes",
-        "description": "",
+        "description": "Assorted grilled meats served in a hot stone molcajete.",
         "allergenInfo": {
             "gluten": 1,
             "wheat": -1,
@@ -614,7 +614,7 @@
     {
         "name": "Beef Barbacoa",
         "itemType": "Classic Tacos",
-        "description": "",
+        "description": "Slow-cooked beef with Mexican spices in a soft taco.",
         "allergenInfo": {
             "gluten": 1,
             "wheat": -1,
@@ -648,7 +648,7 @@
     {
         "name": "Pork Carnitas",
         "itemType": "Classic Tacos",
-        "description": "",
+        "description": "Slow-roasted pork with citrus flavors in a taco.",
         "allergenInfo": {
             "gluten": 1,
             "wheat": -1,
@@ -682,7 +682,7 @@
     {
         "name": "Crispy Fish",
         "itemType": "Classic Tacos",
-        "description": "",
+        "description": "Lightly battered fish taco with fresh slaw and lime.",
         "allergenInfo": {
             "gluten": 2,
             "wheat": -1,
@@ -716,7 +716,7 @@
     {
         "name": "Chicken Tinga",
         "itemType": "Classic Tacos",
-        "description": "",
+        "description": "Spicy shredded chicken in tomato-chipotle sauce taco.",
         "allergenInfo": {
             "gluten": 1,
             "wheat": -1,
@@ -750,7 +750,7 @@
     {
         "name": "Chorizo",
         "itemType": "Classic Tacos",
-        "description": "",
+        "description": "Spicy Mexican sausage taco with fresh cilantro and onions.",
         "allergenInfo": {
             "gluten": 1,
             "wheat": -1,
@@ -784,7 +784,7 @@
     {
         "name": "Braised Mushrooms",
         "itemType": "Classic Tacos",
-        "description": "",
+        "description": "Savory mushrooms braised with herbs in a warm taco.",
         "allergenInfo": {
             "gluten": 1,
             "wheat": -1,
@@ -818,7 +818,7 @@
     {
         "name": "Tacos de Camaron",
         "itemType": "Premium Tacos",
-        "description": "",
+        "description": "Grilled shrimp taco topped with fresh slaw and lime.",
         "allergenInfo": {
             "gluten": 2,
             "wheat": -1,
@@ -852,7 +852,7 @@
     {
         "name": "Quesabirria",
         "itemType": "Premium Tacos",
-        "description": "",
+        "description": "Crispy tacos filled with braised beef and melted cheese.",
         "allergenInfo": {
             "gluten": 2,
             "wheat": -1,
@@ -886,7 +886,7 @@
     {
         "name": "Duck Carnitas",
         "itemType": "Premium Tacos",
-        "description": "",
+        "description": "Rich, tender duck meat in a soft taco shell.",
         "allergenInfo": {
             "gluten": 2,
             "wheat": -1,
@@ -920,7 +920,7 @@
     {
         "name": "Tacos Veganos",
         "itemType": "Premium Tacos",
-        "description": "",
+        "description": "Flavorful vegan tacos with seasoned vegetables and avocado.",
         "allergenInfo": {
             "gluten": 2,
             "wheat": -1,
@@ -954,7 +954,7 @@
     {
         "name": "Tacos de Pescado",
         "itemType": "Premium Tacos",
-        "description": "",
+        "description": "Fresh fish tacos with a zesty slaw and lime drizzle.",
         "allergenInfo": {
             "gluten": 0,
             "wheat": -1,
