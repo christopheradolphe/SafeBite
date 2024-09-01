@@ -302,7 +302,7 @@ struct MainPageView: View {
                             // Display Favourites Section if Available
                             if (User.shared.userProfile.favouriteRestaurants.values.contains(true)) {
                                 VStack(alignment: .leading) {
-                                    Cards(cuisine: "Favourites", restaurants: restaurants, location: "All")
+                                    Cards(cuisine: "Favourites", restaurants: restaurants, location: locationFilter)
                                     Divider()
                                 }
                                 .padding(.bottom, 10)
@@ -310,7 +310,7 @@ struct MainPageView: View {
                             
                             // Display Top 5 Safest Restaurants Section
                             VStack(alignment: .leading) {
-                                Cards(cuisine: "Safest", restaurants: restaurants, location: "All")
+                                Cards(cuisine: "Safest", restaurants: restaurants, location: locationFilter)
                             }
                             .padding(.bottom, 10)
                             
