@@ -60,10 +60,23 @@ struct MapViewMultiple: UIViewRepresentable {
     @ObservedObject var locationManager = LocationManager()
     @State private var initialRegionSet = false
     @State private var showRecenterButton = false
+    @Binding var selectedRestaurant: Restaurant? // State to hold the selected restaurant
+
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapViewMultiple
+
         init(parent: MapViewMultiple) {
             self.parent = parent
+        }
+
+        // Detect when an annotation is selected
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            guard let annotation = view.annotation as? MKPointAnnotation,
+                  let title = annotation.title,
+                  let restaurant = parent.restaurants.first(where: { $0.name == title }) else {
+                return
+            }
+            parent.selectedRestaurant = restaurant // Set the selected restaurant
         }
 
         func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
@@ -72,9 +85,11 @@ struct MapViewMultiple: UIViewRepresentable {
             }
         }
     }
+
     func makeCoordinator() -> Coordinator {
         Coordinator(parent: self)
     }
+
     func makeUIView(context: Context) -> UIView {
         let containerView = UIView()
         let mapView = MKMapView()
@@ -89,12 +104,9 @@ struct MapViewMultiple: UIViewRepresentable {
             )
             mapView.setRegion(region, animated: true)
         } else {
-            // If the user's location isn't available yet, set the user tracking mode to follow
-            // This ensures the map centers on the user's location when it becomes available
             mapView.userTrackingMode = .follow
         }
 
-        // Add mapView to the containerView with constraints
         mapView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(mapView)
         NSLayoutConstraint.activate([
@@ -106,10 +118,10 @@ struct MapViewMultiple: UIViewRepresentable {
 
         return containerView
     }
+
     func updateUIView(_ uiView: UIView, context: Context) {
         guard let mapView = uiView.subviews.first as? MKMapView else { return }
-        guard let userLocation = locationManager.userLocation else { return }
-        
+
         for restaurant in restaurants {
             geocodeAddress(restaurant.address) { coordinate in
                 let annotation = MKPointAnnotation()
@@ -119,7 +131,7 @@ struct MapViewMultiple: UIViewRepresentable {
             }
         }
     }
-    
+
     private func geocodeAddress(_ address: String, completion: @escaping (CLLocationCoordinate2D) -> Void) {
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address) { placemarks, error in
@@ -130,12 +142,12 @@ struct MapViewMultiple: UIViewRepresentable {
             completion(location.coordinate)
         }
     }
-    
+
     func recenterMap(_ mapView: MKMapView) {
         guard let userLocation = locationManager.userLocation else { return }
         let region = MKCoordinateRegion(
             center: userLocation.coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01) // Adjusted for initial zoom
+            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         )
         mapView.setRegion(region, animated: true)
         showRecenterButton = false

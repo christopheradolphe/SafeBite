@@ -364,6 +364,7 @@ struct MainPageView: View {
 struct MapPageView: View {
     @State private var restaurants: [Restaurant] = []
     @StateObject private var locationManager = LocationManager()
+    @State private var selectedRestaurant: Restaurant? // State to hold the selected restaurant
 
     init() {
         let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
@@ -372,23 +373,69 @@ struct MapPageView: View {
 
     var body: some View {
         VStack {
-            MapViewMultiple(restaurants: $restaurants)
+            MapViewMultiple(restaurants: $restaurants, selectedRestaurant: $selectedRestaurant)
                 .edgesIgnoringSafeArea(.all)
                 .onAppear {
                     if let mapView = UIApplication.shared.windows.first?.rootViewController?.view.subviews.first(where: { $0 is MKMapView }) as? MKMapView {
                         setInitialRegion(for: mapView)
                     }
                 }
+                .sheet(item: $selectedRestaurant) { restaurant in
+                    // Display the restaurant information in a sheet
+                    RestaurantDetailSheet(restaurant: restaurant)
+                }
         }
     }
+
     private func setInitialRegion(for mapView: MKMapView) {
-        // Check if the initial region has already been set
-        if let userLocation = locationManager.userLocation{
+        if let userLocation = locationManager.userLocation {
             let region = MKCoordinateRegion(
                 center: userLocation.coordinate,
-                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01) // Adjust zoom level as needed
+                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
             )
             mapView.setRegion(region, animated: true)
+        }
+    }
+}
+
+struct RestaurantDetailSheet: View {
+    let restaurant: Restaurant
+    @State private var navigateToRestaurant = false // State to trigger navigation
+
+    var body: some View {
+        NavigationView { // Wrap in a NavigationView to enable navigation within the sheet
+            VStack(alignment: .leading, spacing: 16) {
+                Text(restaurant.name)
+                    .font(.title)
+                    .fontWeight(.bold)
+
+                Text(restaurant.address)
+                    .font(.subheadline)
+
+                Text(restaurant.description)
+                    .font(.body)
+                    .padding(.top, 8)
+
+                // NavigationLink combined with a button style for a seamless experience
+                NavigationLink(
+                    destination: IndividualRestaurantView(restaurant: restaurant),
+                    isActive: $navigateToRestaurant // Binding to trigger navigation
+                ) {
+                    HStack {
+                        Text("Go to Restaurant")
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                }
+                .buttonStyle(PlainButtonStyle()) // Make the link look like a button
+            }
+            .padding()
+            .presentationDetents([.medium]) // Set the size of the sheet
         }
     }
 }
