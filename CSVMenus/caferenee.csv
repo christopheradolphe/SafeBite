@@ -1,0 +1,41 @@
+name,itemType,gluten,vegan,vegetarian,sesame,soy,fish,shellfish,dairy,egg,treeNuts,peanuts,wheat,legumes,garlic,mustard,halal,keto,lowFODMAP,dashDiet,lowCarb,description
+Escargot Ravioli,STARTERS,2,2,2,0,0,2,0,2,2,0,0,2,0,2,0,2,0,2,2,0,"Onion Garlic Bacon Purée, Cremini, Anchovy Lemon Brown Butter"
+Gruyère Cheese Sticks,STARTERS,2,2,1,0,0,1,0,2,2,0,0,2,0,2,0,1,2,2,2,2,"Fried Gruyère Cheese, Alla Vodka Sauce"
+Mussels & Frites,STARTERS,0,2,2,0,0,2,2,2,0,0,0,0,0,2,0,2,1,1,1,2,"Steamed Salt Spring Mussels, Brown Butter Frites, White Wine Butter Sauce"
+Parisian Poutine,STARTERS,0,2,2,0,2,0,0,2,0,0,0,0,0,2,0,2,2,2,2,2,"French Onion Gravy, Cheese Curds, Gruyère, Confit"
+Steak Tartare,STARTERS,0,2,2,0,0,0,0,0,1,0,0,0,0,2,2,2,0,0,2,0,"Egg Yolk Truffle Mayo, House Pickles, Gaufrettes"
+Chicken Liver Parfait,STARTERS,1,2,2,0,0,0,0,2,0,0,0,1,0,2,0,2,0,0,2,0,"House Pickles, Toasted Points"
+Bucatini Carbonara,PASTA,1,2,2,0,0,2,0,2,2,0,0,1,0,0,0,2,2,2,2,2,"Guanciale, Parmesan, Dashi Hollandaise Base"
+Rigatoni Alla Vodka,PASTA,1,2,1,0,0,2,0,2,1,0,0,1,0,2,0,1,2,2,2,2,"Dashi Based Alla Vodka, Parmesan"
+Ravioles Du Dauphiné,PASTA,2,2,0,0,2,0,0,2,2,0,0,2,0,2,0,0,2,2,2,2,"Beurre Monté, Parmesan, Black Pepper, Olive Oil"
+Lasagna Blanca,PASTA,2,2,2,0,0,2,0,2,2,0,0,2,0,2,0,2,2,2,2,2,"White Ragu, Mushroom, Gruyère, Moray Sauce"
+Ricotta & Spinach Gnudi,PASTA,2,2,2,0,0,2,0,2,2,0,0,2,1,2,0,0,0,1,0,0,"Garden Peas, Green Goddess Butter Sauce, Lemon Zest, Parmesan, Olive Oil"
+Escargot & Coquille,PASTA,1,2,2,0,2,2,0,2,0,0,0,1,0,2,0,2,2,2,2,2,"Conchiglioni, Honey Mushroom, Black Garlic Butter"
+Crab Spaghetti,PASTA,1,2,2,0,2,2,2,2,1,0,0,1,2,2,0,2,2,2,2,2,"Uni Cream, Jokohe Chips"
+Smoked Potato Gnocchi,PASTA,2,2,1,0,0,0,0,2,2,0,0,2,0,0,0,2,2,2,2,2,"Osetra Caviar, Champagne Vin Blanc, Brown Butter"
+French Dip,MAINS,2,2,0,0,2,0,0,2,0,0,0,2,0,2,2,2,2,2,2,2,"Roast Beef, Gruyère, Caramelized Onions, Confit Garlic, Crusty Baguette, Gravy Beef Jus"
+Bánh Mi Du Paris,MAINS,2,2,0,0,0,0,0,1,2,0,0,2,0,0,2,2,2,2,2,2,"Crusty Baguette, Chicken Liver Parfait, Jambon de Paris, Coriander, Pickled Vegetables"
+Steak & Frites,MAINS,2,2,0,0,0,0,0,1,0,0,0,0,0,1,0,2,1,2,2,0,"Bavette, Herb Butter, Brown Butter Frites"
+Steak Au Poivre,MAINS,2,2,0,0,0,1,0,1,0,0,0,0,0,1,0,2,0,2,2,0,"Dry Aged Striploin, Au Poivre Sauce, Sautéed Spinach, Brown Butter Sauce"
+Whole Fried Branzino,MAINS,2,2,0,0,0,2,0,1,0,0,0,0,0,0,0,0,0,2,2,0,"Deboned Branzino Pieces, Olive Salsa, Preserved Lemon, Brown Butter, Parsley"
+Acai Power Bowl,BRUNCH,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,2,2,0,0,"Açaí, Blueberries, Granola, Pepita Seeds, Strawberry, Banana"
+Souffle Pancakes Blueberry,BRUNCH,2,2,0,0,0,0,0,2,2,0,0,2,0,0,0,0,2,2,2,2,"Blueberries, Saskatoon Berry Compote, Whipped Cream, Ricotta"
+Banana Brown Butter Pain Perdu,BRUNCH,2,2,0,0,0,0,0,2,2,0,0,2,0,0,0,0,2,2,2,2,"Whipped Cream, Caramelized Banana, Berries, Maple Syrup"
+Parisian Eggs Benedict,BRUNCH,2,2,1,0,0,0,0,2,2,0,0,2,0,0,0,1,2,2,2,2,"Croissant, Melted Gruyère Cheese, French Ham, Spinach, Hollandaise, Garden Salad"
+Rösti Eggs Benedict,BRUNCH,0,2,0,0,0,0,0,2,2,0,0,0,0,0,0,0,2,2,2,2,"Dressed Spinach, Two Poached Eggs
+Add: Seared Ham +$3"
+Cafe Renee Petit Dejeuner,BRUNCH,2,2,0,0,0,0,0,0,1,0,0,0,0,0,0,1,2,2,2,2,"Two Fried Eggs, Berkshire Bacon, Potato Rösti, Side Salad"
+Smoked Branzino on Potato Rösti,BRUNCH,2,2,0,0,0,2,0,1,0,0,0,0,0,0,0,0,2,2,2,2,"Ricotta, Preserved Lemon, Olive Salsa, Parsley"
+Croque Monsieur,BRUNCH,2,2,0,0,0,0,0,2,0,0,0,2,0,2,2,1,2,2,2,2,"French Ham, Gruyère, Comté Cheese"
+Croque Madame,BRUNCH,2,2,1,0,0,0,0,2,2,0,0,2,0,2,2,1,2,2,2,2,"French Ham, Gruyère, Comté Cheese, Fried Egg"
+Breakfast Poutine,BRUNCH,2,2,0,0,0,2,0,2,2,0,0,0,0,2,0,2,2,2,2,2,"Fried Egg, Frites, Comté, Cheese Curds, Sausage Gravy"
+Burger A L'American,BRUNCH,1,2,2,0,0,0,0,1,1,0,0,1,0,1,1,2,2,2,2,2,"Aged Beef, Onion Jam, Gruyère, Truffle Gribiche, Frites"
+Steak & Eggs,BRUNCH,0,2,0,0,0,0,0,1,1,0,0,0,0,1,0,2,2,2,2,2,"5oz Bavette, Two Fried Eggs, Herb Butter, Sautéed Onion & Mushrooms"
+Frites,BRUNCH,0,1,2,0,0,0,0,1,1,0,0,0,0,0,0,0,2,2,2,2,
+Renee Caesar Salad,BRUNCH,0,2,0,0,0,2,0,2,2,0,0,0,0,2,2,1,2,2,2,2,
+Shrimp Cocktail,COLD BAR,0,2,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"Soft Poached & Chilled Prawn, Cafe Renee Cocktail Sauce"
+Oysters,COLD BAR,0,2,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"Served with Mignonette, Shaved Horseradish"
+Beet Salad,SIDES,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,2,2,2,2,
+Renee Caesar Salad,SIDES,0,2,2,0,0,2,0,2,2,0,0,0,0,2,2,1,2,2,2,2,
+French Garlic Cheese Loaf,SIDES,2,2,0,0,0,0,0,2,2,0,0,2,0,2,0,0,2,2,2,2,
+Bread & House Butter,SIDES,2,0,2,0,0,0,0,1,0,0,0,2,0,0,0,0,2,2,2,2,

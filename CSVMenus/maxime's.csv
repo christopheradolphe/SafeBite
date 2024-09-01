@@ -1,0 +1,50 @@
+name,itemType,vegetarian,vegan,dairy,gluten,egg,peanuts,seeds,soy,garlic,onion,honey,shellfish,gelatin,alcohol,halal,keto,lowFODMAP,dash,lowCarb,description
+Caviar Reserve,Starters & Salads,2,2,1,1,2,0,0,0,0,2,0,0,0,0,0,0,0,0,0,Sfera Caviar - Osetra 30g or Beluga 50g.
+Oysters,Starters & Salads,2,2,0,0,0,0,0,0,0,2,0,2,0,1,0,0,0,0,0,"Daily selection oysters served with peach chardonnay mignonette, fresh horseradish, and lemon."
+Jumbo Shrimp Cocktail ,Starters & Salads,2,2,0,0,0,0,0,0,2,2,0,2,0,0,0,2,2,0,2,Jumbo shrimp cocktail with house cocktail sauce and chives.
+Hamachi Crudo,Starters & Salads,2,2,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0,0,"Yellowtail sashimi with avocado, yuzu, and jalapeno."
+Ahi Tuna Carpaccio ,Starters & Salads,2,2,0,2,2,0,0,0,2,2,0,0,0,0,0,2,2,2,2,"Ahi tuna carpaccio with truffle aioli, parsley, and chive pangrattato."
+Foie Terrine,Starters & Salads,2,2,2,0,0,2,0,0,0,0,0,0,2,2,0,0,0,0,0,"Foie terrine with chicken liver mousse, port gelée, and toasted brioche."
+Beef Tartare,Starters & Salads,2,2,2,2,2,0,0,2,0,2,0,0,0,0,0,2,0,0,2,"Beef tartare with cornichons, chive, shallot, dijon mustard, aioli, lemon crème fraîche, caviar, and toasted bread."
+Caviar Dip,Starters & Salads,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Caviar dip with potato pave, sour cream, chives, and dill."
+Crispy Rock Shrimp,Starters & Salads,2,2,0,2,0,0,0,0,2,0,0,2,0,0,0,0,0,0,0,"Crispy rock shrimp with sumac, lemon-chili aioli, and cilantro."
+Wagyu Sliders,Starters & Salads,2,2,2,2,2,0,2,0,2,2,0,0,0,0,0,0,0,0,0,"Wagyu sliders with secret sauce, onion, pickles, and American cheese."
+Sizzling shrimp,Starters & Salads,2,2,2,2,0,0,0,0,2,2,0,2,0,2,0,0,0,0,0,"Sizzling shrimp with garlic butter, chili, and lime."
+Mediterranian Salad,Starters & Salads,0,0,2,0,0,0,0,0,2,2,2,0,0,0,0,2,2,2,2,"Mediterranean salad with barrel-aged Greek feta, iceberg lettuce, cucumber, olives, and dill vinaigrette."
+Straccitella Salad,Starters & Salads,0,0,2,0,0,0,0,0,2,0,2,0,0,0,0,0,0,0,0,"Stracciatella salad with creamy stracciatella, heirloom tomatoes, and basil."
+Wagyu Caesar Salad,Starters & Salads,2,2,2,2,2,0,0,0,2,2,0,0,0,0,0,0,0,0,0,"Wagyu Caesar salad with wagyu beef bacon, gem lettuce, sourdough crouton, and parmigiano."
+Spicy Rigatoni Vodka,To share,0,0,1,2,2,0,0,0,2,2,0,0,0,1,0,0,0,0,0,"Spicy rigatoni vodka with pecorino romano, parmigiano, bomba chili, and basil."
+Wagyu Veal Bolognese,To share,2,2,1,2,2,0,0,0,2,2,0,0,0,2,0,0,0,0,0,"Wagyu veal bolognese with wagyu & veal, parmesan reggiano, and basil."
+Lobter Buccatini,To share,2,2,2,2,2,0,0,0,2,2,2,2,0,1,0,0,0,0,0,Lobster bucatini with butter-poached lobster and white wine sauce.
+Dover Sole,To share,2,2,2,0,0,0,0,0,0,2,0,0,0,2,0,0,0,0,0,Whole Dover sole with lemon brown butter.
+Whole Seabass,To share,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,"Whole seabass grilled with olive oil, lemon, and sea salt."
+Whole Lobster,To share,2,2,1,0,0,0,0,0,2,2,0,0,0,0,0,2,0,0,2,"Whole lobster grilled with harissa butter, lemon, and parsley."
+Greek Roasted Chicken   [,To share,2,2,1,0,0,0,0,0,2,2,2,0,0,2,0,0,0,2,0,"Greek roasted chicken with lemon, garlic, and oregano."
+Vel Parm,To share,2,2,2,2,2,0,0,0,2,2,0,0,0,0,0,0,0,0,0,Veal parmesan with marinara and mozzarella.
+10oz Coulette,Grill,2,2,0,0,0,0,2,0,2,2,0,0,0,0,2,0,0,0,0,10oz coulette steak served with choice of sauce.
+18oz Bone In Ribeye CDN,Grill,2,2,0,0,0,0,2,0,2,2,0,0,0,0,2,0,0,0,0,18oz bone-in ribeye steak from Canadian beef.
+12oz Striploin USDA,Grill,2,2,0,0,0,0,2,0,2,2,0,0,0,0,2,0,0,0,0,12oz striploin steak from USDA prime beef.
+18oz Bone in Ribeye USDA,Grill,2,2,0,0,0,0,2,0,2,2,0,0,0,0,2,2,2,2,2,18oz bone-in ribeye steak from USDA prime beef.
+25oz T-Bone USDA,Grill,2,2,0,0,0,0,2,0,2,2,0,0,0,0,2,0,0,0,0,25oz T-bone steak from USDA prime beef.
+30-50oz Tomahawk,Grill,2,2,0,0,0,0,2,0,2,2,0,0,0,0,2,0,0,0,0,30-50oz tomahawk steak grilled to perfection.
+8oz Chuck AUS Wagyu,Grill,2,2,0,0,0,0,2,0,2,2,0,0,0,0,2,2,2,2,2,8oz chuck steak from Australian wagyu.
+8oz Flatiron SRF,Grill,2,2,0,0,0,0,2,0,2,2,0,0,0,0,0,0,0,0,0,8oz flat iron steak from Snake River Farms wagyu.
+10oz Zabouton SRF,Grill,2,2,0,0,0,0,2,0,2,2,0,0,0,0,0,0,0,0,0,10oz zabuton steak from Snake River Farms wagyu.
+12oz Striploin Oakleigh,Grill,2,2,0,0,0,0,2,0,2,2,0,0,0,0,2,0,0,0,0,12oz striploin steak from Oakleigh Ranch.
+38oz Tomahawk,Grill,2,2,0,0,0,0,2,0,2,2,0,0,0,0,2,0,0,0,0,38oz tomahawk steak from Australian beef.
+"A5 Ribeye , HYOGO",Grill,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,A5 ribeye steak from Hyogo prefecture.
+10oz Little Joe Strip,Grill,2,2,0,0,0,0,0,0,2,2,0,0,0,0,2,0,0,0,0,10oz strip steak from Little Joe Farms.
+Brady Peppercorn sauce,Grill,2,2,2,0,0,0,0,0,2,2,0,0,0,2,0,0,0,0,0,Creamy black peppercorn sauce.
+Jus,Grill,0,2,2,0,0,0,0,0,2,2,0,0,0,2,0,0,0,0,0,"Rich, flavorful beef jus."
+Chimichurri,Grill,0,2,0,0,0,0,2,0,2,2,0,0,0,0,0,0,0,0,0,Fresh chimichurri sauce.
+Bernaise,Grill,0,2,2,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Classic French béarnaise sauce.
+Triple Cooked Fries,Sides,0,1,2,0,2,0,0,0,2,0,0,0,0,0,0,2,2,2,2,Triple cooked fries with crispy texture.
+Onion Rings,Sides,0,0,0,2,2,0,0,0,2,2,0,0,0,2,0,0,0,0,0,Crispy onion rings with espelette aioli.
+Truffle Mash Potato,Sides,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Creamy mashed potatoes with truffle and parmesan.
+King Oyster Mushrooms,Sides,2,2,2,0,0,0,0,0,2,2,0,0,0,0,0,2,2,2,2,"King oyster mushrooms with chive, extra virgin olive oil, and sherry vinegar."
+Mac and cheese,Sides,0,2,2,2,2,0,0,0,2,2,0,0,0,0,0,0,0,0,0,Classic mac and cheese with tarragon aioli.
+Grilled Broccolini,Sides,0,1,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,Grilled broccolini with garlic and olive oil.
+Baked Alaska,Dessert,0,0,2,2,2,2,0,0,0,0,2,0,0,2,0,0,0,0,0,"Bananas Foster Baked Alaska with spiced rum, coffee financier, and salted caramel."
+Milk & Honey Mille Feuille,Dessert,0,0,0,2,2,2,0,0,0,0,2,0,2,0,0,0,0,0,0,"Milk & Honey Mille Feuille with milk crisp, honeycomb, and cream cheese semifreddo."
+Chocolate Bombe,Dessert,0,0,2,2,2,0,0,0,0,0,0,0,2,0,0,0,0,0,0,"Chocolate Bombe with white chocolate mousse, cherry compote, kirsch, and brownie."
+Tiramisu,Dessert,0,0,2,2,2,2,0,0,0,0,0,0,2,2,0,0,0,0,0,"Tiramisu with frangelico, espresso, and mascarpone."

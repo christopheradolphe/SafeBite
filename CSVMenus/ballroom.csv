@@ -1,0 +1,37 @@
+name,itemType,gluten,vegan,vegetarian,sesame,soy,fish,shellfish,dairy,egg,treeNuts,peanuts,wheat,legumes,garlic,mustard,halal,keto,lowFODMAP,dashDiet,lowCarb,description
+Nacho Supreme,Shareables,0,2,0,0,0,0,0,2,0,0,0,2,0,0,0,0,2,2,2,2,"Mixed cheese, black beans, toasted corn, pickled jalapenos, pico de gallo, shredded lettuce, salsa, sour cream, and guacamole on tortilla chips."
+Fajita Quesadillas,Shareables,2,0,2,0,0,0,0,2,2,0,0,2,0,0,0,0,2,2,2,2,"Charred peppers, mixed cheese, sweet onions, and sriracha mayo with choice of chicken or steak."
+Ballroom Wings,Shareables,2,2,2,0,0,0,0,0,0,0,0,1,0,0,0,0,2,2,2,2,"House-style breaded chicken wings with choice of sauces: sweet chili heat, maple BBQ, buffalo, salt & pepper, lemon pepper."
+Philly Cheese Steak Flatbread,Shareables,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,"Sliced sirloin, mixed peppers, barbecue sauce topped with mozzarella cheese, and green onion on focaccia bread."
+Margherita Flatbread,Shareables,2,2,0,0,0,0,0,2,0,0,0,0,0,0,0,0,2,2,2,2,"Marinara sauce topped with mozzarella, bocconcini, basil, and oregano."
+Poutine,Shareables,2,0,0,0,2,0,0,2,0,0,0,0,0,0,0,0,2,2,2,2,"Mozzarella, cheese curds, and beef gravy."
+Jerk Chicken Tacos,Shareables,2,2,2,0,0,0,0,1,0,0,0,0,0,0,0,0,2,2,2,2,"Soft toasted flour tortillas with jerk chicken, coleslaw, pico de gallo, green onion, and jerk aioli sauce."
+Shrimp Tacos,Shareables,2,2,2,0,0,2,2,1,2,0,0,0,0,0,0,0,2,2,2,2,"Soft toasted flour tortillas with sautéed garlic shrimp, shredded lettuce, pico de gallo, chopped chives, and avocado dressing."
+Buffalo Bites,Shareables,2,2,2,0,0,0,0,2,2,0,0,1,0,0,0,0,2,2,2,2,Breaded chicken bites tossed in Buffalo butter sauce topped with green onion and ranch dressing.
+Smash Mac,Handhelds,2,2,2,0,0,0,0,1,1,0,0,1,0,0,0,0,2,2,2,2,"Double beef patty, cheddar cheese, red onion, lettuce, sliced pickles, and house-made mac sauce."
+Bacon Triple Cheese,Handhelds,2,2,2,0,0,0,0,1,0,0,0,1,0,0,0,2,2,2,2,2,"Double beef patty, cheddar, mozzarella, feta, smoked bacon, pickle, ketchup, and mustard."
+Veggie Burger,Handhelds,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,2,2,2,2,"House-made chickpea and sweet potato burger topped with lettuce, red onion, pickles, and tomato."
+Blackened Chicken Pesto Sandwich,Handhelds,2,2,2,0,0,0,0,2,0,0,0,2,0,0,0,0,2,2,2,2,"Blackened chicken breast, spring mix lettuce, pico de gallo, feta cheese, pickled red onion, green pesto, and balsamic vinaigrette."
+Buffalo Wrap,Handhelds,2,2,2,0,0,0,0,2,0,0,0,0,0,0,0,2,2,2,2,2,"Crispy buffalo chicken topped with pico de gallo, mixed cheese, bacon, lettuce, ranch dressing in a flour tortilla wrap."
+Parmesan Crusted Salmon,Mains,0,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0,2,2,2,2,"Sundried pesto cream sauce served with chives, mashed potatoes, and steamed vegetables."
+Steak Frites,Mains,0,2,2,0,0,0,0,0,1,0,0,0,0,0,0,0,2,2,2,2,"8oz AAA New York strip-loin, truffle parmesan fries, and garlic aioli with add-on peppercorn sauce."
+Fish & Chips,Mains,2,2,2,0,0,2,0,0,2,0,0,0,0,0,0,0,2,2,2,2,"Beer-battered fried haddock served with seasoned fries, creamy coleslaw, tartar sauce, and grilled lemon."
+Spaghetti Bolognese,Mains,2,2,2,0,0,0,0,1,0,0,0,1,0,0,0,0,2,2,2,2,"Spaghetti noodles tossed in house-made bolognese sauce, topped with parmesan cheese, fresh basil, and a side of garlic toast."
+Curry Chicken,Mains,2,2,2,0,2,0,0,0,0,0,0,1,0,0,0,0,2,2,2,2,"Basmati rice, potatoes, carrots, cilantro, red peppers, curry sauce, and naan bread."
+Jerk Chicken Mac N Cheese,Mains,2,2,2,0,0,0,0,2,0,0,0,0,0,0,0,0,2,2,2,2,"Cavatappi noodles, cheese sauce, jerk chicken, panko breadcrumbs, chopped chives, and coleslaw."
+Ballroom Chicken Tenders,Mains,0,2,2,0,2,0,0,2,0,0,0,0,0,0,0,0,2,2,2,2,House-style breaded chicken tenders served with plum sauce and fries.
+Caesar Salad,Salads,2,2,1,0,0,0,0,2,2,0,0,1,0,0,0,1,2,2,2,2,"Crisp romaine lettuce, parmesan cheese, smoked bacon, and creamy Caesar dressing."
+House Salad,Salads,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,2,2,2,2,"Spring salad mix, pickled red onion, cherry tomato, diced cucumber, feta cheese, and balsamic vinaigrette dressing."
+Buffalo Cauliflower Bites,Small Plates,2,2,2,0,0,0,0,2,0,0,0,1,0,0,0,0,2,2,2,2,Cauliflower bites tossed in buffalo sauce served with crispy pickle chips and ranch dressing.
+Calamari,Small Plates,2,2,2,0,0,2,0,2,2,0,0,1,0,0,0,0,2,2,2,2,Deep-fried squid rings topped with chives served with sweet chili sauce and spicy mayo.
+Ballroom Fries,Small Plates,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,2,2,2,French fries with malt mayo.
+Guac & Chips,Small Plates,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,Guacamole topped with pico de gallo and corn tortilla chips.
+Walter Sobchak,Bowling Platters,2,0,0,0,0,0,0,2,2,0,0,1,0,0,0,2,2,2,2,2,"2 lbs of wings, a double order of tailgate sliders, ballroom nachos, salsa, sour cream, carrots, celery, and blue cheese dressing."
+The Big Lebowski,Bowling Platters,2,2,2,0,0,0,0,2,2,0,0,1,0,0,0,2,2,2,2,2,"Tailgate sliders, 1 lb of wings, onion rings, guacamole, chips, carrots, celery, and blue cheese dressing."
+Veg Out,Bowling Platters,2,0,0,0,2,0,0,2,0,0,0,1,0,0,0,0,2,2,2,2,"Spring rolls, tempura battered cauliflower, hummus, guacamole, pita bread, and chips."
+Tiramisu Cake,Desserts,2,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,2,2,2,2,Tiramisu cake with caramel.
+New York Vanilla Cheesecake,Desserts,2,0,0,0,2,0,0,2,2,1,0,0,0,0,0,0,2,2,2,2,"Vanilla cheesecake with strawberry sauce, whipped cream, and pecans."
+Brownie,Desserts,2,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,2,2,2,2,"Ice cream, chocolate sauce, whipped cream, and icing sugar."
+Kids Grilled Cheese,Kids Menu,2,2,0,0,0,0,0,2,2,0,0,0,0,0,0,0,2,2,2,2,Grilled cheese sandwich with fries.
+Ice Cream,Kids Menu,2,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,2,2,2,2,Ice cream scoops (2) with caramel or chocolate sauce.
+Ice Cream Sandwich,Kids Menu,2,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,2,2,2,2,"Cookies, ice cream, and chocolate sauce."

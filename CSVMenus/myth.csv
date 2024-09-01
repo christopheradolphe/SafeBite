@@ -1,0 +1,45 @@
+name,itemType,gluten,vegan,vegetarian,sesame,soy,fish,shellfish,dairy,egg,treeNuts,peanuts,wheat,legumes,garlic,mustard,halal,keto,lowFODMAP,dash,lowCarb,description
+Dzn Oyster,RAW,0,2,2,0,0,0,2,0,0,0,0,0,2,0,0,0,0,0,2,0,"Chef's choice oysters served with horseradish, lemon, mignonette, and Tabasco."
+Tónos,RAW,0,2,0,0,1,2,0,0,0,0,0,0,0,0,0,0,0,2,2,2,"Yellowfin tuna with melon, cucumber, jalapeño, and spring onion."
+Magiatiko,RAW,1,2,0,0,0,2,0,0,0,0,0,1,0,0,1,0,0,2,2,2,"Yellowtail sashimi with green olive tapenade, taramasalata, chili, and caviar."
+Beef Caroaccio,RAW,1,2,2,0,0,1,0,1,1,0,0,1,0,2,1,0,2,2,2,2,"Black garlic skordalia, aged graviera, pickled onion, crispy phyllo kantaifi, and black truffle."
+Myth Traditional Dip,Mezedes,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,0,2,2,2,2,"Assorted dips including hummus, tirokafteri, taramasalata, and marinated olives served with bread basket and seasonal vegetables."
+Hummus,Mezedes,1,1,0,2,0,0,0,0,0,0,0,1,0,2,0,0,2,2,2,2,"Traditional chickpea dip with tahini, garlic, lemon, and olive oil."
+Trokafteri,Mezedes,1,1,0,0,0,0,0,2,0,0,0,1,0,2,0,0,2,2,2,2,Spicy feta cheese dip.
+Taramasalata,Mezedes,2,1,0,0,0,2,0,0,0,0,0,2,0,0,0,0,2,2,2,2,Greek dip made from cured fish roe.
+Tzatziki,Mezedes,0,1,0,0,0,0,0,2,0,0,0,0,0,2,0,0,0,0,0,0,"Greek yogurt dip with cucumber, garlic, and dill."
+Lamb Kebab,Mezedes,2,2,2,0,0,0,0,1,2,0,0,2,0,1,0,2,0,0,2,0,"Ground lamb with spices, yogurt, tomato relish, and herbs."
+Saganaki,Mezedes,1,2,0,1,0,0,0,2,0,0,0,1,0,0,0,0,2,2,2,2,Fried graviera cheese with lemon.
+Iberico Pork Souvlaki,Mezedes,0,2,2,0,0,0,0,1,0,0,0,0,0,1,0,2,2,2,2,2,"Grilled Iberico pork with charred heirloom tomato, parsley, and red onion salad."
+Spanakopita,Mezedes,2,1,0,2,0,0,0,2,0,0,0,2,0,2,0,0,2,2,2,2,"Sesame phyllo, spinach, feta cheese, herbs, and chive yogurt."
+Htapodi,Mezedes,0,1,0,0,0,0,1,0,0,0,0,0,0,1,1,0,2,2,2,2,Grilled octopus with fava krema and onion s'fado.
+Kalamarakia,Mezedes,2,2,2,0,0,0,0,1,1,0,0,2,0,1,0,0,2,2,2,2,Battered squid with lemon aioli.
+Garida Souvlaki,Mezedes,0,2,2,0,0,0,2,1,0,0,0,0,0,1,1,2,0,2,2,2,"Grilled prawns with spicy pepper sauce, feta, and parsley."
+Wagyu Souvlaki,Mezedes,1,2,2,0,0,0,0,0,0,0,0,1,0,1,1,2,2,2,2,2,Grilled Australian Wagyu with English mustard and crispy onion.
+Halloumi Souvlaki,Mezedes,0,2,2,1,0,0,0,2,0,0,0,0,0,1,0,2,2,2,2,2,"Grilled halloumi, mushroom, za’atar, truffle honey, and black truffle."
+Myth Chips,Mezedes,2,1,0,0,0,0,0,1,0,0,0,2,0,1,0,0,2,0,2,0,Crispy zucchini with tzatziki.
+Horiatiki,SALATA,1,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,2,2,0,2,"Heirloom tomatoes, green pepper, Kalamata olives, caper, cucumber, rusks, and feta."
+Beetroot Carpaccio,SALATA,0,1,0,0,0,0,0,1,0,1,0,0,0,2,0,0,2,2,2,2,"Red beets with roasted pecans, chives, aged vinegar yogurt, and yellow beet mousse."
+Baby Gem Salad,SALATA,1,1,0,0,0,1,0,1,1,0,0,1,0,1,1,0,2,2,2,2,"Baby gem lettuce with oyster mushroom, olive oil breadcrumb, kefalograviera, and spicy Florina pepper dressing."
+Seafood Pasta,FOR THE TABLE,2,2,2,0,0,0,2,1,0,0,0,2,0,1,0,0,2,2,2,2,"Linguine with mussel, shrimp, clam, lobster, squid, bisque, tomato, and basil."
+Psari Sto Alati,FOR THE TABLE,0,2,2,0,0,2,0,0,2,0,0,0,0,0,2,0,0,0,2,0,Salt-crusted sea bass with grilled lemon and lemon oil.
+Spalobrizola,FOR THE TABLE,0,2,2,0,0,0,0,0,0,0,0,0,0,1,0,0,2,2,2,2,42oz dry-aged tomahawk steak with oregano chimichurri and smoked sea salt.
+Lavraki,FROM THE SEA,0,2,2,0,0,2,0,0,0,0,0,0,0,0,1,0,2,2,0,2,Sea bass with wild greens and thyme lemon oil.
+Black Cod Spanakorisotto,FROM THE SEA,0,2,2,0,0,2,0,2,0,0,0,0,0,0,0,0,2,2,2,2,Spinach risotto with marinated Canadian black cod and herb salad.
+Paidakia,FROM THE LAND,0,2,2,0,0,0,0,1,0,0,0,0,0,1,1,0,2,2,2,2,"Lamb chops with cucumber salad, tzatziki, and oregano."
+Kotopoulo Psito,FROM THE LAND,0,2,2,0,0,0,0,0,0,0,0,0,0,2,2,0,2,2,2,2,"Half chicken with roasted zucchini, baby eggplant, thyme, and lemon oil."
+T-Bone Steak,FROM THE LAND,0,2,2,0,0,0,0,0,0,0,0,0,0,1,0,0,2,2,2,2,32oz US prime T-bone steak with oregano chimichurri and smoked sea salt.
+Moskari Kebab,FROM THE LAND,1,2,2,1,0,0,0,1,0,0,0,1,0,2,1,0,0,2,2,0,"Filet mignon kebab with Florina pepper marinade, broccolini, smoked salt, and yogurt."
+Gemista Risotto,FROM THE LAND,0,2,2,0,0,0,0,1,0,0,0,0,0,1,1,0,2,2,0,2,"Carnaroli rice with seasonal vegetable purée, roasted eggplant, and feta."
+Wagyu Flat Iron,FROM THE LAND,0,2,2,0,0,0,0,0,0,0,0,0,0,1,0,0,2,2,2,2,Grilled Wagyu flat iron steak.
+Broccolini Psito,SIDES,0,1,0,0,0,0,0,1,0,0,0,0,0,1,1,0,2,2,2,2,"Broccolini with spicy Florina pepper, mizithra, and aged vinegar."
+Patates Fournou,SIDES,0,2,0,0,0,0,0,1,0,0,0,0,0,1,1,0,2,2,2,2,Roasted baby potatoes with lemon and thyme.
+Greek Fries,SIDES,2,2,0,0,0,0,0,1,0,0,0,2,0,0,1,0,2,2,2,2,Feta and Aegean sea spices.
+Corn,SIDES,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2,2,2,2,"Grilled corn on the cob with graviera, brown butter, chive, and spices."
+Cheesecake,DESSERTS,2,1,0,0,0,0,0,2,0,0,0,2,0,0,0,0,2,2,2,2,"Greek yogurt cream, strawberries, thyme, and basil."
+Chocolate Cremeux,DESSERTS,1,2,0,0,0,0,0,2,2,1,0,1,0,0,0,0,2,2,2,2,"Dark chocolate, olive oil, sea salt, and kormos."
+Galaktoboureko,DESSERTS,2,2,0,0,0,0,0,2,2,0,0,2,0,0,0,0,2,2,2,2,"Citrus cream, crispy phyllo, Fior di latte ice cream, cinnamon, and honey."
+Saragli,DESSERTS,2,2,0,0,0,0,0,2,0,2,0,2,0,0,0,0,2,2,2,2,Rolled pistachio baklava with vanilla gelato.
+Sorbet Selection,DESSERTS,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2,0,0,2,Assorted sorbet flavors.
+Gelato Selection,DESSERTS,0,1,0,0,0,0,0,2,2,1,0,0,0,0,0,0,0,2,2,0,Assorted gelato flavors.
+Portokalopita,DESSERTS,2,1,0,0,0,0,0,2,2,0,0,2,0,0,0,0,2,2,2,2,Greek orange cake.

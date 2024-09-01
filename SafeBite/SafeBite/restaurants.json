@@ -141,5 +141,16 @@
    "website": "https://www.tommyskingston.ca/lander",
    "menuTypes": ["Breakfast Combos", "The Benny's", "Smothered in Syrup", "Breakfast Sandwiches", "Omlettes", "Munchies & Apps", "Tommy's Poutines", "Entrees", "Sandwiches & Wraps", "Desserts", "Tommy's Burgers", "TOMMY'S ULTIMATE BURGER CHALLENGE"],
    "location": "Kingston"
+ },
+ {
+   "id": 14,
+   "name": "Cafe Renee",
+   "description": "Typical diner fare, including all-day breakfast, served in a 1950-style space with a full bar.",
+   "cuisine": "BAR & Grill",
+   "address": "379 Princess St, Kingston, ON K7L 1B9",
+   "phoneNumber": " (613) 766-6585",
+   "website": "https://www.tommyskingston.ca/lander",
+   "menuTypes": ["STARTERS", "PASTA", "MAINS", "BRUNCH", "COLD BAR", "SIDES"],
+   "location": "Kingston"
  }
 ]

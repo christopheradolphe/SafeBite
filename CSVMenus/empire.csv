@@ -1,0 +1,32 @@
+name,itemType,gluten,vegan,vegetarian,sesame,soy,fish,shellfish,dairy,egg,treeNuts,peanuts,wheat,legumes,garlic,mustard,halal,keto,LowFODMAP,dash,lowCarb,description
+Charcuterie Board,Appetizer,2,2,2,0,0,0,0,2,0,1,0,2,0,0,0,2,2,2,2,2,"Chef selection of artisan meats and cheeses, housemade pickled vegetables and bread sticks"
+Arugula Salad,Appetizer,0,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,2,0,0,"Arugula, cherry tomatoes, shaved Parmigiano, Empire dressing"
+Caesar Salad,Appetizer,1,2,2,0,0,0,0,0,2,0,0,2,0,0,0,1,0,2,0,0,"Romaine heart, homemade croutons, shaved Parmigiano, crispy bacon"
+Burrata,Appetizer,0,2,0,0,0,0,0,2,0,0,0,2,0,2,0,0,2,2,2,2,"Garden tomatoes, fresh burrata, arugula, basil"
+Beef Sliders,Appetizer,2,0,2,0,0,0,0,0,2,0,0,2,0,0,0,0,2,2,2,2,"Cheddar cheese, lettuce, tomato and garlic mayo on brioche bun"
+Frittura Mista,Appetizer,2,2,2,0,0,2,2,2,0,0,0,2,0,0,0,1,2,2,2,2,"Fried calmari and shrimp, tartar sauce"
+Oysters,Appetizer,0,2,2,0,0,2,2,0,0,0,0,0,0,0,0,1,2,2,2,2,"East coast oysters, served with hot sauce and shallots mignonette"
+Milano,Fresh Baked Panini,2,2,2,0,0,0,0,2,0,0,0,2,0,2,0,0,2,2,2,2,"Crispy chicken cutlet, sliced tomatoes, boston lettuce, garlic mayo"
+New York,Fresh Baked Panini,2,2,2,0,0,0,0,2,2,0,0,2,0,2,0,0,2,2,2,2,"Classic burger, pickels, cheese, crispy onion rings, tomatoes, lettuce, garlic mayo"
+Vegetariano,Fresh Baked Panini,2,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,2,2,2,2,"Marinated and grilled eggplant and zucchini, roasted peppers, sundried tomatoes"
+Gnocchi Al Pomodoro,Pasta,1,0,0,0,0,0,0,0,2,0,0,1,0,2,0,0,2,2,2,2,Gnocchi in tomato sauce with fresh basil
+Risotto AI Funghi,Pasta,2,2,0,0,0,0,0,2,0,0,0,2,0,2,0,0,2,2,2,2,Mushroom risotto
+Fettuccine Bolognese,Pasta,2,2,2,0,0,0,0,0,2,0,0,2,0,2,0,2,2,2,2,2,Homemade traditional Italian meat sauce
+Gnocchi Alla Vodka,Pasta,2,2,0,0,0,0,0,2,2,0,0,2,0,2,0,1,2,2,2,2,"Homemade gnocchi, vodka rosé sauce"
+Pappardelle Al Tartufo,Pasta,1,2,0,0,0,0,0,2,2,0,0,1,0,2,0,0,2,2,2,2,Mixed sautéed mushrooms and Italian black truffle \
+Lobster Risotto,Pasta,2,2,2,0,0,2,2,2,0,0,0,2,0,2,0,2,2,2,2,2,"Butter-poached lobster risotto delicate, and light"
+Grilled Salmon,Main,0,2,2,0,0,2,2,0,0,0,0,0,0,0,0,2,0,0,0,2,"Served with mix salad, fresh orange and fennel"
+Chicken Supreme,Main,0,2,2,0,0,0,0,2,0,0,0,0,0,2,0,2,2,2,2,2,"Roasted chicken supreme served with potato purée, asparagus and jus"
+Tiger Shrimps,Main,0,2,2,0,0,2,2,2,0,0,0,0,0,0,0,2,2,0,0,0,4 jumbo tiger shrimps in marinara sauce with roasted potato and grilled vegetables
+Prime Beef Striploin,Main,0,2,2,0,0,0,0,2,0,0,0,0,0,2,1,0,2,2,2,2,"14oz beef striploin grilled with mashed potato, rapini and sautéed mushroom jus"
+Prime Beef Tenderloin,Main,0,2,2,0,0,0,0,2,0,0,0,0,0,2,1,0,0,0,2,0,"8oz beef striploin grilled with mashed potato, asparagus and jus"
+Gamberoni Alla Griglia,Main,0,2,2,0,0,2,2,2,0,0,0,0,0,0,0,2,2,2,2,2,"Griled jumbo black tiger shrimps, with mixed green salad"
+Grilled Irish Salmon,Main,0,2,2,0,0,2,2,0,0,0,0,0,0,0,0,2,0,0,0,0,"Served with mix salad, fresh orange and fennel"
+Australian Grilled Rack of Lamb,Main,0,2,2,0,0,0,0,2,0,0,0,0,0,2,1,0,2,0,2,0,"Asparagus, rapini and jus"
+Japanese A5 Wagyu Striploin,Main,0,2,2,0,0,0,0,0,0,0,0,0,0,2,1,0,2,2,2,2,"Rapini, sautéed mushrooms and jus"
+Angus Tomahawk,Main,0,2,2,0,0,0,0,2,0,0,0,0,0,2,1,0,2,2,2,2,"Grilled 45 days dry aged tomahawk, potatos purée, asparagus, rapini and jus"
+Meat Platter,Main,0,2,2,0,0,0,0,1,0,0,0,0,0,2,1,0,2,2,2,2,"48oz tomahawk, 14oz New York striploin, 8oz wagyu, full rack of lamb w/ rapini, potato purée and seasonal vegetables"
+Cannoli,Dessert,2,2,0,0,0,0,0,2,0,2,0,2,0,0,0,0,2,2,2,2,Ricotta chocolate chip with pistacchio 
+Tiramisu,Dessert,2,2,0,0,0,0,0,2,2,0,0,2,0,0,0,0,2,2,2,2,Roman tiramisu made in house
+Romanian Bean Crème Brûlée,Dessert,2,2,0,0,0,0,0,2,2,0,0,2,0,0,0,0,2,2,2,2,Crackling and creamy perfection
+Crème Brulee,Dessert,0,2,0,0,0,0,0,2,2,0,0,0,0,0,0,0,2,2,2,2,Crackling and creamy perfection
