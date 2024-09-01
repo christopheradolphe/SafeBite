@@ -383,6 +383,7 @@ struct MapPageView: View {
                 .sheet(item: $selectedRestaurant) { restaurant in
                     // Display the restaurant information in a sheet
                     RestaurantDetailSheet(restaurant: restaurant)
+                        .presentationDetents([.medium])
                 }
         }
     }
@@ -401,20 +402,35 @@ struct MapPageView: View {
 struct RestaurantDetailSheet: View {
     let restaurant: Restaurant
     @State private var navigateToRestaurant = false // State to trigger navigation
+    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         NavigationView { // Wrap in a NavigationView to enable navigation within the sheet
             VStack(alignment: .leading, spacing: 16) {
-                Text(restaurant.name)
-                    .font(.title)
-                    .fontWeight(.bold)
+                HStack(alignment: .top, spacing: 16) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(restaurant.name)
+                            .font(.title)
+                            .fontWeight(.bold)
 
-                Text(restaurant.address)
-                    .font(.subheadline)
+                        Text(restaurant.address)
+                            .font(.subheadline)
+                    }
+
+                    Spacer()
+
+                    // Display restaurant image on the right side
+                    Image(restaurant.image) // Replace with the correct property or method to get the image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 80) // Adjust the size as needed
+                        .cornerRadius(8)
+                }
 
                 Text(restaurant.description)
                     .font(.body)
                     .padding(.top, 8)
+                    .lineLimit(3)
 
                 // NavigationLink combined with a button style for a seamless experience
                 NavigationLink(
@@ -432,10 +448,19 @@ struct RestaurantDetailSheet: View {
                     .foregroundColor(.white)
                     .cornerRadius(8)
                 }
-                .buttonStyle(PlainButtonStyle()) // Make the link look like a button
             }
             .padding()
-            .presentationDetents([.medium]) // Set the size of the sheet
+            .toolbar {
+                // Add a dismiss button in the top right corner
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        dismiss() // Dismiss the view when the button is tapped
+                    }) {
+                        Image(systemName: "xmark") // SF Symbol for an "X" icon
+                            .foregroundColor(.black) // Adjust color as needed
+                    }
+                }
+            }
         }
     }
 }
