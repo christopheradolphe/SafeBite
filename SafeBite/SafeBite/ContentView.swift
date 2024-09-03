@@ -335,16 +335,18 @@ struct MainPageView: View {
                                 .padding(.bottom, 10)
                             }
                             
-                            // Display Top 5 Safest Restaurants Section
-                            VStack(alignment: .leading) {
-                                Cards(cuisine: "Safest", restaurants: restaurants, location: locationFilter)
+                            if cuisineFilter == "All" {
+                                // Display Top 5 Safest Restaurants Section
+                                VStack(alignment: .leading) {
+                                    Cards(cuisine: "Safest", restaurants: restaurants, location: locationFilter)
+                                }
+                                .padding(.bottom, 10)
+                                
+                                VStack(alignment: .leading) {
+                                    Cards(cuisine: "Closest", restaurants: restaurants, location: "All")
+                                }
+                                .padding(.bottom, 10)
                             }
-                            .padding(.bottom, 10)
-                            
-                            VStack(alignment: .leading) {
-                                Cards(cuisine: "Closest", restaurants: restaurants, location: "All")
-                            }
-                            .padding(.bottom, 10)
                         }
                         
                         // Display Cuisine Cards
