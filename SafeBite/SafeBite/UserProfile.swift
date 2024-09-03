@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import CoreLocation
+import Combine
 
 struct UserInformation: Codable {
     var firstName = ""
@@ -26,6 +28,11 @@ struct UserProfile: Codable {
     var allergens = Allergens()
     var dietaryRestrictions = DietaryRestrictions()
     var favouriteRestaurants: [String : Bool]
+    var userLocation: CLLocation?
+    
+    enum CodingKeys: String, CodingKey {
+        case userProfileMade, userInformation, allergens, dietaryRestrictions, favouriteRestaurants
+    }
     
     init() {
         let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
@@ -34,6 +41,7 @@ struct UserProfile: Codable {
             favourites[restaurant.name] = false
         }
         self.favouriteRestaurants = favourites
+        self.userLocation = nil
     }
 }
 
@@ -47,14 +55,24 @@ class User: ObservableObject {
         }
     }
     
+    private var locationManager = LocationManager()
+    
     private init () {
         if let savedUserProfile = UserDefaults.standard.data(forKey: "User Profile") {
             if let decodedUserProfile = try? JSONDecoder().decode(UserProfile.self, from: savedUserProfile) {
                 userProfile = decodedUserProfile
-                return
             }
         }
+        locationManager.$userLocation
+            .receive(on: RunLoop.main)
+            .compactMap { $0 }
+            .sink { [weak self] location in
+                self?.userProfile.userLocation = location
+            }
+            .store(in: &cancellables)
     }
     
     static let shared = User()
+    
+    private var cancellables = Set<AnyCancellable>()
 }
