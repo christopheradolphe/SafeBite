@@ -418,7 +418,7 @@ struct MapPageView: View {
                 .sheet(item: $selectedRestaurant) { restaurant in
                     // Display the restaurant information in a sheet
                     RestaurantDetailSheet(restaurant: restaurant)
-                        .presentationDetents([.medium])
+                        .presentationDetents([.medium, .large])
                 }
         }
     }
