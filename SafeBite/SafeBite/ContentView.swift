@@ -277,13 +277,13 @@ struct MainPageView: View {
                             }) {
                                 Text("Reset")
                                     .font(.subheadline)
-                                    .foregroundColor(.gray)
-                                    .padding(10)
-                                    .background(Color.clear)
+                                    .foregroundColor((locationFilter == "All" && cuisineFilter == "All") ? .clear : .gray)
+                                    .padding(5)
+                                    .background((locationFilter == "All" && cuisineFilter == "All") ? Color.clear : Color.white)
                                     .cornerRadius(30)
                                     .overlay(
                                         Capsule()
-                                            .stroke(Color.gray, lineWidth: 2)
+                                            .stroke((locationFilter == "All" && cuisineFilter == "All") ? Color.clear : Color.gray, lineWidth: 2)
                                     )
                             }
                             .padding(.horizontal)
@@ -299,8 +299,8 @@ struct MainPageView: View {
                                     .font(.system(size: 14))
                                     .bold()
                                     .foregroundColor(.white)
-                                    .padding()
-                                    .background(Color.green)
+                                    .padding(10)
+                                    .background(locationFilter == "All" ? Color.gray : Color.green)
                                     .cornerRadius(30)
                                     .shadow(color: .gray, radius: 2, x: 0, y: 2)
                             }
@@ -313,8 +313,8 @@ struct MainPageView: View {
                                     .font(.system(size: 14))
                                     .bold()
                                     .foregroundColor(.white)
-                                    .padding()
-                                    .background(Color.green)
+                                    .padding(10)
+                                    .background(cuisineFilter == "All" ? Color.gray : Color.green)
                                     .cornerRadius(30)
                                     .shadow(color: .gray, radius: 2, x: 0, y: 2)
                             }
