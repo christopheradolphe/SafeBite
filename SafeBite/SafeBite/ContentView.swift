@@ -143,34 +143,34 @@ struct Cards: View {
                 .prefix(5)
                 .map { $0 }
             
-        case "Closest":
-            // Safely unwrap the user's location before calculating distances
-            guard let userLocation = locationManager.userLocation else {
-                self.restaurantList = [] // Initialize with an empty list if location is not available
-                return
-            }
-            
-            var restaurantDistances: [(restaurant: Restaurant, distance: CLLocationDistance)] = []
-            let group = DispatchGroup()
-            
-            // Calculate the distance between the user's location and each restaurant's location
-            for restaurant in restaurants {
-                group.enter()
-                locationManager.fetchLocation(for: restaurant.address) { coordinate in
-                    if let coordinate = coordinate {
-                        let restaurantLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-                        let distance = userLocation.distance(from: restaurantLocation)
-                        restaurantDistances.append((restaurant, distance))
-                    }
-                    group.leave()
-                }
-            }
-            
-            // After all distances are calculated, sort and select the top 5 closest restaurants
-            self.restaurantList = restaurantDistances
-                .sorted { $0.distance < $1.distance } // Sort by distance in ascending order
-                .prefix(5) // Take the top 5 closest
-                .map { $0.restaurant }
+//        case "Closest":
+//            // Safely unwrap the user's location before calculating distances
+//            guard let userLocation = locationManager.userLocation else {
+//                self.restaurantList = [] // Initialize with an empty list if location is not available
+//                return
+//            }
+//            
+//            var restaurantDistances: [(restaurant: Restaurant, distance: CLLocationDistance)] = []
+//            let group = DispatchGroup()
+//            
+//            // Calculate the distance between the user's location and each restaurant's location
+//            for restaurant in restaurants {
+//                group.enter()
+//                locationManager.fetchLocation(for: restaurant.address) { coordinate in
+//                    if let coordinate = coordinate {
+//                        let restaurantLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+//                        let distance = userLocation.distance(from: restaurantLocation)
+//                        restaurantDistances.append((restaurant, distance))
+//                    }
+//                    group.leave()
+//                }
+//            }
+//            
+//            // After all distances are calculated, sort and select the top 5 closest restaurants
+//            self.restaurantList = restaurantDistances
+//                .sorted { $0.distance < $1.distance } // Sort by distance in ascending order
+//                .prefix(5) // Take the top 5 closest
+//                .map { $0.restaurant }
         default:
             self.restaurantList = restaurants.filter { $0.cuisine == cuisine }
         }
@@ -342,10 +342,10 @@ struct MainPageView: View {
                                 }
                                 .padding(.bottom, 10)
                                 
-                                VStack(alignment: .leading) {
-                                    Cards(cuisine: "Closest", restaurants: restaurants, location: "All")
-                                }
-                                .padding(.bottom, 10)
+//                                VStack(alignment: .leading) {
+//                                    Cards(cuisine: "Closest", restaurants: restaurants, location: "All")
+//                                }
+//                                .padding(.bottom, 10)
                             }
                         }
                         
