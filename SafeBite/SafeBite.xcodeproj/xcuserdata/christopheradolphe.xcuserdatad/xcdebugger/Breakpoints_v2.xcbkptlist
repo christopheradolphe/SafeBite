@@ -14,10 +14,10 @@
             filePath = "SafeBite/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
-            landmarkName = "cuisines"
-            landmarkType = "24">
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "MainPageView"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

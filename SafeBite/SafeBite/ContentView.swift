@@ -70,15 +70,16 @@ struct Cards: View {
                             }
                             
                             HStack {
-                                VStack (alignment: .leading){
+                                VStack(alignment: .leading) {
                                     Text(restaurant.name)
-                                        .font(.system(size: 18))
-                                        .bold()
+                                        .font(.system(size: 18, weight: .semibold, design: .serif))
                                         .foregroundStyle(.black)
                                         .lineLimit(1)
                                         .multilineTextAlignment(.leading)
+                                        .shadow(color: .gray.opacity(0.3), radius: 1, x: 1, y: 1)
+                                    
                                     Text(restaurant.address)
-                                        .font(.system(size: 10))
+                                        .font(.system(size: 10, weight: .regular, design: .serif))
                                         .foregroundStyle(.black)
                                         .lineLimit(1)
                                         .multilineTextAlignment(.leading)
