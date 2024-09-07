@@ -177,8 +177,9 @@ struct IndividualRestaurantView: View {
                 
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
-                        .fill(Color.gray.opacity(0.2))
+                        .fill(Color.white)
                         .padding(20)
+                        .shadow(color: .gray.opacity(0.5), radius: 5, x: 0, y: 5)
                     
                     VStack {
                         Picker(selection: $selection, label: Text("")) {
@@ -190,6 +191,7 @@ struct IndividualRestaurantView: View {
                                 .tag(2)
                         }
                         .pickerStyle(SegmentedPickerStyle())
+                        .accentColor(.green)
                         .padding()
                         
                         if selection == 0 {
