@@ -257,7 +257,11 @@ struct MainPageView: View {
                         .frame(height: 10)
                         .padding()
                         .background(Color(.systemGray6))
-                        .cornerRadius(8)
+                        .clipShape(Capsule())
+                        .overlay(
+                            Capsule() // Overlay a capsule with a stroke
+                                .stroke(Color.gray.opacity(0.5), lineWidth: 2) // Add a subtle gray border
+                        )
                         .padding([.horizontal, .top])
                         
                         // Filters Section
