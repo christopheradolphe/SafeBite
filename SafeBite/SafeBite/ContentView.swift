@@ -264,7 +264,8 @@ struct MainPageView: View {
                         HStack(alignment: .center) {
                             VStack {
                                 Text("Filters")
-                                    .font(.headline)
+                                    .font(.system(size: 16, weight: .semibold, design: .rounded))
+                                    .shadow(color: .gray.opacity(0.5), radius: 2, x: 1, y: 1)
                                     .padding(.horizontal)
                                 Spacer()
                             }
@@ -363,7 +364,6 @@ struct MainPageView: View {
                         }
                     }
                 }
-                .navigationTitle("Restaurants")
                 .sheet(isPresented: $showingLocationFilter) {
                     FilterPickerView(selectedLocation: $locationFilter, options: locationOptions, topic: "Location")
                 }
@@ -391,7 +391,7 @@ struct MainPageView: View {
                         }
                     }
                 }
-                .toolbarBackground(Color.green, for: .navigationBar) // Set consistent toolbar background color
+                .toolbarBackground(Color(red: 60 / 255, green: 180 / 255, blue: 75 / 255), for: .navigationBar)
                 .navigationBarBackButtonHidden(true)
             }
             .background(Color(red: 245/255, green: 242/255, blue: 230/255))
