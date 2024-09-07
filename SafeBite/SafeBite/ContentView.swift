@@ -89,23 +89,22 @@ struct Cards: View {
                                 
                                 ZStack {
                                     let percentage = Double(restaurant.menu.safeItems) / Double(restaurant.menu.totalItems)
-                                    let color = Color(red: (1 - percentage), green: percentage, blue: 0)
-                                    Circle()
-                                        .stroke(lineWidth: 5)
-                                        .opacity(0.3)
-                                        .foregroundColor(.gray)
-                                        .frame(width: 40, height: 40)
+                                    let color = Color(
+                                        red: (1 - percentage) * 0.8 + 0.2, // Adjusted to pastel by blending with lighter tones
+                                        green: percentage * 0.8 + 0.2,
+                                        blue: 0.2
+                                    )
                                     
-                                    Circle()
-                                        .trim(from: 0.0, to: percentage)
-                                        .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
-                                        .foregroundColor(color)
-                                        .rotationEffect(Angle(degrees: -90))
-                                        .animation(.linear, value: percentage)
+                                    // Box with rounded edges to display the percentage
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .fill(color)
                                         .frame(width: 40, height: 40)
+                                        .shadow(radius: 1)
                                     
+                                    // Display the percentage text within the box
                                     Text(percentage, format: .percent.precision(.fractionLength(0)))
-                                        .foregroundStyle(.white)
+                                        .font(.system(size: 12, weight: .bold))
+                                        .foregroundColor(.white)
                                 }
                                 .padding(5)
                             }
