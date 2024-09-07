@@ -116,7 +116,7 @@ struct Cards: View {
                         .shadow(radius: 5)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(.green)
+                                .stroke(.green, lineWidth: 2)
                         )
                         .padding(.horizontal, 10)
                     }
