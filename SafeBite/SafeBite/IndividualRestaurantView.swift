@@ -244,7 +244,6 @@ struct IndividualRestaurantView: View {
                     ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 2, isExpanded: false)
                 }
                 .padding(.horizontal)
-                
                 .navigationTitle(restaurant.name)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbarBackground(.gray)
@@ -254,6 +253,7 @@ struct IndividualRestaurantView: View {
                         User.shared.userProfile.favouriteRestaurants[restaurant.name]?.toggle()
                     } label: {
                         Image(systemName: User.shared.userProfile.favouriteRestaurants[restaurant.name] ?? false ? "star.fill" : "star")
+                            .foregroundStyle(.yellow)
                     }
                 }
                 .sheet(isPresented: $showDescription) {
@@ -298,6 +298,7 @@ struct IndividualRestaurantView: View {
                     .presentationDetents([.medium])
                 }
             }
+            .background(Color(red: 245/255, green: 242/255, blue: 230/255))
         }
     }
 }
