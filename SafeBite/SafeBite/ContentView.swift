@@ -28,11 +28,11 @@ struct Cards: View {
     var body: some View {
         
         if !restaurantList.isEmpty {
-            Divider()
             
             Text(cuisine)
-                .font(.title.bold())
+                .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .padding([.horizontal, .top])
+                .shadow(color: .gray.opacity(0.5), radius: 2, x: 1, y: 1)
         }
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
