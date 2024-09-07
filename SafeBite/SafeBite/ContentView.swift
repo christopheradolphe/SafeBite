@@ -393,7 +393,7 @@ struct MainPageView: View {
                 .toolbarBackground(Color.green, for: .navigationBar) // Set consistent toolbar background color
                 .navigationBarBackButtonHidden(true)
             }
-            .background(Color(red: 240/255, green: 234/255, blue: 214/255))
+            .background(Color(red: 245/255, green: 242/255, blue: 230/255))
 
         }
     }
