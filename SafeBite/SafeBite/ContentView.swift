@@ -45,7 +45,7 @@ struct Cards: View {
                                 Image(restaurant.restaurantThumbnail)
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 250, height: 100)
+                                    .frame(width: 250, height: 120)
                                     .clipped() // Clip content within frame
                                     .cornerRadius(10)
                                     .shadow(radius: 3)
@@ -111,7 +111,8 @@ struct Cards: View {
                             }
                             .frame(maxWidth: 230)
                         }
-                        .background(.green)
+                        .padding(10)
+                        .background(.white)
                         .clipShape(.rect(cornerRadius: 10))
                         .shadow(radius: 5)
                         .overlay(
