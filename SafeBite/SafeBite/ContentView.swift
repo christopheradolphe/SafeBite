@@ -73,6 +73,7 @@ struct Cards: View {
                                 VStack (alignment: .leading){
                                     Text(restaurant.name)
                                         .font(.system(size: 18))
+                                        .bold()
                                         .foregroundStyle(.black)
                                         .lineLimit(1)
                                         .multilineTextAlignment(.leading)
