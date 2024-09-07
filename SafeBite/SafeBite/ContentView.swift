@@ -258,7 +258,7 @@ struct MainPageView: View {
                         .padding()
                         .background(Color(.systemGray6))
                         .cornerRadius(8)
-                        .padding(.horizontal)
+                        .padding([.horizontal, .top])
                         
                         // Filters Section
                         HStack(alignment: .center) {
@@ -393,6 +393,7 @@ struct MainPageView: View {
                 }
                 .toolbarBackground(Color(red: 60 / 255, green: 180 / 255, blue: 75 / 255), for: .navigationBar)
                 .navigationBarBackButtonHidden(true)
+                .navigationBarTitleDisplayMode(.inline)
             }
             .background(Color(red: 245/255, green: 242/255, blue: 230/255))
 
