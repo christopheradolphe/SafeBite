@@ -184,9 +184,12 @@ struct UserProfileView: View {
         HStack {
             Text("\(label):")
                 .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .leading) // Align label to the left
             Text(value)
+                .frame(maxWidth: .infinity, alignment: .trailing) // Align value to the right
         }
         .padding(.bottom, 2)
+        .background(Color.white)
     }
 }
 
