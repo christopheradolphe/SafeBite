@@ -125,7 +125,20 @@ struct ItemCatergoryView: View {
 struct IndividualRestaurantView: View {
     @State var restaurant: Restaurant
     @State private var showDescription = false
-    @State private var selection = 3 //Nothing displayed at start
+    @State private var selection = 3
+    @State private var selectedCategory: Int = 0
+    private var categoryName: String {
+        switch selectedCategory {
+        case 0:
+            return "Allergy Safe"
+        case 1:
+            return "Item Removal Possible"
+        case 2:
+            return "Contains Allergen"
+        default:
+            return "Unknown"
+        }
+    }
     
     var body: some View {
         NavigationStack {
@@ -235,15 +248,39 @@ struct IndividualRestaurantView: View {
                 Divider()
                 
                 VStack {
-                    Text("Menu")
-                        .font(.title2)
-                        .padding(.vertical, 10)
+                    HStack {
+                        Picker("Select Category", selection: $selectedCategory) {
+                            Text("Allergy Safe")
+                                .tag(0)
+                            Text("Item Removable Possible")
+                                .tag(1)
+                            Text("Contains Allergen")
+                                .tag(2)
+                        }
+                        .pickerStyle(MenuPickerStyle()) // Use MenuPickerStyle for a dropdown menu appearance
+                        .frame(width: 140, height: 30) // Slightly wider to accommodate text
+                        .padding(5) // Reduced padding for compactness
+                        .background(Color.white)
+                        .clipShape(Capsule())
+                        .shadow(radius: 3) // Adjust shadow for a subtle effect
+                        .foregroundColor(.black) // Text color
+                        .font(.system(size: 14, weight: .medium))
+                        .padding(.horizontal)
+                        
+                        Spacer()
+                    }
                     
-                    ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 0, isExpanded: true)
+                    switch selectedCategory {
+                    case 0:
+                        ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 0, isExpanded: true)
+                    case 1:
+                        ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 1, isExpanded: false)
+                    case 2:
+                        ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 2, isExpanded: false)
+                    default:
+                        EmptyView()
+                    }
                     
-                    ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 1, isExpanded: false)
-                    
-                    ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 2, isExpanded: false)
                 }
                 .padding(.horizontal)
                 .navigationTitle(restaurant.name)
