@@ -210,7 +210,7 @@ struct SectionView<Content: View>: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color.white)
         .cornerRadius(8)
-        .shadow(color: Color.gray.opacity(0.2), radius: 5, x: 0, y: 5)
+        .shadow(color: Color.gray.opacity(0.6), radius: 8, x: 0, y: 8)
     }
 }
 
