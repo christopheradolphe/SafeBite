@@ -510,6 +510,9 @@ struct RestaurantDetailSheet: View {
 }
 
 struct ContentView: View {
+    @State private var showAnimation = true
+    @State private var animateToMap = false
+    
     var body: some View {
         TabView {
             MainPageView()
@@ -518,7 +521,32 @@ struct ContentView: View {
                     Text("Restaurants")
                 }
             
-            MapPageView()
+            ZStack {
+                if showAnimation {
+                    // Animation View
+                    VStack {
+                        Image("safebite")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 150, height: 150)
+                            .clipShape(RoundedRectangle(cornerRadius: 25))
+                            .scaleEffect(animateToMap ? 1.2 : 1) // Pulsing effect
+                            .opacity(animateToMap ? 0 : 1)
+                            .onAppear {
+                                withAnimation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
+                                    animateToMap.toggle()
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                    showAnimation = false
+                                }
+                            }
+                    }
+                }
+                if !showAnimation {
+                    MapPageView()
+                        .transition(.opacity)
+                }
+            }
                 .tabItem{
                     Image(systemName: "map.fill")
                     Text("Map")
