@@ -120,9 +120,9 @@ struct IndividualRestaurantView: View {
         case 0:
             return "Allergy Safe"
         case 1:
-            return "Item Removal Possible"
+            return "Modifiable"
         case 2:
-            return "Contains Allergen"
+            return "Unsafe"
         default:
             return "Unknown"
         }
@@ -240,9 +240,9 @@ struct IndividualRestaurantView: View {
                         Picker("Select Category", selection: $selectedCategory) {
                             Text("Allergy Safe")
                                 .tag(0)
-                            Text("Item Removable Possible")
+                            Text("Modifiable")
                                 .tag(1)
-                            Text("Contains Allergen")
+                            Text("Unsafe")
                                 .tag(2)
                         }
                         .pickerStyle(MenuPickerStyle()) // Use MenuPickerStyle for a dropdown menu appearance
@@ -269,6 +269,8 @@ struct IndividualRestaurantView: View {
                         .shadow(radius: 3) // Adjust shadow for a less prominent effect
                         .foregroundColor(.black)
                         .font(.system(size: 10, weight: .regular))
+                        .fixedSize(horizontal: true, vertical: false) // Ensure the text fits within the frame
+                        .layoutPriority(1)
                         
                         Spacer()
                     }
