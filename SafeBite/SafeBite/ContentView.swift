@@ -399,7 +399,7 @@ struct MainPageView: View {
                 .navigationBarBackButtonHidden(true)
                 .navigationBarTitleDisplayMode(.inline)
             }
-            .background(Color(red: 245/255, green: 242/255, blue: 230/255))
+            .background(Color(red: 245/255, green: 244/255, blue: 240/255))
 
         }
     }
