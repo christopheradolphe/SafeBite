@@ -83,7 +83,7 @@ struct MenuTypeView: View {
     let safetyRating: Int
     let restaurantName: String
     var menuTypeItems: [MenuItem] {
-        if safetyRating != -1 {
+        if safetyRating == -1 {
             return menu.menuItems.filter { $0.itemType == menuType }
         } else {
             return menu.menuItems.filter { $0.itemType == menuType && $0.safeBiteValue == safetyRating }
@@ -99,8 +99,8 @@ struct MenuTypeView: View {
                     .padding(.bottom, 5)
                     .frame(maxWidth:.infinity)
 
-                ForEach(menu.menuItems.filter{$0.itemType==menuType}.filter{$0.safeBiteValue==safetyRating}) { menuItem in
-                    MenuItemView(menuItem: menuItem, restaurantName: restaurantName, safeBiteValue: safetyRating)
+                ForEach(menuTypeItems) { menuItem in
+                    MenuItemView(menuItem: menuItem, restaurantName: restaurantName, safeBiteValue: menuItem.safeBiteValue)
                 }
             }
             .padding(.vertical)
@@ -146,7 +146,7 @@ struct IndividualRestaurantView: View {
     @State var restaurant: Restaurant
     @State private var showDescription = false
     @State private var selection = 3
-    @State private var selectedSafety: Int = 0
+    @State private var selectedSafety: Int = -1
     @State private var selectedMenuType: String = "All"
     private var categoryName: String {
         switch selectedSafety {
@@ -192,7 +192,7 @@ struct IndividualRestaurantView: View {
                     HStack {
                         Text("About \(restaurant.name)")
                             .font(.title3)
-                            .padding(.leading)
+                            .padding(.leading, 20)
                         
                         if !restaurant.description.isEmpty{
                             Button(action: {
@@ -281,7 +281,7 @@ struct IndividualRestaurantView: View {
                                 .tag(2)
                         }
                         .pickerStyle(MenuPickerStyle()) // Use MenuPickerStyle for a dropdown menu appearance
-                        .frame(width: 140, height: 30) // Slightly wider to accommodate text
+                        .frame(width: 160, height: 30) // Slightly wider to accommodate text
                         .padding(5) // Reduced padding for compactness
                         .background(Color.white)
                         .clipShape(Capsule())
@@ -379,13 +379,13 @@ struct IndividualRestaurantView: View {
                     .presentationDetents([.medium])
                 }
             }
+            .background(Color(red: 245/255, green: 244/255, blue: 240/255))
+            .toolbarBackground(Color(red: 60 / 255, green: 180 / 255, blue: 75 / 255), for: .navigationBar)
         }
-        .background(Color(red: 245/255, green: 244/255, blue: 240/255))
-        .toolbarBackground(Color(red: 60 / 255, green: 180 / 255, blue: 75 / 255), for: .navigationBar)
     }
 }
 
 #Preview {
     let restaurants: [Restaurant] = Bundle.main.decode("restaurants.json")
-    return IndividualRestaurantView(restaurant: restaurants[12])
+    return IndividualRestaurantView(restaurant: restaurants[8])
 }
