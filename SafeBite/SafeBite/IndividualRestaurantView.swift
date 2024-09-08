@@ -379,8 +379,8 @@ struct IndividualRestaurantView: View {
                     .presentationDetents([.medium])
                 }
             }
-            .background(Color(red: 245/255, green: 244/255, blue: 240/255))
-            .toolbarBackground(Color(red: 60 / 255, green: 180 / 255, blue: 75 / 255), for: .navigationBar)
+            .background(Color.backgroundColor)
+            .toolbarBackground(Color.greenApp, for: .navigationBar)
         }
     }
 }

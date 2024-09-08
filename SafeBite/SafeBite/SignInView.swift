@@ -142,7 +142,8 @@ struct UserProfileView: View {
                 .padding()
                 .navigationTitle("Profile Summary")
                 .navigationBarTitleDisplayMode(.inline)
-                .background(Color(UIColor.systemGray6)) // Light gray background
+                .background(Color.backgroundColor)
+                .toolbarBackground(Color.greenApp, for: .navigationBar)
                 .ignoresSafeArea(edges: .all)
             }
         }

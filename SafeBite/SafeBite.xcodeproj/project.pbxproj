@@ -27,6 +27,7 @@
 		8C1DAA732C1D5E9000B308BE /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1DAA722C1D5E9000B308BE /* UserProfile.swift */; };
 		8C1F005A2C4F6AA700D0767B /* SpashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F00592C4F6AA700D0767B /* SpashScreen.swift */; };
 		8C1F005C2C4F70A200D0767B /* MapPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F005B2C4F70A200D0767B /* MapPageView.swift */; };
+		8C8275E32C8D707600F89EED /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8275E22C8D707600F89EED /* Definitions.swift */; };
 		8CB709F72C84382D000A7D5D /* caferenee.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB709F62C84382D000A7D5D /* caferenee.json */; };
 		8CB709F92C843A9B000A7D5D /* theballroom.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB709F82C843A9B000A7D5D /* theballroom.json */; };
 		8CB709FB2C843AB0000A7D5D /* empire.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB709FA2C843AB0000A7D5D /* empire.json */; };
@@ -66,6 +67,7 @@
 		8C1DAA722C1D5E9000B308BE /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		8C1F00592C4F6AA700D0767B /* SpashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpashScreen.swift; sourceTree = "<group>"; };
 		8C1F005B2C4F70A200D0767B /* MapPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPageView.swift; sourceTree = "<group>"; };
+		8C8275E22C8D707600F89EED /* Definitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
 		8CB709F62C84382D000A7D5D /* caferenee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = caferenee.json; path = ../../JSONOutputMenus/caferenee.json; sourceTree = "<group>"; };
 		8CB709F82C843A9B000A7D5D /* theballroom.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = theballroom.json; path = ../../JSONOutputMenus/theballroom.json; sourceTree = "<group>"; };
 		8CB709FA2C843AB0000A7D5D /* empire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = empire.json; path = ../../JSONOutputMenus/empire.json; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				8CEFD91E2C0CE2BA0048982A /* SafeBiteApp.swift */,
 				8C1F005B2C4F70A200D0767B /* MapPageView.swift */,
 				8CEFD9202C0CE2BA0048982A /* ContentView.swift */,
+				8C8275E22C8D707600F89EED /* Definitions.swift */,
 				8C1DAA6E2C1952E300B308BE /* SignInView.swift */,
 				8C1DAA722C1D5E9000B308BE /* UserProfile.swift */,
 				8C1DAA702C1D5B5B00B308BE /* Allergens.swift */,
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C8275E32C8D707600F89EED /* Definitions.swift in Sources */,
 				8CEFD9212C0CE2BA0048982A /* ContentView.swift in Sources */,
 				8C1F005C2C4F70A200D0767B /* MapPageView.swift in Sources */,
 				8CEFD91F2C0CE2BA0048982A /* SafeBiteApp.swift in Sources */,

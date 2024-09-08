@@ -395,11 +395,11 @@ struct MainPageView: View {
                         }
                     }
                 }
-                .toolbarBackground(Color(red: 60 / 255, green: 180 / 255, blue: 75 / 255), for: .navigationBar)
+                .toolbarBackground(Color.greenApp, for: .navigationBar)
                 .navigationBarBackButtonHidden(true)
                 .navigationBarTitleDisplayMode(.inline)
             }
-            .background(Color(red: 245/255, green: 244/255, blue: 240/255))
+            .background(Color.backgroundColor)
 
         }
     }
