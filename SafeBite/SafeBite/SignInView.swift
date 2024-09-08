@@ -98,7 +98,7 @@ struct UserProfileView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 100, height: 100)
-                                .foregroundColor(.blue)
+                                .foregroundColor(.greenApp)
                             Spacer()
                         }
                     }
@@ -130,7 +130,7 @@ struct UserProfileView: View {
                         Text("Edit Profile")
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(Color.blue)
+                            .background(Color.greenApp)
                             .foregroundColor(.white)
                             .cornerRadius(8)
                     }
@@ -142,21 +142,8 @@ struct UserProfileView: View {
                 .padding()
                 .navigationTitle("Profile Summary")
                 .navigationBarTitleDisplayMode(.inline)
-                .background(Color.backgroundColor)
                 .toolbarBackground(Color.greenApp, for: .navigationBar)
-                .ignoresSafeArea(edges: .all)
-            }
-        }
-        .toolbar {
-            // Centered App Icon in Navigation Bar
-            ToolbarItem(placement: .principal) {
-                Image("safebite")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 100, height: 35)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
-                    .clipped()
-                    .padding(.top, 5)
+                .background(Color.backgroundColor).ignoresSafeArea(edges: .all)
             }
         }
     }
@@ -171,7 +158,7 @@ struct UserProfileView: View {
             if user.userProfile.dietaryRestrictions.lowFODMAP { Label("Low FODMAP", systemImage: "leaf.fill") }
             if user.userProfile.dietaryRestrictions.dashDiet { Label("Dash Diet", systemImage: "heart.fill") }
         }
-        .foregroundColor(.green)
+        .foregroundColor(.greenApp)
     }
 
     private var allergiesView: some View {
