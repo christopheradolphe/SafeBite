@@ -82,9 +82,16 @@ struct MenuTypeView: View {
     let menuType: String
     let safetyRating: Int
     let restaurantName: String
+    var menuTypeItems: [MenuItem] {
+        if safetyRating != -1 {
+            return menu.menuItems.filter { $0.itemType == menuType }
+        } else {
+            return menu.menuItems.filter { $0.itemType == menuType && $0.safeBiteValue == safetyRating }
+        }
+    }
     
     var body: some View {
-        let menuTypeItems = menu.menuItems.filter{$0.itemType==menuType}.filter{$0.safeBiteValue==safetyRating}
+        
         if (!menuTypeItems.isEmpty) {
             VStack {
                 Text(menuType)
@@ -117,7 +124,18 @@ struct ItemCatergoryView: View {
                 MenuTypeView(menu: menu, menuType: menuType, safetyRating: safeBiteCatergory, restaurantName: restaurant.name)
             }
         }
-        .background(safeBiteCatergory == 0 ? Color.green.opacity(0.6) : safeBiteCatergory == 1 ? Color.orange.opacity(0.6) : Color.red.opacity(0.6))
+        .background {
+            switch safeBiteCatergory {
+            case 0:
+                Color.green.opacity(0.6)
+            case 1:
+                Color.orange.opacity(0.6)
+            case 2:
+                Color.red.opacity(0.6)
+            default:
+                Color.white
+            }
+        }
         .cornerRadius(10)
         .padding(.bottom, 10)
         .padding(.horizontal, 10)
@@ -128,10 +146,10 @@ struct IndividualRestaurantView: View {
     @State var restaurant: Restaurant
     @State private var showDescription = false
     @State private var selection = 3
-    @State private var selectedCategory: Int = 0
+    @State private var selectedSafety: Int = 0
     @State private var selectedMenuType: String = "All"
     private var categoryName: String {
-        switch selectedCategory {
+        switch selectedSafety {
         case 0:
             return "Allergy Safe"
         case 1:
@@ -139,7 +157,7 @@ struct IndividualRestaurantView: View {
         case 2:
             return "Unsafe"
         default:
-            return "Unknown"
+            return "All"
         }
     }
     
@@ -252,7 +270,9 @@ struct IndividualRestaurantView: View {
                 
                 VStack {
                     HStack {
-                        Picker("Select Category", selection: $selectedCategory) {
+                        Picker("Select Category", selection: $selectedSafety) {
+                            Text("All (Safety)")
+                                .tag(-1)
                             Text("Allergy Safe")
                                 .tag(0)
                             Text("Modifiable")
@@ -290,13 +310,15 @@ struct IndividualRestaurantView: View {
                         Spacer()
                     }
                     
-                    switch selectedCategory {
+                    switch selectedSafety {
                     case 0:
                         ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 0, menuType: selectedMenuType)
                     case 1:
                         ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 1, menuType: selectedMenuType)
                     case 2:
                         ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 2, menuType: selectedMenuType)
+                    case -1:
+                        ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: -1, menuType: selectedMenuType)
                     default:
                         EmptyView()
                     }
