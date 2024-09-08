@@ -271,13 +271,13 @@ struct IndividualRestaurantView: View {
                         .padding(.horizontal)
                         
                         Picker("Select Menu Type", selection: $selectedMenuType) {
-                                    Text("All").tag("All")
+                                    Text("All (Menu Types)").tag("All")
                                     ForEach(restaurant.menuTypes, id: \.self) { type in
                                         Text(type).tag(type)
                                     }
                         }
                         .pickerStyle(MenuPickerStyle()) // Use MenuPickerStyle for a dropdown menu appearance
-                        .frame(width: 140, height: 30) // Adjust width and height for a smaller appearance
+                        .frame(width: 180, height: 30) // Adjust width and height for a smaller appearance
                         .padding(5)
                         .background(Color.white)
                         .clipShape(Capsule())
