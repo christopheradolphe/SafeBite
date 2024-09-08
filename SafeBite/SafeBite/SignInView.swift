@@ -150,32 +150,152 @@ struct UserProfileView: View {
 
     private var dietaryRestrictionsView: some View {
         VStack(alignment: .leading, spacing: 5) {
-            if user.userProfile.dietaryRestrictions.vegetarian { Label("Vegetarian", systemImage: "leaf.fill") }
-            if user.userProfile.dietaryRestrictions.vegan { Label("Vegan", systemImage: "leaf.fill") }
-            if user.userProfile.dietaryRestrictions.halal { Label("Halal", systemImage: "hand.raised.fill") }
-            if user.userProfile.dietaryRestrictions.keto { Label("Keto", systemImage: "bolt.fill") }
-            if user.userProfile.dietaryRestrictions.lowCarb { Label("Low-Carb", systemImage: "flame.fill") }
-            if user.userProfile.dietaryRestrictions.lowFODMAP { Label("Low FODMAP", systemImage: "leaf.fill") }
-            if user.userProfile.dietaryRestrictions.dashDiet { Label("Dash Diet", systemImage: "heart.fill") }
+            if user.userProfile.dietaryRestrictions.vegetarian {
+                HStack {
+                    Text("• Vegetarian")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.dietaryRestrictions.vegan {
+                HStack {
+                    Text("• Vegan")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.dietaryRestrictions.halal {
+                HStack {
+                    Text("• Halal")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.dietaryRestrictions.keto {
+                HStack {
+                    Text("• Keto")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.dietaryRestrictions.lowCarb {
+                HStack {
+                    Text("• Low-Carb")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.dietaryRestrictions.lowFODMAP {
+                HStack {
+                    Text("• Low FODMAP")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.dietaryRestrictions.dashDiet {
+                HStack {
+                    Text("• Dash Diet")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
         }
         .foregroundColor(.greenApp)
     }
 
     private var allergiesView: some View {
         VStack(alignment: .leading, spacing: 5) {
-            if user.userProfile.allergens.wheat { Label("Wheat", systemImage: "exclamationmark.triangle.fill") }
-            if user.userProfile.allergens.gluten { Label("Gluten", systemImage: "exclamationmark.triangle.fill") }
-            if user.userProfile.allergens.soy { Label("Soy", systemImage: "exclamationmark.triangle.fill") }
-            if user.userProfile.allergens.shellfish { Label("Shellfish", systemImage: "exclamationmark.triangle.fill") }
-            if user.userProfile.allergens.fish { Label("Fish", systemImage: "exclamationmark.triangle.fill") }
-            if user.userProfile.allergens.dairy { Label("Dairy", systemImage: "exclamationmark.triangle.fill") }
-            if user.userProfile.allergens.egg { Label("Egg", systemImage: "exclamationmark.triangle.fill") }
-            if user.userProfile.allergens.treeNuts { Label("Tree Nuts", systemImage: "exclamationmark.triangle.fill") }
-            if user.userProfile.allergens.peanuts { Label("Peanuts", systemImage: "exclamationmark.triangle.fill") }
-            if user.userProfile.allergens.sesame { Label("Sesame", systemImage: "exclamationmark.triangle.fill") }
-            if user.userProfile.allergens.mustard { Label("Mustard", systemImage: "exclamationmark.triangle.fill") }
-            if user.userProfile.allergens.garlic { Label("Garlic", systemImage: "exclamationmark.triangle.fill") }
-            if user.userProfile.allergens.sulfites { Label("Sulfites", systemImage: "exclamationmark.triangle.fill") }
+            if user.userProfile.allergens.wheat {
+                HStack {
+                    Text("• Wheat")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.allergens.gluten {
+                HStack {
+                    Text("• Gluten")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.allergens.soy {
+                HStack {
+                    Text("• Soy")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.allergens.shellfish {
+                HStack {
+                    Text("• Shellfish")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.allergens.fish {
+                HStack {
+                    Text("• Fish")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.allergens.dairy {
+                HStack {
+                    Text("• Dairy")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.allergens.egg {
+                HStack {
+                    Text("• Egg")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.allergens.treeNuts {
+                HStack {
+                    Text("• Tree Nuts")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.allergens.peanuts {
+                HStack {
+                    Text("• Peanuts")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.allergens.sesame {
+                HStack {
+                    Text("• Sesame")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.allergens.mustard {
+                HStack {
+                    Text("• Mustard")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.allergens.garlic {
+                HStack {
+                    Text("• Garlic")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
+            if user.userProfile.allergens.sulfites {
+                HStack {
+                    Text("• Sulfites")
+                    Spacer()
+                }
+                .padding(.vertical, 2)
+            }
         }
         .foregroundColor(.red)
     }
