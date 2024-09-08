@@ -90,29 +90,16 @@ struct ItemCatergoryView: View {
     let restaurant: Restaurant
     let menu: Menu
     let safeBiteCatergory: Int
-    
-    @State var isExpanded: Bool
+    var menuType: String
     
     var body: some View {
         VStack(alignment: .leading) {
-            DisclosureGroup(isExpanded: $isExpanded) {
+            if menuType == "All" {
                 ForEach(restaurant.menuTypes, id: \.self) { type in
                     MenuTypeView(menu: menu, menuType: type, safetyRating: safeBiteCatergory, restaurantName: restaurant.name)
                 }
-            } label: {
-                HStack {
-                    Text(safeBiteCatergory == 0 ? "Allergy Safe" : safeBiteCatergory == 1 ? "Item Removal Possible" : "Contains Allergen")
-                        .font(.title3)
-                        .foregroundStyle(.black)
-                        .padding()
-                    
-                    Spacer()
-                    
-                    Text("\(Int( safeBiteCatergory == 0 ? restaurant.menu.safeItems : safeBiteCatergory == 1 ? restaurant.menu.modifiableItems : restaurant.menu.unsafeItems))")
-                        .font(.title3)
-                        .foregroundStyle(.gray)
-                        .padding()
-                }
+            } else {
+                MenuTypeView(menu: menu, menuType: menuType, safetyRating: safeBiteCatergory, restaurantName: restaurant.name)
             }
         }
         .background(safeBiteCatergory == 0 ? Color.green.opacity(0.6) : safeBiteCatergory == 1 ? Color.orange.opacity(0.6) : Color.red.opacity(0.6))
@@ -127,6 +114,7 @@ struct IndividualRestaurantView: View {
     @State private var showDescription = false
     @State private var selection = 3
     @State private var selectedCategory: Int = 0
+    @State private var selectedMenuType: String = "All"
     private var categoryName: String {
         switch selectedCategory {
         case 0:
@@ -264,19 +252,34 @@ struct IndividualRestaurantView: View {
                         .clipShape(Capsule())
                         .shadow(radius: 3) // Adjust shadow for a subtle effect
                         .foregroundColor(.black) // Text color
-                        .font(.system(size: 14, weight: .medium))
+                        .font(.system(size: 10, weight: .medium))
                         .padding(.horizontal)
+                        
+                        Picker("Select Menu Type", selection: $selectedMenuType) {
+                                    Text("All").tag("All")
+                                    ForEach(restaurant.menuTypes, id: \.self) { type in
+                                        Text(type).tag(type)
+                                    }
+                        }
+                        .pickerStyle(MenuPickerStyle()) // Use MenuPickerStyle for a dropdown menu appearance
+                        .frame(width: 140, height: 30) // Adjust width and height for a smaller appearance
+                        .padding(5)
+                        .background(Color.white)
+                        .clipShape(Capsule())
+                        .shadow(radius: 3) // Adjust shadow for a less prominent effect
+                        .foregroundColor(.black)
+                        .font(.system(size: 10, weight: .regular))
                         
                         Spacer()
                     }
                     
                     switch selectedCategory {
                     case 0:
-                        ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 0, isExpanded: true)
+                        ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 0, menuType: selectedMenuType)
                     case 1:
-                        ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 1, isExpanded: false)
+                        ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 1, menuType: selectedMenuType)
                     case 2:
-                        ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 2, isExpanded: false)
+                        ItemCatergoryView(restaurant: restaurant, menu: restaurant.menu, safeBiteCatergory: 2, menuType: selectedMenuType)
                     default:
                         EmptyView()
                     }
