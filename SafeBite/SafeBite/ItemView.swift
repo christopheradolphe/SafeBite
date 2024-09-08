@@ -7,6 +7,27 @@
 
 import SwiftUI
 
+extension String {
+    func capitalizedFirstLetter() -> String {
+        // Capitalize the first letter
+        guard let firstLetter = self.first else {
+            return self
+        }
+        let firstCapitalized = firstLetter.uppercased()
+        let restOfString = self.dropFirst()
+        
+        // Add a space before each capital letter in the rest of the string
+        let result = restOfString.reduce(into: firstCapitalized) { result, char in
+            if char.isUppercase {
+                result.append(" ")
+            }
+            result.append(char)
+        }
+        
+        return result
+    }
+}
+
 struct AllergenCards: View {
     var safetyIndicator: Int
     var allergens: Bool //true-> allergens; false -> Dietary Restrictions
@@ -30,38 +51,78 @@ struct AllergenCards: View {
                     let allergenList = menuItem.allergenInfo.keys.filter{menuItem.allergenInfo[$0] == safetyIndicator}
                     if allergenList.isEmpty {
                         Text("N/A")
-                            .foregroundStyle(.white)
+                            .foregroundStyle(color)
                             .padding(10)
-                            .background(Color.gray)
+                            .background(Color.white)
                             .clipShape(Capsule())
                             .padding(.leading, 3)
+                            .overlay(
+                                Capsule()
+                                    .stroke(color, lineWidth: 1)
+                            )
                     } else {
                         ForEach(allergenList, id: \.self) { allergen in
-                            Text(allergen)
-                                .foregroundStyle(.white)
-                                .padding(10)
-                                .background(color)
-                                .clipShape(.capsule)
-                                .padding(.leading, 3)
+                            if User.shared.userProfile.allergens.allergenList.contains(allergen) {
+                                Text(String(allergen).capitalizedFirstLetter())
+                                    .foregroundStyle(.white)
+                                    .padding(10)
+                                    .background(color)
+                                    .clipShape(.capsule)
+                                    .padding(.leading, 3)
+                            }
+                        }
+                        ForEach(allergenList, id: \.self) { allergen in
+                            if !User.shared.userProfile.allergens.allergenList.contains(allergen) {
+                                Text(String(allergen).capitalizedFirstLetter())
+                                    .foregroundStyle(color)
+                                    .padding(10)
+                                    .background(Color.white)
+                                    .clipShape(Capsule())
+                                    .padding(.leading, 3)
+                                    .overlay(
+                                        Capsule()
+                                            .stroke(color, lineWidth: 1)
+                                    )
+                            }
                         }
                     }
                 } else {
                     let dietaryRestrictionList = menuItem.dietaryRestrictionInfo.keys.filter { menuItem.dietaryRestrictionInfo[$0] == safetyIndicator }
                     if dietaryRestrictionList.isEmpty {
                         Text("N/A")
-                            .foregroundStyle(.white)
+                            .foregroundStyle(color)
                             .padding(10)
-                            .background(Color.gray)
+                            .background(Color.white)
                             .clipShape(Capsule())
                             .padding(.leading, 3)
+                            .overlay(
+                                Capsule()
+                                    .stroke(color, lineWidth: 1)
+                            )
                     } else {
                         ForEach(dietaryRestrictionList, id: \.self) { dietaryRestriction in
-                            Text(dietaryRestriction)
-                                .foregroundStyle(.white)
-                                .padding(10)
-                                .background(color)
-                                .clipShape(Capsule())
-                                .padding(.leading, 3)
+                            if User.shared.userProfile.allergens.allergenList.contains(dietaryRestriction) {
+                                Text(String(dietaryRestriction).capitalizedFirstLetter())
+                                    .foregroundStyle(.white)
+                                    .padding(10)
+                                    .background(color)
+                                    .clipShape(.capsule)
+                                    .padding(.leading, 3)
+                            }
+                        }
+                        ForEach(dietaryRestrictionList, id: \.self) { dietaryRestriction in
+                            if !User.shared.userProfile.allergens.allergenList.contains(dietaryRestriction) {
+                                Text(String(dietaryRestriction).capitalizedFirstLetter())
+                                    .foregroundStyle(color)
+                                    .padding(10)
+                                    .background(Color.white)
+                                    .clipShape(Capsule())
+                                    .padding(.leading, 3)
+                                    .overlay(
+                                        Capsule()
+                                            .stroke(color, lineWidth: 1)
+                                    )
+                            }
                         }
                     }
                 }
