@@ -16,7 +16,21 @@ func imageExists(named name: String) -> Bool {
 struct MenuItemView: View {
     var menuItem: MenuItem
     let restaurantName: String
+    let safeBiteValue: Int
     @State private var showItemDetail = false
+    
+    var iconName: String {
+        switch safeBiteValue {
+        case 0:
+            return "checkmark.circle.fill" // Green checkmark
+        case 1:
+            return "exclamationmark.circle.fill" // Yellow dot
+        case 2:
+            return "xmark.circle.fill" // Red X
+        default:
+            return ""
+        }
+    }
     
     var body: some View {
         let primaryImageName = restaurantName.lowercased().filter{!$0.isWhitespace} + "_" + menuItem.image
@@ -42,10 +56,11 @@ struct MenuItemView: View {
                 }
                 
                 Spacer()
-                
-                Image(systemName: "chevron.right")
-                    .padding(.horizontal)
-                    .foregroundColor(.gray)
+                VStack {
+                    Image(systemName: iconName) // Use the determined icon here
+                        .foregroundColor(safeBiteValue == 0 ? .green : safeBiteValue == 1 ? .yellow : .red)
+                        .padding(5)
+                }
             }
             .padding(5)
             .background(RoundedRectangle(cornerRadius: 10).fill(Color.white).shadow(radius: 10))
@@ -78,7 +93,7 @@ struct MenuTypeView: View {
                     .frame(maxWidth:.infinity)
 
                 ForEach(menu.menuItems.filter{$0.itemType==menuType}.filter{$0.safeBiteValue==safetyRating}) { menuItem in
-                    MenuItemView(menuItem: menuItem, restaurantName: restaurantName)
+                    MenuItemView(menuItem: menuItem, restaurantName: restaurantName, safeBiteValue: safetyRating)
                 }
             }
             .padding(.vertical)
@@ -105,7 +120,7 @@ struct ItemCatergoryView: View {
         .background(safeBiteCatergory == 0 ? Color.green.opacity(0.6) : safeBiteCatergory == 1 ? Color.orange.opacity(0.6) : Color.red.opacity(0.6))
         .cornerRadius(10)
         .padding(.bottom, 10)
-        .padding(.horizontal, 5)
+        .padding(.horizontal, 10)
     }
 }
 
