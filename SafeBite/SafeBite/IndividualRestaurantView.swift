@@ -138,7 +138,7 @@ struct ItemCatergoryView: View {
         }
         .cornerRadius(10)
         .padding(.bottom, 10)
-        .padding(.horizontal, 10)
+        .padding(.horizontal, 20)
     }
 }
 
