@@ -14,11 +14,56 @@ struct SignInView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section ("Personal Information"){
-                    TextField("First Name", text: $user.userProfile.userInformation.firstName)
-                    TextField("Last Name", text: $user.userProfile.userInformation.lastName)
-                    TextField("Email", text: $user.userProfile.userInformation.email)
-                    TextField("Phone Number", text: $user.userProfile.userInformation.phoneNumber)
+                Section(header: Text("Personal Information")) {
+                    // First Name Field
+                    VStack(alignment: .leading) {
+                        Text("First Name *") // Asterisk to indicate required field
+                            .foregroundColor(.primary)
+                        TextField("First Name", text: $user.userProfile.userInformation.firstName)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(user.userProfile.userInformation.firstName.isEmpty ? Color.red : Color.clear, lineWidth: 1)
+                            )
+                    }
+                    
+                    // Last Name Field
+                    VStack(alignment: .leading) {
+                        Text("Last Name *")
+                            .foregroundColor(.primary)
+                        TextField("Last Name", text: $user.userProfile.userInformation.lastName)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(user.userProfile.userInformation.lastName.isEmpty ? Color.red : Color.clear, lineWidth: 1)
+                            )
+                    }
+                    
+                    // Email Field
+                    VStack(alignment: .leading) {
+                        Text("Email *")
+                            .foregroundColor(.primary)
+                        TextField("Email", text: $user.userProfile.userInformation.email)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.emailAddress)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(user.userProfile.userInformation.email.isEmpty ? Color.red : Color.clear, lineWidth: 1)
+                            )
+                    }
+                    
+                    // Phone Number Field
+                    VStack(alignment: .leading) {
+                        Text("Phone Number *")
+                            .foregroundColor(.primary)
+                        TextField("Phone Number", text: $user.userProfile.userInformation.phoneNumber)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.phonePad)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(user.userProfile.userInformation.phoneNumber.isEmpty ? Color.red : Color.clear, lineWidth: 1)
+                            )
+                    }
                 }
                 
                 Section ("Dietary Restrictions") {
@@ -49,18 +94,42 @@ struct SignInView: View {
                 
 //                if !user.userProfile.userProfileMade {
                 if user.userProfile.userProfileMade {
-                    Button {
-                        dismiss()
-                    } label: {
-                        VStack {
-                            HStack {
-                                Spacer()
-                                Text("Update Profile")
-                                Spacer()
+                    Section {
+                        VStack(spacing: 16) { // Add spacing between button and hint
+                            // Update Profile Button
+                            Button {
+                                dismiss()
+                            } label: {
+                                VStack {
+                                    HStack {
+                                        Spacer()
+                                        Text("Update Profile")
+                                            .foregroundColor(user.userProfile.userInformation.invalidUserInformation ? .gray : .blue)
+                                        Spacer()
+                                    }
+                                }
+                                .padding()
+                                .background(Color.white)
+                                .cornerRadius(8)
                             }
+                            .disabled(user.userProfile.userInformation.invalidUserInformation)
+                            .opacity(user.userProfile.userInformation.invalidUserInformation ? 0.6 : 1.0)
+                        }
+                        
+                        // Hint Section for Invalid Information
+                        if user.userProfile.userInformation.invalidUserInformation {
+                            // Separate VStack for hint to make it look distinct
+                            VStack {
+                                Text("Please complete all required fields to enable updating your profile.")
+                                    .font(.footnote)
+                                    .foregroundColor(.red)
+                                    .padding()
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .cornerRadius(8)
+                            }
+                            .padding([.leading, .trailing], 16) // Add padding to make it look well-positioned
                         }
                     }
-                    .disabled(user.userProfile.userInformation.invalidUserInformation)
                 } else {
                     NavigationLink {
                         ContentView()
@@ -74,6 +143,7 @@ struct SignInView: View {
                         }
                     }
                     .disabled(user.userProfile.userInformation.invalidUserInformation)
+                    .opacity(user.userProfile.userInformation.invalidUserInformation ? 0.6 : 1.0)
                 }
             }
             
