@@ -28,7 +28,6 @@ struct Cards: View {
     var body: some View {
         
         if !restaurantList.isEmpty {
-            
             Text(cuisine)
                 .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .padding([.horizontal, .top])

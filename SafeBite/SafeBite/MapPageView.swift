@@ -15,6 +15,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 
     @Published var userLocation: CLLocation? = nil
     @Published var restaurantCoordinates: [String: CLLocationCoordinate2D] = [:]
+    @Published var closestRestaurants: [(String, CLLocationDistance)] = []
 
     override init() {
         super.init()
@@ -47,6 +48,20 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             }
         }
     }
+    private func calculateClosestRestaurants() {
+            guard let userLocation = self.userLocation else { return }
+            var distances: [(String, CLLocationDistance)] = []
+
+            for (name, coordinate) in restaurantCoordinates {
+                let restaurantLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+                let distance = userLocation.distance(from: restaurantLocation)
+                distances.append((name, distance))
+            }
+
+            let sortedDistances = distances.sorted { $0.1 < $1.1 }
+            self.closestRestaurants = Array(sortedDistances.prefix(5))
+        }
+    
 }
 struct MapView: UIViewRepresentable {
     let address: String
